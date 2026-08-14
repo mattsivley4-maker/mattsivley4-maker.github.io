@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join AirMedCare Network — Matthew Sivley</title>
+<style>
+  :root{
+    --navy:#12305c;
+    --blue:#1c73b8;
+    --red:#b0203a;
+    --ink:#1a1f2b;
+    --paper:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,var(--navy),#0b1c33);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  /* ---- Overlay ---- */
+  .overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(10,20,35,.72);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:999;
+    animation:fadeIn .25s ease-out;
+  }
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  .card{
+    background:var(--paper);
+    border-radius:16px;
+    max-width:420px;
+    width:100%;
+    padding:28px 26px 24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    text-align:center;
+    animation:pop .3s ease-out;
+  }
+  @keyframes pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+
+  .badge{
+    display:inline-block;
+    background:#fdeaea;
+    color:var(--red);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+
+  .card h2{
+    font-size:20px;
+    margin:0 0 10px;
+    color:var(--navy);
+    line-height:1.3;
+  }
+
+  .card p{
+    font-size:14.5px;
+    line-height:1.55;
+    color:#3c4657;
+    margin:0 0 18px;
+  }
+
+  .code-box{
+    background:#f2f6fb;
+    border:2px dashed var(--blue);
+    border-radius:12px;
+    padding:14px 16px;
+    margin-bottom:18px;
+  }
+  .code-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#5b6b83;
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .code-value{
+    font-size:32px;
+    font-weight:800;
+    color:var(--navy);
+    letter-spacing:.04em;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .copy-btn{
+    width:100%;
+    padding:11px;
+    border-radius:9px;
+    border:1.5px solid var(--blue);
+    background:#fff;
+    color:var(--blue);
+    font-size:14.5px;
+    font-weight:700;
+    cursor:pointer;
+    margin-bottom:12px;
+    transition:background .15s;
+  }
+  .copy-btn:active{background:#eaf3fb;}
+  .copy-btn.copied{
+    background:#e6f6ec;
+    border-color:#2f9e56;
+    color:#1f7a3f;
+  }
+
+  .ack-row{
+    display:flex;
+    align-items:flex-start;
+    gap:9px;
+    text-align:left;
+    background:#f7f8fa;
+    border-radius:10px;
+    padding:12px 12px;
+    margin-bottom:16px;
+  }
+  .ack-row input{
+    margin-top:3px;
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+    accent-color:var(--blue);
+  }
+  .ack-row label{
+    font-size:13px;
+    line-height:1.45;
+    color:#333c4a;
+  }
+  .ack-row strong{color:var(--navy);}
+
+  .continue-btn{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:none;
+    background:#c7cdd6;
+    color:#fff;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:.02em;
+    cursor:not-allowed;
+    text-decoration:none;
+    display:block;
+    transition:background .2s;
+  }
+  .continue-btn.active{
+    background:var(--red);
+    cursor:pointer;
+  }
+  .continue-btn.active:hover{background:#8f1a2d;}
+
+  .hint{
+    font-size:12px;
+    color:#8a94a6;
+    margin-top:12px;
+    line-height:1.5;
+  }
+
+  .skip{
+    display:block;
+    margin-top:14px;
+    font-size:11px;
+    color:#c2c8d2;
+    text-decoration:underline;
+  }
+</style>
+</head>
+<body>
+
+  <!-- The mandatory overlay -->
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <span class="badge">Before you continue</span>
+      <h2>Don't forget your Track&nbsp;Code</h2>
+      <p>
+        On the next page after you select Join or Renew, scroll to <strong>"Do you have a Coupon/Group Code or a Track or Get Code?"</strong>,
+        open it, and enter the code below in the <strong>Track Code</strong> field. It's easy to miss —
+        it's tucked inside a collapsed section near the bottom of the form.
+      </p>
+
+      <div class="code-box">
+        <div class="code-label">Your Track Code</div>
+        <div class="code-value" id="trackCode">15592</div>
+      </div>
+
+      <button class="copy-btn" id="copyBtn" type="button">Copy Track Code</button>
+
+      <div class="ack-row">
+        <input type="checkbox" id="ackCheck">
+        <label for="ackCheck">I'll enter Track Code <strong>15592</strong> in the Track Code field before submitting my application.</label>
+      </div>
+
+      <a class="continue-btn" id="continueBtn" href="https://www.amcnrep.com/Matthew-Sivley" target="_blank" rel="noopener">
+        Continue to Enrollment →
+      </a>
+
+      <p class="hint">This code links your membership to Matthew Sivley as your enrolling representative.</p>
+      <a class="skip" href="https://www.amcnrep.com/Matthew-Sivley" target="_blank" rel="noopener">Skip this reminder</a>
+    </div>
+  </div>
+
+<script>
+  const checkbox = document.getElementById('ackCheck');
+  const continueBtn = document.getElementById('continueBtn');
+  const copyBtn = document.getElementById('copyBtn');
+  const trackCode = document.getElementById('trackCode').textContent.trim();
+
+  function syncState(){
+    if(checkbox.checked){
+      continueBtn.classList.add('active');
+    } else {
+      continueBtn.classList.remove('active');
+    }
+  }
+
+  continueBtn.addEventListener('click', function(e){
+    if(!checkbox.checked){
+      e.preventDefault();
+      checkbox.parentElement.style.outline = '2px solid #b0203a';
+      checkbox.focus();
+    }
+  });
+
+  checkbox.addEventListener('change', syncState);
+
+  copyBtn.addEventListener('click', async function(){
+    try{
+      await navigator.clipboard.writeText(trackCode);
+    }catch(err){
+      // Fallback for browsers without clipboard API access
+      const ta = document.createElement('textarea');
+      ta.value = trackCode;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    copyBtn.textContent = 'Copied ✓';
+    copyBtn.classList.add('copied');
+    setTimeout(()=>{
+      copyBtn.textContent = 'Copy Track Code';
+      copyBtn.classList.remove('copied');
+    }, 1800);
+  });
+
+  // Block Escape-key / outside-click dismissal — there is no dismiss handler at all,
+  // so there's nothing to disable. This overlay simply has no close button.
+</script>
+
+</body>
+</html>
