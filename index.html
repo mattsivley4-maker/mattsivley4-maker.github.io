@@ -1,268 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join AirMedCare Network — Matthew Sivley</title>
-<style>
-  :root{
-    --navy:#12305c;
-    --blue:#1c73b8;
-    --red:#b0203a;
-    --ink:#1a1f2b;
-    --paper:#ffffff;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:linear-gradient(160deg,var(--navy),#0b1c33);
-    color:var(--ink);
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
-  }
-
-  /* ---- Overlay ---- */
-  .overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(10,20,35,.72);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:999;
-    animation:fadeIn .25s ease-out;
-  }
-  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-  .card{
-    background:var(--paper);
-    border-radius:16px;
-    max-width:420px;
-    width:100%;
-    padding:28px 26px 24px;
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-    text-align:center;
-    animation:pop .3s ease-out;
-  }
-  @keyframes pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
-
-  .badge{
-    display:inline-block;
-    background:#fdeaea;
-    color:var(--red);
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    padding:5px 12px;
-    border-radius:999px;
-    margin-bottom:14px;
-  }
-
-  .card h2{
-    font-size:20px;
-    margin:0 0 10px;
-    color:var(--navy);
-    line-height:1.3;
-  }
-
-  .card p{
-    font-size:14.5px;
-    line-height:1.55;
-    color:#3c4657;
-    margin:0 0 18px;
-  }
-
-  .code-box{
-    background:#f2f6fb;
-    border:2px dashed var(--blue);
-    border-radius:12px;
-    padding:14px 16px;
-    margin-bottom:18px;
-  }
-  .code-label{
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    color:#5b6b83;
-    font-weight:700;
-    margin-bottom:4px;
-  }
-  .code-value{
-    font-size:32px;
-    font-weight:800;
-    color:var(--navy);
-    letter-spacing:.04em;
-    font-variant-numeric:tabular-nums;
-  }
-
-  .copy-btn{
-    width:100%;
-    padding:11px;
-    border-radius:9px;
-    border:1.5px solid var(--blue);
-    background:#fff;
-    color:var(--blue);
-    font-size:14.5px;
-    font-weight:700;
-    cursor:pointer;
-    margin-bottom:12px;
-    transition:background .15s;
-  }
-  .copy-btn:active{background:#eaf3fb;}
-  .copy-btn.copied{
-    background:#e6f6ec;
-    border-color:#2f9e56;
-    color:#1f7a3f;
-  }
-
-  .ack-row{
-    display:flex;
-    align-items:flex-start;
-    gap:9px;
-    text-align:left;
-    background:#f7f8fa;
-    border-radius:10px;
-    padding:12px 12px;
-    margin-bottom:16px;
-  }
-  .ack-row input{
-    margin-top:3px;
-    width:18px;
-    height:18px;
-    flex-shrink:0;
-    accent-color:var(--blue);
-  }
-  .ack-row label{
-    font-size:13px;
-    line-height:1.45;
-    color:#333c4a;
-  }
-  .ack-row strong{color:var(--navy);}
-
-  .continue-btn{
-    width:100%;
-    padding:14px;
-    border-radius:10px;
-    border:none;
-    background:#c7cdd6;
-    color:#fff;
-    font-size:16px;
-    font-weight:800;
-    letter-spacing:.02em;
-    cursor:not-allowed;
-    text-decoration:none;
-    display:block;
-    transition:background .2s;
-  }
-  .continue-btn.active{
-    background:var(--red);
-    cursor:pointer;
-  }
-  .continue-btn.active:hover{background:#8f1a2d;}
-
-  .hint{
-    font-size:12px;
-    color:#8a94a6;
-    margin-top:12px;
-    line-height:1.5;
-  }
-
-  .skip{
-    display:block;
-    margin-top:14px;
-    font-size:11px;
-    color:#c2c8d2;
-    text-decoration:underline;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maker SATX | 3D Printing, Laser Engraving, and Custom Creations</title>
+  <meta name="description" content="Maker SATX offers 3D printing, laser engraving, and custom creations for gifts, prototypes, signs, and small-batch projects in San Antonio.">
+  <link rel="canonical" href="https://www.makersatx.com/">
+  <meta property="og:title" content="Maker SATX">
+  <meta property="og:description" content="3D printing, laser engraving, and custom creations for San Antonio makers, businesses, and one-of-a-kind projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.makersatx.com/">
+  <style>
+    :root{--ink:#151513;--muted:#60645e;--paper:#f7f3ea;--surface:#fffaf3;--green:#284f3b;--coral:#e85f3d;--amber:#eebd62;--blue:#416f91;--line:rgba(21,21,19,.14)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit}.site-header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:66px;padding:12px max(18px,calc((100vw - 1120px)/2));background:rgba(247,243,234,.93);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}.brand-mark{display:grid;place-items:center;width:40px;height:36px;border-radius:7px;background:var(--ink);color:var(--amber);font-size:.78rem}.nav-links{display:flex;gap:22px;color:rgba(21,21,19,.72);font-size:.94rem}.nav-links a,.button{text-decoration:none}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:7px;padding:0 18px;border:1px solid transparent;font-weight:850}.button.primary{background:var(--coral);color:#fff}.button.secondary{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff}.button.dark{background:var(--green);color:#fff}.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.8fr);gap:44px;align-items:center;min-height:calc(100vh - 66px);padding:78px max(18px,calc((100vw - 1120px)/2));background:linear-gradient(135deg,#17261d 0%,#284f3b 52%,#6e3829 100%);color:#fff}.eyebrow{margin:0 0 10px;color:var(--coral);font-size:.78rem;font-weight:950;letter-spacing:0;text-transform:uppercase}.hero .eyebrow{color:#ffc27f}h1,h2,h3,p{margin-top:0}h1{max-width:9ch;margin-bottom:18px;font-size:clamp(4rem,11vw,7.8rem);line-height:.86;letter-spacing:0}.hero-copy{max-width:650px;margin-bottom:30px;color:rgba(255,255,255,.9);font-size:clamp(1.15rem,2.6vw,1.55rem)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.shop-visual{display:grid;gap:14px;padding:22px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,250,243,.12);box-shadow:0 24px 80px rgba(5,12,8,.25);backdrop-filter:blur(16px)}.visual-card{border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:18px;background:rgba(255,255,255,.1)}.visual-card strong{display:block;margin-bottom:6px;color:#ffc27f;font-size:1.05rem}.visual-card span{color:rgba(255,255,255,.82);font-size:.96rem}.line-art{width:100%;height:auto;display:block}.section{width:min(1120px,calc(100% - 36px));margin:0 auto;padding:76px 0}.section-heading{display:grid;grid-template-columns:minmax(180px,.52fr) minmax(0,1.48fr);gap:40px;align-items:start;margin-bottom:28px}.section-heading h2,.quote-section h2{margin-bottom:0;font-size:clamp(2rem,5vw,4rem);line-height:.98;letter-spacing:0}.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.service-card,.quote-tool{border:1px solid var(--line);border-radius:8px;background:var(--surface)}.service-card{min-height:232px;padding:24px}.service-icon{display:inline-grid;place-items:center;min-width:48px;height:38px;margin-bottom:38px;border-radius:7px;padding:0 11px;background:#dce7da;color:var(--green);font-weight:950}.service-card:nth-child(2) .service-icon{background:rgba(232,95,61,.18);color:#ad3b20}.service-card:nth-child(3) .service-icon{background:rgba(65,111,145,.18);color:var(--blue)}.service-card h3{margin-bottom:8px;font-size:1.22rem}.service-card p,.process-list p,.quote-section p{margin-bottom:0;color:var(--muted)}.process-section{border-top:1px solid var(--line)}.process-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line)}.process-list article{min-height:210px;padding:24px;background:var(--paper)}.process-list span{display:grid;place-items:center;width:48px;height:40px;margin-bottom:32px;border-radius:7px;background:var(--ink);color:var(--amber);font-weight:950}.proof-section{display:grid;grid-template-columns:.85fr 1.05fr 1.1fr;gap:1px;width:100%;padding:0;background:var(--line)}.proof-item{display:grid;align-content:center;gap:12px;min-height:170px;padding:28px max(24px,calc((100vw - 1120px)/2));background:#20382d;color:#fff}.proof-item:nth-child(2){background:#6f3728}.proof-item:nth-child(3){background:#263f5c}.proof-item strong{font-size:clamp(2.5rem,6vw,4.5rem);line-height:.9}.proof-item span{max-width:350px;color:rgba(255,255,255,.84)}.quote-section{display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,.7fr);gap:46px;align-items:start}.quote-section p{max-width:650px;margin-top:18px}.quote-tool{display:grid;gap:18px;padding:24px}.quote-tool label{display:grid;gap:7px;color:var(--ink);font-size:.9rem;font-weight:850}.quote-tool select{width:100%;min-height:48px;padding:0 12px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink)}.contact-line{display:grid;gap:8px;margin-top:24px;color:var(--muted)}.contact-line strong{color:var(--ink)}.site-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:90px;width:min(1120px,calc(100% - 36px));margin:0 auto;border-top:1px solid var(--line);color:var(--muted)}.site-footer span:first-child{color:var(--ink);font-weight:900}@media (max-width:880px){.nav-links{display:none}.hero,.section-heading,.service-grid,.process-list,.proof-section,.quote-section{grid-template-columns:1fr}.hero{min-height:auto;padding-top:66px}.section,.quote-section{padding:60px 0}.site-footer{align-items:flex-start;flex-direction:column;padding:20px 0}}@media (max-width:520px){.brand span:last-child{display:none}.hero-actions,.button{width:100%}h1{font-size:clamp(3.45rem,19vw,4.7rem)}.service-card,.process-list article,.quote-tool,.shop-visual{padding:18px}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Maker SATX","url":"https://www.makersatx.com/","description":"3D printing, laser engraving, and custom creations in San Antonio.","areaServed":{"@type":"City","name":"San Antonio"},"address":{"@type":"PostalAddress","addressLocality":"San Antonio","addressRegion":"TX","addressCountry":"US"},"email":"mattsivey4@gmail.com","sameAs":[]}</script>
 </head>
 <body>
-
-  <!-- The mandatory overlay -->
-  <div class="overlay" id="overlay">
-    <div class="card">
-      <span class="badge">Before you continue</span>
-      <h2>Don't forget your Track&nbsp;Code</h2>
-      <p>
-        On the next page after you select Join or Renew, scroll to <strong>"Do you have a Coupon/Group Code or a Track or Get Code?"</strong>,
-        open it, and enter the code below in the <strong>Track Code</strong> field. It's easy to miss —
-        it's tucked inside a collapsed section near the bottom of the form.
-      </p>
-
-      <div class="code-box">
-        <div class="code-label">Your Track Code</div>
-        <div class="code-value" id="trackCode">15592</div>
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Maker SATX home"><span class="brand-mark" aria-hidden="true">MS</span><span>Maker SATX</span></a>
+    <nav class="nav-links" aria-label="Site sections"><a href="#services">Services</a><a href="#process">Process</a><a href="#quote">Quote</a></nav>
+    <a class="button dark" href="mailto:mattsivey4@gmail.com?subject=Maker%20SATX%20Quote%20Request">Request a quote</a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">San Antonio custom fabrication</p>
+        <h1 id="hero-title">Maker SATX</h1>
+        <p class="hero-copy">3D printing, laser engraving, and custom creations for prototypes, gifts, signs, and small-batch ideas.</p>
+        <div class="hero-actions"><a class="button primary" href="#quote">Start a project</a><a class="button secondary" href="#services">View services</a></div>
       </div>
-
-      <button class="copy-btn" id="copyBtn" type="button">Copy Track Code</button>
-
-      <div class="ack-row">
-        <input type="checkbox" id="ackCheck">
-        <label for="ackCheck">I'll enter Track Code <strong>15592</strong> in the Track Code field before submitting my application.</label>
+      <aside class="shop-visual" aria-label="Maker SATX service summary">
+        <svg class="line-art" viewBox="0 0 520 260" role="img" aria-label="Abstract layered fabrication graphic">
+          <rect x="24" y="30" width="472" height="200" rx="12" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.24)"/>
+          <path d="M92 178h140l28-32 32 32h136" fill="none" stroke="#ffc27f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M92 145h140l28-32 32 32h136" fill="none" stroke="#e85f3d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M92 112h140l28-32 32 32h136" fill="none" stroke="#dce7da" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="398" cy="83" r="18" fill="#416f91"/>
+          <path d="M388 72l-72 72" stroke="#fffaf3" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <div class="visual-card"><strong>3D Printing</strong><span>Parts, prototypes, models, fixtures, and one-off objects.</span></div>
+        <div class="visual-card"><strong>Laser Engraving</strong><span>Wood, acrylic, tags, signs, keepsakes, and branded pieces.</span></div>
+        <div class="visual-card"><strong>Custom Creations</strong><span>Made-to-order work for personal projects and small businesses.</span></div>
+      </aside>
+    </section>
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="section-heading"><p class="eyebrow">Services</p><h2 id="services-title">Practical making for real-world projects.</h2></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-icon" aria-hidden="true">3D</span><h3>3D Printing</h3><p>Prototype parts, replacement pieces, tabletop models, product samples, brackets, fixtures, and useful one-off objects.</p></article>
+        <article class="service-card"><span class="service-icon" aria-hidden="true">LX</span><h3>Laser Engraving</h3><p>Custom engraving and cutting for wood, acrylic, tags, signs, keepsakes, branded items, and clean presentation pieces.</p></article>
+        <article class="service-card"><span class="service-icon" aria-hidden="true">CC</span><h3>Custom Creations</h3><p>Made-to-order gifts, event pieces, display objects, small runs, and mixed-material projects that need a hands-on maker.</p></article>
       </div>
-
-      <a class="continue-btn" id="continueBtn" href="https://www.amcnrep.com/Matthew-Sivley" target="_blank" rel="noopener">
-        Continue to Enrollment →
-      </a>
-
-      <p class="hint">This code links your membership to Matthew Sivley as your enrolling representative.</p>
-      <a class="skip" href="https://www.amcnrep.com/Matthew-Sivley" target="_blank" rel="noopener">Skip this reminder</a>
-    </div>
-  </div>
-
-<script>
-  const checkbox = document.getElementById('ackCheck');
-  const continueBtn = document.getElementById('continueBtn');
-  const copyBtn = document.getElementById('copyBtn');
-  const trackCode = document.getElementById('trackCode').textContent.trim();
-
-  function syncState(){
-    if(checkbox.checked){
-      continueBtn.classList.add('active');
-    } else {
-      continueBtn.classList.remove('active');
-    }
-  }
-
-  continueBtn.addEventListener('click', function(e){
-    if(!checkbox.checked){
-      e.preventDefault();
-      checkbox.parentElement.style.outline = '2px solid #b0203a';
-      checkbox.focus();
-    }
-  });
-
-  checkbox.addEventListener('change', syncState);
-
-  copyBtn.addEventListener('click', async function(){
-    try{
-      await navigator.clipboard.writeText(trackCode);
-    }catch(err){
-      // Fallback for browsers without clipboard API access
-      const ta = document.createElement('textarea');
-      ta.value = trackCode;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
-    copyBtn.textContent = 'Copied ✓';
-    copyBtn.classList.add('copied');
-    setTimeout(()=>{
-      copyBtn.textContent = 'Copy Track Code';
-      copyBtn.classList.remove('copied');
-    }, 1800);
-  });
-
-  // Block Escape-key / outside-click dismissal — there is no dismiss handler at all,
-  // so there's nothing to disable. This overlay simply has no close button.
-</script>
-
+    </section>
+    <section id="process" class="section process-section" aria-labelledby="process-title">
+      <div class="section-heading"><p class="eyebrow">How it works</p><h2 id="process-title">A simple path from idea to finished piece.</h2></div>
+      <div class="process-list">
+        <article><span>01</span><h3>Send the details</h3><p>Tell us what you need, what it is for, the rough size, quantity, material preference, and deadline.</p></article>
+        <article><span>02</span><h3>Review the options</h3><p>We confirm feasibility, file needs, material direction, timing, and a practical starting estimate.</p></article>
+        <article><span>03</span><h3>Make it real</h3><p>Once approved, we produce the piece and coordinate pickup, local handoff, or next steps.</p></article>
+      </div>
+    </section>
+    <section class="section proof-section" aria-label="Maker SATX project types">
+      <div class="proof-item"><strong>3D</strong><span>printed parts, prototypes, models, fixtures, and useful objects</span></div>
+      <div class="proof-item"><strong>Laser</strong><span>engraved gifts, signs, tags, acrylic, wood, and display pieces</span></div>
+      <div class="proof-item"><strong>SATX</strong><span>custom work for San Antonio creators, small businesses, and personal projects</span></div>
+    </section>
+    <section id="quote" class="section quote-section" aria-labelledby="quote-title">
+      <div><p class="eyebrow">Request a quote</p><h2 id="quote-title">Ready when your idea is.</h2><p>Send a short project note and include any photos, sketches, files, size requirements, quantity, and due date.</p><div class="contact-line"><span><strong>Email:</strong> mattsivey4@gmail.com</span><span><strong>Location:</strong> San Antonio, Texas</span></div></div>
+      <form class="quote-tool" id="quote-form">
+        <label>I need<select id="project-service" name="project-service"><option value="3D printing">3D printing</option><option value="Laser engraving">Laser engraving</option><option value="Custom creation">Custom creation</option><option value="Not sure yet">Help choosing the right option</option></select></label>
+        <label>Timeline<select id="timeline" name="timeline"><option value="Flexible">Flexible</option><option value="1-2 weeks">1-2 weeks</option><option value="Rush request">Rush request</option></select></label>
+        <label>Quantity<select id="quantity" name="quantity"><option value="1 item">1 item</option><option value="2-10 items">2-10 items</option><option value="Small batch">Small batch</option></select></label>
+        <a class="button primary" id="quote-link" href="mailto:mattsivey4@gmail.com?subject=Maker%20SATX%20Quote%20Request">Email quote request</a>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Maker SATX</span><span>3D printing, laser engraving, and custom creations in San Antonio.</span></footer>
+  <script>
+    const quoteForm=document.querySelector('#quote-form');const quoteLink=document.querySelector('#quote-link');function updateQuoteLink(){const data=new FormData(quoteForm);const body=[`Service: ${data.get('project-service')}`,`Timeline: ${data.get('timeline')}`,`Quantity: ${data.get('quantity')}`,'','Project details:','','Attachments or links:'].join('\n');quoteLink.href=`mailto:mattsivey4@gmail.com?subject=${encodeURIComponent('Maker SATX Quote Request')}&body=${encodeURIComponent(body)}`}quoteForm.addEventListener('change',updateQuoteLink);updateQuoteLink();
+  </script>
 </body>
 </html>
