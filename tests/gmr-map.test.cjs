@@ -10,7 +10,12 @@ assert.equal(data.counties.features.length,254);
 assert.equal(data.bases.length,66);
 assert.equal(data.bases.filter(b=>b.status==='Publicly supported').length,64);
 assert.equal(data.bases.filter(b=>b.status==='Review candidate').length,2);
-assert.equal(data.reviewItems.length,23);
+assert.equal(data.reviewItems.length,22);
+const sat=data.bases.filter(b=>b.siteGroup==='san-antonio-international');
+assert.equal(sat.length,2);
+assert(sat.every(b=>!b.review && b.confirmation.includes('Owner-confirmed')));
+assert(sat.some(b=>b.id==='ami-sat') && sat.some(b=>b.name.includes('148')));
+assert(!data.reviewItems.some(q=>q.name==='AirMed International - San Antonio, TX'));
 assert.equal(new Set(data.bases.map(b=>b.id)).size,data.bases.length);
 assert.equal(data.radiusMeters,138900);
 for(const b of data.bases){

@@ -1176,10 +1176,12 @@
       "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
-      "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
+      "note": "Owner confirms AEL 148 has hangars at San Antonio International Airport near AirMed International. The original operator-published coordinate is retained; it is not a surveyed launch point. Both services share an airport marker at this map scale and retain separate 75 NM geodesic radii.",
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "siteGroup": "san-antonio-international",
+      "confirmation": "Owner-confirmed airport presence, October 12, 2026"
     },
     {
       "operator": "airevac",
@@ -1324,13 +1326,15 @@
         }
       ],
       "precision": "Approximate address (Esri geocoder)",
-      "review": true,
-      "note": "Operator confirms San Antonio base; airport master plan identifies Premier AeroNautique campus. Campus-level marker, not individual hangar. 75 NM is a comparison radius, not this long-range service's operating limit.",
+      "review": false,
+      "note": "Owner personally visited and confirmed AirMed International at San Antonio International Airport and confirmed nearby AEL 148 hangars at the same airport. Presence is resolved. The retained campus coordinate is approximate, not a surveyed hangar or launch point. The shared airport marker does not alter either service's individual 75 NM geodesic radius.",
       "lat": 29.535389,
       "lng": -98.481842,
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "siteGroup": "san-antonio-international",
+      "confirmation": "Owner-confirmed airport presence, October 12, 2026"
     },
     {
       "operator": "guardian",
@@ -2244,15 +2248,6 @@
       ]
     },
     {
-      "name": "AirMed International - San Antonio, TX",
-      "category": "Campus precision",
-      "question": "Operator and airport sources confirm the SAT base at the Premier AeroNautique campus. Confirm exact AirMed hangar(s) and launch coordinate within 10440 John Cape Road; accreditation listings use a general airport address.",
-      "sources": [
-        "https://airmed.com/about-us/our-bases",
-        "https://flysanantonio.com/wp-content/uploads/2022/09/SAT-MP_2-Inventory-FINAL_20220818.pdf"
-      ]
-    },
-    {
       "name": "AeroCare - Alpine and Pecos, TX",
       "category": "Aircraft assignment / pad precision",
       "question": "Current Med-Trans affiliate roster and NPI records establish both bases. Confirm aircraft type and exact launch pad/hangar at Alpine Hangar 41 (3401 N State Highway 118) and Pecos (1363 Massey Street, Trailer 1).",
@@ -2350,6 +2345,6 @@
     "boundaryUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/7",
     "distance": "WGS84 ellipsoidal geodesics. Nearest point on Census Texas polygon in a base-centered azimuthal equidistant projection. Boundary is generalized; near-threshold cases need exact-site review.",
     "screenedLocatorRecords": 322,
-    "limitations": "Not a dispatch tool, operational coverage guarantee, aircraft range limit, response-time model or membership coverage map. No internal roster or direct base confirmation was available."
+    "limitations": "Not a dispatch tool, operational coverage guarantee, aircraft range limit, response-time model or membership coverage map. No comprehensive internal roster was available. Owner confirmations are identified in individual records; approximate coordinates are not surveyed launch points."
   }
 }

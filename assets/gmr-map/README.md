@@ -18,7 +18,9 @@ The original `texas-ingram-air-evac-map.html` is intentionally unchanged. AEL 47
 
 Two additional records are review candidates, hidden by default: Guardian 72 at Idabel and AEL 189 at Anadarko. Guardian's relationship to AEL 184 at the same airport address remains unresolved. No separately confirmed Guardian site is asserted in the default layer.
 
-18 supported sites have open questions, in addition to the two candidates. A hollow marker and dashed ring mean a status, address, pad or aircraft-assignment question is open. The 23-item verification list also includes legacy records not plotted and the near-threshold Dodge City location. An open question is not evidence that a base is closed.
+17 supported sites have open questions, in addition to the two candidates. A hollow marker and dashed ring mean a status, address, pad or aircraft-assignment question is open. The 22-item verification list also includes legacy records not plotted and the near-threshold Dodge City location. An open question is not evidence that a base is closed.
+
+The owner personally visited AirMed International at San Antonio International Airport and confirmed that both AirMed and AEL 148 have nearby hangars there on October 12, 2026. This resolves the AirMed San Antonio verification item. Both records carry owner-confirmation notes. At the statewide map scale, a shared two-color airport marker opens both records; filtering to one service shows its individual marker. The display marker is the midpoint of the two recorded coordinates, not a replacement launch coordinate. Both original coordinates and all 75 NM ring vertices are unchanged.
 
 ## Source Method
 
@@ -31,7 +33,7 @@ The research screened 322 records from the Air Evac, Med-Trans and Guardian publ
 - https://airmed.com/about-us/our-bases
 - https://npiregistry.cms.hhs.gov/
 
-Each mapped base carries its specific links and evidence note. NPI status alone does not establish present operations. Recruiting alone does not establish an opening date. Directory coordinates were corrected when stronger address evidence was available, using Census or Esri address geocoding; these are not surveyed landing pads. No internal roster or direct operational confirmation was available beyond the La Grange correction. Public-source completeness cannot be guaranteed.
+Each mapped base carries its specific links and evidence note. NPI status alone does not establish present operations. Recruiting alone does not establish an opening date. Directory coordinates were corrected when stronger address evidence was available, using Census or Esri address geocoding; these are not surveyed landing pads. No comprehensive internal roster was available. Owner confirmations cover the La Grange closure and the presence of AirMed International and AEL 148 at San Antonio International Airport. Public-source completeness cannot be guaranteed.
 
 ## Geometry
 
