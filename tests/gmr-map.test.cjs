@@ -1,0 +1,30 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const root = path.resolve(__dirname,'..');
+const context = {window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'assets/gmr-map/data.js'),'utf8'),context);
+const data = context.window.GMR_MAP_DATA;
+assert.equal(data.counties.features.length,254);
+assert.equal(data.bases.length,66);
+assert.equal(data.bases.filter(b=>b.status==='Publicly supported').length,64);
+assert.equal(data.bases.filter(b=>b.status==='Review candidate').length,2);
+assert.equal(data.reviewItems.length,23);
+assert.equal(new Set(data.bases.map(b=>b.id)).size,data.bases.length);
+assert.equal(data.radiusMeters,138900);
+for(const b of data.bases){
+  assert(!/La Grange|Headquarters/i.test(b.name));
+  assert(b.distanceToTexasNm<=75 && b.distanceToTexasNm>=0);
+  assert(b.lat>25 && b.lat<39 && b.lng>-108 && b.lng<-90);
+  assert(b.sources.length>0 && b.sources.every(s=>s.url.startsWith('https://')));
+  assert(b.precision && b.note && b.status && b.checked);
+  assert.equal(b.circle.coordinates[0].length,361);
+  assert.deepEqual(b.circle.coordinates[0][0],b.circle.coordinates[0][360]);
+}
+assert(data.bases.find(b=>b.id==='ael-181').lng > -99.75);
+assert(data.bases.find(b=>b.name.includes('Lifeteam 129')).lng > -94.9);
+assert.equal(data.bases.filter(b=>b.name==='AeroCare I + III - Lubbock').length,1);
+assert(data.bases.find(b=>b.operator==='guardian').review);
+assert(data.bases.find(b=>b.id==='ael-189').review);
+console.log('GMR map dataset: all assertions passed.');
