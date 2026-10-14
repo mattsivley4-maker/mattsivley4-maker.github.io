@@ -45,6 +45,10 @@ The browser uses a conformal conic projection. Census polygon winding is normali
 
 ## Checks and Maintenance
 
+Hovering or keyboard-focusing a known aircraft base replaces its pin with a small top-down helicopter, airplane, or nose-to-tail split hybrid. The shared San Antonio airport marker uses a red helicopter half and green airplane half. Unknown aircraft types retain their circle. The glyph stays centered on the existing display coordinate and keeps a constant size during map zoom; no base coordinates or radius geometry are changed.
+
+With Playwright available, run `node tests/gmr-map-hover.browser.cjs` to check the aircraft states, hover exit, keyboard selection, filtering, zoom sizing, geometry preservation and responsive layouts. It uses Edge by default; set `BROWSER_CHANNEL` for another installed Chromium channel. Pass the deployed page URL as its first argument to test production.
+
 Run the dependency-free dataset regression checks from the repository root:
 
 ```sh

@@ -15,6 +15,8 @@
   let airportMarker = null;
   let visible = [];
   let scale = 1;
+  let hoveredMarker = null;
+  let previewMarker = null;
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const links = sources => sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(s.title)}</a>`).join('');
   const icons = () => window.lucide?.createIcons();
@@ -29,6 +31,10 @@
   const texas = data.texas.features.map(orientFeature);
   const counties = data.counties.features.map(orientFeature);
   const svg = d3.select('#map');
+  // Top-down silhouettes share a nose-to-tail centerline for the mixed-aircraft glyph.
+  const airplane = 'M0,-10 C1.1,-10 1.5,-8 1.5,-6 L1.5,-2 L9,2 L9,4 L1.5,2 L1.2,6 L4,8 L4,9 L0,8 L-4,9 L-4,8 L-1.2,6 L-1.5,2 L-9,4 L-9,2 L-1.5,-2 L-1.5,-6 C-1.5,-8 -1.1,-10 0,-10Z';
+  const helicopter = 'M0,-8 C2.7,-8 3,-5 2.5,-2 L1.4,2 L.8,7 L3.5,8 L3.5,9 L0,8.5 L-3.5,9 L-3.5,8 L-.8,7 L-1.4,2 L-2.5,-2 C-3,-5 -2.7,-8 0,-8Z M-9,-3 L9,-3 M-6.5,-9 L6.5,3';
+  svg.append('defs').html(`<clipPath id="aircraft-left"><rect x="-11" y="-12" width="11" height="24"/></clipPath><clipPath id="aircraft-right"><rect x="0" y="-12" width="11" height="24"/></clipPath><g id="aircraft-fixed"><path d="${airplane}"/></g><g id="aircraft-rotor"><path d="${helicopter}"/></g><g id="aircraft-mixed"><path d="${helicopter}" clip-path="url(#aircraft-left)"/><path d="${airplane}" clip-path="url(#aircraft-right)"/></g>`);
   const projection = d3.geoConicConformal().parallels([27.5,35]).rotate([100,0]).fitExtent([[45,45],[950,800]], {type:'FeatureCollection',features:[...texas,...data.bases.map(b=>({type:'Feature',geometry:b.circle}))]});
   const path = d3.geoPath(projection);
   const world = svg.append('g');
@@ -42,19 +48,49 @@
   const markerLayer = world.append('g');
   const airportLayer = world.append('g');
   const labelLayer = world.append('g');
+  const aircraftLayer = world.append('g').attr('class','aircraft-hover-icon').attr('aria-hidden','true').style('display','none');
+  aircraftLayer.append('use').attr('class','aircraft-halo');
+  aircraftLayer.append('use').attr('class','aircraft-silhouette');
+  aircraftLayer.append('use').attr('class','aircraft-silhouette aircraft-secondary').attr('clip-path','url(#aircraft-right)');
+  function aircraftKind(b){
+    const modes=(b.members || [b]).map(site=>site.mode.toLowerCase());
+    const rotor=modes.some(mode=>mode.includes('rotor'));
+    const fixed=modes.some(mode=>mode.includes('fixed'));
+    return rotor && fixed ? 'mixed' : rotor ? 'rotor' : fixed ? 'fixed' : 'unknown';
+  }
+  function renderAircraftPreview(){
+    const focused=document.activeElement?.classList?.contains('base-marker')?document.activeElement.__data__:null;
+    const candidate=hoveredMarker || focused;
+    previewMarker=candidate && aircraftKind(candidate)!=='unknown'?candidate:null;
+    markerLayer.selectAll('.base-marker').classed('aircraft-preview',b=>previewMarker?.id===b.id);
+    airportLayer.selectAll('.shared-marker').classed('aircraft-preview',b=>previewMarker?.id===b.id);
+    aircraftLayer.style('display',previewMarker?null:'none');
+    if(previewMarker){
+      const kind=aircraftKind(previewMarker);
+      const color=operators[previewMarker.operator || 'airevac'].color;
+      aircraftLayer.attr('data-aircraft',kind);
+      aircraftLayer.selectAll('use').attr('href',`#aircraft-${kind}`);
+      aircraftLayer.select('.aircraft-silhouette').attr('fill',previewMarker.review?'white':color).attr('stroke',color);
+      aircraftLayer.select('.aircraft-secondary').style('display',previewMarker.members?null:'none').attr('fill',operators.airmed.color).attr('stroke',operators.airmed.color);
+    }
+    resizeMarks();
+  }
+  function markerEnter(event,b){hoveredMarker=b;renderAircraftPreview();showTooltip(event,b);}
+  function markerLeave(){hoveredMarker=null;$('tooltip').hidden=true;renderAircraftPreview();}
   const zoom = d3.zoom().scaleExtent([1,14]).translateExtent([[-100,-100],[1100,960]]).on('zoom', event => {
     scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();
   });
   svg.call(zoom).on('dblclick.zoom',null);
   function resizeMarks(){
-    markerLayer.selectAll('circle').attr('r',b => (selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
+    markerLayer.selectAll('circle').attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
     airportLayer.selectAll('.shared-marker').attr('transform',b=>`translate(${projection([b.lng,b.lat])}) scale(${1/scale})`);
+    if(previewMarker) aircraftLayer.attr('transform',`translate(${projection([previewMarker.lng,previewMarker.lat])}) scale(${1/scale})`);
     labelLayer.selectAll('text').attr('font-size',10/scale).style('font-size',`${10/scale}px`).attr('stroke-width',3/scale).attr('dx',8/scale).attr('dy',-7/scale);
     stateLayer.selectAll('text').style('opacity', scale > 2 ? 0.4 : 1);
   }
   function showTooltip(event,b){
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
-    $('tooltip').textContent=`${b.name} | ${b.status}${b.review?' | Open question':''}`;
+    $('tooltip').textContent=`${b.name} | ${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''} | ${b.status}${b.review?' | Open question':''}`;
     $('tooltip').hidden=false;
     const w=$('tooltip').offsetWidth,h=$('tooltip').offsetHeight;
     $('tooltip').style.left=`${Math.max(6,Math.min(event.clientX-shell.left+12,shell.width-w-8))}px`;
@@ -88,6 +124,8 @@
     document.querySelectorAll('.base-row').forEach(el=>el.classList.toggle('selected',el.dataset.id===selected?.id));resizeMarks();
   }
   function render(){
+    hoveredMarker=null;
+    $('tooltip').hidden=true;
     const enabled=new Set([...document.querySelectorAll('#operators input:checked')].map(x=>x.value));
     const query=$('search').value.trim().toLowerCase();
     const mode=$('aircraft').value;
@@ -102,18 +140,20 @@
     $('list').innerHTML=visible.map(b=>`<button class="base-row" data-id="${b.id}"><span class="swatch" style="background:${b.review?'white':operators[b.operator].color};border:2px solid ${operators[b.operator].color}"></span><span><strong>${escape(b.name)}</strong><small>${escape(b.city)}, ${escape(b.state)} / ${escape(b.mode)}</small>${b.review?`<small class="question-text">${b.status==='Review candidate'?'Unconfirmed candidate':'Open location / status question'}</small>`:''}</span></button>`).join('')||'<p class="empty">No matching bases.</p>';
     $('list').querySelectorAll('button').forEach(el=>el.onclick=()=>selectBase(visible.find(b=>b.id===el.dataset.id),true));
     ringLayer.selectAll('path').data(visible,b=>b.id).join('path').attr('class',b=>`radius${b.review?' question':''}`).attr('d',b=>path(b.circle)).attr('fill',b=>operators[b.operator].color).attr('stroke',b=>operators[b.operator].color).style('display',$('rings').checked?null:'none');
-    markerLayer.selectAll('circle').data(points,b=>b.id).join('circle').attr('class','base-marker').attr('cx',b=>projection([b.lng,b.lat])[0]).attr('cy',b=>projection([b.lng,b.lat])[1]).attr('fill',b=>b.review?'#fff':operators[b.operator].color).attr('stroke',b=>b.review?operators[b.operator].color:'#fff').attr('tabindex',0).attr('role','button').attr('aria-label',b=>`${b.name}, ${b.status}${b.review?', open question':''}`).on('click',(event,b)=>{event.stopPropagation();selectBase(b);}).on('keydown',(event,b)=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectBase(b);}}).on('pointermove',showTooltip).on('pointerleave',()=>{$('tooltip').hidden=true;});
+    markerLayer.selectAll('circle').data(points,b=>b.id).join('circle').attr('class','base-marker').attr('data-aircraft',aircraftKind).attr('cx',b=>projection([b.lng,b.lat])[0]).attr('cy',b=>projection([b.lng,b.lat])[1]).attr('fill',b=>b.review?'#fff':operators[b.operator].color).attr('stroke',b=>b.review?operators[b.operator].color:'#fff').attr('tabindex',0).attr('role','button').attr('aria-label',b=>`${b.name}, ${b.mode}, ${b.status}${b.review?', open question':''}`).on('click',(event,b)=>{event.stopPropagation();selectBase(b);}).on('keydown',(event,b)=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectBase(b);}}).on('pointerenter',markerEnter).on('pointermove',showTooltip).on('pointerleave',markerLeave).on('focus',renderAircraftPreview).on('blur',renderAircraftPreview);
     airportLayer.selectAll('.shared-marker').data(airportMarker?[airportMarker]:[],b=>b.id).join(enter=>{
       const group=enter.append('g').attr('class','base-marker shared-marker');
       group.append('path').attr('d',d3.arc().innerRadius(0).outerRadius(9).startAngle(0).endAngle(Math.PI)()).attr('fill',operators.airevac.color);
       group.append('path').attr('d',d3.arc().innerRadius(0).outerRadius(9).startAngle(Math.PI).endAngle(2*Math.PI)()).attr('fill',operators.airmed.color);
       group.append('circle').attr('class','shared-outline').attr('r',9).attr('fill','none').attr('stroke','#fff').attr('stroke-width',2);
       group.append('text').attr('text-anchor','middle').attr('dy','0.35em').text('2');
+      group.append('circle').attr('r',12).attr('fill','transparent').attr('stroke','none');
       return group;
-    }).attr('tabindex',0).attr('role','button').attr('aria-label',b=>b.name).on('click',event=>{event.stopPropagation();selectAirport();}).on('keydown',event=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectAirport();}}).on('pointermove',showTooltip).on('pointerleave',()=>{$('tooltip').hidden=true;});
+    }).attr('data-aircraft',aircraftKind).attr('tabindex',0).attr('role','button').attr('aria-label',b=>b.name).on('click',event=>{event.stopPropagation();selectAirport();}).on('keydown',event=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectAirport();}}).on('pointerenter',markerEnter).on('pointermove',showTooltip).on('pointerleave',markerLeave).on('focus',renderAircraftPreview).on('blur',renderAircraftPreview);
     const labels=airportMarker?[...points,{...airportMarker,name:'SAT: AEL 148 + AirMed'}]:points;
     labelLayer.selectAll('text').data(labels,b=>b.id).join('text').attr('class','base-label').attr('x',b=>projection([b.lng,b.lat])[0]).attr('y',b=>projection([b.lng,b.lat])[1]).text(b=>b.name.replace('Air Evac Lifeteam ','AEL ')).style('display',$('labels').checked?null:'none');
     renderSelection();
+    renderAircraftPreview();
   }
   $('search').addEventListener('input',render);
   document.querySelectorAll('input[type=checkbox],select').forEach(el=>el.addEventListener('change',render));
