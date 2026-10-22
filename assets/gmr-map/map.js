@@ -19,6 +19,9 @@
   let previewMarker = null;
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const links = sources => sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(s.title)}</a>`).join('');
+  const phoneText = b => b.phone || (b.rosterEvidence ? 'Not listed (roster N/A)' : 'Not supplied');
+  const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
+  const phoneDetail = b => `<div class="base-phone"><strong>Base phone</strong> ${phoneLink(b)}<small>${escape(b.phoneStatus || 'Not supplied in the screenshots')}</small></div>`;
   const icons = () => window.lucide?.createIcons();
   $('total').textContent = `${supported.length} supported base sites`;
   $('regional-count').textContent = `${supported.filter(b => b.state === 'TX').length} Texas / ${supported.filter(b => b.state !== 'TX').length} border-region / ${data.bases.length-supported.length} review candidates`;
@@ -90,16 +93,22 @@
   }
   function showTooltip(event,b){
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
-    $('tooltip').textContent=`${b.name} | ${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''} | ${b.status}${b.review?' | Open question':''}`;
+    const phoneLines=(b.members || [b]).map(site=>`${b.members?(site.operator==='airevac'?'AEL 148':'AirMed International')+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
+    $('tooltip').textContent=`${b.members?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
     $('tooltip').hidden=false;
     const w=$('tooltip').offsetWidth,h=$('tooltip').offsetHeight;
-    $('tooltip').style.left=`${Math.max(6,Math.min(event.clientX-shell.left+12,shell.width-w-8))}px`;
-    $('tooltip').style.top=`${Math.max(6,Math.min(event.clientY-shell.top+12,shell.height-h-8))}px`;
+    const target=event.currentTarget.getBoundingClientRect();
+    const x=Number.isFinite(event.clientX)?event.clientX:target.left+target.width/2;
+    const y=Number.isFinite(event.clientY)?event.clientY:target.top+target.height/2;
+    $('tooltip').style.left=`${Math.max(6,Math.min(x-shell.left+12,shell.width-w-8))}px`;
+    $('tooltip').style.top=`${Math.max(6,Math.min(y-shell.top+12,shell.height-h-8))}px`;
   }
   function selectBase(b,focusMap=false){
     selectedAirport=false;
     selected=b;
     $('detail').innerHTML=`<div class="detail-top"><div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h2>${escape(b.name)}</h2></div><button id="close-detail" aria-label="Clear selection" title="Clear selection"><i data-lucide="x"></i></button></div><p>${escape(b.address)}</p><div class="details-grid"><div><strong>Evidence status</strong>${escape(b.status)}${b.review?' / open question':''}</div><div><strong>Aircraft</strong>${escape(b.mode)}</div><div><strong>Coordinate precision</strong>${escape(b.precision)}<br>${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div><div><strong>Distance to Texas</strong>${b.distanceToTexasNm===0?'Within Texas':`${b.distanceToTexasNm.toFixed(2)} NM`} / 75 NM circle</div></div><p class="${b.review?'question-text':'muted'}">${escape(b.note)}</p><div class="sources">${links(b.sources)}</div>`;
+    $('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
+    if(b.rosterEvidence) $('detail').insertAdjacentHTML('beforeend',`<p class="muted">Roster evidence: image ${b.rosterEvidence.images.join(', ')}, row ${b.rosterEvidence.rows.join(', ')}; supplied October 20, 2026. Document effective date not shown.<br>Roster address: ${escape(b.rosterEvidence.addresses.join(' / '))}</p>`);
     if(b.confirmation) $('detail').insertAdjacentHTML('beforeend',`<p class="confirmed">${escape(b.confirmation)}</p>`);
     if(b.siteGroup && airportMarker){
       $('detail').insertAdjacentHTML('beforeend','<button class="airport-record" id="airport-services">Both San Antonio airport services</button>');
@@ -114,6 +123,7 @@
     selected=null;selectedAirport=true;
     $('detail').innerHTML=`<h2>San Antonio International Airport</h2><p class="confirmed">Both services confirmed at this airport by the owner, October 12, 2026.</p><div class="airport-services">${airportMarker.members.map(b=>`<div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h3>${escape(b.name)}</h3><p>${escape(b.mode)}</p><p>${escape(b.address)}</p><button class="airport-record" data-airport-base="${b.id}">Base record and sources</button></div>`).join('')}</div><p class="muted">Nearby hangars share this display marker. Each 75 NM ring remains centered on its own recorded coordinate; neither coordinate has been moved or merged.</p>`;
     $('detail').querySelectorAll('[data-airport-base]').forEach(el=>el.onclick=()=>selectBase(airportMarker.members.find(b=>b.id===el.dataset.airportBase)));
+    $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',phoneDetail(airportMarker.members[i])));
     renderSelection();
   }
   function renderSelection(){
@@ -163,5 +173,11 @@
   $('question-count').textContent=`(${data.reviewItems.length})`;
   $('questions').innerHTML=data.reviewItems.map((q,i)=>`<article class="question"><div><h4>${i+1}. ${escape(q.name)}</h4><p class="category">${escape(q.category)}</p></div><div><p>${escape(q.question)}</p><div class="sources">${links(q.sources.map((url,j)=>({url,title:`Source ${j+1}`})))}</div></div></article>`).join('');
   $('excluded').innerHTML=data.exclusions.map(e=>`<div class="exclusion"><strong>${escape(e.name)}</strong><br>${escape(e.reason)}</div>`).join('');
+  $('roster-checks').innerHTML=data.rosterScreening.filter(r=>r.result!=='Existing site corroborated').map(r=>`<div class="exclusion"><strong>${escape(r.name)}, ${escape(r.state)}</strong><br>${r.distanceToTexasNm.toFixed(2)} NM from Texas at the screened coordinate; outside the 75 NM rule. Roster row ${r.row}.</div>`).join('');
+  // Keyboard users receive the same phone information as pointer users.
+  svg.on('focusin.phone',event=>{
+    const marker=event.target.closest('.base-marker');
+    if(marker) showTooltip({currentTarget:marker},marker.__data__);
+  }).on('focusout.phone',()=>{$('tooltip').hidden=true;});
   icons();render();
 })();

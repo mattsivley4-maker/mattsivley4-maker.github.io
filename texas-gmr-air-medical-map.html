@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Source-audited Texas and border-region GMR air medical base map with 75 nautical mile geographic radii and open verification questions.">
   <title>Texas GMR Air Bases | 75 NM Map</title>
-  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261014-aircraft1">
+  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261020-roster1">
 </head>
 <body>
   <header>
     <div><p class="eyebrow">TEXAS + BORDER REGION</p><h1>GMR Air Medical Bases</h1></div>
     <nav aria-label="Maps and records"><a href="texas-ingram-air-evac-map.html">Ingram Ready Mix map</a><a href="#audit">Verification record</a><a href="assets/gmr-map/bases.csv" download><i data-lucide="download"></i>Base CSV</a></nav>
   </header>
-  <div class="notice"><i data-lucide="info"></i><p><strong>75 NM geographic radii, not guaranteed service coverage.</strong> Public-source research checked October 12, 2026. Not a dispatch or flight-planning tool. Aircraft availability, weather, terrain, clinical capability and operating limits are not modeled.</p></div>
+  <div class="notice"><i data-lucide="info"></i><p><strong>75 NM geographic radii, not guaranteed service coverage.</strong> Roster cross-check updated October 20, 2026. Base phones are supplied roster numbers, not verified dispatch lines. Not a dispatch or flight-planning tool. Aircraft availability, weather, terrain, clinical capability and operating limits are not modeled.</p></div>
   <main>
     <section class="workspace" aria-label="Air medical base map">
       <aside class="sidebar">
@@ -42,12 +42,13 @@
     </section>
     <section id="audit" class="audit">
       <div class="section-head"><div><p class="eyebrow">EVIDENCE &amp; EXCEPTIONS</p><h2>Verification Record</h2></div><a href="assets/gmr-map/base-audit.json" download><i data-lucide="download"></i>Full data + sources</a></div>
-      <div class="audit-summary"><div><h3>Scope</h3><p>Air Evac Lifeteam, Med-Trans programs, AirMed International and Guardian Flight. Includes Texas bases and out-of-state sites within 75 NM of Texas, regardless of state name. Ground-only operations, offices and non-GMR programs are excluded. Co-located AeroCare I / III in Lubbock are one site. AirMed International and AEL 148 retain separate records and radii at San Antonio International Airport.</p></div><div><h3>Accuracy Limits</h3><p>Circles are WGS84 ellipsoidal geodesics. Eligibility uses the nearest point on the Census 2024 1:500,000 Texas boundary. Address and campus markers are approximate, not surveyed landing pads. Near-threshold sites require precise-coordinate confirmation. No comprehensive internal roster was available. Owner confirmations are identified in the affected records.</p></div></div>
+      <div class="audit-summary"><div><h3>Scope</h3><p>Air Evac Lifeteam, Med-Trans programs, AirMed International and Guardian Flight. Includes Texas bases and out-of-state sites within 75 NM of Texas, regardless of state name. Ground-only operations, offices and non-GMR programs are excluded. Co-located AeroCare I / III in Lubbock are one site. AirMed International and AEL 148 retain separate records and radii at San Antonio International Airport.</p></div><div><h3>Accuracy Limits</h3><p>Circles are WGS84 ellipsoidal geodesics. Eligibility uses the nearest point on the Census 2024 1:500,000 Texas boundary. Address and campus markers are approximate, not surveyed landing pads. Near-threshold sites require precise-coordinate confirmation. Seven user-provided roster excerpts were cross-checked October 20, 2026; their effective date and completeness are not established. Phones are transcribed as supplied, not independently dial-verified. Missing roster entries do not establish closure.</p></div></div>
       <p class="closure"><strong>AEL 47 La Grange is excluded.</strong> The owner confirmed internally that this base no longer exists; stale public listings do not override that correction.</p>
       <p class="confirmed"><strong>San Antonio airport presence confirmed October 12, 2026.</strong> The owner personally visited AirMed International and confirms both AirMed International and AEL 148 have nearby hangars at San Antonio International Airport. AirMed San Antonio is no longer an open verification item. Coordinates remain approximate; the separate radius centers are unchanged.</p>
       <h3>Open Questions <span id="question-count"></span></h3>
       <p class="muted">These are evidence gaps, not declarations that a base is closed. Some concern only the launch address or aircraft assignment.</p>
       <div id="questions"></div>
+      <details class="exclusions"><summary>Supplied Roster: Outside the 75 NM Rule</summary><p>The 93 visible rows were matched to existing sites or screened geographically. The roster's other radius/range figures do not change this map's uniform 75 NM rule. Near-boundary results remain subject to exact-site and boundary precision.</p><div id="roster-checks"></div></details>
       <details class="exclusions"><summary>Other Exclusions and Border Checks</summary><div id="excluded"></div><p>Legacy Life Air Rescue records in Shreveport are not counted as Med-Trans: the current program is part of <a href="https://acadianairmed.com/operations/lifeairrescue/" target="_blank" rel="noopener">Acadian Air Med</a>. UT Health East Texas AIR1 is <a href="https://www.metroaviation.com/project/air-1/" target="_blank" rel="noopener">Metro Aviation</a>, not GMR. UT LIFESTAR I's San Angelo address in the Med-Trans locator conflicts with its Tennessee coordinates and <a href="https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet" target="_blank" rel="noopener">Tennessee program</a>; it is not a Texas base. Historical McAllen AEL records were not reinstated.</p></details>
     </section>
   </main>
@@ -55,7 +56,7 @@
   <noscript><p>JavaScript is required for the map. <a href="assets/gmr-map/bases.csv">Download the base list.</a></p></noscript>
   <script src="assets/gmr-map/d3.min.js"></script>
   <script src="assets/gmr-map/lucide.min.js"></script>
-  <script src="assets/gmr-map/data.js?v=20261012-sat1"></script>
-  <script src="assets/gmr-map/map.js?v=20261014-aircraft1"></script>
+  <script src="assets/gmr-map/data.js?v=20261020-roster1"></script>
+  <script src="assets/gmr-map/map.js?v=20261020-roster1"></script>
 </body>
 </html>

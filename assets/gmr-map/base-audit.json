@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-12",
+  "checked": "2026-10-20",
   "radiusNm": 75,
   "radiusMeters": 138900,
   "bases": [
@@ -41,8 +41,27 @@
       "review": true,
       "note": "Uses current NPI and Arkansas December 2025 EMS-license address rather than the old N 14th Street locator entry. Street-geocoded, not surveyed pad.",
       "distanceToTexasNm": 28.2,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Listed as N/A in supplied roster",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          24
+        ],
+        "images": [
+          1
+        ],
+        "addresses": [
+          "958 Highway 71 N, DeQueen, AR 71832"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -70,8 +89,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 41.53,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "337-738-7904",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          176
+        ],
+        "images": [
+          3
+        ],
+        "addresses": [
+          "505 Ellie Layne, Kinder, LA 70648"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -99,8 +137,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 34.27,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "318-475-5027",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          177
+        ],
+        "images": [
+          3
+        ],
+        "addresses": [
+          "306 Wallenburg Dr, Natchitoches, LA 71457"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -136,8 +193,27 @@
       "review": true,
       "note": "Locator point is near central Ada; registered address is at Ada Regional Airport. Census address interpolation used; exact hangar pin needs confirmation.",
       "distanceToTexasNm": 51.99,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "405-207-9220",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          240
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "231 John Herrington Ave, Ada, OK 74820"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -165,8 +241,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 13.12,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-482-0461",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          237
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "6333 N Main Street, Altus, OK 73521"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ael-189",
@@ -197,7 +292,9 @@
       "lng": -98.23144,
       "distanceToTexasNm": 55.11,
       "checked": "2026-10-12",
-      "status": "Review candidate"
+      "status": "Review candidate",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "airevac",
@@ -237,8 +334,27 @@
       "review": false,
       "note": "Airport relocation corroborated by city lease and current NPI address. Replaces the old Lake Murray Drive location.",
       "distanceToTexasNm": 13.13,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-226-3554",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          247
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "2205 Executive Airport Dr, Ardmore, OK 73401"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -274,8 +390,27 @@
       "review": true,
       "note": "Address matches NPI. Locator and address geocodes differ by roughly 1 km; approximate street point used pending exact-pad confirmation.",
       "distanceToTexasNm": 20.44,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-475-0566",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          239
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "2702 S 13th Str, Duncan, OK 73533"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ael-174",
@@ -301,12 +436,31 @@
       ],
       "precision": "Approximate address (Esri geocoder)",
       "review": true,
-      "note": "Regional trauma-board records corroborate Durant service. Uses current NPI address; proposed Eaker Field hangar may imply relocation. Current launch site needs confirmation.",
+      "note": "Roster row 252 explicitly identifies 1610 W University Boulevard, Suite A as the changed address, superseding 10 Waldron Drive. NPI agrees. The roster does not distinguish office/crew quarters from the aircraft launch pad; approximate address point retained.",
       "lat": 34.005775,
       "lng": -96.39296,
       "distanceToTexasNm": 11.79,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Listed as N/A in supplied roster",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          252
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "1610 W University Blvd Ste A, Durant, OK 74701"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -334,8 +488,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 29.34,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-303-9200",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          238
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "71 Norman Martin Boulevard, Elk City, OK 73644"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -371,8 +544,27 @@
       "review": true,
       "note": "Locator coordinate is near Hugo, not the listed Idabel address. Corrected to the registered address using Census geocoding; approximate street location.",
       "distanceToTexasNm": 6.22,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-286-5290",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          246
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "1200 SE Avenue N, Idabel, OK 74745"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ael-184",
@@ -396,10 +588,29 @@
       ],
       "precision": "Approximate site coordinate",
       "review": true,
-      "note": "GMR AEL 184 pilot recruitment and 2024 NPI registration support rotor-wing base. Airport location inherited from the same-address Guardian locator; exact pad and Guardian co-location require confirmation.",
+      "note": "Roster row 250 explicitly identifies AEL 184 as Idabel RW, opened March 15, 2024, at 2881 NW Airport Road. This supports the rotor base separately from AEL 129. It does not establish that the older Guardian 72 fixed-wing listing remains active alongside it. Exact pad is approximate.",
       "distanceToTexasNm": 5.82,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-376-2577",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          250
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "2881 NW Airport Rd, Idabel, OK 74745"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ael-180",
@@ -430,7 +641,9 @@
       "lng": -97.220554,
       "distanceToTexasNm": 46.48,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "airevac",
@@ -458,8 +671,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 64.83,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-772-2803",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          244
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "3705 E Main St, Weatherford, OK 73096"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -487,8 +719,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 29.02,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "580-256-2208",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          242
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "1620 Santa Fe Street, Woodward, OK 73801"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -516,15 +767,34 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "325-670-3200",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          313
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1900 Pine Street, Hendrick Med Ctr, Abilene, TX 79601"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
       "name": "SE TX Air Rescue / Air Evac Lifeteam 126 Beaumont, TX",
       "city": "Beaumont",
       "state": "TX",
-      "address": "2900 N Street, Suite 408, Beaumont, TX, 77702",
+      "address": "2900 North Street, Suite 408, Beaumont, TX 77702",
       "lat": 30.08784,
       "lng": -94.13286,
       "sourceUrl": "https://www.lifeteam.net/locations/se-tx-air-rescue-air-evac-lifeteam-126-beaumont,-tx",
@@ -545,17 +815,36 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "409-924-9262",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          322
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "2900 North Street, Suite 408, Beaumont, TX 77702"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
       "name": "Air Evac Lifeteam 54 \u2013 Big Spring, TX",
       "city": "Big Spring",
       "state": "TX",
-      "address": "3300 Rickabaugh Drive Suite B, Big Spring, TX, 79720",
-      "lat": 32.22972,
-      "lng": -101.52711,
+      "address": "1601 W 11th Pl, Big Spring, TX 79720",
+      "lat": 32.23638,
+      "lng": -101.4917,
       "sourceUrl": "https://www.lifeteam.net/locations/air-evac-lifeteam-54-%E2%80%93-big-spring,-tx",
       "locatorUrl": "https://www.lifeteam.net/services/service-area",
       "id": "airevac-256625cc",
@@ -571,15 +860,38 @@
         {
           "url": "https://npiregistry.cms.hhs.gov/provider-view/1083697809",
           "title": "CMS NPI address record (not proof of current operations)"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+          "title": "Address geocoder, October 20, 2026"
         }
       ],
       "mode": "Rotor-wing",
-      "precision": "Operator-published coordinate (not surveyed)",
+      "precision": "Approximate roster address point (Esri); not surveyed pad",
       "review": true,
-      "note": "Operator lists 3300 Rickabaugh Drive at the airfield, while NPI lists 1601 W 11th Place at the hospital. Retains operator's point; current launch site needs confirmation.",
+      "note": "Roster row 310 explicitly records the January 11, 2023 move from Rickabaugh Drive to 1601 W 11th Place. This agrees with the hospital-campus construction record and October 2026 TE61 flight pattern. Updated to the hospital address point; this is not a surveyed helipad.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "432-264-7068",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          310
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1601 W 11th Pl, Big Spring, TX 79720"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -607,8 +919,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "325-641-8988",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          308
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "122 S Park Drive, Brownwood, TX 76801"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -636,17 +967,36 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-876-9421",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          319
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "515 Dimmit County Airport Rd, Carrizo Springs, TX 78834"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
       "name": "Houston County Air Rescue / Air Evac Lifeteam \u2013127 Crockett, TX",
       "city": "Crockett",
       "state": "TX",
-      "address": "1080 E Loop 304, Crockett, TX, 75835",
-      "lat": 31.325293,
-      "lng": -95.438269,
+      "address": "1100 E Loop 304, Crockett, TX 75835",
+      "lat": 31.324602,
+      "lng": -95.43896,
       "sourceUrl": "https://www.lifeteam.net/locations/houston-county-air-rescue-air-evac-lifeteam-%E2%80%93127-crockett,-tx",
       "locatorUrl": "https://www.lifeteam.net/services/service-area",
       "id": "airevac-22bb14c7",
@@ -666,15 +1016,38 @@
         {
           "url": "https://npiregistry.cms.hhs.gov/provider-view/1831569474",
           "title": "CMS NPI address record (not proof of current operations)"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+          "title": "Address geocoder, October 20, 2026"
         }
       ],
       "mode": "Rotor-wing",
-      "precision": "Approximate address (Esri geocoder)",
+      "precision": "Approximate roster address point (Esri); not surveyed pad",
       "review": true,
-      "note": "Locator coordinate differs from the listed/NPI address by about 2 km. Address-geocoded point used pending precise pad confirmation.",
+      "note": "Roster row 323 identifies 1100 Texas Loop 304, normalized to the hospital's 1100 E Loop 304. NPI retains 1080 E Loop 304. Updated to the hospital address point, not a surveyed launch pad. A misleading geocoder match to Texas Avenue was rejected.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "936-545-4305",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          323
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1100 Texas Loop 304, Crockett, TX 75835"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -702,8 +1075,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "940-627-2045",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          317
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "609 Medical Center Drive, Decatur, TX 76234"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -731,8 +1123,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-255-6413",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          343
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "613 N Bedell, Del Rio, TX 78840"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -760,8 +1171,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-757-6514",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          312
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "3351 N Foster Maldonado Blvd, Eagle Pass, TX 78852"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -789,8 +1219,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "254-629-1008",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          321
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "9614 IH20, Eastland, TX 76448"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -818,8 +1267,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "903-389-7266",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          309
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "160 Interstate 45 S, Fairfield, TX 75840"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -847,8 +1315,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "817-579-2031",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          318
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1308 Paluxy Rd, Suite C, Granbury, TX 76048"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -876,8 +1363,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "903-454-4747",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          316
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "88 Majors Road, Greenville, TX 75402"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -905,8 +1411,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "254-580-9023",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          307
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "115 HCR 4282, Hillsboro, TX 76645"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -947,7 +1472,9 @@
       "note": "Current NPI and hospital-district 2025 lease material support the newer Thomas Street site; replaces Marvin Hancock Drive. Exact pad remains approximate.",
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "airevac",
@@ -975,8 +1502,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-257-0441",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          305
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1873 Airport Loop, Kerrville, TX 78028"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1004,17 +1550,36 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "254-628-1275",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          315
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1210 Bell Tower Road, Killeen, TX 76549"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
       "name": "Air Evac Lifeteam 93 \u2013 Laredo, TX",
       "city": "Laredo",
       "state": "TX",
-      "address": "2010 East Hillside  Suite 2, Laredo, TX, 78041",
-      "lat": 27.544986,
-      "lng": -99.475259,
+      "address": "5203 Maher Drive, Laredo, TX 78041",
+      "lat": 27.543589,
+      "lng": -99.469514,
       "sourceUrl": "https://www.lifeteam.net/locations/air-evac-lifeteam-93-%E2%80%93-laredo,-tx",
       "locatorUrl": "https://www.lifeteam.net/services/service-area",
       "id": "airevac-0d914a86",
@@ -1026,15 +1591,38 @@
         {
           "url": "https://www.lifeteam.net/services/service-area",
           "title": "Official service-area directory"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+          "title": "Address geocoder, October 20, 2026"
         }
       ],
       "mode": "Rotor-wing",
-      "precision": "Operator-published coordinate (not surveyed)",
-      "review": false,
-      "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
+      "precision": "Approximate roster address point (Esri); not surveyed pad",
+      "review": true,
+      "note": "Roster row 320 lists 5203 Maher Drive instead of the older Hillside address. Pin updated to the corresponding 5203 Maher Avenue address point returned by the geocoder. Street-suffix difference and exact launch pad remain unverified.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "956-568-5389",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          320
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "5203 Maher Drive, Laredo, TX 78041"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1062,8 +1650,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-693-3851",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          306
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "700B Avenue N, Marble Falls, TX 78654"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1091,8 +1698,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "940-327-8702",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          311
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "322 SW 25th Avenue, Mineral Wells, TX 76067"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1120,8 +1746,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "903-739-2544",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          324
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "675 Deshong Drive, Paris, TX 75460"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1149,8 +1794,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "830-334-2387",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          325
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "159 Medical Dr, Pearsall, TX 78061"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1178,10 +1842,29 @@
       "review": false,
       "note": "Owner confirms AEL 148 has hangars at San Antonio International Airport near AirMed International. The original operator-published coordinate is retained; it is not a surveyed launch point. Both services share an airport marker at this map scale and retain separate 75 NM geodesic radii.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
+      "checked": "2026-10-20",
       "status": "Publicly supported",
       "siteGroup": "san-antonio-international",
-      "confirmation": "Owner-confirmed airport presence, October 12, 2026"
+      "confirmation": "Owner-confirmed airport presence, October 12, 2026",
+      "phone": "210-592-8646",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          326
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1115 Paul Wilkins St, San Antonio, TX 78216"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1209,8 +1892,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "903-771-4558",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          314
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "8111 South Hwy 75, Sherman, TX 75090"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ael-181",
@@ -1240,8 +1942,27 @@
       "lat": 29.217567,
       "lng": -99.740529,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Listed as N/A in supplied roster",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          303
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "399 Airport Blvd, Uvalde, TX 78801"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "airevac",
@@ -1269,8 +1990,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "940-764-3990",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          304
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1610 10th Street, Wichita Falls, TX 76301"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "ami-dallas",
@@ -1301,7 +2041,9 @@
       "lng": -96.853327,
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "id": "ami-sat",
@@ -1334,7 +2076,9 @@
       "checked": "2026-10-12",
       "status": "Publicly supported",
       "siteGroup": "san-antonio-international",
-      "confirmation": "Owner-confirmed airport presence, October 12, 2026"
+      "confirmation": "Owner-confirmed airport presence, October 12, 2026",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "guardian",
@@ -1363,7 +2107,9 @@
       "note": "Still listed by Guardian at the same address now registered to Air Evac EMS / AEL 184. Cannot establish whether Guardian continues separately or this is a stale/transferred listing. Excluded from the default map; available in review layer.",
       "distanceToTexasNm": 5.82,
       "checked": "2026-10-12",
-      "status": "Review candidate"
+      "status": "Review candidate",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "medtrans",
@@ -1400,11 +2146,30 @@
       ],
       "mode": "Fixed-wing",
       "precision": "Operator-published coordinate (not surveyed)",
-      "review": true,
-      "note": "Current Med-Trans and EagleMed location pages list fixed-wing service here. A 2024 GMR administrative document marked EGM 023 inactive; current staffing/base status needs reconfirmation.",
+      "review": false,
+      "note": "Roster row 148 corroborates Liberal fixed-wing service at 757 Terminal Road. Repeated EMD23 departures/returns in the October 15 flight audit also support current local operations. An older inactive administrative cost-center label is not treated as base closure.",
       "distanceToTexasNm": 32.64,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "620-604-0572",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          148
+        ],
+        "images": [
+          2
+        ],
+        "addresses": [
+          "757 Terminal Road, Liberal, KS 67901"
+        ],
+        "aircraftTypes": [
+          "Fixed-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1435,13 +2200,32 @@
           "title": "CMS NPI address record (not proof of current operations)"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Approximate address (Esri geocoder)",
       "review": true,
-      "note": "NPI air-transport record identifies 474 Curry Road 11.5; operator lists 427 CR 12.5. Airport-site address difference and aircraft type need confirmation.",
+      "note": "Roster row 221 identifies rotor-wing service and reads 427 CR 12 #5, Texico. The operator lists 427 CR 12.5; the air-transport NPI lists 474 Curry Road 11.5. The existing airport/address point is retained pending exact-pad confirmation; these are not counted as separate bases.",
       "distanceToTexasNm": 2.1,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "575-389-0060",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          221
+        ],
+        "images": [
+          4
+        ],
+        "addresses": [
+          "427 CR 12 #5, Texico, NM 88135"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1472,13 +2256,32 @@
           "title": "CMS NPI address record (not proof of current operations)"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Approximate address (Esri geocoder)",
       "review": true,
-      "note": "NPI now identifies the airport address; operator locator still shows former hospital at 5419 N Lovington Highway. Current launch location and whether this is a relocation need confirmation. Only one Hobbs entry is shown.",
+      "note": "Roster row 223 explicitly supports 6601 W Carlsbad Highway, Hangar W2, replacing the older hospital address, and identifies rotor-wing service. The airport address point is retained; exact hangar/pad precision remains approximate.",
       "distanceToTexasNm": 7.58,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "432-215-9356",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          223
+        ],
+        "images": [
+          4
+        ],
+        "addresses": [
+          "6601 W Carlsbad Hwy #W2, Hobbs, NM 88240"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1501,18 +2304,37 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 14.28,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "575-396-3603",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          222
+        ],
+        "images": [
+          4
+        ],
+        "addresses": [
+          "1600 North Main Ave, Lovington, NM 88260"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-portales",
       "operator": "medtrans",
-      "name": "AeroCare - Portales",
+      "name": "AeroCare XII - Portales",
       "city": "Portales",
       "state": "NM",
       "address": "2041 Schlenker, Roosevelt General Hospital campus, Portales, NM 88130",
@@ -1537,17 +2359,36 @@
       "lat": 34.168942,
       "lng": -103.361402,
       "distanceToTexasNm": 15.82,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-224-6932",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          220
+        ],
+        "images": [
+          4
+        ],
+        "addresses": [
+          "2041 Schlenker Dr, Portales, NM 88130"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
       "name": "McAlester Regional AirCare",
       "city": "McAlester",
       "state": "OK",
-      "address": "1005 N Strong Boulevard, McAlester, OK, 74501",
-      "lat": 34.935833,
-      "lng": -95.748017,
+      "address": "1021 N Strong Blvd, McAlester, OK 74501",
+      "lat": 34.938048,
+      "lng": -95.749028,
       "sourceUrl": "https://www.med-trans.net/locations/mcalester-regional-aircare",
       "locatorUrl": "https://www.med-trans.net/services/service-area",
       "id": "medtrans-85fbd5d9",
@@ -1559,15 +2400,38 @@
         {
           "url": "https://www.med-trans.net/services/service-area",
           "title": "Official service-area directory"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+          "title": "Address geocoder, October 20, 2026"
         }
       ],
-      "mode": "Air medical",
-      "precision": "Operator-published coordinate (not surveyed)",
-      "review": false,
-      "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
-      "distanceToTexasNm": 59.96,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "mode": "Rotor-wing",
+      "precision": "Approximate roster address point (Esri); not surveyed pad",
+      "review": true,
+      "note": "Roster row 254 explicitly records a September 29, 2026 address change from 1005 to 1021 N Strong Boulevard. Updated to that address point. Rotor-wing type is supplied by the roster; exact launch pad remains approximate.",
+      "distanceToTexasNm": 60.09,
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "918-423-7735",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          254
+        ],
+        "images": [
+          5
+        ],
+        "addresses": [
+          "1021 N Strong Blvd, McAlester, OK 74501"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-alpine",
@@ -1598,7 +2462,9 @@
       "lng": -103.676628,
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "status": "Publicly supported",
+      "phone": null,
+      "phoneStatus": "Not supplied in the screenshots"
     },
     {
       "operator": "medtrans",
@@ -1632,10 +2498,29 @@
       "mode": "Fixed-wing",
       "precision": "Approximate address (Census geocoder)",
       "review": true,
-      "note": "Operator locator duplicates hospital-based helicopter coordinates. NPI supports airport address for fixed-wing service; approximate address location used, hangar confirmation requested.",
+      "note": "Roster row 337 corroborates fixed-wing service at 9901 American Drive. Its ZIP differs from the address-geocoder ZIP; the verified street address point is retained. Aircraft type and airport address are supported, but the precise launch/hangar coordinate is not surveyed.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-440-0149",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          337
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "9901 American Dr, Amarillo, TX 79106"
+        ],
+        "aircraftTypes": [
+          "Fixed-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1658,18 +2543,37 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-354-1625",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          338
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "1501 S Coulter St, Amarillo, TX 79106"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-airmed12-north",
       "operator": "medtrans",
-      "name": "St. Joseph AirMed 12 North - Centerville",
+      "name": "St. Joseph AirMed 12 - Centerville",
       "city": "Centerville",
       "state": "TX",
       "address": "380 W Frontage Road, Centerville, TX 75833",
@@ -1690,17 +2594,36 @@
       ],
       "precision": "Approximate address (Esri geocoder)",
       "review": true,
-      "note": "North base opened in late 2024. NPI says 380 W Frontage Rd; grand-opening report says 404 W Frontage Road South, about 35 m apart in geocoding. One base, exact pad confirmation requested.",
+      "note": "Roster row 329 corroborates 380 W Frontage Road and rotor-wing service, but calls Centerville South while public opening material calls it North. City-based name used to avoid asserting the disputed directional label. Exact pad remains approximate.",
       "lat": 31.255985,
       "lng": -95.988931,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "979-253-2768",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          329
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "380 W Frontage Rd, Centerville, TX 75833"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-childress",
       "operator": "medtrans",
-      "name": "LIFESTAR - Childress",
+      "name": "NW Texas LIFESTAR IV - Childress",
       "city": "Childress",
       "state": "TX",
       "address": "2021 Country Club Drive, Childress, TX 79201",
@@ -1725,8 +2648,27 @@
       "lat": 34.438157,
       "lng": -100.226946,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-440-2586",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          327
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "2021 Country Club Dr, Childress, TX 79201"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-airmed12-south",
@@ -1756,8 +2698,27 @@
       "lat": 30.582252,
       "lng": -96.292144,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "979-764-5286",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          328
+        ],
+        "images": [
+          6
+        ],
+        "addresses": [
+          "1602 Rock Prairie Rd, College Station, TX 77845"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1786,11 +2747,32 @@
       ],
       "mode": "Rotor + fixed-wing",
       "precision": "Operator-published coordinate (not surveyed)",
-      "review": false,
-      "note": "Co-located AeroCare I and III listings are grouped as one physical site. AeroCare III fixed-wing is also listed by EagleMed; aircraft count is not inferred.",
+      "review": true,
+      "note": "Roster rows 330-331 list AeroCare I and III together at 6006 North Cedar Avenue and label both rotor-wing. The official EagleMed AeroCare III page still labels III fixed-wing. One shared physical site is retained with the previously supported rotor + fixed-wing classification, explicitly under aircraft-assignment review; no duplicate pin is added.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-744-0044",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          330,
+          331
+        ],
+        "images": [
+          6,
+          7
+        ],
+        "addresses": [
+          "6006 North Cedar Avenue, Lubbock, TX 79410"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-kite",
@@ -1820,8 +2802,27 @@
       "lat": 33.484152,
       "lng": -101.817661,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "972-324-3730",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          342
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "12111 CR 2500, Lubbock, TX 79404"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1844,13 +2845,32 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "870-408-0991",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          333
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "409 E Yukon Road, Odessa, TX 79762"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1873,22 +2893,41 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "806-440-0149",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          339
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "122 W 30th Street Ste 101, Pampa, TX 79065"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-pecos",
       "operator": "medtrans",
-      "name": "AeroCare - Pecos",
+      "name": "AeroCare X - Pecos",
       "city": "Pecos",
       "state": "TX",
       "address": "1363 Massey Street, Trailer 1, Pecos, TX 79772",
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "sources": [
         {
           "url": "https://www.med-trans.net/affiliates",
@@ -1905,12 +2944,31 @@
       ],
       "precision": "Approximate address (Esri geocoder)",
       "review": true,
-      "note": "Current operator affiliate roster and air-transport NPI confirm Pecos; exact pad and aircraft assignment are not independently confirmed.",
+      "note": "Roster row 341 identifies AeroCare X as rotor-wing at 1363 Massey Street, Trailer 1. This aligns with the October 2026 N501MT repeated Pecos-area flight pattern. Exact pad remains an approximate address point.",
       "lat": 31.393744,
       "lng": -103.512446,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "423-250-4120",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          341
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "1363 Massey St, Trlr 1, Pecos, TX 79772"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-plainview",
@@ -1935,13 +2993,32 @@
         }
       ],
       "precision": "Approximate address (Census geocoder)",
-      "review": false,
-      "note": "Current operator affiliate roster and air-transport NPI corroborate this airport base; separate ground-only NPI is not counted.",
+      "review": true,
+      "note": "Roster row 340 lists 2404 Yonkers and rotor-wing service; the air-transport NPI identifies 3 Miller Drive at the airport. The roster's address note dates to 2018 and does not establish a newer relocation. Airport pin retained pending confirmation. The supplied phone matches Lovington's roster phone; shown as supplied, not independently verified.",
       "lat": 34.173582,
       "lng": -101.713603,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "575-396-3603",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          340
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "2404 Yonkers, Plainview, TX 79072"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -1973,8 +3050,27 @@
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "325-340-3025",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          335
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "Shannon Medical Center, 120 E Harris, San Angelo, TX 76903"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "id": "mt-airmed2",
@@ -2004,8 +3100,27 @@
       "lat": 31.365282,
       "lng": -100.503159,
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "325-249-3622",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          336
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "8926 Hangar Rd, San Angelo, TX 76904"
+        ],
+        "aircraftTypes": [
+          "Fixed-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -2028,13 +3143,32 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "432-245-2175",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          332
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "802 Hobbs Highway, Seminole, TX 79360"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     },
     {
       "operator": "medtrans",
@@ -2057,20 +3191,39 @@
           "title": "Official service-area directory"
         }
       ],
-      "mode": "Air medical",
+      "mode": "Rotor-wing",
       "precision": "Operator-published coordinate (not surveyed)",
       "review": false,
       "note": "Listed by the operator at the time of review. Public listings do not establish current aircraft availability.",
       "distanceToTexasNm": 0,
-      "checked": "2026-10-12",
-      "status": "Publicly supported"
+      "checked": "2026-10-20",
+      "status": "Publicly supported",
+      "phone": "870-408-0992",
+      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
+      "rosterEvidence": {
+        "received": "2026-10-20",
+        "effectiveDate": null,
+        "rows": [
+          334
+        ],
+        "images": [
+          7
+        ],
+        "addresses": [
+          "1562 Airport Drive, Fort Stockton, TX 79735"
+        ],
+        "aircraftTypes": [
+          "Rotor-wing"
+        ],
+        "source": "User-provided base roster screenshots; document effective date not shown"
+      }
     }
   ],
   "reviewItems": [
     {
       "name": "Guardian Flight 72 / Air Evac Lifeteam 184 - Idabel, OK",
-      "category": "Operating status / possible duplicate",
-      "question": "Does Guardian 72 fixed-wing still operate from 2881 NW Airport Road alongside AEL 184 rotor-wing, or has the Guardian listing been superseded? Confirm both brands, aircraft type and current base identifiers.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 250 confirms AEL 184 rotor-wing at Idabel airport, separately from AEL 129 in row 246. It does not list Guardian 72. Does Guardian 72 fixed-wing still operate independently, or is its public listing superseded? Absence from these excerpts is not proof of closure.",
       "sources": [
         "https://www.guardianflight.com/locations/gfl-072-%28fw%29-%E2%80%93-idabel%2C-ok",
         "https://careers.gmr.net/air-evac-lifeteam/jobs/56561?lang=en-us",
@@ -2088,8 +3241,8 @@
     },
     {
       "name": "Air Evac Lifeteam 174 - Durant, OK",
-      "category": "Possible relocation",
-      "question": "NPI now lists 1610 W University Boulevard, Suite A; older records list 10 Waldron Drive. City/state documents describe an Eaker Field hangar project. Has the flight base moved to the airport, and what is its current launch coordinate?",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 252 explicitly confirms the address change to 1610 W University Boulevard, Suite A from 10 Waldron Drive. Address conflict is resolved in favor of the roster/NPI address. Confirm whether that address is also the aircraft launch pad.",
       "sources": [
         "https://npiregistry.cms.hhs.gov/provider-view/1134883879",
         "https://durant.org/DocumentCenter/View/3763/January-2024-Department-Head-Reports"
@@ -2106,8 +3259,8 @@
     },
     {
       "name": "AeroCare IX - Hobbs, NM",
-      "category": "Address conflict",
-      "question": "Operator locator says 5419 N Lovington Highway (former hospital); NPI says 6601 W Carlsbad Highway, Hangar W2. Confirm current launch site and whether a relocation, separate aircraft or administrative-address change explains this.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 223 corroborates the airport address at 6601 W Carlsbad Highway, Hangar W2, and rotor-wing type. Former-hospital address conflict is resolved; confirm the exact airport launch pad/hangar coordinate.",
       "sources": [
         "https://www.med-trans.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1134709736"
@@ -2115,8 +3268,8 @@
     },
     {
       "name": "AeroCare II - Clovis / Texico, NM",
-      "category": "Address / aircraft type",
-      "question": "Operator lists 427 CR 12.5, while the air-transport NPI lists 474 Curry Road 11.5. Confirm the current airport hangar/pad and aircraft type. A separate AeroCare ground record must not become an extra flight base.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 221 confirms rotor-wing type but reads 427 CR 12 #5; the operator writes 427 CR 12.5 and NPI lists 474 Curry Road 11.5. Confirm the actual current pad before relocating the retained airport pin.",
       "sources": [
         "https://www.med-trans.net/locations/aerocare-ii-%E2%80%93-clovis%2C-nm",
         "https://npiregistry.cms.hhs.gov/provider-view/1073849527"
@@ -2124,8 +3277,8 @@
     },
     {
       "name": "Northwest Texas LIFESTAR fixed-wing - Amarillo, TX",
-      "category": "Incorrect locator pin",
-      "question": "Med-Trans's fixed-wing locator duplicates the helicopter hospital point at 1501 S Coulter Street. NPI lists 9901 American Drive at the airport. Confirm the fixed-wing hangar and separate helicopter/fixed-wing site count.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 337 confirms fixed-wing service at 9901 American Drive. The hospital helicopter and airport airplane remain separate sites. Confirm the exact airport hangar coordinate; the screenshot ZIP conflicts with address geocoding.",
       "sources": [
         "https://www.med-trans.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1669922985"
@@ -2133,21 +3286,11 @@
     },
     {
       "name": "Air Evac Lifeteam 54 - Big Spring, TX",
-      "category": "Address conflict",
-      "question": "Operator lists 3300 Rickabaugh Drive, Suite B; current NPI lists 1601 W 11th Place, Suite B. Confirm whether the helicopter launches from the airfield or hospital campus.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 310 explicitly confirms the 2023 move to 1601 W 11th Place at the hospital, corroborated by the construction record and TE61 flight pattern. The airport point has been replaced with a hospital address point. Confirm the precise current launch pad.",
       "sources": [
         "https://www.lifeteam.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1083697809"
-      ]
-    },
-    {
-      "name": "EagleMed 23 / Med-Trans fixed-wing - Liberal, KS",
-      "category": "Status conflict",
-      "question": "Current EagleMed and Med-Trans location pages list this base, but a 2024 GMR administrative location document marked EGM 023 inactive. An administrative cost-center label is not proof of a base closure. Confirm current staffing, operational control and physical base. The listed point is about 32.6 NM from Texas and geographically qualifies.",
-      "sources": [
-        "https://www.flyeaglemed.com/locations/eaglemed-23-%28fixed-wing%29-%E2%80%93-liberal%2C-ks",
-        "https://www.med-trans.net/services/service-area",
-        "https://www.globalmedicalresponse.com/docs/2024-email-documents/02-01-24-pay-group-locations"
       ]
     },
     {
@@ -2186,8 +3329,8 @@
     },
     {
       "name": "Air Evac Lifeteam 129 - Idabel, OK",
-      "category": "Coordinate correction",
-      "question": "Listed address is 1200 SE Avenue N, but official locator coordinates point near Hugo, roughly 37 NM west. Address-geocoded correction is used. Please confirm the exact helipad coordinate.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 246 confirms AEL 129 at 1200 SE Avenue N and separately lists AEL 184 at the airport. The erroneous Hugo locator is not reinstated. Exact pad at the corrected Idabel address remains unverified.",
       "sources": [
         "https://www.lifeteam.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1871962472"
@@ -2195,8 +3338,8 @@
     },
     {
       "name": "Air Evac Lifeteam 26 - Ada, OK",
-      "category": "Coordinate correction",
-      "question": "Locator point is near central Ada, whereas 231 John Herrington Avenue geocodes to Ada Regional Airport. Confirm exact airport base/pad coordinates.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 240 corroborates 231 John Herrington Avenue and rotor-wing type. The airport address remains supported; confirm the exact launch pad rather than treating address interpolation as surveyed.",
       "sources": [
         "https://www.lifeteam.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1386627883"
@@ -2204,8 +3347,8 @@
     },
     {
       "name": "Air Evac Lifeteam 25 - Duncan, OK",
-      "category": "Coordinate correction",
-      "question": "The locator point and address geocoders differ by roughly 1 km for 2702 S 13th Street. Confirm the actual base pad, not a street interpolation.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 239 corroborates 2702 S 13th Street and rotor-wing type. The approximately 1 km locator/geocoder discrepancy still requires an exact launch coordinate.",
       "sources": [
         "https://www.lifeteam.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1982687794"
@@ -2213,8 +3356,8 @@
     },
     {
       "name": "Houston County Air Rescue / AEL 127 - Crockett, TX",
-      "category": "Coordinate correction",
-      "question": "The locator point lies about 2 km south of where both geocoders place 1080 E Loop 304. Confirm the launch site and helipad coordinate.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 323 lists the hospital at 1100 Texas Loop 304 (normalized to 1100 E Loop 304), versus NPI's neighboring 1080 E Loop 304. Pin updated to the hospital address point. Confirm the actual launch pad.",
       "sources": [
         "https://www.lifeteam.net/services/service-area",
         "https://npiregistry.cms.hhs.gov/provider-view/1831569474"
@@ -2222,8 +3365,8 @@
     },
     {
       "name": "Air Evac Lifeteam 73 - De Queen, AR",
-      "category": "Relocation / exact pad",
-      "question": "Current NPI and December 2025 Arkansas licensing support 958 Highway 71 N rather than old 1017 N 14th Street. Confirm current launch pad coordinates at the newer address.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 24 explicitly corroborates the August 2023 change to 958 Highway 71 N from 1017 N 14th Street. Current address is supported; exact launch pad remains approximate. Phone is N/A in the roster.",
       "sources": [
         "https://npiregistry.cms.hhs.gov/provider-view/1255525218",
         "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf"
@@ -2240,8 +3383,8 @@
     },
     {
       "name": "St. Joseph AirMed 12 North - Centerville, TX",
-      "category": "Street number / exact pad",
-      "question": "NPI lists 380 W Frontage Road; the January 2025 opening report lists 404 W Frontage Road South. The geocoded points are about 35 m apart. Confirm correct number and launch coordinate; these are treated as one base.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 329 corroborates 380 W Frontage Road and provides a phone, but calls Centerville South while opening coverage calls it North. The city-based display name avoids that conflict. Confirm the directional designation and precise pad.",
       "sources": [
         "https://npiregistry.cms.hhs.gov/provider-view/1265297220",
         "https://www.kbtx.com/2025/01/28/air-med-12-expands-its-network-improving-emergency-response-times-rural-texas/?outputType=amp"
@@ -2249,8 +3392,8 @@
     },
     {
       "name": "AeroCare - Alpine and Pecos, TX",
-      "category": "Aircraft assignment / pad precision",
-      "question": "Current Med-Trans affiliate roster and NPI records establish both bases. Confirm aircraft type and exact launch pad/hangar at Alpine Hangar 41 (3401 N State Highway 118) and Pecos (1363 Massey Street, Trailer 1).",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 341 confirms AeroCare X Pecos as rotor-wing at 1363 Massey Street, Trailer 1. Exact Pecos pad remains approximate. Alpine is absent from the supplied excerpts, so its aircraft type and Hangar 41 launch coordinate remain unconfirmed; absence is not closure.",
       "sources": [
         "https://www.med-trans.net/affiliates",
         "https://npiregistry.cms.hhs.gov/provider-view/1396318259",
@@ -2259,11 +3402,35 @@
     },
     {
       "name": "Med-Trans / EagleMed - Dodge City, KS",
-      "category": "75 NM boundary edge; not plotted",
-      "question": "Listed coordinate is approximately 75.04 NM from Texas using WGS84 and Census 1:500,000 boundary; alternate street geocode is also outside. Confirm exact launch coordinate before a strict include/exclude decision near this approximately 80 m margin. Currently excluded from 75 NM map.",
+      "category": "Roster cross-check / remaining precision or identity question",
+      "question": "Roster row 146 confirms fixed-wing service at 103 Airport Road. Its address point is approximately 75.52 NM from Texas, while the older operator point was 75.04 NM. Both are outside the strict radius; exact launch coordinate is still necessary for this boundary-edge case. Remains excluded.",
       "sources": [
         "https://www.med-trans.net/services/service-area"
       ]
+    },
+    {
+      "name": "AeroCare I / III - Lubbock",
+      "category": "Aircraft-type conflict",
+      "question": "Roster rows 330-331 list AeroCare I and III together at 6006 North Cedar Avenue and label both rotor-wing. The official EagleMed AeroCare III page still labels III fixed-wing. One shared physical site is retained with the previously supported rotor + fixed-wing classification, explicitly under aircraft-assignment review; no duplicate pin is added.",
+      "sources": []
+    },
+    {
+      "name": "AeroCare VIII - Plainview",
+      "category": "Address and phone conflict",
+      "question": "Roster row 340 lists 2404 Yonkers and rotor-wing service; the air-transport NPI identifies 3 Miller Drive at the airport. The roster's address note dates to 2018 and does not establish a newer relocation. Airport pin retained pending confirmation. The supplied phone matches Lovington's roster phone; shown as supplied, not independently verified.",
+      "sources": []
+    },
+    {
+      "name": "Air Evac Lifeteam 93 - Laredo",
+      "category": "Roster relocation / exact pad",
+      "question": "Roster row 320 lists 5203 Maher Drive instead of the older Hillside address. Pin updated to the corresponding 5203 Maher Avenue address point returned by the geocoder. Street-suffix difference and exact launch pad remain unverified.",
+      "sources": []
+    },
+    {
+      "name": "McAlester Regional AirCare",
+      "category": "September 2026 address change / exact pad",
+      "question": "Roster row 254 explicitly records a September 29, 2026 address change from 1005 to 1021 N Strong Boulevard. Updated to that address point. Rotor-wing type is supplied by the roster; exact launch pad remains approximate.",
+      "sources": []
     }
   ],
   "exclusions": [
@@ -2281,7 +3448,7 @@
     },
     {
       "name": "Med-Trans \u2013 Dodge City FW",
-      "reason": "Outside 75 NM: 75.04 NM from Texas",
+      "reason": "Outside 75 NM: 75.04 NM from Texas at the older operator coordinate. Roster address point: 75.52 NM; also outside the 75 NM rule.",
       "sources": [
         {
           "url": "https://www.med-trans.net/locations/med-trans-%E2%80%93-dodge-city-fw",
@@ -2295,7 +3462,7 @@
     },
     {
       "name": "Air Evac Lifeteam 124 \u2013 Opelousas, LA",
-      "reason": "Outside 75 NM: 78.16 NM from Texas",
+      "reason": "Outside 75 NM: 78.16 NM from Texas at the older operator coordinate. Roster address point: 77.11 NM; also outside the 75 NM rule.",
       "sources": [
         {
           "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-124-%E2%80%93-opelousas,-la",
@@ -2309,7 +3476,7 @@
     },
     {
       "name": "Air Evac Lifeteam 158 \u2013 Seminole, OK",
-      "reason": "Outside 75 NM: 80.58 NM from Texas",
+      "reason": "Outside 75 NM: 80.58 NM from Texas at the older operator coordinate. Roster address point: 79.64 NM; also outside the 75 NM rule.",
       "sources": [
         {
           "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-158-%E2%80%93-seminole,-ok",
@@ -2340,11 +3507,757 @@
       ]
     }
   ],
+  "rosterScreening": [
+    {
+      "name": "Springdale",
+      "state": "AR",
+      "row": 19,
+      "distanceToTexasNm": 143.107,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Mountain Home",
+      "state": "AR",
+      "row": 20,
+      "distanceToTexasNm": 185.317,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Paris / Clarksville",
+      "state": "AR",
+      "row": 21,
+      "distanceToTexasNm": 105.659,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Boone County / Harrison",
+      "state": "AR",
+      "row": 22,
+      "distanceToTexasNm": 166.483,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Forrest City",
+      "state": "AR",
+      "row": 23,
+      "distanceToTexasNm": 185.416,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "DeQueen",
+      "state": "AR",
+      "row": 24,
+      "distanceToTexasNm": 28.2,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Blytheville",
+      "state": "AR",
+      "row": 25,
+      "distanceToTexasNm": 249.278,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Fort Smith",
+      "state": "AR",
+      "row": 26,
+      "distanceToTexasNm": 92.883,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Hospital Wing",
+      "state": "AR",
+      "row": 27,
+      "distanceToTexasNm": 216.18,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "EagleMed 11",
+      "state": "KS",
+      "row": 144,
+      "distanceToTexasNm": 142.34,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "EagleMed 9",
+      "state": "KS",
+      "row": 145,
+      "distanceToTexasNm": 144.943,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Med-Trans Dodge City FW",
+      "state": "KS",
+      "row": 146,
+      "distanceToTexasNm": 75.522,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Med-Trans Goodland FW",
+      "state": "KS",
+      "row": 147,
+      "distanceToTexasNm": 170.76,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Med-Trans Liberal FW",
+      "state": "KS",
+      "row": 148,
+      "distanceToTexasNm": 32.641,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Med-Trans Wichita FW",
+      "state": "KS",
+      "row": 149,
+      "distanceToTexasNm": 142.34,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "EagleMed / Chanute",
+      "state": "KS",
+      "row": 150,
+      "distanceToTexasNm": 222.784,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "EagleMed 10",
+      "state": "KS",
+      "row": 151,
+      "distanceToTexasNm": 123.176,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Life Star II",
+      "state": "KS",
+      "row": 152,
+      "distanceToTexasNm": 213.753,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Life Star I",
+      "state": "KS",
+      "row": 153,
+      "distanceToTexasNm": 270.836,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Life Star III",
+      "state": "KS",
+      "row": 154,
+      "distanceToTexasNm": 290.455,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Rayville",
+      "state": "LA",
+      "row": 174,
+      "distanceToTexasNm": 113.396,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Opelousas",
+      "state": "LA",
+      "row": 175,
+      "distanceToTexasNm": 77.105,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Kinder",
+      "state": "LA",
+      "row": 176,
+      "distanceToTexasNm": 41.528,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Natchitoches",
+      "state": "LA",
+      "row": 177,
+      "distanceToTexasNm": 34.272,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Gallup rotor",
+      "state": "NM",
+      "row": 216,
+      "distanceToTexasNm": 236.631,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Gallup FW 007",
+      "state": "NM",
+      "row": 217,
+      "distanceToTexasNm": 235.102,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Gallup Med Flight FW 018",
+      "state": "NM",
+      "row": 218,
+      "distanceToTexasNm": 236.631,
+      "coordinateSource": "Same west-side street address as row 216; east-side geocode rejected",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Gallup FW 033",
+      "state": "NM",
+      "row": 219,
+      "distanceToTexasNm": 236.631,
+      "coordinateSource": "Same west-side street address as row 216; east-side geocode rejected",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "AeroCare 12",
+      "state": "NM",
+      "row": 220,
+      "distanceToTexasNm": 15.821,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare II",
+      "state": "NM",
+      "row": 221,
+      "distanceToTexasNm": 2.568,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare VII",
+      "state": "NM",
+      "row": 222,
+      "distanceToTexasNm": 14.28,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare 9",
+      "state": "NM",
+      "row": 223,
+      "distanceToTexasNm": 7.577,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Altus",
+      "state": "OK",
+      "row": 237,
+      "distanceToTexasNm": 13.123,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Elk City",
+      "state": "OK",
+      "row": 238,
+      "distanceToTexasNm": 29.343,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Duncan",
+      "state": "OK",
+      "row": 239,
+      "distanceToTexasNm": 20.44,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Ada",
+      "state": "OK",
+      "row": 240,
+      "distanceToTexasNm": 51.989,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Claremore",
+      "state": "OK",
+      "row": 241,
+      "distanceToTexasNm": 140.613,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Woodward",
+      "state": "OK",
+      "row": 242,
+      "distanceToTexasNm": 29.022,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Muskogee",
+      "state": "OK",
+      "row": 243,
+      "distanceToTexasNm": 107.557,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Weatherford",
+      "state": "OK",
+      "row": 244,
+      "distanceToTexasNm": 64.827,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Ponca City",
+      "state": "OK",
+      "row": 245,
+      "distanceToTexasNm": 130.339,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Idabel",
+      "state": "OK",
+      "row": 246,
+      "distanceToTexasNm": 6.219,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Ardmore",
+      "state": "OK",
+      "row": 247,
+      "distanceToTexasNm": 13.132,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Kingfisher",
+      "state": "OK",
+      "row": 248,
+      "distanceToTexasNm": 99.6,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Henryetta",
+      "state": "OK",
+      "row": 249,
+      "distanceToTexasNm": 92.051,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Idabel RW",
+      "state": "OK",
+      "row": 250,
+      "distanceToTexasNm": 5.818,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Seminole",
+      "state": "OK",
+      "row": 251,
+      "distanceToTexasNm": 79.644,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Durant",
+      "state": "OK",
+      "row": 252,
+      "distanceToTexasNm": 11.785,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Grove",
+      "state": "OK",
+      "row": 253,
+      "distanceToTexasNm": 160.345,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "McAlester Regional AirCare",
+      "state": "OK",
+      "row": 254,
+      "distanceToTexasNm": 60.095,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Tahlequah First Flight",
+      "state": "OK",
+      "row": 255,
+      "distanceToTexasNm": 117.694,
+      "coordinateSource": "Operator coordinate; outside with >10 NM margin",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "McAlester Regional AirCare II",
+      "state": "OK",
+      "row": 256,
+      "distanceToTexasNm": 81.941,
+      "coordinateSource": "Existing address geocode",
+      "result": "Outside 75 NM at screened coordinate"
+    },
+    {
+      "name": "Uvalde",
+      "state": "TX",
+      "row": 303,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Wichita Falls",
+      "state": "TX",
+      "row": 304,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Kerrville",
+      "state": "TX",
+      "row": 305,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Marble Falls",
+      "state": "TX",
+      "row": 306,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Hillsboro",
+      "state": "TX",
+      "row": 307,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Brownwood",
+      "state": "TX",
+      "row": 308,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Fairfield",
+      "state": "TX",
+      "row": 309,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Big Spring",
+      "state": "TX",
+      "row": 310,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Mineral Wells",
+      "state": "TX",
+      "row": 311,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Eagle Pass",
+      "state": "TX",
+      "row": 312,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Abilene",
+      "state": "TX",
+      "row": 313,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Texhoma / Sherman",
+      "state": "TX",
+      "row": 314,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Killeen",
+      "state": "TX",
+      "row": 315,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Greenville",
+      "state": "TX",
+      "row": 316,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Decatur",
+      "state": "TX",
+      "row": 317,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Granbury",
+      "state": "TX",
+      "row": 318,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Carrizo Springs",
+      "state": "TX",
+      "row": 319,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Laredo",
+      "state": "TX",
+      "row": 320,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Eastland",
+      "state": "TX",
+      "row": 321,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Beaumont / Air Rescue",
+      "state": "TX",
+      "row": 322,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Houston County / Crockett",
+      "state": "TX",
+      "row": 323,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Lamar / Paris",
+      "state": "TX",
+      "row": 324,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Pearsall / Methodist AirCare",
+      "state": "TX",
+      "row": 325,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "San Antonio / Methodist AirCare",
+      "state": "TX",
+      "row": 326,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "NW TX Lifestar IV",
+      "state": "TX",
+      "row": 327,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "St. Joseph's AirMed 12",
+      "state": "TX",
+      "row": 328,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "St. Joseph's AirMed 12 South (roster wording)",
+      "state": "TX",
+      "row": 329,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare I",
+      "state": "TX",
+      "row": 330,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare III",
+      "state": "TX",
+      "row": 331,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare IV",
+      "state": "TX",
+      "row": 332,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare V",
+      "state": "TX",
+      "row": 333,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare VI",
+      "state": "TX",
+      "row": 334,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Air Med 1",
+      "state": "TX",
+      "row": 335,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Air Med 2",
+      "state": "TX",
+      "row": 336,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "NW Texas Lifestar FW",
+      "state": "TX",
+      "row": 337,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "NW Texas Lifestar I",
+      "state": "TX",
+      "row": 338,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "NW Texas Lifestar II",
+      "state": "TX",
+      "row": 339,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare 8",
+      "state": "TX",
+      "row": 340,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Esri address geocode; not surveyed pad",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "AeroCare X",
+      "state": "TX",
+      "row": 341,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Covenant Childrens Hospital Kite Flight",
+      "state": "TX",
+      "row": 342,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    },
+    {
+      "name": "Del Rio / Methodist AirCare",
+      "state": "TX",
+      "row": 343,
+      "distanceToTexasNm": 0,
+      "coordinateSource": "Existing map coordinate",
+      "result": "Existing site corroborated"
+    }
+  ],
   "methodology": {
     "boundary": "US Census TIGERweb ACS 2024 States 500K",
     "boundaryUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/7",
     "distance": "WGS84 ellipsoidal geodesics. Nearest point on Census Texas polygon in a base-centered azimuthal equidistant projection. Boundary is generalized; near-threshold cases need exact-site review.",
     "screenedLocatorRecords": 322,
-    "limitations": "Not a dispatch tool, operational coverage guarantee, aircraft range limit, response-time model or membership coverage map. No comprehensive internal roster was available. Owner confirmations are identified in individual records; approximate coordinates are not surveyed launch points."
+    "limitations": "Not a dispatch tool, operational coverage guarantee, aircraft range limit, response-time model or membership coverage map. Seven user-provided roster excerpts were received October 20, 2026; their effective date and completeness are not established. Listed phones are transcribed, not independently dial-verified or asserted to be dispatch numbers. Owner confirmations are identified; approximate coordinates are not surveyed launch points."
   }
 }
