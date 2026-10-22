@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Texas and border-region GMR air base map with 75 nautical mile geographic radii.">
+  <title>Texas GMR Air Bases | Interactive Map</title>
+  <link rel="stylesheet" href="assets/gmr-map/map-only.css?v=20261022-1">
+</head>
+<body>
+  <header>
+    <h1>Texas GMR Air Bases</h1>
+    <div class="toolbar">
+      <label class="search"><i data-lucide="search"></i><input id="search" type="search" placeholder="Base or city" aria-label="Search bases"></label>
+      <button id="filter-toggle" class="icon-button" aria-label="Base filters" title="Base filters" aria-expanded="false" aria-controls="filters"><i data-lucide="sliders-horizontal"></i></button>
+      <label class="check"><input id="rings" type="checkbox" checked>75 NM</label>
+      <label class="check"><input id="labels" type="checkbox">Labels</label>
+    </div>
+  </header>
+  <main class="map-shell">
+    <svg id="map" role="group" aria-label="Interactive Texas GMR air base map"></svg>
+    <aside id="filters" class="filters" aria-label="Base filters" hidden>
+      <div class="panel-heading"><h2>Base Filters</h2><button id="close-filters" class="icon-button" title="Close filters" aria-label="Close filters"><i data-lucide="x"></i></button></div>
+      <fieldset id="operators"><legend>Operator</legend></fieldset>
+      <label class="mode-label" for="aircraft">Aircraft</label>
+      <select id="aircraft"><option value="all">All aircraft</option><option value="rotor">Rotor-wing</option><option value="fixed">Fixed-wing</option><option value="unknown">Type not established</option></select>
+      <div id="results" class="results" aria-label="Base results"></div>
+    </aside>
+    <div class="zoom-tools">
+      <button id="zoom-in" class="icon-button" aria-label="Zoom in" title="Zoom in"><i data-lucide="plus"></i></button>
+      <button id="zoom-out" class="icon-button" aria-label="Zoom out" title="Zoom out"><i data-lucide="minus"></i></button>
+      <button id="reset" class="icon-button" aria-label="Reset map extent" title="Reset map extent"><i data-lucide="maximize"></i></button>
+    </div>
+    <div id="tooltip" role="tooltip" hidden></div>
+    <section id="selection" class="selection" aria-live="polite" hidden><button id="close-selection" class="icon-button" title="Clear selection" aria-label="Clear selection"><i data-lucide="x"></i></button><div id="selection-content"></div></section>
+    <div class="map-caption"><span id="visible-count" role="status"></span><span>75 NM = 138.9 km</span></div>
+  </main>
+  <noscript>JavaScript is required for this interactive map.</noscript>
+  <script src="assets/gmr-map/d3.min.js"></script>
+  <script src="assets/gmr-map/lucide.min.js"></script>
+  <script src="assets/gmr-map/map-only-data.js?v=20261022-1"></script>
+  <script src="assets/gmr-map/map-only.js?v=20261022-1"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const {pathToFileURL}=require('node:url');
+const root=path.resolve(__dirname,'..');
+const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'assets/gmr-map',file),'utf8'),context);return JSON.parse(JSON.stringify(context.window[key]));};
+const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
+const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup'];
+assert.equal(clean.bases.length,64);
+assert.equal(clean.radiusMeters,138900);
+assert.deepEqual(clean.counties,full.counties);
+assert.deepEqual(clean.texas,full.texas);
+for(const b of clean.bases){
+  assert(Object.keys(b).every(k=>fields.includes(k)));
+  const original=full.bases.find(x=>x.id===b.id);
+  assert.equal(original.status,'Publicly supported');
+  for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
+  assert(!/La Grange|GFL 072|Lifeteam 189/.test(b.name));
+}
+assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringify(clean)));
+
+(async()=>{
+  const browser=await chromium.launch({channel:'msedge',headless:true});
+  try{
+    const page=await browser.newPage({viewport:{width:1440,height:900}});
+    const errors=[],requests=[];
+    page.on('pageerror',e=>errors.push(e.message));
+    page.on('request',r=>requests.push(r.url()));
+    await page.goto(process.argv[2]||pathToFileURL(path.join(root,'texas-gmr-air-medical-map-only.html')).href);
+    await page.waitForSelector('.base-marker');
+    assert.equal(await page.locator('.base-marker').count(),63);
+    assert.equal(await page.locator('.county').count(),254);
+    assert.equal(await page.locator('.radius').count(),64);
+    assert(!requests.some(u=>/\/(data|map)\.(js|css)(\?|$)/.test(u)));
+    assert.equal(await page.locator('a[href^="tel:"],#audit,#detail').count(),0);
+    for(const b of clean.bases){
+      await page.locator('#search').fill(b.name);
+      const marker=page.locator('.base-marker');
+      assert.equal(await marker.count(),1,b.name);
+      await marker.hover();
+      const tip=await page.locator('#tooltip').innerText();
+      assert(tip.replace(/\s+/g,' ').includes(b.name.replace(/\s+/g,' ')),`${b.name}: ${tip}`);
+      assert(tip.includes('Base identified in public sources.'));
+      assert(!/phone|roster|internal|research|screenshot/i.test(tip));
+      const expected=b.mode.includes('Rotor')&&b.mode.includes('fixed')?'mixed':b.mode.includes('Rotor')?'rotor':b.mode.includes('Fixed')?'fixed':'unknown';
+      assert.equal(await marker.getAttribute('data-aircraft'),expected);
+      if(expected!=='unknown')assert(await marker.locator('.aircraft').isVisible());
+      await page.mouse.move(1,1);
+      await marker.focus();
+      assert(await page.locator('#tooltip').isVisible());
+      await page.keyboard.press('Enter');
+      assert((await page.locator('#selection').innerText()).replace(/\s+/g,' ').includes(b.name.replace(/\s+/g,' ')));
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('#selection').isVisible(),false);
+    }
+    await page.locator('#search').fill('San Antonio');
+    await page.locator('.base-marker').click();
+    assert.equal(await page.locator('.radius.active').count(),2);
+    assert.equal(await page.locator('#selection .member').count(),2);
+    await page.locator('#filter-toggle').click();
+    await page.locator('#operators input[value="airmed"]').uncheck();
+    await page.locator('#close-filters').click();
+    assert.equal(await page.locator('.base-marker').count(),1);
+    assert.equal(await page.locator('.base-marker').getAttribute('data-aircraft'),'rotor');
+    await page.locator('#filter-toggle').click();
+    await page.locator('#operators input[value="airmed"]').check();
+    await page.locator('#search').fill('');
+    await page.locator('#aircraft').selectOption('fixed');
+    assert.equal(await page.locator('.radius').count(),6);
+    await page.locator('#aircraft').selectOption('all');
+    await page.locator('#results button').first().click();
+    assert.equal(await page.locator('#filters').isVisible(),false);
+    await page.locator('#reset').click();
+    await page.waitForTimeout(300);
+    await page.locator('#rings').uncheck();
+    assert.equal(await page.locator('.radius:visible').count(),0);
+    await page.locator('#rings').check();
+    await page.locator('#labels').check();
+    assert.equal(await page.locator('.base-label:visible').count(),63);
+    await page.locator('#labels').uncheck();
+    const before=await page.locator('#map>g').getAttribute('transform');
+    await page.locator('#zoom-in').click();
+    await page.waitForTimeout(250);
+    assert.notEqual(await page.locator('#map>g').getAttribute('transform'),before);
+    await page.locator('#reset').click();
+    await page.waitForTimeout(300);
+    const output=process.env.SCREENSHOT_DIR;
+    if(output)fs.mkdirSync(output,{recursive:true});
+    for(const [width,height] of [[390,844],[768,1024],[1440,900],[1920,1080]]){
+      await page.setViewportSize({width,height});
+      await page.waitForTimeout(150);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+      assert(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1));
+      const box=await page.locator('.texas-outline').boundingBox();
+      assert(box.width>250&&box.height>250);
+      if(output)await page.screenshot({path:path.join(output,`map-only-${width}.png`)});
+      await page.locator('#search').fill('San Antonio');
+      await page.locator('.base-marker').focus();
+      const tip=await page.locator('#tooltip').boundingBox(),map=await page.locator('.map-shell').boundingBox();
+      assert(tip.x>=map.x&&tip.x+tip.width<=map.x+map.width+1);
+      assert(tip.y>=map.y&&tip.y+tip.height<=map.y+map.height+1);
+      if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
+      await page.locator('#search').fill('');
+    }
+    const text=await page.locator('body').innerText();
+    assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
+    assert.deepEqual(errors,[]);
+    console.log(JSON.stringify({passed:true,sites:64,markers:63,counties:254,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
+  }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
