@@ -8,7 +8,8 @@ const root=path.resolve(__dirname,'..');
 const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'assets/gmr-map',file),'utf8'),context);return JSON.parse(JSON.stringify(context.window[key]));};
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup'];
-assert.equal(clean.bases.length,64);
+assert.equal(clean.bases.length,63);
+assert(!clean.bases.some(b=>b.id==='mt-alpine'||/Alpine/i.test(b.name)));
 assert.equal(clean.radiusMeters,138900);
 assert.deepEqual(clean.counties,full.counties);
 assert.deepEqual(clean.texas,full.texas);
@@ -30,9 +31,13 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     page.on('request',r=>requests.push(r.url()));
     await page.goto(process.argv[2]||pathToFileURL(path.join(root,'texas-gmr-air-medical-map-only.html')).href);
     await page.waitForSelector('.base-marker');
-    assert.equal(await page.locator('.base-marker').count(),63);
+    assert.equal(await page.locator('.base-marker').count(),62);
     assert.equal(await page.locator('.county').count(),254);
-    assert.equal(await page.locator('.radius').count(),64);
+    assert.equal(await page.locator('.radius').count(),63);
+    await page.locator('#search').fill('Alpine');
+    assert.equal(await page.locator('.base-marker').count(),0);
+    assert.equal(await page.locator('.radius').count(),0);
+    await page.locator('#search').fill('');
     assert(!requests.some(u=>/\/(data|map)\.(js|css)(\?|$)/.test(u)));
     assert.equal(await page.locator('a[href^="tel:"],#audit,#detail').count(),0);
     for(const b of clean.bases){
@@ -78,7 +83,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     assert.equal(await page.locator('.radius:visible').count(),0);
     await page.locator('#rings').check();
     await page.locator('#labels').check();
-    assert.equal(await page.locator('.base-label:visible').count(),63);
+    assert.equal(await page.locator('.base-label:visible').count(),62);
     await page.locator('#labels').uncheck();
     const before=await page.locator('#map>g').getAttribute('transform');
     await page.locator('#zoom-in').click();
@@ -107,6 +112,6 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     const text=await page.locator('body').innerText();
     assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
     assert.deepEqual(errors,[]);
-    console.log(JSON.stringify({passed:true,sites:64,markers:63,counties:254,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
+    console.log(JSON.stringify({passed:true,sites:63,markers:62,counties:254,alpineExcluded:true,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
