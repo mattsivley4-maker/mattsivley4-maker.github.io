@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Source-audited Texas and border-region GMR air medical base map with 75 nautical mile geographic radii and open verification questions.">
   <title>Texas GMR Air Bases | 75 NM Map</title>
-  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261020-roster1">
+  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261025-social1">
 </head>
 <body>
   <header>
     <div><p class="eyebrow">TEXAS + BORDER REGION</p><h1>GMR Air Medical Bases</h1></div>
-    <nav aria-label="Maps and records"><a href="texas-ingram-air-evac-map.html">Ingram Ready Mix map</a><a href="#audit">Verification record</a><a href="assets/gmr-map/bases.csv" download><i data-lucide="download"></i>Base CSV</a></nav>
+    <nav aria-label="Maps and records"><a href="texas-ingram-air-evac-map.html">Ingram Ready Mix map</a><a href="texas-gmr-facebook-directory.html">Facebook directory</a><a href="#audit">Verification record</a><a href="assets/gmr-map/bases.csv" download><i data-lucide="download"></i>Base CSV</a></nav>
   </header>
   <div class="notice"><i data-lucide="info"></i><p><strong>75 NM geographic radii, not guaranteed service coverage.</strong> Roster cross-check updated October 20, 2026. Base phones are supplied roster numbers, not verified dispatch lines. Not a dispatch or flight-planning tool. Aircraft availability, weather, terrain, clinical capability and operating limits are not modeled.</p></div>
   <main>
@@ -35,7 +35,7 @@
           <svg id="map" viewBox="0 0 1000 860" role="group" aria-label="Interactive Texas county map and air medical bases"></svg>
           <div class="zoom-tools"><button id="zoom-in" title="Zoom in" aria-label="Zoom in"><i data-lucide="plus"></i></button><button id="zoom-out" title="Zoom out" aria-label="Zoom out"><i data-lucide="minus"></i></button><button id="reset" title="Reset map extent" aria-label="Reset map extent"><i data-lucide="maximize"></i></button></div>
           <div class="map-caption">WGS84 &middot; 75 NM = 138.9 km<br>Texas county boundaries &middot; U.S. Census</div>
-          <div id="tooltip" role="tooltip" hidden></div>
+          <div id="tooltip" role="dialog" aria-label="Base quick details" hidden></div>
         </div>
         <section id="detail" class="detail" aria-live="polite"><h2>Research Snapshot</h2><p id="overview"></p><p class="muted">An active registry entry is not proof that a base is currently staffed. Review candidates are excluded from the default map. Location questions remain visible in each base record.</p></section>
       </div>
@@ -57,6 +57,7 @@
   <script src="assets/gmr-map/d3.min.js"></script>
   <script src="assets/gmr-map/lucide.min.js"></script>
   <script src="assets/gmr-map/data.js?v=20261020-roster1"></script>
-  <script src="assets/gmr-map/map.js?v=20261020-roster1"></script>
+  <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
+  <script src="assets/gmr-map/map.js?v=20261025-social1"></script>
 </body>
 </html>

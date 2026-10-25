@@ -1,0 +1,25 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const root=path.resolve(__dirname,'..'),dir=path.join(root,'assets/gmr-map');
+const context={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(dir,'data.js'),'utf8'),context);
+const bases=context.window.GMR_MAP_DATA.bases;
+const source=JSON.parse(fs.readFileSync(path.join(dir,'facebook-matches.json'),'utf8'));
+const matches=new Map(source.matches.map(row=>[row[0],row]));
+if(matches.size!==source.matches.length||matches.size!==bases.length)throw new Error('Missing or duplicate base matches');
+const southwest=new Set(['San Antonio','Pearsall','Del Rio','Eagle Pass','Uvalde','Kerrville','Carrizo Springs','Laredo']);
+const west=new Set(['San Angelo','Stockton','Odessa','Pecos','Seminole','Abilene','Big Spring','Brownwood','Eastland','Lubbock','Plainview','Amarillo','Childress','Pampa','Alpine']);
+const priority=b=>b.state==='TX'?(southwest.has(b.city)?0:west.has(b.city)?1:2):3;
+const groups=['San Antonio + southwest Texas','Other west Texas','Other Texas','Border-region states'];
+const rows=bases.map(b=>{
+  const row=matches.get(b.id);if(!row)throw new Error('No match: '+b.id);
+  return {id:b.id,name:b.name,city:b.city,state:b.state,priority:priority(b),group:groups[priority(b)],scope:row[2],url:row[1]?'https://www.facebook.com/'+row[1]+'/':null,note:row[3],checked:source.checked,verification:row[1]?'Public Facebook page opened and identity matched':'No matching page confirmed',mapStatus:b.id==='mt-alpine'?'Pending; excluded from map-only page':b.status==='Review candidate'?'Unconfirmed review candidate':'Mapped base'};
+}).sort((a,b)=>a.priority-b.priority||a.city.localeCompare(b.city)||a.name.localeCompare(b.name));
+const result={checked:source.checked,method:source.method,priorityBasis:source.priorityBasis,rows};
+fs.writeFileSync(path.join(dir,'facebook-pages.json'),JSON.stringify(result,null,2)+'\n');
+fs.writeFileSync(path.join(dir,'facebook-data.js'),'window.GMR_FACEBOOK_DATA = '+JSON.stringify(result)+';\n');
+const columns=['group','name','city','state','scope','url','mapStatus','verification','checked','note'];
+const cell=value=>'"'+String(value??'').replaceAll('"','""')+'"';
+fs.writeFileSync(path.join(dir,'facebook-pages.csv'),'\uFEFF'+[columns.map(cell).join(','),...rows.map(row=>columns.map(k=>cell(row[k])).join(','))].join('\r\n')+'\r\n');
+console.log(JSON.stringify({bases:rows.length,linked:rows.filter(r=>r.url).length,uniquePages:new Set(rows.filter(r=>r.url).map(r=>r.url)).size,scopes:rows.reduce((a,r)=>(a[r.scope]=(a[r.scope]||0)+1,a),{})}));

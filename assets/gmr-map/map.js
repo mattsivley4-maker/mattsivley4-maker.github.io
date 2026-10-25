@@ -18,6 +18,16 @@
   let hoveredMarker = null;
   let previewMarker = null;
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const socialPages=new Map((window.GMR_FACEBOOK_DATA?.rows||[]).map(row=>[row.id,row]));
+  const socialDetail=b=>{
+    const page=socialPages.get(b.id);
+    if(!page?.url)return '<p class="social-unavailable">Facebook: no matching base page confirmed.</p>';
+    return `<div class="social-link"><a href="${escape(page.url)}" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">&#8599;</span></a><span>${escape(page.scope)}</span></div>`;
+  };
+  let tooltipTimer,tooltipId=null;
+  const keepTooltip=()=>clearTimeout(tooltipTimer);
+  function hideTooltip(){keepTooltip();$('tooltip').hidden=true;tooltipId=null;}
+  function scheduleTooltipHide(){keepTooltip();tooltipTimer=setTimeout(()=>{if(!$('tooltip').matches(':hover')&&!$('tooltip').contains(document.activeElement))hideTooltip();},300);}
   const links = sources => sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(s.title)}</a>`).join('');
   const phoneText = b => b.phone || (b.rosterEvidence ? 'Not listed (roster N/A)' : 'Not supplied');
   const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
@@ -79,9 +89,9 @@
     resizeMarks();
   }
   function markerEnter(event,b){hoveredMarker=b;renderAircraftPreview();showTooltip(event,b);}
-  function markerLeave(){hoveredMarker=null;$('tooltip').hidden=true;renderAircraftPreview();}
+  function markerLeave(){hoveredMarker=null;scheduleTooltipHide();renderAircraftPreview();}
   const zoom = d3.zoom().scaleExtent([1,14]).translateExtent([[-100,-100],[1100,960]]).on('zoom', event => {
-    scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();
+    scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();hideTooltip();
   });
   svg.call(zoom).on('dblclick.zoom',null);
   function resizeMarks(){
@@ -92,9 +102,15 @@
     stateLayer.selectAll('text').style('opacity', scale > 2 ? 0.4 : 1);
   }
   function showTooltip(event,b){
+    keepTooltip();
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
     const phoneLines=(b.members || [b]).map(site=>`${b.members?(site.operator==='airevac'?'AEL 148':'AirMed International')+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
-    $('tooltip').textContent=`${b.members?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
+    if(tooltipId!==b.id){
+      const summary=`${b.members?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
+      $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details" title="Close quick details"><i data-lucide="x"></i></button><div class="tip-summary">${escape(summary)}</div><div class="tip-social">${(b.members||[b]).map(site=>`${b.members?`<strong>${escape(site.name)}</strong>`:''}${socialDetail(site)}`).join('')}</div>`;
+      $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
+      tooltipId=b.id;icons();
+    }
     $('tooltip').hidden=false;
     const w=$('tooltip').offsetWidth,h=$('tooltip').offsetHeight;
     const target=event.currentTarget.getBoundingClientRect();
@@ -108,6 +124,7 @@
     selected=b;
     $('detail').innerHTML=`<div class="detail-top"><div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h2>${escape(b.name)}</h2></div><button id="close-detail" aria-label="Clear selection" title="Clear selection"><i data-lucide="x"></i></button></div><p>${escape(b.address)}</p><div class="details-grid"><div><strong>Evidence status</strong>${escape(b.status)}${b.review?' / open question':''}</div><div><strong>Aircraft</strong>${escape(b.mode)}</div><div><strong>Coordinate precision</strong>${escape(b.precision)}<br>${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div><div><strong>Distance to Texas</strong>${b.distanceToTexasNm===0?'Within Texas':`${b.distanceToTexasNm.toFixed(2)} NM`} / 75 NM circle</div></div><p class="${b.review?'question-text':'muted'}">${escape(b.note)}</p><div class="sources">${links(b.sources)}</div>`;
     $('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
+    $('detail').insertAdjacentHTML('beforeend',socialDetail(b));
     if(b.rosterEvidence) $('detail').insertAdjacentHTML('beforeend',`<p class="muted">Roster evidence: image ${b.rosterEvidence.images.join(', ')}, row ${b.rosterEvidence.rows.join(', ')}; supplied October 20, 2026. Document effective date not shown.<br>Roster address: ${escape(b.rosterEvidence.addresses.join(' / '))}</p>`);
     if(b.confirmation) $('detail').insertAdjacentHTML('beforeend',`<p class="confirmed">${escape(b.confirmation)}</p>`);
     if(b.siteGroup && airportMarker){
@@ -123,7 +140,7 @@
     selected=null;selectedAirport=true;
     $('detail').innerHTML=`<h2>San Antonio International Airport</h2><p class="confirmed">Both services confirmed at this airport by the owner, October 12, 2026.</p><div class="airport-services">${airportMarker.members.map(b=>`<div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h3>${escape(b.name)}</h3><p>${escape(b.mode)}</p><p>${escape(b.address)}</p><button class="airport-record" data-airport-base="${b.id}">Base record and sources</button></div>`).join('')}</div><p class="muted">Nearby hangars share this display marker. Each 75 NM ring remains centered on its own recorded coordinate; neither coordinate has been moved or merged.</p>`;
     $('detail').querySelectorAll('[data-airport-base]').forEach(el=>el.onclick=()=>selectBase(airportMarker.members.find(b=>b.id===el.dataset.airportBase)));
-    $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',phoneDetail(airportMarker.members[i])));
+    $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',phoneDetail(airportMarker.members[i])+socialDetail(airportMarker.members[i])));
     renderSelection();
   }
   function renderSelection(){
@@ -135,7 +152,7 @@
   }
   function render(){
     hoveredMarker=null;
-    $('tooltip').hidden=true;
+    hideTooltip();
     const enabled=new Set([...document.querySelectorAll('#operators input:checked')].map(x=>x.value));
     const query=$('search').value.trim().toLowerCase();
     const mode=$('aircraft').value;
@@ -178,6 +195,11 @@
   svg.on('focusin.phone',event=>{
     const marker=event.target.closest('.base-marker');
     if(marker) showTooltip({currentTarget:marker},marker.__data__);
-  }).on('focusout.phone',()=>{$('tooltip').hidden=true;});
+  }).on('focusout.phone',scheduleTooltipHide);
+  $('tooltip').addEventListener('pointerenter',keepTooltip);
+  $('tooltip').addEventListener('pointerleave',scheduleTooltipHide);
+  $('tooltip').addEventListener('focusin',keepTooltip);
+  $('tooltip').addEventListener('focusout',scheduleTooltipHide);
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
   icons();render();
 })();

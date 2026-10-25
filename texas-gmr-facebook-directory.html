@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Texas GMR Base Facebook Directory</title>
+  <link rel="stylesheet" href="assets/gmr-map/facebook-directory.css?v=20261025-social1">
+</head>
+<body>
+  <header><h1>Texas GMR Base Facebook Directory</h1><nav><a href="texas-gmr-air-medical-map.html">Research map</a><a href="texas-gmr-air-medical-map-only.html">Map-only page</a><a href="assets/gmr-map/facebook-pages.csv" download>Download CSV</a></nav></header>
+  <main>
+    <section class="directory-summary"><p id="counts"></p><p>Checked October 25, 2026. Public page identities were matched to the bases or programs; this does not certify current base operations, aircraft assignment, or Facebook verification-badge status.</p><p>Initial priority: San Antonio and southwest Texas, then other west Texas sites. Exact territory boundaries have not been supplied. Shared, company, and hospital pages are labeled separately from base-specific pages. Facebook may require sign-in.</p></section>
+    <div class="directory-filters"><label>Base or city<input id="directory-search" type="search" placeholder="Search directory"></label><label>Page type<select id="directory-scope"><option value="">All page types</option><option>Base page</option><option>Shared program page</option><option>Company page</option><option>Hospital page</option><option>Not confirmed</option></select></label><span id="directory-count" role="status"></span></div>
+    <div class="table-scroll"><table><thead><tr><th>Base</th><th>Location</th><th>Facebook page</th><th>Match notes</th></tr></thead><tbody id="directory-rows"></tbody></table></div>
+  </main>
+  <noscript><p><a href="assets/gmr-map/facebook-pages.csv">Download the complete Facebook directory.</a></p></noscript>
+  <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
+  <script src="assets/gmr-map/facebook-directory.js?v=20261025-social1"></script>
+</body>
+</html>
