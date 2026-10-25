@@ -6,6 +6,16 @@
   const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const modeText=b=>b.mode==='Air medical'?'Aircraft type not established':b.mode;
   const members=b=>b.members || [b];
+  const socialPages=new Map((window.GMR_FACEBOOK_DATA?.rows||[]).map(row=>[row.id,row]));
+  const socialDetail=b=>{
+    const page=socialPages.get(b.id);
+    return page?.url?`<div class="social-link"><a href="${escape(page.url)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a><span>${escape(page.scope)}</span></div>`:'';
+  };
+  const memberDetails=b=>members(b).map(x=>`<div class="member"><h2>${escape(x.name)}</h2><p>${escape(modeText(x))}</p>${socialDetail(x)}</div>`).join('')+'<p class="provenance">Base identified in public sources.</p>';
+  let tooltipTimer,tooltipId=null;
+  const keepTooltip=()=>clearTimeout(tooltipTimer);
+  function hideTooltip(){keepTooltip();$('tooltip').hidden=true;tooltipId=null;}
+  function scheduleTooltipHide(){keepTooltip();tooltipTimer=setTimeout(()=>{if(!$('tooltip').matches(':hover')&&!$('tooltip').contains(document.activeElement))hideTooltip();},300);}
   const kind=b=>{
     const modes=members(b).map(x=>x.mode.toLowerCase());
     const rotor=modes.some(x=>x.includes('rotor')),fixed=modes.some(x=>x.includes('fixed'));
@@ -32,7 +42,7 @@
     scale=event.transform.k;
     world.attr('transform',event.transform);
     positionMarks();
-    $('tooltip').hidden=true;
+    hideTooltip();
   });
   svg.call(zoom).on('dblclick.zoom',null).on('click',()=>clearSelection());
 
@@ -45,8 +55,13 @@
     markers.selectAll('.base-marker').classed('preview',function(b){return kind(b)!=='unknown'&&(hovered===b.id||this===document.activeElement);});
   }
   function showTooltip(event,b){
+    keepTooltip();
     const box=$('map').getBoundingClientRect(),target=event.currentTarget.getBoundingClientRect();
-    $('tooltip').textContent=members(b).map(x=>`${x.name}\n${modeText(x)}`).join('\n\n')+'\nBase identified in public sources.';
+    if(tooltipId!==b.id){
+      $('tooltip').innerHTML='<button class="tip-close" type="button" aria-label="Close quick details">×</button>'+memberDetails(b);
+      $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
+      tooltipId=b.id;
+    }
     $('tooltip').hidden=false;
     const tip=$('tooltip'),x=Number.isFinite(event.clientX)?event.clientX:target.left+target.width/2,y=Number.isFinite(event.clientY)?event.clientY:target.top+target.height/2;
     tip.style.left=`${Math.max(8,Math.min(x-box.left+12,box.width-tip.offsetWidth-8))}px`;
@@ -57,17 +72,17 @@
     markers.selectAll('.base-marker').classed('selected',b=>b.id===selected?.id);
     rings.selectAll('path').classed('active',b=>ids.has(b.id)).style('opacity',b=>selected&&!ids.has(b.id)?.22:1);
   }
-  function clearSelection(){selected=null;$('selection').hidden=true;$('tooltip').hidden=true;selectionStyle();}
+  function clearSelection(){selected=null;$('selection').hidden=true;hideTooltip();selectionStyle();}
   function select(b,focus=false){
     selected=b;
-    $('selection-content').innerHTML=members(b).map(x=>`<div class="member"><h2>${escape(x.name)}</h2><p>${escape(modeText(x))}</p></div>`).join('')+'<p class="provenance">Base identified in public sources.</p>';
+    $('selection-content').innerHTML=memberDetails(b);
     $('selection').hidden=false;
-    $('tooltip').hidden=true;
+    hideTooltip();
     selectionStyle();
     if(focus){const [x,y]=projection([b.lng,b.lat]);svg.transition().duration(250).call(zoom.transform,d3.zoomIdentity.translate(width/2-x*2.8,height/2-y*2.8).scale(2.8));}
   }
   function render(){
-    hovered=null;$('tooltip').hidden=true;
+    hovered=null;hideTooltip();
     const enabled=new Set([...document.querySelectorAll('#operators input:checked')].map(x=>x.value));
     const query=$('search').value.trim().toLowerCase(),mode=$('aircraft').value;
     visible=data.bases.filter(b=>enabled.has(b.operator)&&`${b.name} ${b.city} ${b.state}`.toLowerCase().includes(query)&&(mode==='all'||(mode==='unknown'?kind(b)==='unknown':b.mode.toLowerCase().includes(mode))));
@@ -90,8 +105,8 @@
       g.append('circle').attr('r',12).attr('fill','transparent');
       return g;
     }).attr('tabindex',0).attr('role','button').attr('data-id',b=>b.id).attr('data-aircraft',kind).attr('aria-label',b=>members(b).map(x=>`${x.name}, ${modeText(x)}`).join('; '));
-    nodes.on('pointerenter',(event,b)=>{hovered=b.id;preview();showTooltip(event,b);}).on('pointermove',showTooltip).on('pointerleave',()=>{hovered=null;preview();$('tooltip').hidden=true;})
-      .on('focus',(event,b)=>{preview();showTooltip(event,b);}).on('blur',()=>{preview();$('tooltip').hidden=true;})
+    nodes.on('pointerenter',(event,b)=>{hovered=b.id;preview();showTooltip(event,b);}).on('pointermove',showTooltip).on('pointerleave',()=>{hovered=null;preview();scheduleTooltipHide();})
+      .on('focus',(event,b)=>{preview();showTooltip(event,b);}).on('blur',()=>{preview();scheduleTooltipHide();})
       .on('click',(event,b)=>{event.stopPropagation();select(b);}).on('keydown',(event,b)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();select(b);}});
     labels.selectAll('text').data(points,b=>b.id).join('text').attr('class','base-label').text(b=>b.members?'SAT: AEL 148 + AirMed':b.name.replace('Air Evac Lifeteam ','AEL ')).style('display',$('labels').checked?null:'none');
     positionMarks();selectionStyle();preview();
@@ -110,6 +125,10 @@
   $('filter-toggle').onclick=()=>{const open=$('filters').hidden;$('filters').hidden=!open;$('filter-toggle').setAttribute('aria-expanded',String(open));if(open){$('selection').hidden=true;$('close-filters').focus();}};
   $('close-filters').onclick=()=>{closeFilters();$('filter-toggle').focus();};
   $('close-selection').onclick=clearSelection;
+  $('tooltip').addEventListener('pointerenter',keepTooltip);
+  $('tooltip').addEventListener('pointerleave',scheduleTooltipHide);
+  $('tooltip').addEventListener('focusin',keepTooltip);
+  $('tooltip').addEventListener('focusout',scheduleTooltipHide);
   document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeFilters();clearSelection();}});
   $('operators').insertAdjacentHTML('beforeend',Object.entries(operators).map(([id,o])=>`<label class="operator"><input type="checkbox" value="${id}" checked><span class="swatch" style="background:${o.color}"></span>${o.name}<span class="count">${data.bases.filter(b=>b.operator===id).length}</span></label>`).join(''));
   $('search').addEventListener('input',render);

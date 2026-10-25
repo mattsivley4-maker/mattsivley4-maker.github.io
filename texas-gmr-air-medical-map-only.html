@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Interactive Texas and border-region GMR air base map with 75 nautical mile geographic radii.">
   <title>Texas GMR Air Bases | Interactive Map</title>
-  <link rel="stylesheet" href="assets/gmr-map/map-only.css?v=20261022-1">
+  <link rel="stylesheet" href="assets/gmr-map/map-only.css?v=20261025-social1">
 </head>
 <body>
   <header>
@@ -31,7 +31,7 @@
       <button id="zoom-out" class="icon-button" aria-label="Zoom out" title="Zoom out"><i data-lucide="minus"></i></button>
       <button id="reset" class="icon-button" aria-label="Reset map extent" title="Reset map extent"><i data-lucide="maximize"></i></button>
     </div>
-    <div id="tooltip" role="tooltip" hidden></div>
+    <div id="tooltip" role="dialog" aria-label="Base quick details" hidden></div>
     <section id="selection" class="selection" aria-live="polite" hidden><button id="close-selection" class="icon-button" title="Clear selection" aria-label="Clear selection"><i data-lucide="x"></i></button><div id="selection-content"></div></section>
     <div class="map-caption"><span id="visible-count" role="status"></span><span>75 NM = 138.9 km</span></div>
   </main>
@@ -39,6 +39,7 @@
   <script src="assets/gmr-map/d3.min.js"></script>
   <script src="assets/gmr-map/lucide.min.js"></script>
   <script src="assets/gmr-map/map-only-data.js?v=20261023-1"></script>
-  <script src="assets/gmr-map/map-only.js?v=20261022-1"></script>
+  <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
+  <script src="assets/gmr-map/map-only.js?v=20261025-social1"></script>
 </body>
 </html>
