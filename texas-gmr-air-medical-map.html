@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Source-audited Texas and border-region GMR air medical base map with 75 nautical mile geographic radii and open verification questions.">
-  <title>Texas GMR Air Bases | 75 NM Map</title>
-  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261025-social1">
+  <meta name="description" content="Texas GMR and selected HALO, PHI and Air Methods bases with 75 nautical mile geographic radii, source notes and open location questions.">
+  <title>Texas GMR + Regional Air Bases | 75 NM Map</title>
+  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261027-regional1">
 </head>
 <body>
   <header>
-    <div><p class="eyebrow">TEXAS + BORDER REGION</p><h1>GMR Air Medical Bases</h1></div>
+    <div><p class="eyebrow">TEXAS + BORDER REGION</p><h1>GMR + Regional Air Medical Bases</h1></div>
     <nav aria-label="Maps and records"><a href="texas-ingram-air-evac-map.html">Ingram Ready Mix map</a><a href="texas-gmr-facebook-directory.html">Facebook directory</a><a href="#audit">Verification record</a><a href="assets/gmr-map/bases.csv" download><i data-lucide="download"></i>Base CSV</a></nav>
   </header>
-  <div class="notice"><i data-lucide="info"></i><p><strong>75 NM geographic radii, not guaranteed service coverage.</strong> Roster cross-check updated October 20, 2026. Base phones are supplied roster numbers, not verified dispatch lines. Not a dispatch or flight-planning tool. Aircraft availability, weather, terrain, clinical capability and operating limits are not modeled.</p></div>
+  <div class="notice"><i data-lucide="info"></i><p><strong>75 NM geographic radii, not guaranteed service coverage.</strong> HALO, regional PHI and AirLIFE TEXAS public-source review: October 27, 2026. GMR roster cross-check: October 20, 2026. Base phones are supplied roster numbers, not verified dispatch lines. Not a dispatch or flight-planning tool. Aircraft availability, weather, terrain, clinical capability and operating limits are not modeled.</p></div>
   <main>
     <section class="workspace" aria-label="Air medical base map">
       <aside class="sidebar">
@@ -41,8 +41,19 @@
       </div>
     </section>
     <section id="audit" class="audit">
-      <div class="section-head"><div><p class="eyebrow">EVIDENCE &amp; EXCEPTIONS</p><h2>Verification Record</h2></div><a href="assets/gmr-map/base-audit.json" download><i data-lucide="download"></i>Full data + sources</a></div>
-      <div class="audit-summary"><div><h3>Scope</h3><p>Air Evac Lifeteam, Med-Trans programs, AirMed International and Guardian Flight. Includes Texas bases and out-of-state sites within 75 NM of Texas, regardless of state name. Ground-only operations, offices and non-GMR programs are excluded. Co-located AeroCare I / III in Lubbock are one site. AirMed International and AEL 148 retain separate records and radii at San Antonio International Airport.</p></div><div><h3>Accuracy Limits</h3><p>Circles are WGS84 ellipsoidal geodesics. Eligibility uses the nearest point on the Census 2024 1:500,000 Texas boundary. Address and campus markers are approximate, not surveyed landing pads. Near-threshold sites require precise-coordinate confirmation. Seven user-provided roster excerpts were cross-checked October 20, 2026; their effective date and completeness are not established. Phones are transcribed as supplied, not independently dial-verified. Missing roster entries do not establish closure.</p></div></div>
+      <div class="section-head"><div><p class="eyebrow">EVIDENCE &amp; EXCEPTIONS</p><h2>Verification Record</h2></div><a href="assets/gmr-map/base-audit.json" download><i data-lucide="download"></i>GMR data + sources</a></div>
+      <div class="audit-summary"><div><h3>Scope</h3><p>GMR: Air Evac Lifeteam, Med-Trans programs, AirMed International and Guardian Flight in Texas and within 75 NM of its border. This research page also includes the selected HALO, PHI and Air Methods locations described below; those operators are not GMR. This is not a complete statewide inventory of PHI or every Air Methods program. Co-located AeroCare I / III in Lubbock are one site. AirMed International and AEL 148 retain separate records and radii at San Antonio International Airport.</p></div><div><h3>Accuracy Limits</h3><p>Circles are WGS84 ellipsoidal geodesics. Eligibility uses the nearest point on the Census 2024 1:500,000 Texas boundary. Address and campus markers are approximate, not surveyed landing pads. Near-threshold sites require precise-coordinate confirmation. Seven user-provided roster excerpts were cross-checked October 20, 2026; their effective date and completeness are not established. Phones are transcribed as supplied, not independently dial-verified. Missing roster entries do not establish closure.</p></div></div>
+      <section id="regional-research" aria-labelledby="regional-heading">
+        <h3 id="regional-heading">HALO, nearby PHI and AirLIFE TEXAS — October 27, 2026</h3>
+        <p class="regional-legend"><span><b style="background:#7b2cbf"></b>HALO: purple</span><span><b style="background:#d4aa00"></b>PHI: yellow</span><span><b style="background:#81522e"></b>Air Methods: brown</span></p>
+        <p><strong>11 publicly supported regional sites and one unresolved launch-site candidate.</strong> Select a name below for its address, coordinate precision, evidence and limitations. Every displayed circle uses the same 75 NM (138,900 m) geodesic radius. The map-only and Ingram pages are separate.</p>
+        <p><strong>HALO has three named locations.</strong> Alice is in Jim Wells County, Beeville is in Bee County, and Corpus Christi is in Nueces County. Alice and Jim Wells are not two bases. HALO identifies the Alice and Beeville hospital campuses; FAA-derived heliport records supply estimated pad coordinates. Its two official pages describe Corpus Christi's response/support role differently, so that site's role is flagged. <a href="https://haloflight.org/services/service-area/" target="_blank" rel="noopener">HALO bases</a> · <a href="https://haloflight.org/operations/operating-fleet/" target="_blank" rel="noopener">HALO fleet roles</a></p>
+        <p><strong>Nearby PHI screening:</strong> the public PHI locator was screened for centers within 150 NM of a HALO site, because two 75 NM circles can overlap at that distance. Six communities qualify. Victoria is the closest supported general air-medical site, 46.62 NM from HALO Beeville. San Antonio's hospital proxy is 72.99 NM away but its current launch location is unresolved and hidden by default. Columbus, Bay City, Cedar Creek and Richmond also have overlapping circles. These distances do not establish dispatch availability, pediatric/adult capability or membership eligibility. <a href="https://phicares.com/coverage-map/" target="_blank" rel="noopener">PHI locator</a> · <a href="https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/" target="_blank" rel="noopener">October 2026 community list</a></p>
+        <p><strong>Address discrepancies are retained in the evidence.</strong> Bay City's locator coordinate is about 5 NM west of the airport address corroborated by PHI and CMS; this map instead uses the approximate airport-address match. San Antonio's hospital listing and Stinson airport tenancy cannot yet establish one current launch pad. Uvalde AirLIFE uses 403 Airport Blvd, beside the existing AEL 181 address at 399; their coordinates and circles remain distinct. Each Uvalde pop-up links to the other base record.</p>
+        <p><strong>AirLIFE TEXAS:</strong> current Air Methods pages support Lockhart (1), Uvalde (5) and Snyder (39). New Braunfels (10) is not added: a mirrored program post reports closure on January 15, 2026, and the current operator page no longer lists it. This addition follows the current AirLIFE program listing, rather than attempting a statewide inventory of other Air Methods programs. <a href="https://www.airmethods.com/air-medical/program/airlife-texas/" target="_blank" rel="noopener">Current AirLIFE program</a> · <a href="https://www.govserv.org/US/New-Braunfels/199407453254447/AirLife-Texas-10-New-Braunfels" target="_blank" rel="noopener">Mirrored closure notice</a></p>
+        <div class="regional-table-wrap"><table class="regional-table"><thead><tr><th scope="col">Base / county</th><th scope="col">Evidence and coordinate confidence</th><th scope="col">Nearest HALO center</th></tr></thead><tbody id="regional-records"></tbody></table></div>
+        <p><a href="assets/gmr-map/regional-bases.csv" download>Regional base CSV</a> · <a href="assets/gmr-map/regional-audit.json" download>Regional data, sources and PHI distance screening</a></p>
+      </section>
       <p class="closure"><strong>AEL 47 La Grange is excluded.</strong> The owner confirmed internally that this base no longer exists; stale public listings do not override that correction.</p>
       <p class="confirmed"><strong>San Antonio airport presence confirmed October 12, 2026.</strong> The owner personally visited AirMed International and confirms both AirMed International and AEL 148 have nearby hangars at San Antonio International Airport. AirMed San Antonio is no longer an open verification item. Coordinates remain approximate; the separate radius centers are unchanged.</p>
       <h3>Open Questions <span id="question-count"></span></h3>
@@ -52,12 +63,13 @@
       <details class="exclusions"><summary>Other Exclusions and Border Checks</summary><div id="excluded"></div><p>Legacy Life Air Rescue records in Shreveport are not counted as Med-Trans: the current program is part of <a href="https://acadianairmed.com/operations/lifeairrescue/" target="_blank" rel="noopener">Acadian Air Med</a>. UT Health East Texas AIR1 is <a href="https://www.metroaviation.com/project/air-1/" target="_blank" rel="noopener">Metro Aviation</a>, not GMR. UT LIFESTAR I's San Angelo address in the Med-Trans locator conflicts with its Tennessee coordinates and <a href="https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet" target="_blank" rel="noopener">Tennessee program</a>; it is not a Texas base. Historical McAllen AEL records were not reinstated.</p></details>
     </section>
   </main>
-  <footer>Independent research map, not an official GMR operational product. <a href="texas-ingram-air-evac-map.html">Original Ingram Ready Mix map</a></footer>
+  <footer>Independent research map, not an official operational product of any displayed operator. <a href="texas-ingram-air-evac-map.html">Original Ingram Ready Mix map</a></footer>
   <noscript><p>JavaScript is required for the map. <a href="assets/gmr-map/bases.csv">Download the base list.</a></p></noscript>
   <script src="assets/gmr-map/d3.min.js"></script>
   <script src="assets/gmr-map/lucide.min.js"></script>
   <script src="assets/gmr-map/data.js?v=20261020-roster1"></script>
+  <script src="assets/gmr-map/regional-data.js?v=20261027-regional1"></script>
   <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
-  <script src="assets/gmr-map/map.js?v=20261025-social1"></script>
+  <script src="assets/gmr-map/map.js?v=20261027-regional1"></script>
 </body>
 </html>

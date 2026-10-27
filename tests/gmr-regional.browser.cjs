@@ -1,0 +1,80 @@
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const root=path.resolve(__dirname,'..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'assets/gmr-map/regional-audit.json'),'utf8'));
+assert.equal(data.bases.length,12);
+assert.equal(data.bases.filter(b=>b.status==='Publicly supported').length,11);
+assert.equal(data.geometryValidation.maximumVertexRadiusErrorMeters<0.002,true);
+assert.equal(data.phiLocatorScreening.filter(b=>b.included).length,6);
+assert.equal(data.bases.find(b=>b.id==='phi-san-antonio').status,'Review candidate');
+assert(data.bases.find(b=>b.id==='phi-bay-city').lng>-95.88);
+assert(data.bases.find(b=>b.id==='phi-bay-city').locatorOffsetNm>4.9);
+assert(data.bases.every(b=>b.sources.length>=3&&b.circle.coordinates[0].length===361));
+assert(!data.bases.some(b=>/New Braunfels|Sandia/.test(b.name)));
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1100}}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(process.argv[2]||pathToFileURL(path.join(root,'texas-gmr-air-medical-map.html')).href);
+  await page.waitForSelector('.base-marker');
+  assert.equal(await page.locator('.county').count(),254);
+  assert.equal(await page.locator('.radius').count(),75);
+  assert.equal(await page.locator('#regional-records tr').count(),12);
+  assert.equal(await page.locator('#operators input').count(),7);
+  assert.equal(await page.locator('.base-marker').evaluateAll(ns=>ns.some(n=>n.__data__.id==='phi-san-antonio')),false);
+  const originalGeometry=await page.locator('.radius').evaluateAll(ns=>Object.fromEntries(ns.filter(n=>!['halo','phi','airmethods'].includes(n.__data__.operator)).map(n=>[n.__data__.id,n.getAttribute('d')])));
+  await page.locator('#candidates').check();
+  const colors={halo:'#7b2cbf',phi:'#d4aa00',airmethods:'#81522e'};
+  for(const b of data.bases){
+   await page.locator('#search').fill(b.name);
+   const marker=page.locator('.base-marker');
+   assert.equal(await marker.count(),1,b.name);
+   assert.equal(await page.locator('.radius').getAttribute('stroke'),colors[b.operator]);
+   await marker.focus();
+   assert((await page.locator('#tooltip').innerText()).includes(b.precision));
+   await page.keyboard.press('Enter');
+   const detail=await page.locator('#detail').innerText();
+   assert(detail.includes(b.address)&&detail.includes(b.note)&&detail.includes(b.county),b.name);
+   assert.equal(await page.locator('#detail .sources a').count(),b.sources.length);
+   assert.equal(await page.locator('#detail a[href^="tel:"]').count(),0);
+  }
+  await page.locator('#search').fill('Uvalde');
+  assert.equal(await page.locator('.base-marker').count(),2);
+  await page.locator('#list button').filter({hasText:'AirLIFE TEXAS 5'}).click();
+  await page.locator('#detail [data-nearby-base="ael-181"]').click();
+  assert((await page.locator('#detail h2').innerText()).includes('181'));
+  await page.locator('#detail [data-nearby-base="airmethods-uvalde"]').click();
+  assert((await page.locator('#detail h2').innerText()).includes('AirLIFE TEXAS 5'));
+  await page.locator('#search').fill('');
+  await page.locator('#candidates').uncheck();
+  for(const op of ['halo','phi','airmethods'])await page.locator(`#operators input[value="${op}"]`).uncheck();
+  const after=await page.locator('.radius').evaluateAll(ns=>Object.fromEntries(ns.map(n=>[n.__data__.id,n.getAttribute('d')])));
+  assert.deepEqual(after,originalGeometry);
+  await page.locator('[data-regional-base="phi-san-antonio"]').click();
+  assert(await page.locator('#candidates').isChecked());
+  assert((await page.locator('#detail h2').innerText()).includes('launch site unresolved'));
+  for(const op of ['halo','phi','airmethods'])await page.locator(`#operators input[value="${op}"]`).check();
+  const out=process.env.SCREENSHOT_DIR;if(out)fs.mkdirSync(out,{recursive:true});
+  for(const width of [390,768,1440]){
+   await page.setViewportSize({width,height:1100});
+   await page.locator('#search').fill('HALO');
+   await page.locator('#reset').click();await page.waitForTimeout(400);
+   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+   if(out)await page.locator('.workspace').screenshot({path:path.join(out,`halo-${width}.png`)});
+   await page.locator('#search').fill('AirLIFE TEXAS 5');
+   await page.locator('.base-marker').focus();
+   const tip=await page.locator('#tooltip').boundingBox(),shell=await page.locator('.map-shell').boundingBox();
+   assert(tip.x>=shell.x&&tip.x+tip.width<=shell.x+shell.width+1);
+   assert(tip.y>=shell.y&&tip.y+tip.height<=shell.y+shell.height+1);
+   await page.locator('#tooltip .nearby-base').hover();await page.waitForTimeout(400);
+   assert(await page.locator('#tooltip').isVisible());
+   if(out)await page.locator('.map-shell').screenshot({path:path.join(out,`uvalde-${width}.png`)});
+  }
+  assert.deepEqual(errors,[]);
+  console.log(JSON.stringify({passed:true,regional:12,supported:11,reviewCandidate:1,colors:true,counties:254,originalRingsUnchanged:true,nearbyUvaldeAccessible:true,mobile:true}));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

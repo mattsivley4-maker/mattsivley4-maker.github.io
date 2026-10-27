@@ -1,12 +1,20 @@
 /* Source data and geodesic rings are generated separately; UI never infers operational coverage. */
 (() => {
   'use strict';
-  const data = window.GMR_MAP_DATA;
+  const regional = window.GMR_REGIONAL_DATA || {bases:[],reviewItems:[],exclusions:[]};
+  const data = {...window.GMR_MAP_DATA,
+    bases:[...window.GMR_MAP_DATA.bases,...regional.bases],
+    reviewItems:[...window.GMR_MAP_DATA.reviewItems,...regional.reviewItems],
+    exclusions:[...window.GMR_MAP_DATA.exclusions,...regional.exclusions]};
+  const regionalIds=new Set(regional.bases.map(b=>b.id));
   const operators = {
     airevac: {name:'Air Evac Lifeteam', color:'#b53942'},
     medtrans: {name:'Med-Trans programs', color:'#197790'},
     airmed: {name:'AirMed International', color:'#32794c'},
-    guardian: {name:'Guardian Flight', color:'#8c5e9f'}
+    guardian: {name:'Guardian Flight', color:'#8c5e9f'},
+    halo: {name:'HALO-Flight', color:'#7b2cbf'},
+    phi: {name:'PHI Air Medical / partners', color:'#d4aa00'},
+    airmethods: {name:'Air Methods / AirLIFE TEXAS', color:'#81522e'}
   };
   const $ = id => document.getElementById(id);
   const supported = data.bases.filter(b => b.status === 'Publicly supported');
@@ -20,6 +28,7 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const socialPages=new Map((window.GMR_FACEBOOK_DATA?.rows||[]).map(row=>[row.id,row]));
   const socialDetail=b=>{
+    if(regionalIds.has(b.id))return '';
     const page=socialPages.get(b.id);
     if(!page?.url)return '<p class="social-unavailable">Facebook: no matching base page confirmed.</p>';
     return `<div class="social-link"><a href="${escape(page.url)}" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">&#8599;</span></a><span>${escape(page.scope)}</span></div>`;
@@ -32,12 +41,15 @@
   const phoneText = b => b.phone || (b.rosterEvidence ? 'Not listed (roster N/A)' : 'Not supplied');
   const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
   const phoneDetail = b => `<div class="base-phone"><strong>Base phone</strong> ${phoneLink(b)}<small>${escape(b.phoneStatus || 'Not supplied in the screenshots')}</small></div>`;
+  const nearbyBases=b=>data.bases.filter(x=>b.nearbyBaseIds?.includes(x.id)||x.nearbyBaseIds?.includes(b.id));
+  const nearbyHtml=b=>nearbyBases(b).map(x=>`<button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
+  const wireNearby=container=>container.querySelectorAll('[data-nearby-base]').forEach(el=>el.onclick=()=>{hideTooltip();selectBase(data.bases.find(b=>b.id===el.dataset.nearbyBase));});
   const icons = () => window.lucide?.createIcons();
   $('total').textContent = `${supported.length} supported base sites`;
   $('regional-count').textContent = `${supported.filter(b => b.state === 'TX').length} Texas / ${supported.filter(b => b.state !== 'TX').length} border-region / ${data.bases.length-supported.length} review candidates`;
   $('candidate-count').textContent = `(${data.bases.length-supported.length})`;
-  $('overview').textContent = `${supported.length} publicly supported sites across the requested operator families. ${data.bases.filter(b => b.review && b.status==='Publicly supported').length} have open location or status questions. Guardian 72 and AEL 189 are held as review candidates. La Grange remains excluded.`;
-  $('operators').insertAdjacentHTML('beforeend', Object.entries(operators).map(([id,o]) => `<label class="operator"><input type="checkbox" value="${id}" checked><span class="swatch" style="background:${o.color}"></span>${o.name}<span class="count">${supported.filter(b => b.operator===id).length}${id==='guardian'?' + 1 review':''}</span></label>`).join(''));
+  $('overview').textContent = `${supported.length} publicly supported sites across GMR and the selected regional operators. ${data.bases.filter(b => b.review && b.status==='Publicly supported').length} have open location or role questions. Guardian 72, AEL 189 and the PHI San Antonio launch site are held as review candidates. Regional review: October 27, 2026. La Grange remains excluded.`;
+  $('operators').insertAdjacentHTML('beforeend', Object.entries(operators).map(([id,o]) => {const reviews=data.bases.filter(b=>b.operator===id&&b.status==='Review candidate').length;return `<label class="operator"><input type="checkbox" value="${id}" checked><span class="swatch" style="background:${o.color}"></span>${o.name}<span class="count">${supported.filter(b => b.operator===id).length}${reviews?` + ${reviews} review`:''}</span></label>`;}).join(''));
   // Census GeoJSON uses opposite polygon winding to D3's spherical geometry.
   const orientPolygon = coordinates => d3.geoArea({type:'Polygon',coordinates}) > 2 * Math.PI ? coordinates.map(ring => [...ring].reverse()) : coordinates;
   const orientFeature = feature => ({...feature,geometry:{...feature.geometry,coordinates:feature.geometry.type === 'MultiPolygon' ? feature.geometry.coordinates.map(orientPolygon) : orientPolygon(feature.geometry.coordinates)}});
@@ -104,11 +116,12 @@
   function showTooltip(event,b){
     keepTooltip();
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
-    const phoneLines=(b.members || [b]).map(site=>`${b.members?(site.operator==='airevac'?'AEL 148':'AirMed International')+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
+    const phoneLines=(b.members || [b]).filter(site=>!regionalIds.has(site.id)).map(site=>`${b.members?(site.operator==='airevac'?'AEL 148':'AirMed International')+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
     if(tooltipId!==b.id){
       const summary=`${b.members?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
-      $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details" title="Close quick details"><i data-lucide="x"></i></button><div class="tip-summary">${escape(summary)}</div><div class="tip-social">${(b.members||[b]).map(site=>`${b.members?`<strong>${escape(site.name)}</strong>`:''}${socialDetail(site)}`).join('')}</div>`;
+      $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details" title="Close quick details"><i data-lucide="x"></i></button><div class="tip-summary">${escape(summary)}</div>${regionalIds.has(b.id)?`<p class="tip-evidence">${escape(b.precision)}${b.review?'<br>Open question: select the base for evidence.':''}</p>`:''}<div class="tip-social">${(b.members||[b]).map(site=>`${b.members?`<strong>${escape(site.name)}</strong>`:''}${socialDetail(site)}`).join('')}${nearbyHtml(b)}</div>`;
       $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
+      wireNearby($('tooltip'));
       tooltipId=b.id;icons();
     }
     $('tooltip').hidden=false;
@@ -123,7 +136,9 @@
     selectedAirport=false;
     selected=b;
     $('detail').innerHTML=`<div class="detail-top"><div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h2>${escape(b.name)}</h2></div><button id="close-detail" aria-label="Clear selection" title="Clear selection"><i data-lucide="x"></i></button></div><p>${escape(b.address)}</p><div class="details-grid"><div><strong>Evidence status</strong>${escape(b.status)}${b.review?' / open question':''}</div><div><strong>Aircraft</strong>${escape(b.mode)}</div><div><strong>Coordinate precision</strong>${escape(b.precision)}<br>${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div><div><strong>Distance to Texas</strong>${b.distanceToTexasNm===0?'Within Texas':`${b.distanceToTexasNm.toFixed(2)} NM`} / 75 NM circle</div></div><p class="${b.review?'question-text':'muted'}">${escape(b.note)}</p><div class="sources">${links(b.sources)}</div>`;
-    $('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
+    if(!regionalIds.has(b.id))$('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
+    if(regionalIds.has(b.id))$('detail').insertAdjacentHTML('beforeend',`<p class="muted">Public sources checked ${escape(b.checked)}. County: ${escape(b.county)}.${b.nearestHalo?` Nearest HALO site: ${escape(b.nearestHalo.city)}, ${b.nearestHalo.distanceNm.toFixed(2)} NM center-to-center. Circle overlap is not a promise of service.`:''}</p>`);
+    $('detail').insertAdjacentHTML('beforeend',nearbyHtml(b));wireNearby($('detail'));
     $('detail').insertAdjacentHTML('beforeend',socialDetail(b));
     if(b.rosterEvidence) $('detail').insertAdjacentHTML('beforeend',`<p class="muted">Roster evidence: image ${b.rosterEvidence.images.join(', ')}, row ${b.rosterEvidence.rows.join(', ')}; supplied October 20, 2026. Document effective date not shown.<br>Roster address: ${escape(b.rosterEvidence.addresses.join(' / '))}</p>`);
     if(b.confirmation) $('detail').insertAdjacentHTML('beforeend',`<p class="confirmed">${escape(b.confirmation)}</p>`);
@@ -190,6 +205,10 @@
   $('question-count').textContent=`(${data.reviewItems.length})`;
   $('questions').innerHTML=data.reviewItems.map((q,i)=>`<article class="question"><div><h4>${i+1}. ${escape(q.name)}</h4><p class="category">${escape(q.category)}</p></div><div><p>${escape(q.question)}</p><div class="sources">${links(q.sources.map((url,j)=>({url,title:`Source ${j+1}`})))}</div></div></article>`).join('');
   $('excluded').innerHTML=data.exclusions.map(e=>`<div class="exclusion"><strong>${escape(e.name)}</strong><br>${escape(e.reason)}</div>`).join('');
+  if($('regional-records')){
+    $('regional-records').innerHTML=regional.bases.map(b=>`<tr><td><button class="regional-record" data-regional-base="${escape(b.id)}">${escape(b.name)}</button><small>${escape(b.county)} County</small></td><td>${b.status==='Review candidate'?'Review candidate — hidden by default':b.review?'Site supported; open question':'Publicly supported'}<small>${escape(b.precision)}</small></td><td>${b.nearestHalo?`${b.nearestHalo.distanceNm.toFixed(2)} NM to ${escape(b.nearestHalo.city)}`:'—'}</td></tr>`).join('');
+    document.querySelectorAll('[data-regional-base]').forEach(el=>el.onclick=()=>{const b=data.bases.find(x=>x.id===el.dataset.regionalBase);$('search').value='';$('aircraft').value='all';document.querySelector(`#operators input[value="${b.operator}"]`).checked=true;if(b.status==='Review candidate')$('candidates').checked=true;render();selectBase(b,true);$('detail').scrollIntoView({behavior:'smooth',block:'nearest'});});
+  }
   $('roster-checks').innerHTML=data.rosterScreening.filter(r=>r.result!=='Existing site corroborated').map(r=>`<div class="exclusion"><strong>${escape(r.name)}, ${escape(r.state)}</strong><br>${r.distanceToTexasNm.toFixed(2)} NM from Texas at the screened coordinate; outside the 75 NM rule. Roster row ${r.row}.</div>`).join('');
   // Keyboard users receive the same phone information as pointer users.
   svg.on('focusin.phone',event=>{

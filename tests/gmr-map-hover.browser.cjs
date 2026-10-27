@@ -17,7 +17,7 @@ const fs=require('node:fs');
     const geometry=await page.locator('.radius').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('d')));
     const screenshotDir=process.env.SCREENSHOT_DIR;
     if(screenshotDir) fs.mkdirSync(screenshotDir,{recursive:true});
-    const cases=[['rotor','Uvalde'],['fixed','AirMed International - Dallas'],['mixed','AeroCare I + III'],['unknown','AeroCare - Alpine'],['mixed','San Antonio']];
+    const cases=[['rotor','Lifeteam 181'],['fixed','AirMed International - Dallas'],['mixed','AeroCare I + III'],['unknown','AeroCare - Alpine'],['mixed','San Antonio']];
     for(const [kind,query] of cases){
       await page.locator('#search').fill(query);
       const marker=page.locator('.base-marker');
@@ -64,7 +64,7 @@ const fs=require('node:fs');
     await page.locator('.base-marker').hover();
     assert.equal(await preview.getAttribute('data-aircraft'),'rotor');
     await page.locator('#operators input[value="airmed"]').check();
-    await page.locator('#search').fill('Uvalde');
+    await page.locator('#search').fill('Lifeteam 181');
     await page.locator('.base-marker').focus();
     const before=await preview.boundingBox();
     await page.locator('#zoom-in').evaluate(n=>n.click());

@@ -1,0 +1,712 @@
+{
+  "checked": "2026-10-27",
+  "scope": "HALO's three named sites; PHI locator communities whose 75 NM circles could overlap a HALO 75 NM circle (centers no more than 150 NM apart); the current AirLIFE TEXAS program, not all Air Methods brands statewide.",
+  "bases": [
+    {
+      "id": "halo-alice",
+      "operator": "halo",
+      "name": "HALO-Flight - Alice (Jim Wells County)",
+      "city": "Alice",
+      "state": "TX",
+      "county": "Jim Wells",
+      "address": "CHRISTUS Spohn Hospital Alice, 2500 E Main Street, Alice, TX 78332; heliport TA29",
+      "lat": 27.7650296,
+      "lng": -98.0409061,
+      "mode": "Rotor-wing",
+      "precision": "FAA-listed TA29 helipad coordinate via AirNav; estimated, not surveyed",
+      "note": "The Alice base is the Jim Wells County base, not a fourth HALO location. HALO names the Spohn Alice campus; the matching FAA heliport record identifies that hospital and the HALO management address. Aircraft allocation can change.",
+      "sources": [
+        {
+          "url": "https://haloflight.org/services/service-area/",
+          "title": "HALO official base list"
+        },
+        {
+          "url": "https://haloflight.org/operations/operating-fleet/",
+          "title": "HALO fleet and base roles"
+        },
+        {
+          "url": "https://www.airnav.com/airport/TA29",
+          "title": "TA29 FAA-derived heliport record"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0
+    },
+    {
+      "id": "halo-beeville",
+      "operator": "halo",
+      "name": "HALO-Flight - Beeville (Bee County)",
+      "city": "Beeville",
+      "state": "TX",
+      "county": "Bee",
+      "address": "CHRISTUS Spohn Hospital Beeville, 1500 E Houston Street, Beeville, TX 78102; heliport TA36",
+      "lat": 28.4066988,
+      "lng": -97.7308646,
+      "mode": "Rotor-wing",
+      "precision": "FAA-listed TA36 helipad coordinate via AirNav; estimated, not surveyed",
+      "note": "HALO explicitly identifies its hangar at CHRISTUS Spohn Hospital Beeville in its December 2025 equipment announcement. This is the hospital base, not Chase Field, which older reporting describes as a weather shelter.",
+      "sources": [
+        {
+          "url": "https://haloflight.org/services/service-area/",
+          "title": "HALO official base list"
+        },
+        {
+          "url": "https://haloflight.org/new-equipment-to-safely-move-helicopter/",
+          "title": "HALO hospital-hangar confirmation, December 9, 2025"
+        },
+        {
+          "url": "https://www.airnav.com/airport/TA36",
+          "title": "TA36 FAA-derived heliport record"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0
+    },
+    {
+      "id": "halo-corpus",
+      "operator": "halo",
+      "name": "HALO-Flight - Corpus Christi (Nueces County)",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "county": "Nueces",
+      "address": "1843 FM 665, Corpus Christi, TX 78415; HALO-Flight heliport TX10",
+      "lat": 27.7183833,
+      "lng": -97.5523917,
+      "mode": "Rotor-wing",
+      "precision": "FAA-listed TX10 helipad coordinate via AirNav; estimated, not surveyed",
+      "note": "Physical HALO location is supported. Its service-area page describes emergency and Driscoll aircraft here, while its fleet page describes spare aircraft, maintenance and dispatch supporting Alice/Beeville plus a Driscoll-dedicated aircraft. The routine launch/standby role remains unresolved. The 75 NM circle is geographic only; do not assume a continuously staffed general-response aircraft here.",
+      "sources": [
+        {
+          "url": "https://haloflight.org/services/service-area/",
+          "title": "HALO official base list"
+        },
+        {
+          "url": "https://haloflight.org/operations/operating-fleet/",
+          "title": "HALO fleet and base roles"
+        },
+        {
+          "url": "https://www.airnav.com/airport/TX10",
+          "title": "TX10 FAA-derived HALO heliport record"
+        }
+      ],
+      "review": true,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0
+    },
+    {
+      "id": "phi-victoria",
+      "operator": "phi",
+      "name": "PHI Med 3 - Victoria",
+      "city": "Victoria",
+      "state": "TX",
+      "county": "Victoria",
+      "address": "2701 Hospital Drive Victoria TX 77901",
+      "lat": 28.81309,
+      "lng": -96.977678,
+      "mode": "Rotor-wing",
+      "precision": "Operator-published address coordinate; not a surveyed launch pad",
+      "note": "Current PHI locator and October 2026 community list support this base community. CMS independently corroborates its practice address. The marker follows the operator coordinate; neither directory proves today's aircraft availability. Located on the Citizens Medical Center campus; street/building coordinate rather than an exact helipad.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+          "title": "CMS practice addresses; not proof of current operations"
+        },
+        {
+          "url": "https://cbrac.org/wp-content/uploads/2022/03/2022-03-Trauma-System-Plan-Update.pdf",
+          "title": "Coastal Bend RAC identifies PHI Victoria serving the region"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 28.81309,
+        "lng": -96.977678,
+        "markerId": "150"
+      }
+    },
+    {
+      "id": "phi-columbus",
+      "operator": "phi",
+      "name": "PHI Med 7 - Columbus",
+      "city": "Columbus",
+      "state": "TX",
+      "county": "Colorado",
+      "address": "1038 County Road 102 Columbus TX 78934",
+      "lat": 29.644932,
+      "lng": -96.516433,
+      "mode": "Rotor-wing",
+      "precision": "Operator-published address coordinate; not a surveyed launch pad",
+      "note": "Current PHI locator and October 2026 community list support this base community. CMS independently corroborates its practice address. The marker follows the operator coordinate; neither directory proves today's aircraft availability. The address geocoder lands about 0.18 NM from the operator point on the airport property. The operator point is retained; exact hangar/pad remains approximate.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+          "title": "CMS practice addresses; not proof of current operations"
+        },
+        {
+          "url": "https://www.co.colorado.tx.us/upload/page/9816/Minutes%202022/CCM%20-%20October%2011%202022.pdf",
+          "title": "Colorado County EMS identifies PHI Med 7 in Columbus"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 29.644932,
+        "lng": -96.516433,
+        "markerId": "159"
+      }
+    },
+    {
+      "id": "phi-bay-city",
+      "operator": "phi",
+      "name": "PHI / Allegiance Air 2 - Bay City",
+      "city": "Bay City",
+      "state": "TX",
+      "county": "Matagorda",
+      "address": "3598 FM 2540 N, Ste M4, Bay City, TX, 77414",
+      "lat": 28.9783564,
+      "lng": -95.8687344,
+      "mode": "Rotor-wing",
+      "precision": "Geocoded published airport address; exact Suite M4 launch pad unverified",
+      "note": "PHI and CMS agree on 3598 FM 2540 N at Bay City Regional Airport (Suite M4 / Suite 4). PHI's locator point (28.9808, -95.9644) is about 5 NM west of this address and is rejected for the ring center. The plotted address match is on the airport property; the precise crew hangar/pad still needs confirmation.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+          "title": "CMS practice addresses; not proof of current operations"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3598+FM+2540+N%2C+Bay+City%2C+TX&f=json&outFields=Addr_type%2CMatch_addr&maxLocations=2",
+          "title": "Esri address match; approximate site, not surveyed pad"
+        },
+        {
+          "url": "https://www.airnav.com/airport/KBYY",
+          "title": "Bay City Regional Airport location cross-check"
+        },
+        {
+          "url": "https://phicares.com/2024/08/08/understanding-the-phi-air-medical-coverage-map/",
+          "title": "PHI identifies Bay City as Allegiance Air 2"
+        }
+      ],
+      "review": true,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 28.9808,
+        "lng": -95.9644,
+        "markerId": "1140"
+      }
+    },
+    {
+      "id": "phi-cedar-creek",
+      "operator": "phi",
+      "name": "PHI Med 14 - Cedar Creek",
+      "city": "Cedar Creek",
+      "state": "TX",
+      "county": "Bastrop",
+      "address": "525 - B Union Chapel Rd. Cedar Creek TX 78612",
+      "lat": 30.129426,
+      "lng": -97.451753,
+      "mode": "Rotor-wing",
+      "precision": "Operator-published address coordinate; not a surveyed launch pad",
+      "note": "Current PHI locator and October 2026 community list support this base community. CMS independently corroborates its practice address. The marker follows the operator coordinate; neither directory proves today's aircraft availability. The plotted address is on Union Chapel Road; a separately indexed helipad is about 0.11 NM north. Exact launch-pad position has not been established.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+          "title": "CMS practice addresses; not proof of current operations"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 30.129426,
+        "lng": -97.451753,
+        "markerId": "147"
+      }
+    },
+    {
+      "id": "phi-richmond",
+      "operator": "phi",
+      "name": "PHI Med 9 - Richmond",
+      "city": "Richmond",
+      "state": "TX",
+      "county": "Fort Bend",
+      "address": "1530 Austin Street Richmond TX 77469",
+      "lat": 29.575616,
+      "lng": -95.769145,
+      "mode": "Rotor-wing",
+      "precision": "Operator-published address coordinate; not a surveyed launch pad",
+      "note": "Current PHI locator and October 2026 community list support this base community. CMS independently corroborates its practice address. The marker follows the operator coordinate; neither directory proves today's aircraft availability.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+          "title": "CMS practice addresses; not proof of current operations"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 29.575616,
+        "lng": -95.769145,
+        "markerId": "160"
+      }
+    },
+    {
+      "id": "phi-san-antonio",
+      "operator": "phi",
+      "name": "PHI / CHRISTUS Children's - San Antonio (launch site unresolved)",
+      "city": "San Antonio",
+      "state": "TX",
+      "county": "Bexar",
+      "address": "333 N Santa Rosa St, San Antonio, TX, 78207",
+      "lat": 29.425,
+      "lng": -98.4939,
+      "mode": "Rotor-wing",
+      "precision": "PHI locator hospital-area proxy ONLY; actual standby/launch site unresolved",
+      "note": "PHI's current locator lists 333 N Santa Rosa Street and this hospital-area coordinate. The city airport tenant list also identifies PHI in Suite 111 at Stinson; a 2019 city lease links Stinson operations to the children's hospital. These may be complementary facilities, but the current launch location is not resolved. Held as a review candidate, hidden by default; the optional yellow circle is centered on the PHI hospital proxy, not a verified operating pad. This is a pediatric partner program, not assumed general adult scene coverage.",
+      "sources": [
+        {
+          "url": "https://phicares.com/coverage-map/",
+          "title": "PHI official coverage locator (checked October 27, 2026)"
+        },
+        {
+          "url": "https://phicares.com/wp-json/wpgmza/v1/markers/?filter=%7B%22map_id%22%3A%221%22%7D",
+          "title": "PHI public locator coordinates and addresses"
+        },
+        {
+          "url": "https://phicares.com/2026/10/21/does-your-membership-work-in-another-state/",
+          "title": "PHI base communities, October 21, 2026"
+        },
+        {
+          "url": "https://flysanantonio.com/stinson/about/",
+          "title": "City airport tenant list: PHI Suite 111"
+        },
+        {
+          "url": "https://sanantonio.legistar.com/LegislationDetail.aspx?ID=3942109&GUID=03C1C468-CF21-44B1-85CF-EF8B7E826CE2",
+          "title": "2019 city lease: Stinson operations for children's hospital"
+        },
+        {
+          "url": "https://www.strac.org/wp-content/uploads/2023/08/Regional_Transfer_Packet_03302023.pdf",
+          "title": "STRAC identifies PHI / CHOSA All Kidz"
+        }
+      ],
+      "review": true,
+      "status": "Review candidate",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "locatorOriginal": {
+        "lat": 29.425,
+        "lng": -98.4939,
+        "markerId": "1137"
+      }
+    },
+    {
+      "id": "airmethods-lockhart",
+      "operator": "airmethods",
+      "name": "AirLIFE TEXAS 1 - Lockhart",
+      "city": "Lockhart",
+      "state": "TX",
+      "county": "Caldwell",
+      "address": "145 Old Lockhart Road, Lockhart, TX",
+      "lat": 30.006901,
+      "lng": -97.685816,
+      "mode": "Rotor-wing",
+      "precision": "Approximate geocoded base address; not surveyed hangar/pad",
+      "note": "Air Methods gives this street address for its Bell 407 base. Census and Esri agree on the address area within about 60 m. This is the base address, not the separate American Legion ribbon-cutting venue.",
+      "sources": [
+        {
+          "url": "https://www.airmethods.com/air-medical/program/airlife-texas/",
+          "title": "Air Methods current AirLIFE TEXAS program"
+        },
+        {
+          "url": "https://www.airmethods.com/press-releases/airlife-texas-cuts-the-ribbon-on-new-base-in-lockhart/",
+          "title": "Air Methods opening and street address, August 21, 2025"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=145+Old+Lockhart+Road%2C+Lockhart%2C+TX&f=json&outFields=Addr_type%2CMatch_addr&maxLocations=2",
+          "title": "Esri address match; approximate site, not surveyed pad"
+        },
+        {
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json&address=145%20Old%20Lockhart%20Road,%20Lockhart,%20TX",
+          "title": "Census address cross-check; street interpolation"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0
+    },
+    {
+      "id": "airmethods-uvalde",
+      "operator": "airmethods",
+      "name": "AirLIFE TEXAS 5 - Uvalde",
+      "city": "Uvalde",
+      "state": "TX",
+      "county": "Uvalde",
+      "address": "403 Airport Blvd, Uvalde, TX",
+      "lat": 29.2170352,
+      "lng": -99.7413446,
+      "mode": "Rotor-wing",
+      "precision": "Approximate geocoded base address; not surveyed hangar/pad",
+      "note": "Operator publication confirms current Uvalde operations. The local Chamber and clinical-affiliate address list identify 403 Airport Blvd at Garner Field. This is beside the existing AEL 181 address at 399 Airport Blvd; they are distinct operators and retain separate ring centers. Esri matches the address; Census returned no match. The hangar/pad has not been surveyed.",
+      "sources": [
+        {
+          "url": "https://www.airmethods.com/air-medical/program/airlife-texas/",
+          "title": "Air Methods current AirLIFE TEXAS program"
+        },
+        {
+          "url": "https://www.airmethods.com/press-releases/airlife-texas-in-uvalde-gets-injured-k9-officers-to-help-faster/",
+          "title": "Air Methods Uvalde operations, August 25, 2026"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=403+Airport+Blvd%2C+Uvalde%2C+TX&f=json&outFields=Addr_type%2CMatch_addr&maxLocations=2",
+          "title": "Esri address match; approximate site, not surveyed pad"
+        },
+        {
+          "url": "https://www.adventhealth.com/sites/default/files/assets/affiliate-sites-adventhealth_v2a.pdf",
+          "title": "AdventHealth clinical-affiliate base address list (undated)"
+        },
+        {
+          "url": "https://chamber.uvalde.org/list/search?sa=true",
+          "title": "Uvalde Chamber: AirLife Texas, 403 Airport Blvd"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0,
+      "nearbyBaseIds": [
+        "ael-181"
+      ]
+    },
+    {
+      "id": "airmethods-snyder",
+      "operator": "airmethods",
+      "name": "AirLIFE TEXAS 39 - Snyder",
+      "city": "Snyder",
+      "state": "TX",
+      "county": "Scurry",
+      "address": "5305 Etgen Blvd, Snyder, TX",
+      "lat": 32.6882089,
+      "lng": -100.9156743,
+      "mode": "Rotor-wing",
+      "precision": "Approximate geocoded base address; not surveyed hangar/pad",
+      "note": "Current Air Methods publication identifies AirLIFE TEXAS 39 in Snyder. A hospital clinical-affiliate list gives 5305 Etgen Blvd; Esri and Census street matches agree within about 22 m. Exact pad position remains approximate.",
+      "sources": [
+        {
+          "url": "https://www.airmethods.com/air-medical/program/airlife-texas/",
+          "title": "Air Methods current AirLIFE TEXAS program"
+        },
+        {
+          "url": "https://www.airmethods.com/press-releases/airlife-texas-enhances-emergency-air-medical-service-with-upgraded-helicopter/",
+          "title": "Air Methods Snyder Bell 407 GXi upgrade, March 11, 2026"
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=5305+Etgen+Blvd%2C+Snyder%2C+TX&f=json&outFields=Addr_type%2CMatch_addr&maxLocations=2",
+          "title": "Esri address match; approximate site, not surveyed pad"
+        },
+        {
+          "url": "https://www.adventhealth.com/sites/default/files/assets/affiliate-sites-adventhealth_v2a.pdf",
+          "title": "AdventHealth clinical-affiliate base address list (undated)"
+        },
+        {
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json&address=5305%20Etgen%20Blvd,%20Snyder,%20TX",
+          "title": "Census address cross-check; street interpolation"
+        }
+      ],
+      "review": false,
+      "status": "Publicly supported",
+      "checked": "2026-10-27",
+      "phone": null,
+      "phoneStatus": "No independently verified base phone added in this public-source review.",
+      "distanceToTexasNm": 0
+    }
+  ],
+  "reviewItems": [
+    {
+      "name": "HALO Corpus Christi: response role",
+      "category": "Physical site supported; routine role unresolved",
+      "question": "Physical HALO location is supported. Its service-area page describes emergency and Driscoll aircraft here, while its fleet page describes spare aircraft, maintenance and dispatch supporting Alice/Beeville plus a Driscoll-dedicated aircraft. The routine launch/standby role remains unresolved. The 75 NM circle is geographic only; do not assume a continuously staffed general-response aircraft here.",
+      "sources": [
+        "https://haloflight.org/services/service-area/",
+        "https://haloflight.org/operations/operating-fleet/"
+      ]
+    },
+    {
+      "name": "PHI Bay City: locator disagreement",
+      "category": "Airport supported; exact hangar/pad still approximate",
+      "question": "PHI and CMS agree on 3598 FM 2540 N at Bay City Regional Airport (Suite M4 / Suite 4). PHI's locator point (28.9808, -95.9644) is about 5 NM west of this address and is rejected for the ring center. The plotted address match is on the airport property; the precise crew hangar/pad still needs confirmation.",
+      "sources": [
+        "https://phicares.com/coverage-map/",
+        "https://npiregistry.cms.hhs.gov/provider-view/1306289996",
+        "https://www.airnav.com/airport/KBYY"
+      ]
+    },
+    {
+      "name": "PHI San Antonio: hospital or Stinson?",
+      "category": "Review candidate; not displayed by default",
+      "question": "PHI's current locator lists 333 N Santa Rosa Street and this hospital-area coordinate. The city airport tenant list also identifies PHI in Suite 111 at Stinson; a 2019 city lease links Stinson operations to the children's hospital. These may be complementary facilities, but the current launch location is not resolved. Held as a review candidate, hidden by default; the optional yellow circle is centered on the PHI hospital proxy, not a verified operating pad. This is a pediatric partner program, not assumed general adult scene coverage.",
+      "sources": [
+        "https://phicares.com/coverage-map/",
+        "https://flysanantonio.com/stinson/about/"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "HALO Sandia landing zone",
+      "reason": "The January 2025 Sandia announcement describes a landing pad, not a staffed aircraft base. Do not add a fourth HALO base. https://www.kristv.com/news/local-news/in-your-neighborhood/jim-wells-county/halo-flights-newest-landing-pad-unveiled-in-sandia"
+    },
+    {
+      "name": "AirLIFE TEXAS 10 - New Braunfels",
+      "reason": "Not added as active. A mirrored program-page post reports closure January 15, 2026; current Air Methods program and August 2026 release list Uvalde, Lockhart and Snyder. Older 2025 opening announcements naming New Braunfels are stale. The closure post was available through a mirror, not independently opened on Facebook."
+    }
+  ],
+  "phiLocatorScreening": [
+    {
+      "id": "138",
+      "title": "Palestine     ",
+      "address": "1320 ACR 421 Palestine TX 75803",
+      "lat": "31.783234",
+      "lng": "-95.701589"
+    },
+    {
+      "id": "139",
+      "title": "Mt. Pleasant   ",
+      "address": "105 W 20th St Mt Pleasant TX 75455",
+      "lat": "33.174995",
+      "lng": "-94.971325"
+    },
+    {
+      "id": "140",
+      "title": "Longview      ",
+      "address": "201 Corporate Road, Hangar 18 Longview TX 75603",
+      "lat": "32.380041",
+      "lng": "-94.719744"
+    },
+    {
+      "id": "141",
+      "title": "Wills Point   ",
+      "address": "Van Zandt Regional Airport Wills Point TX 75169",
+      "lat": "32.695514",
+      "lng": "-95.974996"
+    },
+    {
+      "id": "143",
+      "title": "Conroe        ",
+      "address": "2971 Hawthorne Drive, Suite 205 Conroe TX 77303",
+      "lat": "30.346103",
+      "lng": "-95.410575"
+    },
+    {
+      "id": "144",
+      "title": "Denton        ",
+      "address": "3535 B S. I-35 East Denton TX 76210",
+      "lat": "33.176683",
+      "lng": "-97.092588"
+    },
+    {
+      "id": "145",
+      "title": "Lufkin        ",
+      "address": "1220 Ellis, Suite B Lufkin TX 75904",
+      "lat": "31.335139",
+      "lng": "-94.743765"
+    },
+    {
+      "id": "146",
+      "title": "Medical City Health",
+      "address": "1469 Wattley Way STE 500 McKinney TX 75069",
+      "lat": "33.1686458",
+      "lng": "-96.5926976"
+    },
+    {
+      "id": "147",
+      "title": "Cedar Creek    ",
+      "address": "525 - B Union Chapel Rd. Cedar Creek TX 78612",
+      "lat": "30.129426",
+      "lng": "-97.451753"
+    },
+    {
+      "id": "148",
+      "title": "Temple         ",
+      "address": "7720-F Airport Road, Hangar 22 Temple TX 76501",
+      "lat": "31.152275",
+      "lng": "-97.416153"
+    },
+    {
+      "id": "149",
+      "title": "McKinney      ",
+      "address": "1500 E. Industrial Blvd, Suite 405 McKinney TX 75069",
+      "lat": "33.177386",
+      "lng": "-96.592483"
+    },
+    {
+      "id": "150",
+      "title": "Victoria      ",
+      "address": "2701 Hospital Drive Victoria TX 77901",
+      "lat": "28.81309",
+      "lng": "-96.977678"
+    },
+    {
+      "id": "158",
+      "title": "Corsicana     ",
+      "address": "9000 Old Navarro Road Bldg 6 Corsicana TX 75109",
+      "lat": "32.027306",
+      "lng": "-96.395858"
+    },
+    {
+      "id": "159",
+      "title": "Columbus       ",
+      "address": "1038 County Road 102 Columbus TX 78934",
+      "lat": "29.644932",
+      "lng": "-96.516433"
+    },
+    {
+      "id": "160",
+      "title": "Richmond      ",
+      "address": "1530 Austin Street Richmond TX 77469",
+      "lat": "29.575616",
+      "lng": "-95.769145"
+    },
+    {
+      "id": "1109",
+      "title": "Kirbyville",
+      "address": "216 County Road 411, Hangar 2, Kirbyville, Texas 75956",
+      "lat": "30.6437718",
+      "lng": "-93.9136709"
+    },
+    {
+      "id": "1137",
+      "title": "San Antonio",
+      "address": "333 N Santa Rosa St, San Antonio, TX, 78207",
+      "lat": "29.4250",
+      "lng": "-98.4939"
+    },
+    {
+      "id": "1139",
+      "title": "Livingston",
+      "address": "1601 US Highway 59 N Loop, Suite 300, Livingston, TX, 77351",
+      "lat": "30.7261",
+      "lng": "-94.9425"
+    },
+    {
+      "id": "1140",
+      "title": "Bay City",
+      "address": "3598 FM 2540 N, Ste M4, Bay City, TX, 77414",
+      "lat": "28.9808",
+      "lng": "-95.9644"
+    }
+  ],
+  "scopeSources": [
+    {
+      "url": "https://haloflight.org/services/service-area/",
+      "title": "HALO official base list"
+    },
+    {
+      "url": "https://phicares.com/coverage-map/",
+      "title": "PHI official coverage locator (checked October 27, 2026)"
+    },
+    {
+      "url": "https://www.airmethods.com/air-medical/program/airlife-texas/",
+      "title": "Air Methods current AirLIFE TEXAS program"
+    },
+    {
+      "url": "https://www.govserv.org/US/New-Braunfels/199407453254447/AirLife-Texas-10-New-Braunfels",
+      "title": "Mirror of January 15, 2026 New Braunfels closure post"
+    }
+  ]
+}
