@@ -65,7 +65,7 @@
   const projection = d3.geoConicConformal().parallels([27.5,35]).rotate([100,0]).fitExtent([[45,45],[950,800]], {type:'FeatureCollection',features:[...texas,...data.bases.map(b=>({type:'Feature',geometry:b.circle}))]});
   const path = d3.geoPath(projection);
   const world = svg.append('g');
-  const highlightedCounties=new Set(['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio']);
+  const highlightedCounties=new Set(['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio','Atascosa','Wilson']);
   const countyName=d=>(d.properties.NAME || d.properties.name || 'Texas').replace(/ County$/,'');
   world.append('g').selectAll('path').data(counties).join('path').attr('class',d=>`county${highlightedCounties.has(countyName(d))?' highlighted-county':''}`).attr('d',path).append('title').text(d => `${countyName(d)} County`);
   world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline').attr('d',path);

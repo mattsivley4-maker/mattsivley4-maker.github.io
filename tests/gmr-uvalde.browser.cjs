@@ -16,7 +16,7 @@ const {pathToFileURL}=require('node:url');
   assert.deepEqual(await shared.locator('path').evaluateAll(ns=>ns.map(n=>n.getAttribute('fill'))),['#b53942','#81522e']);
   assert(await shared.evaluate(n=>{const a=window.GMR_MAP_DATA.bases.find(b=>b.id==='ael-181');return n.__data__.lat===a.lat&&n.__data__.lng===a.lng;}));
   const highlighted=await page.locator('.highlighted-county').evaluateAll(ns=>ns.map(n=>(n.__data__.properties.NAME||n.__data__.properties.name).replace(/ County$/,'')).sort());
-  assert.deepEqual(highlighted,['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio'].sort());
+  assert.deepEqual(highlighted,['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio','Atascosa','Wilson'].sort());
   assert.equal(await page.locator('.county').count(),254);
   for(const width of [1440,390]){
    await page.setViewportSize({width,height:1100});
