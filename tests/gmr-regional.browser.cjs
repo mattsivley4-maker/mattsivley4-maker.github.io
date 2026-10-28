@@ -43,7 +43,7 @@ assert(!data.bases.some(b=>/New Braunfels|Sandia/.test(b.name)));
    assert.equal(await page.locator('#detail a[href^="tel:"]').count(),0);
   }
   await page.locator('#search').fill('Uvalde');
-  assert.equal(await page.locator('.base-marker').count(),2);
+  assert.equal(await page.locator('.shared-marker').count(),1);
   await page.locator('#list button').filter({hasText:'AirLIFE TEXAS 5'}).click();
   await page.locator('#detail [data-nearby-base="ael-181"]').click();
   assert((await page.locator('#detail h2').innerText()).includes('181'));

@@ -21,6 +21,8 @@
   let selected = null;
   let selectedAirport = false;
   let airportMarker = null;
+  let uvaldeMarker = null;
+  let selectedUvalde = false;
   let visible = [];
   let scale = 1;
   let hoveredMarker = null;
@@ -42,7 +44,7 @@
   const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
   const phoneDetail = b => `<div class="base-phone"><strong>Base phone</strong> ${phoneLink(b)}<small>${escape(b.phoneStatus || 'Not supplied in the screenshots')}</small></div>`;
   const nearbyBases=b=>data.bases.filter(x=>b.nearbyBaseIds?.includes(x.id)||x.nearbyBaseIds?.includes(b.id));
-  const nearbyHtml=b=>nearbyBases(b).map(x=>`<p class="tip-evidence">Nearby dots are spaced apart when needed for selection. Thin lines point to mapped locations; radius centers are unchanged.</p><button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
+  const nearbyHtml=b=>nearbyBases(b).map(x=>`<p class="tip-evidence">The shared Uvalde dot is centered on AEL 181's mapped location. Both radius centers are unchanged.</p><button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
   const wireNearby=container=>container.querySelectorAll('[data-nearby-base]').forEach(el=>el.onclick=()=>{hideTooltip();selectBase(data.bases.find(b=>b.id===el.dataset.nearbyBase));});
   const icons = () => window.lucide?.createIcons();
   $('total').textContent = `${supported.length} supported base sites`;
@@ -63,14 +65,15 @@
   const projection = d3.geoConicConformal().parallels([27.5,35]).rotate([100,0]).fitExtent([[45,45],[950,800]], {type:'FeatureCollection',features:[...texas,...data.bases.map(b=>({type:'Feature',geometry:b.circle}))]});
   const path = d3.geoPath(projection);
   const world = svg.append('g');
-  world.append('g').selectAll('path').data(counties).join('path').attr('class','county').attr('d',path).append('title').text(d => `${d.properties.NAME || d.properties.name || 'Texas'} County`);
+  const highlightedCounties=new Set(['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio']);
+  const countyName=d=>(d.properties.NAME || d.properties.name || 'Texas').replace(/ County$/,'');
+  world.append('g').selectAll('path').data(counties).join('path').attr('class',d=>`county${highlightedCounties.has(countyName(d))?' highlighted-county':''}`).attr('d',path).append('title').text(d => `${countyName(d)} County`);
   world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline').attr('d',path);
   const ringLayer = world.append('g');
   const stateLayer = world.append('g');
   [['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-100.8,37.35],['MEXICO',-103,28.5]].forEach(([name,x,y]) => {
     const p=projection([x,y]);stateLayer.append('text').attr('class','state-label').attr('x',p[0]).attr('y',p[1]).attr('text-anchor','middle').text(name);
   });
-  const markerLeaders = world.append('g').attr('pointer-events','none');
   const markerLayer = world.append('g');
   const airportLayer = world.append('g');
   const labelLayer = world.append('g');
@@ -97,7 +100,8 @@
       aircraftLayer.attr('data-aircraft',kind);
       aircraftLayer.selectAll('use').attr('href',`#aircraft-${kind}`);
       aircraftLayer.select('.aircraft-silhouette').attr('fill',previewMarker.review?'white':color).attr('stroke',color);
-      aircraftLayer.select('.aircraft-secondary').style('display',previewMarker.members?null:'none').attr('fill',operators.airmed.color).attr('stroke',operators.airmed.color);
+      const secondaryColor=operators[previewMarker.members?.[1].operator || 'airmed'].color;
+      aircraftLayer.select('.aircraft-secondary').style('display',previewMarker.members?null:'none').attr('fill',secondaryColor).attr('stroke',secondaryColor);
     }
     resizeMarks();
   }
@@ -107,26 +111,8 @@
     scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();hideTooltip();
   });
   svg.call(zoom).on('dblclick.zoom',null);
-  const markerPositions = new Map();
-  const markerPosition = b => markerPositions.get(b.id) || projection([b.lng,b.lat]);
+  const markerPosition = b => projection([b.lng,b.lat]);
   function resizeMarks(){
-    markerPositions.clear();
-    // Separate the two Garner Field display markers only; geographic data and rings never move.
-    const pair=['ael-181','airmethods-uvalde'].map(id=>visible.find(b=>b.id===id));
-    if(pair.every(Boolean)){
-      const [a,b]=pair.map(site=>projection([site.lng,site.lat]));
-      const cssScale=svg.node().getScreenCTM()?.a || 1;
-      const gap=Math.max(28,20/cssScale)/scale;
-      if(Math.hypot(b[0]-a[0],b[1]-a[1])<gap){
-        const mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
-        markerPositions.set(pair[0].id,[mid[0]-gap/2,mid[1]]);
-        markerPositions.set(pair[1].id,[mid[0]+gap/2,mid[1]]);
-      }
-    }
-    markerLeaders.selectAll('line').data(pair.filter(b=>b&&markerPositions.has(b.id)),b=>b.id).join('line')
-      .attr('x1',b=>projection([b.lng,b.lat])[0]).attr('y1',b=>projection([b.lng,b.lat])[1])
-      .attr('x2',b=>markerPosition(b)[0]).attr('y2',b=>markerPosition(b)[1])
-      .attr('stroke',b=>operators[b.operator].color).attr('stroke-width',1).attr('vector-effect','non-scaling-stroke');
     markerLayer.selectAll('circle').attr('cx',b=>markerPosition(b)[0]).attr('cy',b=>markerPosition(b)[1]).attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
     airportLayer.selectAll('.shared-marker').attr('transform',b=>`translate(${projection([b.lng,b.lat])}) scale(${1/scale})`);
     if(previewMarker) aircraftLayer.attr('transform',`translate(${markerPosition(previewMarker)}) scale(${1/scale})`);
@@ -137,12 +123,16 @@
   function showTooltip(event,b){
     keepTooltip();
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
-    const phoneLines=(b.members || [b]).filter(site=>!regionalIds.has(site.id)).map(site=>`${b.members?(site.operator==='airevac'?'AEL 148':'AirMed International')+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
+    const phoneLines=(b.members || [b]).filter(site=>!regionalIds.has(site.id)).map(site=>`${b.members?site.name+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
     if(tooltipId!==b.id){
-      const summary=`${b.members?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
+      const summary=`${b.members&&b.id==='san-antonio-international'?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
       $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details" title="Close quick details"><i data-lucide="x"></i></button><div class="tip-summary">${escape(summary)}</div>${regionalIds.has(b.id)?`<p class="tip-evidence">${escape(b.precision)}${b.review?'<br>Open question: select the base for evidence.':''}</p>`:''}<div class="tip-social">${(b.members||[b]).map(site=>`${b.members?`<strong>${escape(site.name)}</strong>`:''}${socialDetail(site)}`).join('')}${nearbyHtml(b)}</div>`;
       $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
       wireNearby($('tooltip'));
+      if(b.id==='uvalde-shared'){
+        $('tooltip').insertAdjacentHTML('beforeend',b.members.map(site=>`<button class="nearby-base" data-nearby-base="${site.id}">${escape(site.name)} — base details</button>`).join(''));
+        wireNearby($('tooltip'));
+      }
       tooltipId=b.id;icons();
     }
     $('tooltip').hidden=false;
@@ -162,6 +152,7 @@
   }
   function selectBase(b,focusMap=false){
     selectedAirport=false;
+    selectedUvalde=false;
     selected=b;
     $('detail').innerHTML=`<div class="detail-top"><div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h2>${escape(b.name)}</h2></div><button id="close-detail" aria-label="Clear selection" title="Clear selection"><i data-lucide="x"></i></button></div><p>${escape(b.address)}</p><div class="details-grid"><div><strong>Evidence status</strong>${escape(b.status)}${b.review?' / open question':''}</div><div><strong>Aircraft</strong>${escape(b.mode)}</div><div><strong>Coordinate precision</strong>${escape(b.precision)}<br>${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div><div><strong>Distance to Texas</strong>${b.distanceToTexasNm===0?'Within Texas':`${b.distanceToTexasNm.toFixed(2)} NM`} / 75 NM circle</div></div><p class="${b.review?'question-text':'muted'}">${escape(b.note)}</p><div class="sources">${links(b.sources)}</div>`;
     if(!regionalIds.has(b.id))$('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
@@ -180,17 +171,23 @@
   }
   function selectAirport(){
     if(!airportMarker) return;
-    selected=null;selectedAirport=true;
+    selected=null;selectedAirport=true;selectedUvalde=false;
     $('detail').innerHTML=`<h2>San Antonio International Airport</h2><p class="confirmed">Both services confirmed at this airport by the owner, October 12, 2026.</p><div class="airport-services">${airportMarker.members.map(b=>`<div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h3>${escape(b.name)}</h3><p>${escape(b.mode)}</p><p>${escape(b.address)}</p><button class="airport-record" data-airport-base="${b.id}">Base record and sources</button></div>`).join('')}</div><p class="muted">Nearby hangars share this display marker. Each 75 NM ring remains centered on its own recorded coordinate; neither coordinate has been moved or merged.</p>`;
     $('detail').querySelectorAll('[data-airport-base]').forEach(el=>el.onclick=()=>selectBase(airportMarker.members.find(b=>b.id===el.dataset.airportBase)));
     $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',phoneDetail(airportMarker.members[i])+socialDetail(airportMarker.members[i])));
     renderSelection();
   }
+  function selectUvalde(){
+    if(!uvaldeMarker)return;
+    selected=null;selectedAirport=false;selectedUvalde=true;
+    $('detail').innerHTML=`<h2>Uvalde / Garner Field</h2><div class="airport-services">${uvaldeMarker.members.map(b=>`<div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h3>${escape(b.name)}</h3><p>${escape(b.mode)}</p><p>${escape(b.address)}</p><button class="airport-record" data-nearby-base="${b.id}">Base record and sources</button>${socialDetail(b)}</div>`).join('')}</div><p class="muted">The shared red/brown marker is centered on AEL 181's original mapped location. Each base retains its own recorded coordinates and 75 NM radius.</p>`;
+    wireNearby($('detail'));renderSelection();
+  }
   function renderSelection(){
     markerLayer.selectAll('circle').classed('selected',b=>selected?.id===b.id);
-    airportLayer.selectAll('.shared-marker').classed('selected',selectedAirport || !!selected?.siteGroup);
-    const active=b=>selected?.id===b.id || (selectedAirport && b.siteGroup==='san-antonio-international');
-    ringLayer.selectAll('path').classed('active',active).style('opacity', b => (selected || selectedAirport) && !active(b) ? 0.22 : 1);
+    airportLayer.selectAll('.shared-marker').classed('selected',b=>b.id==='uvalde-shared'?(selectedUvalde||b.members.some(x=>x.id===selected?.id)):(selectedAirport || !!selected?.siteGroup));
+    const active=b=>selected?.id===b.id || (selectedAirport && b.siteGroup==='san-antonio-international') || (selectedUvalde && uvaldeMarker?.members.some(x=>x.id===b.id));
+    ringLayer.selectAll('path').classed('active',active).style('opacity', b => (selected || selectedAirport || selectedUvalde) && !active(b) ? 0.22 : 1);
     document.querySelectorAll('.base-row').forEach(el=>el.classList.toggle('selected',el.dataset.id===selected?.id));resizeMarks();
   }
   function render(){
@@ -203,7 +200,12 @@
     const airportBases=visible.filter(b=>b.siteGroup==='san-antonio-international');
     // Display grouping only: retain both original geodesic centers and records.
     airportMarker=airportBases.length>1?{id:'san-antonio-international',name:'San Antonio International Airport: AEL 148 + AirMed International',status:'2 owner-confirmed airport services',lat:d3.mean(airportBases,b=>b.lat),lng:d3.mean(airportBases,b=>b.lng),members:airportBases}:null;
-    const points=airportMarker?visible.filter(b=>!b.siteGroup):visible;
+    const uvaldeBases=['ael-181','airmethods-uvalde'].map(id=>visible.find(b=>b.id===id));
+    uvaldeMarker=uvaldeBases.every(Boolean)?{id:'uvalde-shared',name:'Uvalde: AEL 181 + AirLIFE TEXAS 5',mode:'Rotor-wing',lat:uvaldeBases[0].lat,lng:uvaldeBases[0].lng,members:uvaldeBases}:null;
+    const sharedMarkers=[airportMarker,uvaldeMarker].filter(Boolean);
+    const groupedIds=new Set(sharedMarkers.flatMap(b=>b.members.map(x=>x.id)));
+    const points=visible.filter(b=>!groupedIds.has(b.id));
+    if(selectedUvalde&&!uvaldeMarker){selectedUvalde=false;$('detail').innerHTML='<h2>Research Snapshot</h2><p class="muted">The shared Uvalde selection is outside the current filters.</p>';}
     if(selectedAirport && !airportMarker){selectedAirport=false;$('detail').innerHTML='<h2>Research Snapshot</h2><p class="muted">The airport selection is outside the current filters.</p>';}
     if(selected&&!visible.some(b=>b.id===selected.id)){selected=null;$('detail').innerHTML='<h2>Research Snapshot</h2><p class="muted">The previous selection is outside the current filters.</p>';}
     $('visible-count').textContent=`${visible.length} sites shown${visible.some(b=>b.status==='Review candidate')?' / includes unconfirmed candidates':''}`;
@@ -211,16 +213,16 @@
     $('list').querySelectorAll('button').forEach(el=>el.onclick=()=>selectBase(visible.find(b=>b.id===el.dataset.id),true));
     ringLayer.selectAll('path').data(visible,b=>b.id).join('path').attr('class',b=>`radius${b.review?' question':''}`).attr('d',b=>path(b.circle)).attr('fill',b=>operators[b.operator].color).attr('stroke',b=>operators[b.operator].color).style('display',$('rings').checked?null:'none');
     markerLayer.selectAll('circle').data(points,b=>b.id).join('circle').attr('class','base-marker').attr('data-aircraft',aircraftKind).attr('cx',b=>projection([b.lng,b.lat])[0]).attr('cy',b=>projection([b.lng,b.lat])[1]).attr('fill',b=>b.review?'#fff':operators[b.operator].color).attr('stroke',b=>b.review?operators[b.operator].color:'#fff').attr('tabindex',0).attr('role','button').attr('aria-label',b=>`${b.name}, ${b.mode}, ${b.status}${b.review?', open question':''}`).on('click',(event,b)=>{event.stopPropagation();selectBase(b);}).on('keydown',(event,b)=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectBase(b);}}).on('pointerenter',markerEnter).on('pointermove',showTooltip).on('pointerleave',markerLeave).on('focus',renderAircraftPreview).on('blur',renderAircraftPreview);
-    airportLayer.selectAll('.shared-marker').data(airportMarker?[airportMarker]:[],b=>b.id).join(enter=>{
+    airportLayer.selectAll('.shared-marker').data(sharedMarkers,b=>b.id).join(enter=>{
       const group=enter.append('g').attr('class','base-marker shared-marker');
       group.append('path').attr('d',d3.arc().innerRadius(0).outerRadius(9).startAngle(0).endAngle(Math.PI)()).attr('fill',operators.airevac.color);
-      group.append('path').attr('d',d3.arc().innerRadius(0).outerRadius(9).startAngle(Math.PI).endAngle(2*Math.PI)()).attr('fill',operators.airmed.color);
+      group.append('path').attr('d',d3.arc().innerRadius(0).outerRadius(9).startAngle(Math.PI).endAngle(2*Math.PI)()).attr('fill',b=>operators[b.members[1].operator].color);
       group.append('circle').attr('class','shared-outline').attr('r',9).attr('fill','none').attr('stroke','#fff').attr('stroke-width',2);
       group.append('text').attr('text-anchor','middle').attr('dy','0.35em').text('2');
       group.append('circle').attr('r',12).attr('fill','transparent').attr('stroke','none');
       return group;
-    }).attr('data-aircraft',aircraftKind).attr('tabindex',0).attr('role','button').attr('aria-label',b=>b.name).on('click',event=>{event.stopPropagation();selectAirport();}).on('keydown',event=>{if(['Enter',' '].includes(event.key)){event.preventDefault();selectAirport();}}).on('pointerenter',markerEnter).on('pointermove',showTooltip).on('pointerleave',markerLeave).on('focus',renderAircraftPreview).on('blur',renderAircraftPreview);
-    const labels=airportMarker?[...points,{...airportMarker,name:'SAT: AEL 148 + AirMed'}]:points;
+    }).attr('data-aircraft',aircraftKind).attr('tabindex',0).attr('role','button').attr('aria-label',b=>b.name).on('click',(event,b)=>{event.stopPropagation();b.id==='uvalde-shared'?selectUvalde():selectAirport();}).on('keydown',(event,b)=>{if(['Enter',' '].includes(event.key)){event.preventDefault();b.id==='uvalde-shared'?selectUvalde():selectAirport();}}).on('pointerenter',markerEnter).on('pointermove',showTooltip).on('pointerleave',markerLeave).on('focus',renderAircraftPreview).on('blur',renderAircraftPreview);
+    const labels=[...points,...sharedMarkers.map(b=>({...b,name:b.id==='san-antonio-international'?'SAT: AEL 148 + AirMed':b.name}))];
     labelLayer.selectAll('text').data(labels,b=>b.id).join('text').attr('class','base-label').attr('x',b=>projection([b.lng,b.lat])[0]).attr('y',b=>projection([b.lng,b.lat])[1]).text(b=>b.name.replace('Air Evac Lifeteam ','AEL ')).style('display',$('labels').checked?null:'none');
     renderSelection();
     renderAircraftPreview();
