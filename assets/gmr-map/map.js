@@ -42,7 +42,7 @@
   const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
   const phoneDetail = b => `<div class="base-phone"><strong>Base phone</strong> ${phoneLink(b)}<small>${escape(b.phoneStatus || 'Not supplied in the screenshots')}</small></div>`;
   const nearbyBases=b=>data.bases.filter(x=>b.nearbyBaseIds?.includes(x.id)||x.nearbyBaseIds?.includes(b.id));
-  const nearbyHtml=b=>nearbyBases(b).map(x=>`<button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
+  const nearbyHtml=b=>nearbyBases(b).map(x=>`<p class="tip-evidence">Nearby dots are spaced apart when needed for selection. Thin lines point to mapped locations; radius centers are unchanged.</p><button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
   const wireNearby=container=>container.querySelectorAll('[data-nearby-base]').forEach(el=>el.onclick=()=>{hideTooltip();selectBase(data.bases.find(b=>b.id===el.dataset.nearbyBase));});
   const icons = () => window.lucide?.createIcons();
   $('total').textContent = `${supported.length} supported base sites`;
@@ -70,6 +70,7 @@
   [['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-100.8,37.35],['MEXICO',-103,28.5]].forEach(([name,x,y]) => {
     const p=projection([x,y]);stateLayer.append('text').attr('class','state-label').attr('x',p[0]).attr('y',p[1]).attr('text-anchor','middle').text(name);
   });
+  const markerLeaders = world.append('g').attr('pointer-events','none');
   const markerLayer = world.append('g');
   const airportLayer = world.append('g');
   const labelLayer = world.append('g');
@@ -106,13 +107,33 @@
     scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();hideTooltip();
   });
   svg.call(zoom).on('dblclick.zoom',null);
+  const markerPositions = new Map();
+  const markerPosition = b => markerPositions.get(b.id) || projection([b.lng,b.lat]);
   function resizeMarks(){
-    markerLayer.selectAll('circle').attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
+    markerPositions.clear();
+    // Separate the two Garner Field display markers only; geographic data and rings never move.
+    const pair=['ael-181','airmethods-uvalde'].map(id=>visible.find(b=>b.id===id));
+    if(pair.every(Boolean)){
+      const [a,b]=pair.map(site=>projection([site.lng,site.lat]));
+      const cssScale=svg.node().getScreenCTM()?.a || 1;
+      const gap=Math.max(28,20/cssScale)/scale;
+      if(Math.hypot(b[0]-a[0],b[1]-a[1])<gap){
+        const mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+        markerPositions.set(pair[0].id,[mid[0]-gap/2,mid[1]]);
+        markerPositions.set(pair[1].id,[mid[0]+gap/2,mid[1]]);
+      }
+    }
+    markerLeaders.selectAll('line').data(pair.filter(b=>b&&markerPositions.has(b.id)),b=>b.id).join('line')
+      .attr('x1',b=>projection([b.lng,b.lat])[0]).attr('y1',b=>projection([b.lng,b.lat])[1])
+      .attr('x2',b=>markerPosition(b)[0]).attr('y2',b=>markerPosition(b)[1])
+      .attr('stroke',b=>operators[b.operator].color).attr('stroke-width',1).attr('vector-effect','non-scaling-stroke');
+    markerLayer.selectAll('circle').attr('cx',b=>markerPosition(b)[0]).attr('cy',b=>markerPosition(b)[1]).attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
     airportLayer.selectAll('.shared-marker').attr('transform',b=>`translate(${projection([b.lng,b.lat])}) scale(${1/scale})`);
-    if(previewMarker) aircraftLayer.attr('transform',`translate(${projection([previewMarker.lng,previewMarker.lat])}) scale(${1/scale})`);
-    labelLayer.selectAll('text').attr('font-size',10/scale).style('font-size',`${10/scale}px`).attr('stroke-width',3/scale).attr('dx',8/scale).attr('dy',-7/scale);
+    if(previewMarker) aircraftLayer.attr('transform',`translate(${markerPosition(previewMarker)}) scale(${1/scale})`);
+    labelLayer.selectAll('text').attr('x',b=>markerPosition(b)[0]).attr('y',b=>markerPosition(b)[1]).attr('font-size',10/scale).style('font-size',`${10/scale}px`).attr('stroke-width',3/scale).attr('dx',8/scale).attr('dy',-7/scale);
     stateLayer.selectAll('text').style('opacity', scale > 2 ? 0.4 : 1);
   }
+  new ResizeObserver(()=>resizeMarks()).observe(svg.node());
   function showTooltip(event,b){
     keepTooltip();
     const shell=document.querySelector('.map-shell').getBoundingClientRect();
@@ -125,12 +146,19 @@
       tooltipId=b.id;icons();
     }
     $('tooltip').hidden=false;
+    $('tooltip').style.maxHeight=`${shell.height-16}px`;
+    $('tooltip').style.overflowY='auto';
     const w=$('tooltip').offsetWidth,h=$('tooltip').offsetHeight;
     const target=event.currentTarget.getBoundingClientRect();
     const x=Number.isFinite(event.clientX)?event.clientX:target.left+target.width/2;
-    const y=Number.isFinite(event.clientY)?event.clientY:target.top+target.height/2;
     $('tooltip').style.left=`${Math.max(6,Math.min(x-shell.left+12,shell.width-w-8))}px`;
-    $('tooltip').style.top=`${Math.max(6,Math.min(y-shell.top+12,shell.height-h-8))}px`;
+    // Keep the pop-up above or below its marker so it cannot intercept the click.
+    const above=Math.max(0,target.top-shell.top-14),below=Math.max(0,shell.bottom-target.bottom-14);
+    const placeBelow=below>=h || below>=above;
+    const room=Math.max(40,placeBelow?below:above);
+    $('tooltip').style.maxHeight=`${room}px`;
+    const height=$('tooltip').offsetHeight;
+    $('tooltip').style.top=`${Math.max(6,Math.min(placeBelow?target.bottom-shell.top+6:target.top-shell.top-height-6,shell.height-height-8))}px`;
   }
   function selectBase(b,focusMap=false){
     selectedAirport=false;
