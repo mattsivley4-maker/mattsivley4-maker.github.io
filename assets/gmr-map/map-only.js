@@ -23,7 +23,8 @@
   };
   let scale=1,selected=null,selectedCounty=null,hovered=null,visible=[],points=[],width=1000,height=860;
   const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ County$/,'');
-  const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.name,c]));
+  const countyEligibleIds=new Set(data.bases.filter(b=>b.operator!=='airmed'&&!/fixed/i.test(b.mode)).map(b=>b.id));
+  const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.name,{...c,matches:c.matches.filter(m=>countyEligibleIds.has(m.id))}]));
   const basesById=new Map(data.bases.map(b=>[b.id,b]));
   const orient=coordinates=>d3.geoArea({type:'Polygon',coordinates})>2*Math.PI?coordinates.map(r=>[...r].reverse()):coordinates;
   const feature=f=>({...f,geometry:{...f.geometry,coordinates:f.geometry.type==='MultiPolygon'?f.geometry.coordinates.map(orient):orient(f.geometry.coordinates)}});
@@ -91,12 +92,12 @@
   }
   function selectCounty(f){
     selected=null;selectedCounty=countyCoverage.get(countyName(f));
-    // A county query always checks every mapped base, including border states.
+    // County results exclude AirMed International and any fixed-wing operation.
     $('search').value='';$('aircraft').value='all';$('rings').checked=true;
     document.querySelectorAll('#operators input').forEach(el=>el.checked=true);
     closeFilters();render();
     const matches=selectedCounty.matches;
-    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} County</h2><p>${matches.length} ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this county.</p><p class="provenance">Closest to farthest by distance to the nearest point in the county. Bases inside are 0 NM. All ${data.bases.length} mapped bases checked.</p>${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?'0 NM · Inside county':`${(m.distanceMeters/1852).toFixed(2)} NM to county`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:'<p class="empty">No mapped base radius touches this county.</p>'}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
+    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} County</h2><p>${matches.length} ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this county.</p><p class="provenance">Closest to farthest by distance to the nearest point in the county. Bases inside are 0 NM. ${countyEligibleIds.size} eligible bases checked; AirMed International and fixed-wing operations excluded.</p>${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?'0 NM · Inside county':`${(m.distanceMeters/1852).toFixed(2)} NM to county`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:'<p class="empty">No eligible base radius touches this county.</p>'}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
     $('selection').hidden=false;
     $('selection').scrollTop=0;
     positionCounty();
