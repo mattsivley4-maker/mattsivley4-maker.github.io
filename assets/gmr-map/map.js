@@ -66,9 +66,17 @@
   const projection = d3.geoConicConformal().parallels([27.5,35]).rotate([100,0]).fitExtent([[45,45],[950,800]], {type:'FeatureCollection',features:[...texas,...data.bases.map(b=>({type:'Feature',geometry:b.circle}))]});
   const path = d3.geoPath(projection);
   const world = svg.append('g');
+  // Keep the county footprint unchanged; hatching encodes the owner's territory categories.
+  const countyHatches=svg.select('defs').selectAll('pattern.county-hatch').data([
+    {id:'municipal-county-hatch',color:'#163e6c'},
+    {id:'gmr-gap-county-hatch',color:'#b32636'}
+  ]).join('pattern').attr('class','county-hatch').attr('id',d=>d.id).attr('patternUnits','userSpaceOnUse').attr('width',8).attr('height',8).attr('patternTransform','rotate(45)');
+  countyHatches.append('rect').attr('width',8).attr('height',8).attr('fill','#d8eef5');
+  countyHatches.append('path').attr('d','M0,0V8').attr('fill','none').attr('stroke',d=>d.color).attr('stroke-width',1.2);
   const highlightedCounties=new Set(['Bexar','Nueces','McMullen','Live Oak','Karnes','DeWitt','Gonzales','Comal','Guadalupe','Frio','Atascosa','Wilson']);
   const countyName=d=>(d.properties.NAME || d.properties.name || 'Texas').replace(/ County$/,'');
-  world.append('g').selectAll('path').data(counties).join('path').attr('class',d=>`county${highlightedCounties.has(countyName(d))?' highlighted-county':''}`).attr('d',path).append('title').text(d => `${countyName(d)} County`);
+  const municipalCounties=new Set(['Frio','McMullen']);
+  world.append('g').selectAll('path').data(counties).join('path').attr('class',d=>`county${highlightedCounties.has(countyName(d))?' highlighted-county':''}${municipalCounties.has(countyName(d))?' municipal-county':countyName(d)==='Nueces'?' gmr-gap-county':''}`).attr('d',path).append('title').text(d => `${countyName(d)} County${municipalCounties.has(countyName(d))?' — Municipal site plans':countyName(d)==='Nueces'?' — No mapped GMR base’s 75 NM radius reaches this county; competitor radii may overlap.':''}`);
   world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline').attr('d',path);
   const ringLayer = world.append('g');
   const stateLayer = world.append('g');
@@ -114,6 +122,7 @@
   svg.call(zoom).on('dblclick.zoom',null);
   const markerPosition = b => projection([b.lng,b.lat]);
   function resizeMarks(){
+    countyHatches.attr('patternTransform',`rotate(45) scale(${1/scale})`);
     hospitalUI?.resize();
     markerLayer.selectAll('circle').attr('cx',b=>markerPosition(b)[0]).attr('cy',b=>markerPosition(b)[1]).attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
     airportLayer.selectAll('.shared-marker').attr('transform',b=>`translate(${projection([b.lng,b.lat])}) scale(${1/scale})`);
