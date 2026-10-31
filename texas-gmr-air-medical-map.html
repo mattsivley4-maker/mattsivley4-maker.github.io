@@ -6,6 +6,7 @@
   <meta name="description" content="Texas GMR and selected HALO, PHI and Air Methods bases with 75 nautical mile geographic radii, source notes and open location questions.">
   <title>Texas GMR + Regional Air Bases | 75 NM Map</title>
   <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261028-counties1">
+  <link rel="stylesheet" href="assets/gmr-map/hospitals.css?v=20261031-1">
 </head>
 <body>
   <header>
@@ -32,18 +33,39 @@
           <span id="visible-count" role="status"></span>
           <div class="map-options"><label class="check"><input id="rings" type="checkbox" checked>75 NM rings</label><label class="check"><input id="labels" type="checkbox">Base labels</label></div>
         </div>
+        <section class="hospital-controls" aria-label="Hospital map controls">
+          <div class="hospital-heading"><h2>Hospital flags</h2><label class="check"><input id="hospitals-visible" type="checkbox" checked>Show hospitals</label><button id="hospital-fit">Focus hospital region</button></div>
+          <fieldset id="hospital-levels"><legend>Trauma designation</legend></fieldset>
+          <p>Gray includes specialty, rehabilitation and psychiatric hospitals without a current listed trauma designation. Texas uses Levels I–IV, not V. Hover or select a flag for details; zoom in to separate nearby flags.</p>
+          <label class="search"><input id="hospital-search" type="search" placeholder="Hospital, county, city or address" aria-label="Search hospitals"></label>
+          <p id="hospital-count" role="status"></p>
+          <details><summary>Matching hospitals — select to locate</summary><div id="hospital-results" class="hospital-results"></div></details>
+        </section>
         <div class="map-shell">
           <svg id="map" viewBox="0 0 1000 860" role="group" aria-label="Interactive Texas county map and air medical bases"></svg>
           <div class="zoom-tools"><button id="zoom-in" title="Zoom in" aria-label="Zoom in"><i data-lucide="plus"></i></button><button id="zoom-out" title="Zoom out" aria-label="Zoom out"><i data-lucide="minus"></i></button><button id="reset" title="Reset map extent" aria-label="Reset map extent"><i data-lucide="maximize"></i></button></div>
           <div class="map-caption">WGS84 &middot; 75 NM = 138.9 km<br>Texas county boundaries &middot; U.S. Census</div>
+          <div id="hospital-tooltip" class="hospital-tooltip" role="dialog" aria-label="Hospital quick details" hidden></div>
           <div id="tooltip" role="dialog" aria-label="Base quick details" hidden></div>
         </div>
+        <section id="hospital-detail" class="detail" aria-live="polite" hidden></section>
         <section id="detail" class="detail" aria-live="polite"><h2>Research Snapshot</h2><p id="overview"></p><p class="muted">An active registry entry is not proof that a base is currently staffed. Review candidates are excluded from the default map. Location questions remain visible in each base record.</p></section>
       </div>
     </section>
     <section id="audit" class="audit">
       <div class="section-head"><div><p class="eyebrow">EVIDENCE &amp; EXCEPTIONS</p><h2>Verification Record</h2></div><a href="assets/gmr-map/base-audit.json" download><i data-lucide="download"></i>GMR data + sources</a></div>
       <div class="audit-summary"><div><h3>Scope</h3><p>GMR: Air Evac Lifeteam, Med-Trans programs, AirMed International and Guardian Flight in Texas and within 75 NM of its border. This research page also includes the selected HALO, PHI and Air Methods locations described below; those operators are not GMR. This is not a complete statewide inventory of PHI or every Air Methods program. Co-located AeroCare I / III in Lubbock are one site. AirMed International and AEL 148 retain separate records and radii at San Antonio International Airport.</p></div><div><h3>Accuracy Limits</h3><p>Circles are WGS84 ellipsoidal geodesics. Eligibility uses the nearest point on the Census 2024 1:500,000 Texas boundary. Address and campus markers are approximate, not surveyed landing pads. Near-threshold sites require precise-coordinate confirmation. Seven user-provided roster excerpts were cross-checked October 20, 2026; their effective date and completeness are not established. Phones are transcribed as supplied, not independently dial-verified. Missing roster entries do not establish closure.</p></div></div>
+      <section id="hospital-research" aria-labelledby="hospital-heading">
+        <h3 id="hospital-heading">Hospitals — October 31, 2026 review</h3>
+        <p><strong>104 hospital records: 2 Level I, 3 Level II, 12 Level III, 28 Level IV, and 59 without a current listed trauma designation.</strong> Flags use the same projection as the air-base map. Green = I, yellow = II, purple = III, blue = IV, gray = no designation listed. Level is assigned to the specific facility, never inherited from its hospital system.</p>
+        <p>Trauma levels and contingent/probationary notes follow the <a href="https://www.dshs.texas.gov/dshs-ems-trauma-systems/trauma-system-development/texas-trauma-facilities" target="_blank" rel="noopener">Texas DSHS list dated October 28, 2026</a>. Hospital addresses follow the October 21 <a href="https://www.hhs.texas.gov/sites/default/files/documents/general-special-hospital-list.xlsx">HHSC general/special directory</a> and <a href="https://www.hhs.texas.gov/sites/default/files/documents/doing-business-with-hhs/provider-portal/facilities-regulation/hospitals/hospital-psych-directory.xlsx">psychiatric directory</a>, supplemented by official military, VA, state and university hospital pages. The limited-services rural directory was screened; none fell in scope.</p>
+        <p><strong>Scope:</strong> the 12 highlighted counties plus their neighbors, including corner contacts, using this map's Census boundaries (33 counties). Outpatient-only clinics and freestanding ERs are excluded; licensed ER-and-inpatient hospitals are included. University main-campus services, including the Women's &amp; Children's Hospital, share one record. Separate licensed facilities at the same point remain selectable.</p>
+        <details><summary>Included counties</summary><p id="hospital-scope"></p></details>
+        <p><strong>Location precision:</strong> 88 current addresses match the public HHSC location layer, 15 use geocoded published addresses, and one uses coordinates published by its operator. All were checked against their mapped county. These are approximate address/campus locations, not surveyed entrances or landing pads. Hover lists nearby flags; the searchable directory keeps overlapping hospitals accessible.</p>
+        <p><strong>Review limits:</strong> this is a dated directory snapshot, not proof of current admissions, emergency capability or transport acceptance. Gray does not imply an emergency department. Trauma, stroke, cardiac, maternal and neonatal designations are different categories. The supplied August PDF was used as a cross-check; newer state records determine the trauma colors. Planned Palo Alto, Retama and Babcock Specialty hospital openings are excluded pending opening confirmation.</p>
+        <p><a href="assets/gmr-map/hospitals.csv" download>Hospital CSV</a> · <a href="assets/gmr-map/hospital-audit.json" download>Hospital records, sources and scope</a></p>
+        <details><summary>Hospital directory — all 104 records</summary><div class="regional-table-wrap hospital-directory"><table class="regional-table"><thead><tr><th scope="col">Hospital / county</th><th scope="col">Trauma designation</th><th scope="col">Published address</th></tr></thead><tbody id="hospital-records"></tbody></table></div></details>
+      </section>
       <section id="regional-research" aria-labelledby="regional-heading">
         <h3 id="regional-heading">HALO, nearby PHI and AirLIFE TEXAS — October 27, 2026</h3>
         <p class="regional-legend"><span><b style="background:#7b2cbf"></b>HALO: purple</span><span><b style="background:#d4aa00"></b>PHI: yellow</span><span><b style="background:#81522e"></b>Air Methods: brown</span></p>
@@ -71,6 +93,8 @@
   <script src="assets/gmr-map/data.js?v=20261020-roster1"></script>
   <script src="assets/gmr-map/regional-data.js?v=20261027-regional1"></script>
   <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
-  <script src="assets/gmr-map/map.js?v=20261028-counties2"></script>
+  <script src="assets/gmr-map/hospital-data.js?v=20261031-1"></script>
+  <script src="assets/gmr-map/hospitals.js?v=20261031-1"></script>
+  <script src="assets/gmr-map/map.js?v=20261031-hospitals1"></script>
 </body>
 </html>

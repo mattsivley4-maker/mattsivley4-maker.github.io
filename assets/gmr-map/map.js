@@ -27,6 +27,7 @@
   let scale = 1;
   let hoveredMarker = null;
   let previewMarker = null;
+  let hospitalUI = null;
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const socialPages=new Map((window.GMR_FACEBOOK_DATA?.rows||[]).map(row=>[row.id,row]));
   const socialDetail=b=>{
@@ -105,14 +106,15 @@
     }
     resizeMarks();
   }
-  function markerEnter(event,b){hoveredMarker=b;renderAircraftPreview();showTooltip(event,b);}
+  function markerEnter(event,b){hospitalUI?.hideTooltip();hoveredMarker=b;renderAircraftPreview();showTooltip(event,b);}
   function markerLeave(){hoveredMarker=null;scheduleTooltipHide();renderAircraftPreview();}
   const zoom = d3.zoom().scaleExtent([1,14]).translateExtent([[-100,-100],[1100,960]]).on('zoom', event => {
-    scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();hideTooltip();
+    scale=event.transform.k;world.attr('transform',event.transform);resizeMarks();hideTooltip();hospitalUI?.hideTooltip();
   });
   svg.call(zoom).on('dblclick.zoom',null);
   const markerPosition = b => projection([b.lng,b.lat]);
   function resizeMarks(){
+    hospitalUI?.resize();
     markerLayer.selectAll('circle').attr('cx',b=>markerPosition(b)[0]).attr('cy',b=>markerPosition(b)[1]).attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
     airportLayer.selectAll('.shared-marker').attr('transform',b=>`translate(${projection([b.lng,b.lat])}) scale(${1/scale})`);
     if(previewMarker) aircraftLayer.attr('transform',`translate(${markerPosition(previewMarker)}) scale(${1/scale})`);
@@ -228,7 +230,7 @@
     renderAircraftPreview();
   }
   $('search').addEventListener('input',render);
-  document.querySelectorAll('input[type=checkbox],select').forEach(el=>el.addEventListener('change',render));
+  document.querySelectorAll('#operators input,#aircraft,#candidates,#rings,#labels').forEach(el=>el.addEventListener('change',render));
   $('zoom-in').onclick=()=>svg.transition().duration(200).call(zoom.scaleBy,1.6);
   $('zoom-out').onclick=()=>svg.transition().duration(200).call(zoom.scaleBy,1/1.6);
   $('reset').onclick=()=>svg.transition().duration(300).call(zoom.transform,d3.zoomIdentity);
@@ -250,5 +252,6 @@
   $('tooltip').addEventListener('focusin',keepTooltip);
   $('tooltip').addEventListener('focusout',scheduleTooltipHide);
   document.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
+  hospitalUI=window.createHospitalLayer?.({world,before:markerLayer,projection,svg,zoom,getScale:()=>scale,hideBaseTooltip:hideTooltip});
   icons();render();
 })();
