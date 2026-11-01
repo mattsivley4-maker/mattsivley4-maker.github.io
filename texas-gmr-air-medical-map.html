@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Texas GMR and selected HALO, PHI and Air Methods bases with 75 nautical mile geographic radii, source notes and open location questions.">
   <title>Texas GMR + Regional Air Bases | 75 NM Map</title>
-  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261101-esd1">
+  <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261101-groundfilters1">
   <link rel="stylesheet" href="assets/gmr-map/hospitals.css?v=20261031-1">
 </head>
 <body>
@@ -26,8 +26,13 @@
           <div class="key"><span><b class="solid-symbol"></b>Publicly supported</span><span><b class="hollow-symbol"></b>Open location question</span></div>
           <p class="county-key"><b></b>Highlighted counties: Bexar, Nueces, McMullen, Live Oak, Karnes, DeWitt, Gonzales, Comal, Guadalupe, Frio, Atascosa and Wilson.</p>
           <div class="territory-key"><b aria-hidden="true"></b><span><strong>Dark-blue stripes:</strong> Frio and McMullen — municipal site plans.</span><b class="gap-key" aria-hidden="true"></b><span><strong>Red stripes:</strong> Nueces — no mapped GMR base’s 75 NM radius reaches this county. Competitor radii may overlap.</span></div>
-          <p class="ground-key"><b aria-hidden="true"></b>Yellow ambulance: Allegiance, partnered with PHI — county ground transport contracts in Bexar and Frio (owner-supplied information).</p>
-          <p class="ground-key esd-key"><b aria-hidden="true"></b>Black ambulance: ESDs identified as primary ground providers in Bexar, Atascosa, Wilson, Guadalupe and Comal. Hover for in-person feedback from MSM and program directors about ground versus air transport times (owner-supplied information).</p>
+          <fieldset id="ground-providers"><legend>County ground ambulances</legend>
+            <label class="ground-toggle"><input type="checkbox" value="allegiance" checked><b aria-hidden="true"></b><span>Yellow — Allegiance / PHI</span><small>2</small></label>
+            <label class="ground-toggle esd-toggle"><input type="checkbox" value="esd" checked><b aria-hidden="true"></b><span>Black — ESDs</span><small>5</small></label>
+            <label class="ground-toggle arcadian-toggle"><input type="checkbox" value="arcadian" checked><b aria-hidden="true"></b><span>Gray — Arcadian / Live Oak</span><small>1</small></label>
+          </fieldset>
+          <p id="ground-count" role="status"></p>
+          <p class="ground-filter-note">Show or hide each color for your view. Hover or tap an ambulance for owner-supplied county notes, reported relationships and transport feedback.</p>
         </div>
         <div id="list" class="base-list" aria-label="Base results"></div>
       </aside>
@@ -98,6 +103,6 @@
   <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
   <script src="assets/gmr-map/hospital-data.js?v=20261031-1"></script>
   <script src="assets/gmr-map/hospitals.js?v=20261031-1"></script>
-  <script src="assets/gmr-map/map.js?v=20261101-esd1"></script>
+  <script src="assets/gmr-map/map.js?v=20261101-groundfilters1"></script>
 </body>
 </html>
