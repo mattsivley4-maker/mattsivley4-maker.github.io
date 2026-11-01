@@ -86,6 +86,21 @@
   const markerLayer = world.append('g');
   const airportLayer = world.append('g');
   const labelLayer = world.append('g');
+  const groundLayer=world.append('g').attr('class','ground-transport-layer');
+  const groundCounties=['Bexar','Frio'].map(name=>{
+    const county=counties.find(c=>countyName(c)===name),bounds=path.bounds(county),point=path.centroid(county);
+    // County annotation only: place west of center to keep nearby hospital/base pins accessible.
+    point[0]-=(bounds[1][0]-bounds[0][0])*.23;
+    return {id:`ground-${name.toLowerCase()}`,name,point};
+  });
+  const ambulances=groundLayer.selectAll('.county-ambulance').data(groundCounties).join('g').attr('class','county-ambulance').attr('data-county',d=>d.name).attr('tabindex',0).attr('role','button').attr('aria-label',d=>`Arcadian ground transport contracts — ${d.name} County`);
+  ambulances.append('path').attr('class','ambulance-body').attr('d','M-8,3V-5H2V-3H5L8,0V3Z');
+  ambulances.append('path').attr('class','ambulance-window').attr('d','M3,-2H4.5L6.5,0H3Z');
+  ambulances.append('path').attr('class','ambulance-cross').attr('d','M-4,-3V1M-6,-1H-2');
+  ambulances.append('circle').attr('class','ambulance-wheel').attr('cx',-5).attr('cy',3).attr('r',1.6);
+  ambulances.append('circle').attr('class','ambulance-wheel').attr('cx',5).attr('cy',3).attr('r',1.6);
+  ambulances.append('rect').attr('x',-10).attr('y',-8).attr('width',20).attr('height',16).attr('fill','transparent');
+  ambulances.on('pointerenter',showGroundTooltip).on('pointerleave',scheduleTooltipHide).on('focus',showGroundTooltip).on('blur',scheduleTooltipHide).on('click',(e,d)=>{e.stopPropagation();showGroundTooltip(e,d);}).on('keydown',(e,d)=>{if(['Enter',' '].includes(e.key)){e.preventDefault();showGroundTooltip(e,d);}});
   const aircraftLayer = world.append('g').attr('class','aircraft-hover-icon').attr('aria-hidden','true').style('display','none');
   aircraftLayer.append('use').attr('class','aircraft-halo');
   aircraftLayer.append('use').attr('class','aircraft-silhouette');
@@ -122,6 +137,7 @@
   svg.call(zoom).on('dblclick.zoom',null);
   const markerPosition = b => projection([b.lng,b.lat]);
   function resizeMarks(){
+    ambulances.attr('transform',d=>`translate(${d.point}) scale(${1/scale})`);
     countyHatches.attr('patternTransform',`rotate(45) scale(${1/scale})`);
     hospitalUI?.resize();
     markerLayer.selectAll('circle').attr('cx',b=>markerPosition(b)[0]).attr('cy',b=>markerPosition(b)[1]).attr('r',b => (previewMarker?.id===b.id?11:selected?.id===b.id?7:5)/scale).attr('stroke-width',b => (selected?.id===b.id?2.5:1.7)/scale);
@@ -133,7 +149,7 @@
   new ResizeObserver(()=>resizeMarks()).observe(svg.node());
   function showTooltip(event,b){
     keepTooltip();
-    const shell=document.querySelector('.map-shell').getBoundingClientRect();
+    $('tooltip').setAttribute('aria-label','Base quick details');
     const phoneLines=(b.members || [b]).filter(site=>!regionalIds.has(site.id)).map(site=>`${b.members?site.name+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
     if(tooltipId!==b.id){
       const summary=`${b.members&&b.id==='san-antonio-international'?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
@@ -146,6 +162,18 @@
       }
       tooltipId=b.id;icons();
     }
+    positionTooltip(event);
+  }
+  function showGroundTooltip(event,d){
+    keepTooltip();hospitalUI?.hideTooltip();
+    tooltipId=d.id;
+    $('tooltip').setAttribute('aria-label','County ground transport details');
+    $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details">×</button><strong>${escape(d.name)} County</strong><p>Arcadian has ground transport contracts for ${escape(d.name)} County.</p><p class="tip-evidence">County-level information supplied by the map owner. The icon marks the county, not a station address.</p>`;
+    $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
+    positionTooltip(event);
+  }
+  function positionTooltip(event){
+    const shell=document.querySelector('.map-shell').getBoundingClientRect();
     $('tooltip').hidden=false;
     $('tooltip').style.maxHeight=`${shell.height-16}px`;
     $('tooltip').style.overflowY='auto';
