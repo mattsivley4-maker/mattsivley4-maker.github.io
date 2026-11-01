@@ -87,13 +87,13 @@
   const airportLayer = world.append('g');
   const labelLayer = world.append('g');
   const groundLayer=world.append('g').attr('class','ground-transport-layer');
-  const groundCounties=['Bexar','Frio'].map(name=>{
+  const groundCounties=[...['Bexar','Frio'].map(name=>({name,kind:'allegiance'})),...['Bexar','Atascosa','Wilson','Guadalupe','Comal'].map(name=>({name,kind:'esd'}))].map(({name,kind})=>{
     const county=counties.find(c=>countyName(c)===name),bounds=path.bounds(county),point=path.centroid(county);
-    // County annotation only: place west of center to keep nearby hospital/base pins accessible.
-    point[0]-=(bounds[1][0]-bounds[0][0])*.23;
-    return {id:`ground-${name.toLowerCase()}`,name,point};
+    // County annotations avoid busy centers; Bexar's ESD icon sits east of its Allegiance icon.
+    point[0]+=(bounds[1][0]-bounds[0][0])*(kind==='esd'&&name==='Bexar'?.32:-.23);
+    return {id:`ground-${kind}-${name.toLowerCase()}`,name,kind,point};
   });
-  const ambulances=groundLayer.selectAll('.county-ambulance').data(groundCounties).join('g').attr('class','county-ambulance').attr('data-county',d=>d.name).attr('tabindex',0).attr('role','button').attr('aria-label',d=>`Allegiance, partnered with PHI — ground transport contracts — ${d.name} County`);
+  const ambulances=groundLayer.selectAll('.county-ambulance').data(groundCounties).join('g').attr('class',d=>`county-ambulance ${d.kind}-ambulance`).attr('data-county',d=>d.name).attr('data-kind',d=>d.kind).attr('tabindex',0).attr('role','button').attr('aria-label',d=>`${d.kind==='esd'?'ESD primary ground providers — reported transport feedback':'Allegiance, partnered with PHI — ground transport contracts'} — ${d.name} County`);
   ambulances.append('path').attr('class','ambulance-body').attr('d','M-8,3V-5H2V-3H5L8,0V3Z');
   ambulances.append('path').attr('class','ambulance-window').attr('d','M3,-2H4.5L6.5,0H3Z');
   ambulances.append('path').attr('class','ambulance-cross').attr('d','M-4,-3V1M-6,-1H-2');
@@ -168,7 +168,8 @@
     keepTooltip();hospitalUI?.hideTooltip();
     tooltipId=d.id;
     $('tooltip').setAttribute('aria-label','County ground transport details');
-    $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details">×</button><strong>${escape(d.name)} County</strong><p>Allegiance, partnered with PHI, has ground transport contracts for ${escape(d.name)} County.</p><p class="tip-evidence">County-level information supplied by the map owner. The icon marks the county, not a station address.</p>`;
+    const message=d.kind==='esd'?`<p><strong>ESDs — primary ground transport providers.</strong></p><p>In-person feedback from MSM and program directors, informed by friendships and ongoing communication with local ESDs, indicates reluctance to request air ambulance because higher-level care is nearby.</p><p>ESD crews report they can reach the hospital by ground in equal or less time than the full air-ambulance sequence: notifying the air base, crew preparation and flight approval, flying to the scene, landing, loading the patient, and flying to the hospital.</p><p class="tip-evidence">Owner-supplied operational feedback, not an independently measured transport-time comparison. The icon marks the county, not a station address.</p>`:`<p>Allegiance, partnered with PHI, has ground transport contracts for ${escape(d.name)} County.</p><p class="tip-evidence">County-level information supplied by the map owner. The icon marks the county, not a station address.</p>`;
+    $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details">×</button><strong>${escape(d.name)} County</strong>${message}`;
     $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
     positionTooltip(event);
   }
