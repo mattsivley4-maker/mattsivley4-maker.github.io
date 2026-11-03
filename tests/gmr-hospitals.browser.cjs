@@ -10,18 +10,33 @@ const {pathToFileURL}=require('node:url');
   await page.goto(process.argv[2]||pathToFileURL(path.resolve(__dirname,'../texas-gmr-air-medical-map.html')).href);
   await page.waitForSelector('.hospital-flag');
   const rings=await page.locator('.radius').evaluateAll(ns=>ns.map(n=>n.getAttribute('d')));
-  assert.equal(await page.locator('.hospital-flag').count(),104);
-  assert.equal(await page.locator('#hospital-records tr').count(),104);
-  assert.equal(await page.locator('#hospital-results .hospital-record').count(),104);
-  for(const [level,count] of [['1',2],['2',3],['3',12],['4',28],['none',59]])assert.equal(await page.locator(`.hospital-flag[data-level="${level}"]`).count(),count);
+  assert.equal(await page.locator('.hospital-flag').count(),348);
+  assert.equal(await page.locator('#hospital-records tr').count(),348);
+  assert.equal(await page.locator('#hospital-results .hospital-record').count(),348);
+  for(const [level,count] of [['1',22],['2',31],['3',62],['4',174],['none',59]])assert.equal(await page.locator(`.hospital-flag[data-level="${level}"]`).count(),count);
   assert.equal(await page.locator('.county').count(),254);
   assert.equal(await page.locator('.highlighted-county').count(),12);
   await page.locator('#hospital-levels input[value="none"]').uncheck();
-  assert.equal(await page.locator('.hospital-flag').count(),45);
+  assert.equal(await page.locator('.hospital-flag').count(),289);
   await page.locator('#hospitals-visible').uncheck();
   assert.equal(await page.locator('.hospital-flag').count(),0);
   await page.locator('#hospitals-visible').check();
   await page.locator('#hospital-levels input[value="none"]').check();
+  // Statewide facilities must be searchable, selectable and correctly colored.
+  for(const [query,level] of [['William Beaumont','3'],['Parkland','1'],['Clements','4'],['OakBend','4']]){
+   await page.locator('#hospital-search').fill(query);
+   const found=page.locator('.hospital-flag');
+   assert.equal(await found.count(),query==='OakBend'?2:1);
+   assert.equal(await found.first().getAttribute('data-level'),level);
+   await found.first().focus();await page.keyboard.press('Enter');
+   assert.match(await page.locator('#hospital-detail h2').innerText(),new RegExp(query,'i'));
+  }
+  // Each trauma tier independently hides and restores its flags.
+  for(const [level,count] of [['1',22],['2',31],['3',62],['4',174]]){
+   await page.locator(`#hospital-levels input[value="${level}"]`).uncheck();
+   assert.equal(await page.locator('.hospital-flag').count(),348-count);
+   await page.locator(`#hospital-levels input[value="${level}"]`).check();
+  }
   await page.locator('#hospital-search').fill('Cuero');
   assert.equal(await page.locator('.hospital-flag').count(),1);
   const flag=page.locator('.hospital-flag');
@@ -60,6 +75,6 @@ const {pathToFileURL}=require('node:url');
   await page.mouse.move(0,0);await page.keyboard.press('Escape');
   if(process.env.SCREENSHOT_PATH)await page.locator('.map-column').screenshot({path:process.env.SCREENSHOT_PATH});
   assert.deepEqual(errors,[]);
-  console.log(JSON.stringify({passed:true,hospitals:104,trauma:45,gray:59,filters:true,search:true,coLocatedRecordsAccessible:true,baseAccess:true,mobile:true,ringsUnchanged:true}));
+  console.log(JSON.stringify({passed:true,hospitals:348,trauma:289,gray:59,filters:true,search:true,coLocatedRecordsAccessible:true,baseAccess:true,mobile:true,ringsUnchanged:true}));
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
