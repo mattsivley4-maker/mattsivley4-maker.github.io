@@ -14,7 +14,8 @@
     guardian: {name:'Guardian Flight', color:'#8c5e9f'},
     halo: {name:'HALO-Flight', color:'#7b2cbf'},
     phi: {name:'PHI Air Medical / partners', color:'#d4aa00'},
-    airmethods: {name:'Air Methods / AirLIFE TEXAS', color:'#81522e'}
+    airmethods: {name:'Air Methods / AirLIFE TEXAS', color:'#81522e'},
+    ...regional.operators
   };
   const $ = id => document.getElementById(id);
   const supported = data.bases.filter(b => b.status === 'Publicly supported');
@@ -48,7 +49,7 @@
   $('total').textContent = `${supported.length} supported base sites`;
   $('regional-count').textContent = `${supported.filter(b => b.state === 'TX').length} Texas / ${supported.filter(b => b.state !== 'TX').length} border-region / ${data.bases.length-supported.length} review candidates`;
   $('candidate-count').textContent = `(${data.bases.length-supported.length})`;
-  $('overview').textContent = `${supported.length} publicly supported sites across GMR and the selected regional operators. ${data.bases.filter(b => b.review && b.status==='Publicly supported').length} have open location or role questions. Guardian 72, AEL 189 and the PHI San Antonio launch site are held as review candidates. Regional review: October 27, 2026. La Grange remains excluded.`;
+  $('overview').textContent = `${supported.length} publicly supported sites across GMR and the reviewed competitor programs. ${data.bases.filter(b => b.review && b.status==='Publicly supported').length} have open location or role questions. ${regional.unplottedCandidates?.length||0} additional competitor question groups are documented without speculative pins. Review date: ${regional.checked}. A site count is not an aircraft count. La Grange remains excluded.`;
   $('operators').insertAdjacentHTML('beforeend', Object.entries(operators).map(([id,o]) => {const reviews=data.bases.filter(b=>b.operator===id&&b.status==='Review candidate').length;return `<label class="operator"><input type="checkbox" value="${id}" checked><span class="swatch" style="background:${o.color}"></span>${o.name}<span class="count">${supported.filter(b => b.operator===id).length}${reviews?` + ${reviews} review`:''}</span></label>`;}).join(''));
   // Census GeoJSON uses opposite polygon winding to D3's spherical geometry.
   const orientPolygon = coordinates => d3.geoArea({type:'Polygon',coordinates}) > 2 * Math.PI ? coordinates.map(ring => [...ring].reverse()) : coordinates;
@@ -281,7 +282,7 @@
   $('questions').innerHTML=data.reviewItems.map((q,i)=>`<article class="question"><div><h4>${i+1}. ${escape(q.name)}</h4><p class="category">${escape(q.category)}</p></div><div><p>${escape(q.question)}</p><div class="sources">${links(q.sources.map((url,j)=>({url,title:`Source ${j+1}`})))}</div></div></article>`).join('');
   $('excluded').innerHTML=data.exclusions.map(e=>`<div class="exclusion"><strong>${escape(e.name)}</strong><br>${escape(e.reason)}</div>`).join('');
   if($('regional-records')){
-    $('regional-records').innerHTML=regional.bases.map(b=>`<tr><td><button class="regional-record" data-regional-base="${escape(b.id)}">${escape(b.name)}</button><small>${escape(b.county)} County</small></td><td>${b.status==='Review candidate'?'Review candidate — hidden by default':b.review?'Site supported; open question':'Publicly supported'}<small>${escape(b.precision)}</small></td><td>${b.nearestHalo?`${b.nearestHalo.distanceNm.toFixed(2)} NM to ${escape(b.nearestHalo.city)}`:'—'}</td></tr>`).join('');
+    $('regional-records').innerHTML=regional.bases.map(b=>`<tr><td><button class="regional-record" data-regional-base="${escape(b.id)}">${escape(b.name)}</button><small>${escape(b.county)} County, ${escape(b.state)}</small></td><td>${b.status==='Review candidate'?'Review candidate — hidden by default':b.review?'Site supported; open question':'Publicly supported'}<small>${escape(b.precision)}</small></td><td>${escape(b.mode)}<small>${escape(b.role||'See base record for service limitations')}</small></td></tr>`).join('');
     document.querySelectorAll('[data-regional-base]').forEach(el=>el.onclick=()=>{const b=data.bases.find(x=>x.id===el.dataset.regionalBase);$('search').value='';$('aircraft').value='all';document.querySelector(`#operators input[value="${b.operator}"]`).checked=true;if(b.status==='Review candidate')$('candidates').checked=true;render();selectBase(b,true);$('detail').scrollIntoView({behavior:'smooth',block:'nearest'});});
   }
   $('roster-checks').innerHTML=data.rosterScreening.filter(r=>r.result!=='Existing site corroborated').map(r=>`<div class="exclusion"><strong>${escape(r.name)}, ${escape(r.state)}</strong><br>${r.distanceToTexasNm.toFixed(2)} NM from Texas at the screened coordinate; outside the 75 NM rule. Roster row ${r.row}.</div>`).join('');
