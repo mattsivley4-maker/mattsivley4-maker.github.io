@@ -13,7 +13,6 @@ assert.equal(data.bases.filter(b=>b.status==='Review candidate').length,2);
 assert.equal(data.reviewItems.length,25);
 assert.equal(data.rosterScreening.length,93);
 assert.equal(data.bases.filter(b=>b.rosterEvidence).length,59);
-assert.equal(data.bases.filter(b=>b.phone).length,56);
 assert.equal(data.rosterScreening.filter(r=>r.result.startsWith('Outside')).length,33);
 assert(!data.rosterScreening.some(r=>r.result==='Needs review'));
 const sat=data.bases.filter(b=>b.siteGroup==='san-antonio-international');
@@ -24,13 +23,12 @@ assert(!data.reviewItems.some(q=>q.name==='AirMed International - San Antonio, T
 assert.equal(new Set(data.bases.map(b=>b.id)).size,data.bases.length);
 assert.equal(data.radiusMeters,138900);
 for(const b of data.bases){
+  assert(!Object.keys(b).some(k=>/phone/i.test(k)));
   assert(!/La Grange|Headquarters/i.test(b.name));
   assert(b.distanceToTexasNm<=75 && b.distanceToTexasNm>=0);
   assert(b.lat>25 && b.lat<39 && b.lng>-108 && b.lng<-90);
   assert(b.sources.length>0 && b.sources.every(s=>s.url.startsWith('https://')));
   assert(b.precision && b.note && b.status && b.checked);
-  assert(b.phone === null || /^\d{3}-\d{3}-\d{4}$/.test(b.phone));
-  assert(b.phoneStatus);
   assert.equal(b.circle.coordinates[0].length,361);
   assert.deepEqual(b.circle.coordinates[0][0],b.circle.coordinates[0][360]);
 }
@@ -39,10 +37,6 @@ assert(data.bases.find(b=>b.name.includes('Lifeteam 129')).lng > -94.9);
 assert.equal(data.bases.filter(b=>b.name==='AeroCare I + III - Lubbock').length,1);
 assert(data.bases.find(b=>b.operator==='guardian').review);
 assert(data.bases.find(b=>b.id==='ael-189').review);
-assert.equal(data.bases.find(b=>b.id==='airevac-a3bf99b1').phone,'210-592-8646');
-assert.equal(data.bases.find(b=>b.id==='ami-sat').phone,null);
-assert.equal(data.bases.find(b=>b.id==='ael-181').phone,null);
-assert.equal(data.bases.find(b=>b.id==='ael-174').phone,null);
 assert.equal(data.bases.find(b=>b.id==='medtrans-faeeab2f').mode,'Rotor-wing');
 assert.equal(data.bases.find(b=>b.id==='mt-pecos').mode,'Rotor-wing');
 assert.equal(data.bases.find(b=>b.id==='medtrans-e2a8b370').lat,34.428988);

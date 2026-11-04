@@ -32,8 +32,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0
     },
     {
@@ -66,8 +64,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0
     },
     {
@@ -100,8 +96,6 @@
       "review": true,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0
     },
     {
@@ -142,8 +136,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 28.81309,
@@ -189,8 +181,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 29.644932,
@@ -244,8 +234,6 @@
       "review": true,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 28.9808,
@@ -287,8 +275,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 30.129426,
@@ -330,8 +316,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 29.575616,
@@ -381,8 +365,6 @@
       "review": true,
       "status": "Review candidate",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "locatorOriginal": {
         "lat": 29.425,
@@ -424,8 +406,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0
     },
     {
@@ -466,8 +446,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0,
       "nearbyBaseIds": [
         "ael-181"
@@ -511,8 +489,6 @@
       "review": false,
       "status": "Publicly supported",
       "checked": "2026-10-27",
-      "phone": null,
-      "phoneStatus": "No independently verified base phone added in this public-source review.",
       "distanceToTexasNm": 0
     }
   ],

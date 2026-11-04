@@ -41,9 +41,6 @@
   function hideTooltip(){keepTooltip();$('tooltip').hidden=true;tooltipId=null;}
   function scheduleTooltipHide(){keepTooltip();tooltipTimer=setTimeout(()=>{if(!$('tooltip').matches(':hover')&&!$('tooltip').contains(document.activeElement))hideTooltip();},300);}
   const links = sources => sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(s.title)}</a>`).join('');
-  const phoneText = b => b.phone || (b.rosterEvidence ? 'Not listed (roster N/A)' : 'Not supplied');
-  const phoneLink = b => b.phone ? `<a href="tel:+1${b.phone.replace(/\D/g,'')}">${escape(b.phone)}</a>` : escape(phoneText(b));
-  const phoneDetail = b => `<div class="base-phone"><strong>Base phone</strong> ${phoneLink(b)}<small>${escape(b.phoneStatus || 'Not supplied in the screenshots')}</small></div>`;
   const nearbyBases=b=>data.bases.filter(x=>b.nearbyBaseIds?.includes(x.id)||x.nearbyBaseIds?.includes(b.id));
   const nearbyHtml=b=>nearbyBases(b).map(x=>`<p class="tip-evidence">The shared Uvalde dot is centered on AEL 181's mapped location. Both radius centers are unchanged.</p><button class="nearby-base" data-nearby-base="${escape(x.id)}">Nearby at Garner Field: ${escape(x.name)}</button>`).join('');
   const wireNearby=container=>container.querySelectorAll('[data-nearby-base]').forEach(el=>el.onclick=()=>{hideTooltip();selectBase(data.bases.find(b=>b.id===el.dataset.nearbyBase));});
@@ -160,9 +157,8 @@
   function showTooltip(event,b){
     keepTooltip();
     $('tooltip').setAttribute('aria-label','Base quick details');
-    const phoneLines=(b.members || [b]).filter(site=>!regionalIds.has(site.id)).map(site=>`${b.members?site.name+': ':'Base phone: '}${phoneText(site)}${site.phone?' (roster)':''}`).join('\n');
     if(tooltipId!==b.id){
-      const summary=`${b.members&&b.id==='san-antonio-international'?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}\n${phoneLines}`;
+      const summary=`${b.members&&b.id==='san-antonio-international'?'San Antonio International Airport':b.name}\n${b.mode || 'Rotor + fixed-wing'}${aircraftKind(b)==='unknown'?' (aircraft type unconfirmed)':''}${b.review?' | Open question':''}`;
       $('tooltip').innerHTML=`<button class="tip-close" type="button" aria-label="Close quick details" title="Close quick details"><i data-lucide="x"></i></button><div class="tip-summary">${escape(summary)}</div>${regionalIds.has(b.id)?`<p class="tip-evidence">${escape(b.precision)}${b.review?'<br>Open question: select the base for evidence.':''}</p>`:''}<div class="tip-social">${(b.members||[b]).map(site=>`${b.members?`<strong>${escape(site.name)}</strong>`:''}${socialDetail(site)}`).join('')}${nearbyHtml(b)}</div>`;
       $('tooltip').querySelector('.tip-close').onclick=hideTooltip;
       wireNearby($('tooltip'));
@@ -205,7 +201,6 @@
     selectedUvalde=false;
     selected=b;
     $('detail').innerHTML=`<div class="detail-top"><div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h2>${escape(b.name)}</h2></div><button id="close-detail" aria-label="Clear selection" title="Clear selection"><i data-lucide="x"></i></button></div><p>${escape(b.address)}</p><div class="details-grid"><div><strong>Evidence status</strong>${escape(b.status)}${b.review?' / open question':''}</div><div><strong>Aircraft</strong>${escape(b.mode)}</div><div><strong>Coordinate precision</strong>${escape(b.precision)}<br>${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div><div><strong>Distance to Texas</strong>${b.distanceToTexasNm===0?'Within Texas':`${b.distanceToTexasNm.toFixed(2)} NM`} / 75 NM circle</div></div><p class="${b.review?'question-text':'muted'}">${escape(b.note)}</p><div class="sources">${links(b.sources)}</div>`;
-    if(!regionalIds.has(b.id))$('detail').insertAdjacentHTML('beforeend',phoneDetail(b));
     if(regionalIds.has(b.id))$('detail').insertAdjacentHTML('beforeend',`<p class="muted">Public sources checked ${escape(b.checked)}. County: ${escape(b.county)}.${b.nearestHalo?` Nearest HALO site: ${escape(b.nearestHalo.city)}, ${b.nearestHalo.distanceNm.toFixed(2)} NM center-to-center. Circle overlap is not a promise of service.`:''}</p>`);
     $('detail').insertAdjacentHTML('beforeend',nearbyHtml(b));wireNearby($('detail'));
     $('detail').insertAdjacentHTML('beforeend',socialDetail(b));
@@ -224,7 +219,7 @@
     selected=null;selectedAirport=true;selectedUvalde=false;
     $('detail').innerHTML=`<h2>San Antonio International Airport</h2><p class="confirmed">Both services confirmed at this airport by the owner, October 12, 2026.</p><div class="airport-services">${airportMarker.members.map(b=>`<div><p class="eyebrow" style="color:${operators[b.operator].color}">${escape(operators[b.operator].name)}</p><h3>${escape(b.name)}</h3><p>${escape(b.mode)}</p><p>${escape(b.address)}</p><button class="airport-record" data-airport-base="${b.id}">Base record and sources</button></div>`).join('')}</div><p class="muted">Nearby hangars share this display marker. Each 75 NM ring remains centered on its own recorded coordinate; neither coordinate has been moved or merged.</p>`;
     $('detail').querySelectorAll('[data-airport-base]').forEach(el=>el.onclick=()=>selectBase(airportMarker.members.find(b=>b.id===el.dataset.airportBase)));
-    $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',phoneDetail(airportMarker.members[i])+socialDetail(airportMarker.members[i])));
+    $('detail').querySelectorAll('.airport-services > div').forEach((el,i)=>el.insertAdjacentHTML('beforeend',socialDetail(airportMarker.members[i])));
     renderSelection();
   }
   function selectUvalde(){
@@ -290,11 +285,11 @@
     document.querySelectorAll('[data-regional-base]').forEach(el=>el.onclick=()=>{const b=data.bases.find(x=>x.id===el.dataset.regionalBase);$('search').value='';$('aircraft').value='all';document.querySelector(`#operators input[value="${b.operator}"]`).checked=true;if(b.status==='Review candidate')$('candidates').checked=true;render();selectBase(b,true);$('detail').scrollIntoView({behavior:'smooth',block:'nearest'});});
   }
   $('roster-checks').innerHTML=data.rosterScreening.filter(r=>r.result!=='Existing site corroborated').map(r=>`<div class="exclusion"><strong>${escape(r.name)}, ${escape(r.state)}</strong><br>${r.distanceToTexasNm.toFixed(2)} NM from Texas at the screened coordinate; outside the 75 NM rule. Roster row ${r.row}.</div>`).join('');
-  // Keyboard users receive the same phone information as pointer users.
-  svg.on('focusin.phone',event=>{
+  // Keyboard users receive the same base details as pointer users.
+  svg.on('focusin.base',event=>{
     const marker=event.target.closest('.base-marker');
     if(marker) showTooltip({currentTarget:marker},marker.__data__);
-  }).on('focusout.phone',scheduleTooltipHide);
+  }).on('focusout.base',scheduleTooltipHide);
   $('tooltip').addEventListener('pointerenter',keepTooltip);
   $('tooltip').addEventListener('pointerleave',scheduleTooltipHide);
   $('tooltip').addEventListener('focusin',keepTooltip);

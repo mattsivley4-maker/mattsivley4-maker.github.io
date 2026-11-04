@@ -5,7 +5,7 @@
   "bases": [
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 73 \u2013 DeQueen, AR",
+      "name": "Air Evac Lifeteam 73 – DeQueen, AR",
       "city": "DeQueen",
       "state": "AR",
       "address": "958 Highway 71 N, De Queen, AR 71832",
@@ -43,8 +43,6 @@
       "distanceToTexasNm": 28.2,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Listed as N/A in supplied roster",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -65,7 +63,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 125 \u2013 Kinder, LA",
+      "name": "Air Evac Lifeteam 125 – Kinder, LA",
       "city": "Kinder",
       "state": "LA",
       "address": "505 Ellie Layne, Kinder, LA, 70648",
@@ -91,8 +89,6 @@
       "distanceToTexasNm": 41.53,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "337-738-7904",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -113,7 +109,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 160 \u2013 Natchitoches, LA",
+      "name": "Air Evac Lifeteam 160 – Natchitoches, LA",
       "city": "Natchitoches",
       "state": "LA",
       "address": "306 Wallenburg Drive, Natchitoches, LA, 71457",
@@ -139,8 +135,6 @@
       "distanceToTexasNm": 34.27,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "318-475-5027",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -161,7 +155,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 26 \u2013 Ada, OK",
+      "name": "Air Evac Lifeteam 26 – Ada, OK",
       "city": "Ada",
       "state": "OK",
       "address": "231 John Herrington Ave, Ada, OK, 74820",
@@ -195,8 +189,6 @@
       "distanceToTexasNm": 51.99,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "405-207-9220",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -217,7 +209,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 6 \u2013 Altus, OK",
+      "name": "Air Evac Lifeteam 6 – Altus, OK",
       "city": "Altus",
       "state": "OK",
       "address": "6333 N. Main Street, Altus, OK, 73521",
@@ -243,8 +235,6 @@
       "distanceToTexasNm": 13.12,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-482-0461",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -292,13 +282,11 @@
       "lng": -98.23144,
       "distanceToTexasNm": 55.11,
       "checked": "2026-10-12",
-      "status": "Review candidate",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Review candidate"
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 130 \u2013 Ardmore , OK",
+      "name": "Air Evac Lifeteam 130 – Ardmore , OK",
       "city": "Ardmore",
       "state": "OK",
       "address": "2205 Executive Airport Drive, Ardmore, OK 73401",
@@ -336,8 +324,6 @@
       "distanceToTexasNm": 13.13,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-226-3554",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -358,7 +344,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 25 \u2013 Duncan, OK",
+      "name": "Air Evac Lifeteam 25 – Duncan, OK",
       "city": "Duncan",
       "state": "OK",
       "address": "2702 S 13th Str, Duncan, OK, 73533",
@@ -392,8 +378,6 @@
       "distanceToTexasNm": 20.44,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-475-0566",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -442,8 +426,6 @@
       "distanceToTexasNm": 11.79,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Listed as N/A in supplied roster",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -464,7 +446,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 21 \u2013 Elk City, OK",
+      "name": "Air Evac Lifeteam 21 – Elk City, OK",
       "city": "Elk City",
       "state": "OK",
       "address": "71 Norman Martin Boulevard, Elk City, OK, 73644",
@@ -490,8 +472,6 @@
       "distanceToTexasNm": 29.34,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-303-9200",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -512,7 +492,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 129 \u2013 Idabel, OK",
+      "name": "Air Evac Lifeteam 129 – Idabel, OK",
       "city": "Idabel",
       "state": "OK",
       "address": "1200 SE Avenue N, Idabel, OK, 74745",
@@ -546,8 +526,6 @@
       "distanceToTexasNm": 6.22,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-286-5290",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -592,8 +570,6 @@
       "distanceToTexasNm": 5.82,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-376-2577",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -641,13 +617,11 @@
       "lng": -97.220554,
       "distanceToTexasNm": 46.48,
       "checked": "2026-10-12",
-      "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Publicly supported"
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 122 \u2013 Weatherford, OK",
+      "name": "Air Evac Lifeteam 122 – Weatherford, OK",
       "city": "Weatherford",
       "state": "OK",
       "address": "3705 E. Main St., Weatherford, OK, 73096",
@@ -673,8 +647,6 @@
       "distanceToTexasNm": 64.83,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-772-2803",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -695,7 +667,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 70 \u2013 Woodward, OK",
+      "name": "Air Evac Lifeteam 70 – Woodward, OK",
       "city": "Woodward",
       "state": "OK",
       "address": "1620 Santa Fe Street, Woodward, OK, 73801",
@@ -721,8 +693,6 @@
       "distanceToTexasNm": 29.02,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "580-256-2208",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -743,7 +713,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 63 \u2013 Abilene, TX",
+      "name": "Air Evac Lifeteam 63 – Abilene, TX",
       "city": "Abilene",
       "state": "TX",
       "address": "1900 Pine Street, c/o Hendrick Med Ctr, Abilene, TX, 79601",
@@ -769,8 +739,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "325-670-3200",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -817,8 +785,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "409-924-9262",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -839,7 +805,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 54 \u2013 Big Spring, TX",
+      "name": "Air Evac Lifeteam 54 – Big Spring, TX",
       "city": "Big Spring",
       "state": "TX",
       "address": "1601 W 11th Pl, Big Spring, TX 79720",
@@ -873,8 +839,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "432-264-7068",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -895,7 +859,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 52 \u2013 Brownwood, TX",
+      "name": "Air Evac Lifeteam 52 – Brownwood, TX",
       "city": "Brownwood",
       "state": "TX",
       "address": "122 S Park Drive, Brownwood, TX, 76801",
@@ -921,8 +885,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "325-641-8988",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -943,7 +905,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 71 \u2013 Carrizo Springs, TX",
+      "name": "Air Evac Lifeteam 71 – Carrizo Springs, TX",
       "city": "Carrizo Springs",
       "state": "TX",
       "address": "515 Airport Rd, Carrizo Springs, TX, 78834",
@@ -969,8 +931,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-876-9421",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -991,7 +951,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Houston County Air Rescue / Air Evac Lifeteam \u2013127 Crockett, TX",
+      "name": "Houston County Air Rescue / Air Evac Lifeteam –127 Crockett, TX",
       "city": "Crockett",
       "state": "TX",
       "address": "1100 E Loop 304, Crockett, TX 75835",
@@ -1029,8 +989,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "936-545-4305",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1051,7 +1009,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 68 \u2013 Decatur, TX",
+      "name": "Air Evac Lifeteam 68 – Decatur, TX",
       "city": "Decatur",
       "state": "TX",
       "address": "609 Medical Center Drive, Decatur, TX, 76234",
@@ -1077,8 +1035,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "940-627-2045",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1099,7 +1055,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 134 \u2013 Del Rio , TX",
+      "name": "Air Evac Lifeteam 134 – Del Rio , TX",
       "city": "Del Rio",
       "state": "TX",
       "address": "613 N. Bedell, Del Rio, TX, 78840",
@@ -1125,8 +1081,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-255-6413",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1147,7 +1101,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 57 \u2013 Eagle Pass, TX",
+      "name": "Air Evac Lifeteam 57 – Eagle Pass, TX",
       "city": "Eagle Pass",
       "state": "TX",
       "address": "3351 N. Foster Maldonado Blvd, Eagle Pass, TX, 78852",
@@ -1173,8 +1127,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-757-6514",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1195,7 +1147,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 115 \u2013 Eastland, TX",
+      "name": "Air Evac Lifeteam 115 – Eastland, TX",
       "city": "Eastland",
       "state": "TX",
       "address": "9614 Interstate 20, Eastland, Texas, 76448",
@@ -1221,8 +1173,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "254-629-1008",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1243,7 +1193,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 53 \u2013 Fairfield, TX",
+      "name": "Air Evac Lifeteam 53 – Fairfield, TX",
       "city": "Fairfield",
       "state": "TX",
       "address": "160 Interstate 45 S, Fairfield, TX, 75840",
@@ -1269,8 +1219,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "903-389-7266",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1291,7 +1239,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 69 \u2013 Granbury, TX",
+      "name": "Air Evac Lifeteam 69 – Granbury, TX",
       "city": "Granbury",
       "state": "TX",
       "address": "1308 Paluxy Rd  Suite C, Granbury, TX, 76048",
@@ -1317,8 +1265,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "817-579-2031",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1339,7 +1285,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 67 \u2013 Greenville, TX",
+      "name": "Air Evac Lifeteam 67 – Greenville, TX",
       "city": "Greenville",
       "state": "TX",
       "address": "88 Majors Road, Greenville, TX, 75402",
@@ -1365,8 +1311,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "903-454-4747",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1387,7 +1331,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 51 \u2013 Hillsboro, TX",
+      "name": "Air Evac Lifeteam 51 – Hillsboro, TX",
       "city": "Hillsboro",
       "state": "TX",
       "address": "115 CR 4282, Hillsboro, TX, 76645",
@@ -1413,8 +1357,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "254-580-9023",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1435,7 +1377,7 @@
     },
     {
       "operator": "airevac",
-      "name": "SE TX Air Rescue/Air Evac Lifeteam 152 \u2013 Jasper, TX",
+      "name": "SE TX Air Rescue/Air Evac Lifeteam 152 – Jasper, TX",
       "city": "Jasper",
       "state": "TX",
       "address": "19 Thomas Street, Jasper, TX 75951",
@@ -1472,13 +1414,11 @@
       "note": "Current NPI and hospital-district 2025 lease material support the newer Thomas Street site; replaces Marvin Hancock Drive. Exact pad remains approximate.",
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Publicly supported"
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 48 \u2013 Kerrville, TX",
+      "name": "Air Evac Lifeteam 48 – Kerrville, TX",
       "city": "Kerrville",
       "state": "TX",
       "address": "1873 Airport Loop, Kerrville, TX, 78028",
@@ -1504,8 +1444,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-257-0441",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1526,7 +1464,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 66 \u2013 Killeen, TX",
+      "name": "Air Evac Lifeteam 66 – Killeen, TX",
       "city": "Killeen",
       "state": "TX",
       "address": "1210 Bell Tower Road, Killeen, Texas, 76549",
@@ -1552,8 +1490,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "254-628-1275",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1574,7 +1510,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 93 \u2013 Laredo, TX",
+      "name": "Air Evac Lifeteam 93 – Laredo, TX",
       "city": "Laredo",
       "state": "TX",
       "address": "5203 Maher Drive, Laredo, TX 78041",
@@ -1604,8 +1540,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "956-568-5389",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1626,7 +1560,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 49 \u2013 Marble Falls, TX",
+      "name": "Air Evac Lifeteam 49 – Marble Falls, TX",
       "city": "Marble Falls",
       "state": "TX",
       "address": "700 Avenue N Ste B, Marble Falls, TX, 78654",
@@ -1652,8 +1586,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-693-3851",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1674,7 +1606,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 55 \u2013 Mineral Wells, TX",
+      "name": "Air Evac Lifeteam 55 – Mineral Wells, TX",
       "city": "Mineral Wells",
       "state": "TX",
       "address": "322 SW 25th Avenue, Mineral Wells, TX, 76067",
@@ -1700,8 +1632,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "940-327-8702",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1722,7 +1652,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 139 \u2013 Lamar County, TX",
+      "name": "Air Evac Lifeteam 139 – Lamar County, TX",
       "city": "Paris",
       "state": "TX",
       "address": "675 Deshong Drive, Paris, Texas, 75460",
@@ -1748,8 +1678,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "903-739-2544",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1770,7 +1698,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Methodist AirCare 2/Air Evac Lifeteam 147 \u2013 Pearsall, TX",
+      "name": "Methodist AirCare 2/Air Evac Lifeteam 147 – Pearsall, TX",
       "city": "Pearsall",
       "state": "TX",
       "address": "159 Medical Drive, Pearsall, TX, 78061",
@@ -1796,8 +1724,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "830-334-2387",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1818,7 +1744,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Methodist AirCare 1/Air Evac Lifeteam 148 \u2013 San Antonio, TX",
+      "name": "Methodist AirCare 1/Air Evac Lifeteam 148 – San Antonio, TX",
       "city": "San Antonio",
       "state": "TX",
       "address": "1115 Paul Wilkins St, San Antonio, Texas, 78216",
@@ -1846,8 +1772,6 @@
       "status": "Publicly supported",
       "siteGroup": "san-antonio-international",
       "confirmation": "Owner-confirmed airport presence, October 12, 2026",
-      "phone": "210-592-8646",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1894,8 +1818,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "903-771-4558",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1944,8 +1866,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Listed as N/A in supplied roster",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -1966,7 +1886,7 @@
     },
     {
       "operator": "airevac",
-      "name": "Air Evac Lifeteam 34 \u2013 Wichita Falls, TX",
+      "name": "Air Evac Lifeteam 34 – Wichita Falls, TX",
       "city": "Wichita Falls",
       "state": "TX",
       "address": "1610 10th Street, Wichita Falls, TX, 76301",
@@ -1992,8 +1912,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "940-764-3990",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2041,9 +1959,7 @@
       "lng": -96.853327,
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Publicly supported"
     },
     {
       "id": "ami-sat",
@@ -2076,13 +1992,11 @@
       "checked": "2026-10-12",
       "status": "Publicly supported",
       "siteGroup": "san-antonio-international",
-      "confirmation": "Owner-confirmed airport presence, October 12, 2026",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "confirmation": "Owner-confirmed airport presence, October 12, 2026"
     },
     {
       "operator": "guardian",
-      "name": "GFL 072 \u2013 Idabel, OK",
+      "name": "GFL 072 – Idabel, OK",
       "city": "Idabel",
       "state": "OK",
       "address": "2881 NW Airport Road, Idabel, Oklahoma, 74745",
@@ -2107,9 +2021,7 @@
       "note": "Still listed by Guardian at the same address now registered to Air Evac EMS / AEL 184. Cannot establish whether Guardian continues separately or this is a stale/transferred listing. Excluded from the default map; available in review layer.",
       "distanceToTexasNm": 5.82,
       "checked": "2026-10-12",
-      "status": "Review candidate",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Review candidate"
     },
     {
       "operator": "medtrans",
@@ -2151,8 +2063,6 @@
       "distanceToTexasNm": 32.64,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "620-604-0572",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2173,7 +2083,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare II \u2013 Clovis, NM",
+      "name": "AeroCare II – Clovis, NM",
       "city": "Clovis",
       "state": "NM",
       "address": "474 Curry Road 11.5, Texico, NM 88135 (Clovis airport)",
@@ -2207,8 +2117,6 @@
       "distanceToTexasNm": 2.1,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "575-389-0060",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2229,7 +2137,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare IX \u2013 Hobbs, NM",
+      "name": "AeroCare IX – Hobbs, NM",
       "city": "Hobbs",
       "state": "NM",
       "address": "6601 W Carlsbad Highway, Hangar W2, Hobbs, NM 88240",
@@ -2263,8 +2171,6 @@
       "distanceToTexasNm": 7.58,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "432-215-9356",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2285,7 +2191,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare VII \u2013 Lovington,  NM",
+      "name": "AeroCare VII – Lovington,  NM",
       "city": "Lovington",
       "state": "NM",
       "address": "1600 North Main Ave, Lovington, NM, 88260",
@@ -2311,8 +2217,6 @@
       "distanceToTexasNm": 14.28,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "575-396-3603",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2361,8 +2265,6 @@
       "distanceToTexasNm": 15.82,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-224-6932",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2413,8 +2315,6 @@
       "distanceToTexasNm": 60.09,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "918-423-7735",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2462,13 +2362,11 @@
       "lng": -103.676628,
       "distanceToTexasNm": 0,
       "checked": "2026-10-12",
-      "status": "Publicly supported",
-      "phone": null,
-      "phoneStatus": "Not supplied in the screenshots"
+      "status": "Publicly supported"
     },
     {
       "operator": "medtrans",
-      "name": "NW Texas Lifestar FW \u2013 Amarillo, TX",
+      "name": "NW Texas Lifestar FW – Amarillo, TX",
       "city": "Amarillo",
       "state": "TX",
       "address": "9901 American Drive, Amarillo, TX 79111",
@@ -2502,8 +2400,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-440-0149",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2524,7 +2420,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "NW Texas Lifestar I \u2013 Amarillo, TX",
+      "name": "NW Texas Lifestar I – Amarillo, TX",
       "city": "Amarillo",
       "state": "TX",
       "address": "1501 S Coulter St, Amarillo, TX, 79107",
@@ -2550,8 +2446,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-354-1625",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2600,8 +2494,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "979-253-2768",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2650,8 +2542,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-440-2586",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2700,8 +2590,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "979-764-5286",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2752,8 +2640,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-744-0044",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2804,8 +2690,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "972-324-3730",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2826,7 +2710,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare V \u2013 Odessa, TX",
+      "name": "AeroCare V – Odessa, TX",
       "city": "Odessa",
       "state": "TX",
       "address": "409 E Yukon Road, Odessa, TX, 79762",
@@ -2852,8 +2736,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "870-408-0991",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2874,7 +2756,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "NW Texas Lifestar II \u2013 Pampa, TX",
+      "name": "NW Texas Lifestar II – Pampa, TX",
       "city": "Pampa",
       "state": "TX",
       "address": "122 W. 30th Street Ste 101, Pampa, TX, 79065",
@@ -2900,8 +2782,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "806-440-0149",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -2950,8 +2830,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "423-250-4120",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3000,8 +2878,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "575-396-3603",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3052,8 +2928,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "325-340-3025",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3102,8 +2976,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "325-249-3622",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3124,7 +2996,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare IV \u2013 Seminole, TX",
+      "name": "AeroCare IV – Seminole, TX",
       "city": "Seminole",
       "state": "TX",
       "address": "802 Hobbs Highway, Seminole, TX, 79360",
@@ -3150,8 +3022,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "432-245-2175",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3172,7 +3042,7 @@
     },
     {
       "operator": "medtrans",
-      "name": "AeroCare VI \u2013 Fort Stockton, TX",
+      "name": "AeroCare VI – Fort Stockton, TX",
       "city": "Stockton",
       "state": "TX",
       "address": " 1562 Airport Drive Fort, Stockton, TX, 79735",
@@ -3198,8 +3068,6 @@
       "distanceToTexasNm": 0,
       "checked": "2026-10-20",
       "status": "Publicly supported",
-      "phone": "870-408-0992",
-      "phoneStatus": "Listed in user-provided roster; not independently dial-verified",
       "rosterEvidence": {
         "received": "2026-10-20",
         "effectiveDate": null,
@@ -3443,11 +3311,11 @@
       "reason": "Corporate office, not a response base"
     },
     {
-      "name": "Air Evac Lifeteam 47 \u2013 La Grange, TX",
+      "name": "Air Evac Lifeteam 47 – La Grange, TX",
       "reason": "User-confirmed closed; do not restore"
     },
     {
-      "name": "Med-Trans \u2013 Dodge City FW",
+      "name": "Med-Trans – Dodge City FW",
       "reason": "Outside 75 NM: 75.04 NM from Texas at the older operator coordinate. Roster address point: 75.52 NM; also outside the 75 NM rule.",
       "sources": [
         {
@@ -3461,7 +3329,7 @@
       ]
     },
     {
-      "name": "Air Evac Lifeteam 124 \u2013 Opelousas, LA",
+      "name": "Air Evac Lifeteam 124 – Opelousas, LA",
       "reason": "Outside 75 NM: 78.16 NM from Texas at the older operator coordinate. Roster address point: 77.11 NM; also outside the 75 NM rule.",
       "sources": [
         {
@@ -3475,7 +3343,7 @@
       ]
     },
     {
-      "name": "Air Evac Lifeteam 158 \u2013 Seminole, OK",
+      "name": "Air Evac Lifeteam 158 – Seminole, OK",
       "reason": "Outside 75 NM: 80.58 NM from Texas at the older operator coordinate. Roster address point: 79.64 NM; also outside the 75 NM rule.",
       "sources": [
         {
