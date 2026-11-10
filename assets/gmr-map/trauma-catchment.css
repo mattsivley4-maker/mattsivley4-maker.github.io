@@ -1,0 +1,9 @@
+.catchment-controls{padding:14px 18px;border-bottom:1px solid var(--line);background:#f6f9fc;font-size:12px;line-height:1.5}
+.catchment-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.catchment-heading h2{font-size:15px;margin:0}.catchment-heading button{padding:6px 10px;background:white;border:1px solid #b7c6d4;border-radius:3px;color:#184d7c;font:inherit}
+.catchment-controls fieldset{border:0;padding:0;margin:9px 0;display:flex;gap:10px 24px;flex-wrap:wrap}.catchment-controls legend{font-size:11px;color:#53626f;margin-bottom:5px}
+.catchment-controls label{display:flex;align-items:center;gap:7px;cursor:pointer}.catchment-controls input{accent-color:#174d91}.catchment-controls label b{display:inline-block;width:18px;height:13px;border:2px solid #174d91;background:#174d9122;flex-shrink:0}
+.catchment-controls label .tie-swatch{border-color:#ad5900;background:repeating-linear-gradient(125deg,#edaf5322 0 4px,#ad5900aa 4px 5px)}
+.catchment-controls p{margin:6px 0;color:#4d5c68}.catchment-controls details{margin-top:6px}.catchment-controls summary{cursor:pointer;color:#174d91}.catchment-controls ul{padding-left:20px;columns:2;column-gap:25px}.catchment-controls li{break-inside:avoid;margin:4px 0}
+.trauma-zone{pointer-events:none;stroke-width:2;stroke-linejoin:round}.bexar-nearest{fill:#174d91;fill-opacity:.12;stroke:#174d91}.bexar-near-tie{fill:url(#bexar-near-tie-hatch);stroke:#ad5900;stroke-width:1.6;stroke-dasharray:5 3}
+@media(max-width:600px){.catchment-controls{padding:12px}.catchment-controls ul{columns:1}.catchment-controls fieldset{display:grid;gap:8px}.catchment-heading h2{font-size:14px}}

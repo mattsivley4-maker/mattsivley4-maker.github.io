@@ -7,6 +7,7 @@
   <title>Texas GMR + Regional Air Bases | 75 NM Map</title>
   <link rel="stylesheet" href="assets/gmr-map/map.css?v=20261101-groundfilters1">
   <link rel="stylesheet" href="assets/gmr-map/hospitals.css?v=20261031-1">
+  <link rel="stylesheet" href="assets/gmr-map/trauma-catchment.css?v=20261110-1">
 </head>
 <body>
   <header>
@@ -48,6 +49,22 @@
           <label class="search"><input id="hospital-search" type="search" placeholder="Hospital, county, city or address" aria-label="Search hospitals"></label>
           <p id="hospital-count" role="status"></p>
           <details><summary>Matching hospitals â€” select to locate</summary><div id="hospital-results" class="hospital-results"></div></details>
+        </section>
+        <section class="catchment-controls" aria-label="Bexar adult Level I distance comparison">
+          <div class="catchment-heading"><h2>Bexar adult Level I distance zones</h2><button id="catchment-fit" type="button">Fit comparison zones</button></div>
+          <fieldset><legend>Independent map layers</legend>
+            <label><input id="bexar-nearest-visible" type="checkbox" checked><b aria-hidden="true"></b>Bexar is closest</label>
+            <label><input id="bexar-near-tie-visible" type="checkbox" checked><b class="tie-swatch" aria-hidden="true"></b>Outside near-tie: Bexar adds up to 10 NM</label>
+          </fieldset>
+          <p><strong>Blue:</strong> University Hospital or Brooke Army Medical Center is the nearest Texas adult Level I by straight-line helicopter distance. <strong>Amber stripes:</strong> another adult Level I is closer, but the nearest Bexar center is no more than 10 NM farther. The amber band is outside the blue zone.</p>
+          <p>Distance comparison only, not a predicted or recommended destination. These irregular zones are independent of the air bases' 75 NM rings and are clipped at Texas borders and the coast.</p>
+          <p id="catchment-status" role="status"></p>
+          <details><summary>How these boundaries are determined</summary>
+            <p>At each location, compare the shortest WGS84 distance to either Bexar center with the shortest distance to any of the 17 other Texas adult-capable Level I campuses. The blue boundary is equal distance; the outer amber boundary is an additional 10 NM to Bexar. The owner selected the 10 NM comparison threshold; it is not a clinical rule.</p>
+            <p>No aircraft-to-scene leg, flight time, wind, weather, airspace restrictions, patient-specific capability, bed availability, acceptance or diversion status is included. Hospital coordinates are approximate campus locations. Hiding flags or other layers does not remove hospitals from this calculation. Only Texas adult Level I centers are compared; pediatric-only centers, other trauma levels and out-of-state centers are excluded.</p>
+            <p>Designation list dated October 28, 2026; rechecked November 10. <a href="https://www.dshs.texas.gov/dshs-ems-trauma-systems/trauma-system-development/texas-trauma-facilities" target="_blank" rel="noopener">Texas DSHS list</a> · <a href="assets/gmr-map/trauma-catchment.json?v=20261110-1" download>Boundary data, hospital coordinates and validation</a></p>
+            <ul id="catchment-centers" aria-label="Hospitals used in the distance comparison"></ul>
+          </details>
         </section>
         <div class="map-shell">
           <svg id="map" viewBox="0 0 1000 860" role="group" aria-label="Interactive Texas county map and air medical bases"></svg>
@@ -105,6 +122,8 @@
   <script src="assets/gmr-map/facebook-data.js?v=20261025-social1"></script>
   <script src="assets/gmr-map/hospital-data.js?v=20261103-statewide"></script>
   <script src="assets/gmr-map/hospitals.js?v=20261103-statewide"></script>
-  <script src="assets/gmr-map/map.js?v=20261103-statewide"></script>
+  <script src="assets/gmr-map/trauma-catchment-data.js?v=20261110-1"></script>
+  <script src="assets/gmr-map/trauma-catchment.js?v=20261110-1"></script>
+  <script src="assets/gmr-map/map.js?v=20261110-catchment"></script>
 </body>
 </html>

@@ -297,5 +297,6 @@
   $('tooltip').addEventListener('focusout',scheduleTooltipHide);
   document.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
   hospitalUI=window.createHospitalLayer?.({world,before:markerLayer,projection,svg,zoom,getScale:()=>scale,hideBaseTooltip:hideTooltip});
+  window.createTraumaCatchmentLayer?.({world,before:stateLayer,projection,svg,zoom,orientFeature});
   icons();render();
 })();
