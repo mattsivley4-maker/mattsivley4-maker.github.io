@@ -97,7 +97,9 @@ def build():
             if distance <= RADIUS + TOLERANCE:
                 matches.append({'id':b['id'], 'distanceMeters':round(distance,3)})
         matches.sort(key=lambda m:(m['distanceMeters'], next(b['name'] for b in data['bases'] if b['id']==m['id'])))
-        rows.append({'name':name, 'matches':matches})
+        geoid = props.get('GEOID', props.get('geoid'))
+        state = next(s['code'] for s in data.get('reviewedStates',[{'code':'TX','fips':'48'}]) if geoid.startswith(s['fips']))
+        rows.append({'id':geoid, 'state':state, 'name':name, 'matches':matches})
     result = {'sourceSha256':hashlib.sha256(source).hexdigest(), 'radiusMeters':RADIUS,
               'method':'Minimum WGS84 geodesic distance to county area; interior = 0; edge contact included.',
               'numericalToleranceMeters':TOLERANCE, 'counties':rows}

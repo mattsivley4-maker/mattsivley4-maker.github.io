@@ -1,0 +1,493 @@
+{
+  "checked": "2026-11-14",
+  "state": "OK",
+  "reviewedSites": 21,
+  "bases": [
+    {
+      "id": "airevac-dd03c79e",
+      "name": "Air Evac Lifeteam 6 \u2013 Altus, OK",
+      "city": "Altus",
+      "lat": 34.7035944,
+      "lng": -99.3354668,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate address point at the publicly registered airport base.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-6-%E2%80%93-altus,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1235112426",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=6333++N.+Main+Street%2C+Altus%2C+OK+73521&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-702d57d3",
+      "name": "Air Evac Lifeteam 21 \u2013 Elk City, OK",
+      "city": "Elk City",
+      "lat": 35.422768,
+      "lng": -99.401989,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-21-%E2%80%93-elk-city,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1356324347",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=71+Norman+Martin+Boulevard%2C+Elk+City%2C+OK+73644&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-9bd9b8b1",
+      "name": "Air Evac Lifeteam 25 \u2013 Duncan, OK",
+      "city": "Duncan",
+      "lat": 34.4736,
+      "lng": -97.964924,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-25-%E2%80%93-duncan,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1982687794",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2702+S+13th+Str%2C+Duncan%2C+OK+73533&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-3c42f662",
+      "name": "Air Evac Lifeteam 26 \u2013 Ada, OK",
+      "city": "Ada",
+      "lat": 34.80329,
+      "lng": -96.676091,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-26-%E2%80%93-ada,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1386627883",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=231+John+Herrington+Ave%2C+Ada%2C+OK+74820&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-29",
+      "name": "Air Evac Lifeteam 29 \u2013 Claremore, OK",
+      "city": "Claremore",
+      "lat": 36.293344,
+      "lng": -95.4767984,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate airport address; individual hangar position is not verified.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-29-%E2%80%93-claremore,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1255315701",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=19502+E+Rogers+Post+Rd%2C+Claremore%2C+OK+74019&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-a3a1f44f",
+      "name": "Air Evac Lifeteam 70 \u2013 Woodward, OK",
+      "city": "Woodward",
+      "lat": 36.438355,
+      "lng": -99.400943,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-70-%E2%80%93-woodward,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1497963110",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1620+Santa+Fe+Street%2C+Woodward%2C+OK+73801&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-83",
+      "name": "Air Evac Lifeteam 83 \u2013 Muskogee, OK",
+      "city": "Muskogee",
+      "lat": 35.74982,
+      "lng": -95.4065,
+      "method": "Named heliport coordinate corroborated in public aerial imagery; generic park geocode rejected.",
+      "limitation": "Approximate heliport position, cross-checked against public aerial imagery.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-83-%E2%80%93-muskogee,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1003077447",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://ourairports.com/airports/US-4933/",
+          "purpose": "Candidate heliport point, independently checked visually against aerial imagery."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=500+S+36th+Street%2C+Muskogee%2C+OK+74401&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-7365e8fa",
+      "name": "Air Evac Lifeteam 122 \u2013 Weatherford, OK",
+      "city": "Weatherford",
+      "lat": 35.5398639,
+      "lng": -98.6623639,
+      "method": "FAA-derived estimated heliport reference coordinate (AirNav 4OK1).",
+      "limitation": "Estimated published heliport reference point, corroborated against the current address area.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-122-%E2%80%93-weatherford,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1265834600",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://www.airnav.com/airport/4OK1",
+          "purpose": "Published estimated heliport reference coordinate."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3705+E.+Main+St.%2C+Weatherford%2C+OK+73096&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-128",
+      "name": "Air Evac Lifeteam 128 \u2013 Ponca City, OK",
+      "city": "Ponca City",
+      "lat": 36.7250871,
+      "lng": -97.0695999,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate address point; public operator coordinate corrected to the published Ponca City address.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-128-%E2%80%93-ponca-city,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1790154391",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=311+Fairview+Ave%2C+Ponca+City%2C+OK+74601&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-036c5573",
+      "name": "Air Evac Lifeteam 129 \u2013 Idabel, OK",
+      "city": "Idabel",
+      "lat": 33.884164,
+      "lng": -94.812917,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-129-%E2%80%93-idabel,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1871962472",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1200+SE+Avenue+N%2C+Idabel%2C+OK+74745&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "airevac-6ee72c41",
+      "name": "Air Evac Lifeteam 130 \u2013 Ardmore, OK",
+      "city": "Ardmore",
+      "lat": 34.143958,
+      "lng": -97.120804,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-130-%E2%80%93-ardmore-,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1679942270",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2205+Executive+Airport+Dr.%2C+Ardmore%2C+OK+73401&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-131",
+      "name": "Air Evac Lifeteam 131 \u2013 Kingfisher, OK",
+      "city": "Kingfisher",
+      "lat": 35.8097455,
+      "lng": -97.9454742,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-131-%E2%80%93-kingfisher,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1922477520",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=800+Hospital+Circle%2C+Kingfisher%2C+OK+73750&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-135",
+      "name": "Air Evac Lifeteam 135 \u2013 Henryetta, OK",
+      "city": "Henryetta",
+      "lat": 35.4396741,
+      "lng": -96.0148818,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-135-%E2%80%93-henryetta,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1609234293",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2407+West+Main+St%2C+Henryetta%2C+OK+74437&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-184",
+      "name": "Air Evac Lifeteam 184 \u2013 Idabel, OK",
+      "city": "Idabel",
+      "lat": 33.908945,
+      "lng": -94.856236,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1174384309",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2881+NW+Airport+Rd%2C+Idabel%2C+OK+74745&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-158",
+      "name": "Air Evac Lifeteam 158 \u2013 Seminole, OK",
+      "city": "Seminole",
+      "lat": 35.273016,
+      "lng": -96.6718599,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-158-%E2%80%93-seminole,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1235776808",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=12023+N+Highway+99%2C+Seminole%2C+OK+74868&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-174",
+      "name": "Air Evac Lifeteam 174 \u2013 Durant, OK",
+      "city": "Durant",
+      "lat": 34.005775,
+      "lng": -96.39296,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1134883879",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1610+W+University+Blvd+Ste+A%2C+Durant%2C+OK+74701&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-165",
+      "name": "Air Evac Lifeteam 165 \u2013 Grove, OK",
+      "city": "Grove",
+      "lat": 36.5843498,
+      "lng": -94.7604931,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate address point at the publicly registered East 11th Street site.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-165-%E2%80%93-grove,-ok",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1760061618",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://business.groveok.org/directory/Details/air-medcare-network-3807611",
+          "purpose": "Corroborates relocated East 11th Street address."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=872+E+11th+St%2C+Grove%2C+OK+74344&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "medtrans-85fbd5d9",
+      "name": "McAlester Regional AirCare I \u2013 McAlester, OK",
+      "city": "McAlester",
+      "lat": 34.938048,
+      "lng": -95.749028,
+      "method": "Previously reviewed map coordinate retained; public address rechecked.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/mcalester-regional-aircare",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1396120200",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/mcalester-regional-air-care-expands-emergency-air-ambulance-access",
+          "purpose": "Operator announcement identifies both rotor bases."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1021+N+Strong+Blvd%2C+McAlester%2C+OK+74501&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "mt-tahlequah",
+      "name": "Tahlequah First Flight \u2013 Tahlequah, OK",
+      "city": "Tahlequah",
+      "lat": 35.914899,
+      "lng": -94.948187,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/talequah-first-flight",
+          "purpose": "Official base listing; coordinate checked separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1194173021",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1500+E+Downing+Ste+214%2C+Tahlequah%2C+OK+74464&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "mt-eufaula",
+      "name": "McAlester Regional AirCare II \u2013 Eufaula, OK",
+      "city": "Eufaula",
+      "lat": 35.3110075,
+      "lng": -95.5917577,
+      "method": "Published address geocode; site position is approximate.",
+      "limitation": "Approximate site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1982333555",
+          "purpose": "Public practice address; registration is not proof of current dispatch availability."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/mcalester-regional-air-care-expands-emergency-air-ambulance-access",
+          "purpose": "Operator announcement identifies both rotor bases."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2+Hospital+Dr.%2C+Eufaula%2C+OK+74432&f=json&outFields=Match_addr%2CAddr_type%2CPlaceName%2CScore&outSR=4326&maxLocations=3&forStorage=false",
+          "purpose": "Independent address-coordinate comparison."
+        }
+      ]
+    },
+    {
+      "id": "ael-180",
+      "name": "Air Evac Lifeteam 180 - Pauls Valley",
+      "city": "Pauls Valley",
+      "lat": 34.70655,
+      "lng": -97.220554,
+      "method": "Previously reviewed rotor-base address retained.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1225739055",
+          "purpose": "Rotor-base public address."
+        },
+        {
+          "url": "https://www.linkedin.com/jobs/view/base-pilot-supervisor-ael-180-pauls-valley-ok-located-in-pauls-valley-ok-at-air-evac-lifeteam-4473823686",
+          "purpose": "Operator recruiting identifies AEL 180 rotor operation."
+        }
+      ]
+    }
+  ]
+}

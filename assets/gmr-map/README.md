@@ -1,5 +1,17 @@
 # Texas GMR Air Medical Map
 
+## Map-only state expansion — November 14, 2026
+
+The map-only page now covers Texas and all 77 Oklahoma counties. It has 72 base records, including 21 Oklahoma rotor sites (18 Air Evac and 3 Med-Trans). Nine Oklahoma sites were added: Claremore, Eufaula, Grove, Henryetta, Kingfisher, Muskogee, Ponca City, Seminole and Tahlequah. Altus and Weatherford coordinates and their rings were corrected. All 51 non-Oklahoma base records and the original 254 Texas county geometries are unchanged. The separate research page retains its earlier scope.
+
+`oklahoma-public-evidence.json` records the public evidence and coordinate methods for this increment. It contains no supplied workbook rows, change history, base contacts or personnel. The active workbook and research inputs remain outside the public repository. Public operator locations were compared against CMS practice addresses, hospital/operator announcements, address geocoding and aerial imagery. Approximate address/airport/heliport positions remain labeled in the popup. NPI registration and recruiting do not by themselves prove real-time availability. The map does not claim surveyed coordinates.
+
+Regional, Texas and Oklahoma views are available. County identity uses five-digit Census GEOIDs to distinguish counties with the same name in different states. Every county comparison includes any mapped eligible base whose WGS84 75 NM ring touches the county, including boundary-only contact. Mixed aircraft sites qualify; exclusively fixed-wing sites do not. Oklahoma results disclose that neighboring-state inventories are still being expanded.
+
+Next planned state: New Mexico, followed by Arkansas, Kansas, Louisiana and Tennessee. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
+
+Validation: 331 county interactions, 23,832 independently checked county/base distances, 25,992 geodesic radius vertices, all 72 base popups, existing Facebook links, aircraft hover icons, state views and 390/768/1440/1920-pixel layouts. All ring vertices remain 138,900 meters from their own recorded base point; source position and generalized boundary uncertainty remain separate limitations.
+
 Public-source baseline: October 12, 2026. User-provided roster cross-check: October 20, 2026. This is an independent research map, not an official GMR roster or dispatch tool.
 
 ## Published Files

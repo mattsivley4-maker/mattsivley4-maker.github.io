@@ -11,7 +11,7 @@
     const page=socialPages.get(b.id);
     return page?.url?`<div class="social-link"><a href="${escape(page.url)}" target="_blank" rel="noopener noreferrer">Facebook ↗</a><span>${escape(page.scope)}</span></div>`:'';
   };
-  const memberDetails=b=>members(b).map(x=>`<div class="member"><h2>${escape(x.name)}</h2><p>${escape(modeText(x))}</p>${socialDetail(x)}</div>`).join('')+'<p class="provenance">Base identified in public sources.</p>';
+  const memberDetails=b=>members(b).map(x=>`<div class="member"><h2>${escape(x.name)}</h2><p>${escape(modeText(x))}</p>${socialDetail(x)}${x.locationNote?`<p class="provenance">${escape(x.locationNote)}</p>`:''}</div>`).join('')+'<p class="provenance">Base identified in public sources.</p>';
   let tooltipTimer,tooltipId=null;
   const keepTooltip=()=>clearTimeout(tooltipTimer);
   function hideTooltip(){keepTooltip();$('tooltip').hidden=true;tooltipId=null;}
@@ -23,12 +23,14 @@
   };
   let scale=1,selected=null,selectedCounty=null,hovered=null,visible=[],points=[],width=1000,height=860;
   const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ County$/,'');
+  const countyId=f=>f.properties.GEOID || f.properties.geoid;
+  const countyState=f=>data.reviewedStates.find(s=>countyId(f).startsWith(s.fips))?.code || '';
   const countyEligibleIds=new Set(data.bases.filter(b=>!/fixed/i.test(b.mode)||/rotor/i.test(b.mode)).map(b=>b.id));
-  const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.name,{...c,matches:c.matches.filter(m=>countyEligibleIds.has(m.id))}]));
+  const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.id,{...c,matches:c.matches.filter(m=>countyEligibleIds.has(m.id))}]));
   const basesById=new Map(data.bases.map(b=>[b.id,b]));
   const orient=coordinates=>d3.geoArea({type:'Polygon',coordinates})>2*Math.PI?coordinates.map(r=>[...r].reverse()):coordinates;
   const feature=f=>({...f,geometry:{...f.geometry,coordinates:f.geometry.type==='MultiPolygon'?f.geometry.coordinates.map(orient):orient(f.geometry.coordinates)}});
-  const counties=data.counties.features.map(feature),texas=data.texas.features.map(feature);
+  const counties=data.counties.features.map(feature),texas=(data.states || data.texas).features.map(feature);
   const extent={type:'FeatureCollection',features:[...texas,...data.bases.map(b=>({type:'Feature',geometry:b.circle}))]};
   const projection=d3.geoConicConformal().parallels([27.5,35]).rotate([100,0]);
   const path=d3.geoPath(projection),svg=d3.select('#map');
@@ -37,9 +39,9 @@
   svg.append('defs').html(`<clipPath id="glyph-left"><rect x="-11" y="-12" width="11" height="24"/></clipPath><clipPath id="glyph-right"><rect x="0" y="-12" width="11" height="24"/></clipPath><g id="glyph-fixed"><path d="${airplane}"/></g><g id="glyph-rotor"><path d="${helicopter}"/></g><g id="glyph-mixed"><path d="${helicopter}" clip-path="url(#glyph-left)"/><path d="${airplane}" clip-path="url(#glyph-right)"/></g>`);
   const world=svg.append('g');
   const countyLayer=world.append('g').selectAll('path').data(counties).join('path').attr('class','county');
-  countyLayer.append('title').text(f=>`${f.properties.NAME || f.properties.name} County`);
-  countyLayer.attr('data-county',countyName).attr('tabindex',0).attr('role','button')
-    .attr('aria-label',f=>`${countyName(f)} County: show bases within 75 nautical miles`)
+  countyLayer.append('title').text(f=>`${countyName(f)} County, ${countyState(f)}`);
+  countyLayer.attr('data-county',countyName).attr('data-geoid',countyId).attr('data-state',countyState).attr('tabindex',0).attr('role','button')
+    .attr('aria-label',f=>`${countyName(f)} County, ${countyState(f)}: show bases within 75 nautical miles`)
     .on('click',(event,f)=>{event.stopPropagation();selectCounty(f);})
     .on('keydown',(event,f)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();selectCounty(f);}});
   const boundary=world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline');
@@ -77,7 +79,7 @@
   }
   function selectionStyle(){
     const ids=new Set(selectedCounty?selectedCounty.matches.map(m=>m.id):selected?members(selected).map(b=>b.id):[]);
-    countyLayer.classed('county-selected',f=>countyName(f)===selectedCounty?.name).attr('aria-pressed',f=>String(countyName(f)===selectedCounty?.name));
+    countyLayer.classed('county-selected',f=>countyId(f)===selectedCounty?.id).attr('aria-pressed',f=>String(countyId(f)===selectedCounty?.id));
     markers.selectAll('.base-marker').classed('selected',b=>selectedCounty?members(b).some(x=>ids.has(x.id)):b.id===selected?.id);
     rings.selectAll('path').classed('active',b=>ids.has(b.id)).classed('county-muted',b=>!!selectedCounty&&!ids.has(b.id)).style('opacity',b=>selected&&!ids.has(b.id)?.22:1);
     $('selection').classList.toggle('county-selection',!!selectedCounty);
@@ -85,19 +87,19 @@
   function clearSelection(){selected=null;selectedCounty=null;$('selection').hidden=true;hideTooltip();selectionStyle();}
   function positionCounty(){
     if(!selectedCounty||width>700||$('selection').hidden)return;
-    const f=counties.find(f=>countyName(f)===selectedCounty.name),[x,y]=path.centroid(f);
+    const f=counties.find(f=>countyId(f)===selectedCounty.id),[x,y]=path.centroid(f);
     const available=$('selection').getBoundingClientRect().top-$('map').getBoundingClientRect().top;
     const current=d3.zoomTransform(svg.node());
     svg.call(zoom.transform,d3.zoomIdentity.translate(width/2-x*current.k,available/2-y*current.k).scale(current.k));
   }
   function selectCounty(f){
-    selected=null;selectedCounty=countyCoverage.get(countyName(f));
+    selected=null;selectedCounty=countyCoverage.get(countyId(f));
     // County results exclude exclusively fixed-wing operations; mixed bases qualify.
     $('search').value='';$('aircraft').value='all';$('rings').checked=true;
     document.querySelectorAll('#operators input').forEach(el=>el.checked=true);
     closeFilters();render();
     const matches=selectedCounty.matches;
-    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} County</h2><p>${matches.length} ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this county.</p><p class="provenance">Closest to farthest by distance to the nearest point in the county. Bases inside are 0 NM. ${countyEligibleIds.size} eligible bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?'0 NM · Inside county':`${(m.distanceMeters/1852).toFixed(2)} NM to county`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:'<p class="empty">No eligible base radius touches this county.</p>'}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
+    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} County, ${escape(selectedCounty.state)}</h2><p>${matches.length} mapped ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this county.</p><p class="provenance">Closest to farthest by distance to the nearest point in the county. Bases inside are 0 NM. ${countyEligibleIds.size} eligible mapped bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${selectedCounty.state!=='TX'?'<p class="provenance">Adjacent-state inventory is still being expanded. Results cover the bases currently on this map.</p>':''}${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?'0 NM · Inside county':`${(m.distanceMeters/1852).toFixed(2)} NM to county`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:'<p class="empty">No eligible mapped base radius touches this county.</p>'}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
     $('selection').hidden=false;
     $('selection').scrollTop=0;
     positionCounty();
@@ -144,7 +146,9 @@
     const box=$('map').getBoundingClientRect();width=box.width;height=box.height;
     if(width<80||height<80)return;
     svg.attr('viewBox',`0 0 ${width} ${height}`);
-    projection.fitExtent([[24,25],[width-24,height-42]],extent);
+    const state=$('state-view').value;
+    const view=state==='all'?extent:{type:'FeatureCollection',features:texas.filter(f=>f.properties.state===state)};
+    projection.fitExtent([[24,25],[width-24,height-55]],view);
     countyLayer.attr('d',path);boundary.attr('d',path);
     states.attr('x',d=>projection([d[1],d[2]])[0]).attr('y',d=>projection([d[1],d[2]])[1]);
     svg.call(zoom.extent([[0,0],[width,height]]).translateExtent([[-width,-height],[width*2,height*2]]));
@@ -161,7 +165,8 @@
   document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeFilters();clearSelection();}});
   $('operators').insertAdjacentHTML('beforeend',Object.entries(operators).map(([id,o])=>`<label class="operator"><input type="checkbox" value="${id}" checked><span class="swatch" style="background:${o.color}"></span>${o.name}<span class="count">${data.bases.filter(b=>b.operator===id).length}</span></label>`).join(''));
   $('search').addEventListener('input',()=>{if(selectedCounty)clearSelection();render();});
-  document.querySelectorAll('input[type=checkbox],select').forEach(el=>el.addEventListener('change',()=>{if(selectedCounty&&el.id!=='rings'&&el.id!=='labels')clearSelection();render();}));
+  document.querySelectorAll('input[type=checkbox],select:not(#state-view)').forEach(el=>el.addEventListener('change',()=>{if(selectedCounty&&el.id!=='rings'&&el.id!=='labels')clearSelection();render();}));
+  $('state-view').onchange=()=>{clearSelection();resize();};
   $('zoom-in').onclick=()=>svg.transition().duration(200).call(zoom.scaleBy,1.6);
   $('zoom-out').onclick=()=>svg.transition().duration(200).call(zoom.scaleBy,1/1.6);
   $('reset').onclick=()=>{clearSelection();svg.transition().duration(250).call(zoom.transform,d3.zoomIdentity);};

@@ -8,17 +8,21 @@ const root=path.resolve(__dirname,'..');
 const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'assets/gmr-map',file),'utf8'),context);return JSON.parse(JSON.stringify(context.window[key]));};
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
-const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup'];
-assert.equal(clean.bases.length,63);
+const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
+assert.equal(clean.bases.length,72);
+assert.equal(clean.bases.filter(b=>b.state==='OK').length,21);
 assert(!clean.bases.some(b=>b.id==='mt-alpine'||/Alpine/i.test(b.name)));
 assert.equal(clean.radiusMeters,138900);
-assert.deepEqual(clean.counties,full.counties);
+assert.deepEqual(clean.counties.features.filter(f=>f.properties.geoid.startsWith('48')),full.counties.features);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('40')).length,77);
 assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  assert.equal(original.status,'Publicly supported');
-  for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
+  if(b.state!=='OK'){
+    assert.equal(original.status,'Publicly supported');
+    for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
+  }
   assert(!/La Grange|GFL 072|Lifeteam 189/.test(b.name));
 }
 assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringify(clean)));
@@ -32,9 +36,9 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     page.on('request',r=>requests.push(r.url()));
     await page.goto(process.argv[2]||pathToFileURL(path.join(root,'texas-gmr-air-medical-map-only.html')).href);
     await page.waitForSelector('.base-marker');
-    assert.equal(await page.locator('.base-marker').count(),62);
-    assert.equal(await page.locator('.county').count(),254);
-    assert.equal(await page.locator('.radius').count(),63);
+    assert.equal(await page.locator('.base-marker').count(),71);
+    assert.equal(await page.locator('.county').count(),331);
+    assert.equal(await page.locator('.radius').count(),72);
     await page.locator('#search').fill('Alpine');
     assert.equal(await page.locator('.base-marker').count(),0);
     assert.equal(await page.locator('.radius').count(),0);
@@ -50,8 +54,10 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       assert(tip.replace(/\s+/g,' ').includes(b.name.replace(/\s+/g,' ')),`${b.name}: ${tip}`);
       assert(tip.includes('Base identified in public sources.'));
       assert(!/phone|roster|internal|research|screenshot/i.test(tip));
-      assert.equal(await page.locator('#tooltip .social-link a').getAttribute('href'),social.get(b.id).url);
-      assert(tip.includes(social.get(b.id).scope));
+      if(social.has(b.id)){
+        assert.equal(await page.locator('#tooltip .social-link a').getAttribute('href'),social.get(b.id).url);
+        assert(tip.includes(social.get(b.id).scope));
+      }else assert.equal(await page.locator('#tooltip .social-link a').count(),0);
       const expected=b.mode.includes('Rotor')&&b.mode.includes('fixed')?'mixed':b.mode.includes('Rotor')?'rotor':b.mode.includes('Fixed')?'fixed':'unknown';
       assert.equal(await marker.getAttribute('data-aircraft'),expected);
       if(expected!=='unknown')assert(await marker.locator('.aircraft').isVisible());
@@ -60,7 +66,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       assert(await page.locator('#tooltip').isVisible());
       await page.keyboard.press('Enter');
       assert((await page.locator('#selection').innerText()).replace(/\s+/g,' ').includes(b.name.replace(/\s+/g,' ')));
-      assert.equal(await page.locator('#selection .social-link a').getAttribute('href'),social.get(b.id).url);
+      if(social.has(b.id))assert.equal(await page.locator('#selection .social-link a').getAttribute('href'),social.get(b.id).url);
       await page.keyboard.press('Escape');
       assert.equal(await page.locator('#selection').isVisible(),false);
     }
@@ -102,7 +108,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     assert.equal(await page.locator('.radius:visible').count(),0);
     await page.locator('#rings').check();
     await page.locator('#labels').check();
-    assert.equal(await page.locator('.base-label:visible').count(),62);
+    assert.equal(await page.locator('.base-label:visible').count(),71);
     await page.locator('#labels').uncheck();
     const before=await page.locator('#map>g').getAttribute('transform');
     await page.locator('#zoom-in').click();
@@ -117,7 +123,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       await page.waitForTimeout(150);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
       assert(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1));
-      const box=await page.locator('.texas-outline').boundingBox();
+      const box=await page.locator('.texas-outline').first().boundingBox();
       assert(box.width>250&&box.height>250);
       if(output)await page.screenshot({path:path.join(output,`map-only-${width}.png`)});
       await page.locator('#search').fill('San Antonio');
@@ -129,9 +135,15 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
+    for(const state of ['OK','TX','all']){
+      await page.locator('#state-view').selectOption(state);
+      assert.equal(await page.locator('.radius').count(),72);
+      assert.equal(await page.locator('.county').count(),331);
+      if(output)await page.screenshot({path:path.join(output,`state-view-${state}.png`)});
+    }
     const text=await page.locator('body').innerText();
     assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
     assert.deepEqual(errors,[]);
-    console.log(JSON.stringify({passed:true,sites:63,markers:62,counties:254,alpineExcluded:true,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
+    console.log(JSON.stringify({passed:true,sites:72,markers:71,counties:331,alpineExcluded:true,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

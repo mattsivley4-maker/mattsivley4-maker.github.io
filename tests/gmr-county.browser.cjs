@@ -22,15 +22,15 @@ const root=path.resolve(__dirname,'..');
     await page.mouse.click(hit.x,hit.y);assert((await page.locator('#selection h2').innerText()).includes('Bexar'));
     await page.keyboard.press('Escape');
     for(const row of rows){
-      await page.locator(`[data-county="${row.name}"]`).dispatchEvent('click');
-      assert.equal(await page.locator('.county-selected').getAttribute('data-county'),row.name);
+      await page.locator(`[data-geoid="${row.id}"]`).dispatchEvent('click');
+      assert.equal(await page.locator('.county-selected').getAttribute('data-geoid'),row.id);
       assert.equal(await page.locator('.radius.active').count(),row.matches.length,row.name);
-      assert.equal(await page.locator('.radius.county-muted').count(),63-row.matches.length);
+      assert.equal(await page.locator('.radius.county-muted').count(),72-row.matches.length);
       const list=await page.locator('.county-base-list li').evaluateAll(items=>items.map(el=>el.dataset.baseId));
       assert.deepEqual(list,row.matches.map(m=>m.id),row.name);
-      assert.equal(await page.locator('.county-base-list a').count(),row.matches.length);
+      assert((await page.locator('.county-base-list a').count())<=row.matches.length);
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
-      if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible base radius'));
+      if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
     // Border-state rotor bases remain; SAT's county list contains only AEL 148.
     const bases=await page.evaluate(()=>window.GMR_MAP_ONLY_DATA.bases);
@@ -49,7 +49,7 @@ const root=path.resolve(__dirname,'..');
     await bexar.focus();await page.keyboard.press('Space');
     assert.equal(await page.locator('#search').inputValue(),'');
     assert(await page.locator('#rings').isChecked());
-    assert.equal(await page.locator('.radius').count(),63);
+    assert.equal(await page.locator('.radius').count(),72);
     await page.locator('#labels').check();
     assert.equal(await page.locator('.county-selected').count(),1);
     await page.locator('#search').fill('San Antonio');

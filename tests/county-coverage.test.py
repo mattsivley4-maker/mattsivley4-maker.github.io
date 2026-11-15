@@ -34,9 +34,10 @@ source=(root/'assets/gmr-map/map-only-data.js').read_text(encoding='utf-8')
 data=json.loads(source.split('=',1)[1].strip().removesuffix(';'))
 result=json.loads((root/'assets/gmr-map/county-coverage.js').read_text().split('=',1)[1].strip().removesuffix(';'))
 assert hashlib.sha256(source.encode()).hexdigest()==result['sourceSha256'], 'Rebuild coverage after changing map data'
-assert len(result['counties'])==254
-lookup={c['name']:c for c in result['counties']}
-polygons=[(f['properties'].get('NAME',f['properties'].get('name')).removesuffix(' County'),coverage.prepare(f['geometry'])[1]) for f in data['counties']['features']]
+assert len(result['counties'])==331
+assert len({c['id'] for c in result['counties']})==331
+lookup={c['id']:c for c in result['counties']}
+polygons=[(f['properties'].get('GEOID',f['properties'].get('geoid')),coverage.prepare(f['geometry'])[1]) for f in data['counties']['features']]
 max_error=0
 for base in data['bases']:
     # Independent nearest-point calculation in a base-centered azimuthal
@@ -56,4 +57,4 @@ for base in data['bases']:
 for county in result['counties']:
     distances=[m['distanceMeters'] for m in county['matches']]
     assert distances==sorted(distances)
-print(json.dumps({'passed':True,'pairsChecked':254*63,'independentDistanceMaxDifferenceMeters':max_error,'tangentAndGrazingEdges':True,'holesAndMultipolygons':True}))
+print(json.dumps({'passed':True,'pairsChecked':len(data['counties']['features'])*len(data['bases']),'independentDistanceMaxDifferenceMeters':max_error,'tangentAndGrazingEdges':True,'holesAndMultipolygons':True}))
