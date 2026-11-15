@@ -34,6 +34,12 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Mississippi fixed-wing AirCare 5 stays on the map but not in county helicopter lists.
+    await page.locator('[data-geoid="28121"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-ms-292"]').count(),0);
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-ms-175"]').count(),1);
+    await page.locator('[data-geoid="28001"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ael-99"]').count(),1);
     // Both Jackson programs qualify; shared Memphis/Paris facilities are counted once each.
     await page.locator('[data-geoid="47113"]').dispatchEvent('click');
     for(const id of ['ael-7','ael-188'])assert.equal(await page.locator(`.county-base-list [data-base-id="${id}"]`).count(),1);

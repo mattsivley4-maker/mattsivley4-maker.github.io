@@ -1,0 +1,485 @@
+{
+  "checked": "2026-11-15",
+  "state": "MS",
+  "airPrograms": 13,
+  "mappedSites": 13,
+  "operators": {
+    "airevac": 4,
+    "medtrans": 8,
+    "guardian": 1
+  },
+  "bases": [
+    {
+      "id": "ael-58",
+      "name": "Air Evac Lifeteam 58 \u2013 Corinth, MS",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.934457,
+      "lng": -88.562224,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate operator base-address reference at the hospital campus, cross-checked with CMS, geocoding and aerial imagery; not the surveyed helipad center.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1366425282",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3704+JOANN+DR%2C+CORINTH%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-58-%E2%80%93-corinth,-ms",
+          "purpose": "Operator identifies the base and public address."
+        }
+      ],
+      "directoryOffsetMeters": 0.0
+    },
+    {
+      "id": "ael-61",
+      "name": "Air Evac Lifeteam 61 \u2013 Batesville, MS",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.3053054,
+      "lng": -89.9160336,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1699734905",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=311+MEDICAL+CENTER+DR%2C+BATESVILLE%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-61-%E2%80%93-batesville,-ms",
+          "purpose": "Operator identifies the base and public address."
+        }
+      ],
+      "directoryOffsetMeters": 110.5
+    },
+    {
+      "id": "ael-87",
+      "name": "Air Evac Lifeteam 87 \u2013 Greenville, MS",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 33.411839,
+      "lng": -91.033464,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate operator base-address reference at the hospital campus, cross-checked with CMS, geocoding and aerial imagery; not the surveyed helipad center.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1124257670",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1609+HOSPITAL+ST%2C+GREENVILLE%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-87-%E2%80%93-washington-county,-ms",
+          "purpose": "Operator identifies the base and public address."
+        }
+      ],
+      "directoryOffsetMeters": 0.0
+    },
+    {
+      "id": "ael-99",
+      "name": "Air Evac Lifeteam 99 \u2013 Natchez, MS",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 31.4925459,
+      "lng": -91.3659697,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate Roux 61 Drive base-address reference, corroborated by public environmental records and visible helipad facilities. The town-center directory coordinate is not used.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1598056046",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=10+ROUX+61+DRIVE%2C+NATCHEZ%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-99-%E2%80%93-natchez,-ms",
+          "purpose": "Operator identifies the base and public address."
+        },
+        {
+          "url": "https://opcgis.deq.state.ms.us/ensearchonline/ai_info.aspx?ai=70445",
+          "purpose": "State environmental facility record independently identifies Air Evac Base 99 at Roux 61 Drive."
+        }
+      ],
+      "directoryOffsetMeters": 8316.3
+    },
+    {
+      "id": "mt-ms-143",
+      "name": "Mississippi Air Rescue 5 \u2013 Gulfport, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 30.4008167,
+      "lng": -89.0716466,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate airport hangar reference at the public CMS address on Hangar Street. The operator lists 1100 while CMS lists 900; the exact current hangar assignment remains unresolved.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1568915247",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=900+HANGAR+ST%2C+GULFPORT%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/flightcare-rescue-5",
+          "purpose": "Operator program identity and public location. Historical FlightCare names are not counted as extra bases."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1100+Hangar+St+Gulfport+Mississippi&outFields=%2A&maxLocations=3&f=json",
+          "purpose": "Alternative 1100 Hangar Street reference compared with the CMS 900 address and aerial imagery."
+        }
+      ],
+      "directoryOffsetMeters": 276.1
+    },
+    {
+      "id": "mt-ms-250",
+      "name": "Mississippi Air Rescue 7 \u2013 Hattiesburg, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 31.2708056,
+      "lng": -89.2517203,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate operator base reference, checked against the public practice address and aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1326439357",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=27+ACADEMY+DR%2C+HATTIESBURG%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/mississippi-air-rescue-7-%E2%80%93-hattiesberg,-ms",
+          "purpose": "Operator program identity and public location. Historical FlightCare names are not counted as extra bases."
+        }
+      ],
+      "directoryOffsetMeters": 0.0
+    },
+    {
+      "id": "mt-ms-140",
+      "name": "Mississippi Air Rescue 9 \u2013 McComb, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 31.2509782,
+      "lng": -90.4746682,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate operator base reference, checked against the public practice address and aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1730546045",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=215A+MARION+AVE%2C+MCCOMB%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/mississippi-air-rescue-9-%E2%80%93-mccomb,-ms",
+          "purpose": "Operator program identity and public location. Historical FlightCare names are not counted as extra bases."
+        }
+      ],
+      "directoryOffsetMeters": 0.0
+    },
+    {
+      "id": "mt-ms-261",
+      "name": "Hospital Wing 7 \u2013 Oxford, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 34.3460967,
+      "lng": -89.5196333,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1669143442",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2400+JEFF+DAVIS+DR+EXT%2C+OXFORD%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/hospital-wing-7",
+          "purpose": "Operator program identity and public location. Historical FlightCare names are not counted as extra bases."
+        }
+      ],
+      "directoryOffsetMeters": 1.1
+    },
+    {
+      "id": "mt-ms-175",
+      "name": "UMMC AirCare 1 \u2013 Jackson, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 32.3299096,
+      "lng": -90.1630879,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate MCES hangar-site reference on the east side of the UMMC campus, not the general hospital mailing-address point. Not a surveyed helipad center.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1871123778",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2500+N+STATE+ST%2C+JACKSON%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.umc.edu/UMMC/Outreach-Programs/MS-Center-for-Emergency-Services/Critical-Care-Transport/AirCare-Home/Aircraft/AirCare-Fleet-Home.html",
+          "purpose": "Hospital identifies four helicopter bases and Med-Trans as the helicopter operator."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/aircare-1-%28ummc%29-%E2%80%93-jackson,ms",
+          "purpose": "Operator program identity; its city-center coordinate is rejected."
+        },
+        {
+          "url": "https://www.umc.edu/maps/?cid=10",
+          "purpose": "Hospital campus directions place MCES at the east end of Central University Drive."
+        },
+        {
+          "url": "https://www.umc.edu/news/News_Articles/2021/07/MCES-Hurricane-Season.html",
+          "purpose": "Hospital identifies AirCare 1 at the MCES hangar, separate from the receiving hospital rooftop pad."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Mississippi+Center+for+Emergency+Services+Jackson+Mississippi&outFields=%2A&maxLocations=3&f=json",
+          "purpose": "Named MCES facility coordinate corroborated by campus directions and aerial hangar/helipad imagery."
+        }
+      ],
+      "directoryOffsetMeters": 4014.8
+    },
+    {
+      "id": "mt-ms-176",
+      "name": "UMMC AirCare 2 \u2013 Meridian, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 32.3328617,
+      "lng": -88.7515722,
+      "method": "Confirmed airport identity with published FAA airport reference coordinate, rather than a city center or unreliable street geocode. Exact base position within the airport remains unresolved.",
+      "limitation": "Approximate Key Field airport reference. The hospital confirms this airport base, but the exact AirCare hangar or pad coordinate is not established; the street geocode is not used.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1235762725",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2411A+HIGHWAY+11+S%2C+MERIDIAN%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.umc.edu/UMMC/Outreach-Programs/MS-Center-for-Emergency-Services/Critical-Care-Transport/AirCare-Home/Aircraft/AirCare-Fleet-Home.html",
+          "purpose": "Hospital identifies four helicopter bases and Med-Trans as the helicopter operator."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/aircare-2-%28ummc%29-%E2%80%93-meridian,-ms",
+          "purpose": "Operator program identity; its city-center coordinate is rejected."
+        },
+        {
+          "url": "https://www.airnav.com/airport/KMEI",
+          "purpose": "FAA airport reference coordinate as reproduced by AirNav; not the AirCare pad."
+        },
+        {
+          "url": "https://www.umc.edu/news/News_Articles/2014/January/UMMC-PLANS-TO-EXPAND-AIRCARE-SERVICE--REACH-PATIENTS-SOONER--WITH-NEW-HELICOPTER-IN-GRENADA.html",
+          "purpose": "Hospital identifies the dedicated Meridian hangar at Key Field."
+        }
+      ],
+      "directoryOffsetMeters": 5701.5
+    },
+    {
+      "id": "mt-ms-177",
+      "name": "UMMC AirCare 3 \u2013 Columbus, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 33.457394,
+      "lng": -88.585135,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate Airbus facility reference at Golden Triangle Regional Airport, where UMMC identifies its leased base space. Exact aircraft parking position is not established.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1861022766",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1910+AIRPORT+RD%2C+COLUMBUS%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.umc.edu/UMMC/Outreach-Programs/MS-Center-for-Emergency-Services/Critical-Care-Transport/AirCare-Home/Aircraft/AirCare-Fleet-Home.html",
+          "purpose": "Hospital identifies four helicopter bases and Med-Trans as the helicopter operator."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/aircare-3-%28ummc%29-%E2%80%93-columbus,-ms",
+          "purpose": "Operator program identity; its city-center coordinate is rejected."
+        },
+        {
+          "url": "https://www.umc.edu/news/News_Articles/2016/April/UMMC-expands-AirCare-helicopter-service-with-northern-Mississippi-base.html",
+          "purpose": "Hospital identifies leased Airbus hangar and office space at Golden Triangle Regional Airport."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Airbus+Helicopters+Columbus+Mississippi&outFields=%2A&maxLocations=3&f=json",
+          "purpose": "Named Airbus facility coordinate checked against airport hangar/apron imagery."
+        }
+      ],
+      "directoryOffsetMeters": 15275.8
+    },
+    {
+      "id": "mt-ms-178",
+      "name": "UMMC AirCare 4 \u2013 Greenwood, MS",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 33.4933083,
+      "lng": -90.0866778,
+      "method": "Hospital-confirmed airport, independent airport reference geocode and aerial imagery. Rejected the first street-geocode result in a field away from the airport.",
+      "limitation": "Approximate Greenwood-Leflore airport reference near the terminal/apron area. The hospital confirms the airport base; its exact current hangar or pad coordinate is not established.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1922638832",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=508+AIRPORT+RD%2C+GREENWOOD%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.umc.edu/UMMC/Outreach-Programs/MS-Center-for-Emergency-Services/Critical-Care-Transport/AirCare-Home/Aircraft/AirCare-Fleet-Home.html",
+          "purpose": "Hospital identifies four helicopter bases and Med-Trans as the helicopter operator."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/aircare-4-%28ummc%29-%E2%80%93-greenwood,-ms",
+          "purpose": "Operator program identity; its city-center coordinate is rejected."
+        },
+        {
+          "url": "https://www.umc.edu/news/News_Articles/2017/October/aircare-expansion-lands-at-greenwood-base.html",
+          "purpose": "Hospital identifies airport base adjacent to the control tower."
+        },
+        {
+          "url": "https://greenwoodedf.com/work-here/target-industry-sectors",
+          "purpose": "Local economic development foundation identifies UMMC AirCare as an airport tenant."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Greenwood+Leflore+Airport+Mississippi&outFields=%2A&maxLocations=3&f=json",
+          "purpose": "Named airport reference coordinate, not a surveyed aircraft parking point."
+        }
+      ],
+      "directoryOffsetMeters": 8994.2
+    },
+    {
+      "id": "gf-ms-292",
+      "name": "UMMC AirCare 5 (Guardian Flight) \u2013 Pearl, MS",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 32.3035904,
+      "lng": -90.0701892,
+      "method": "Public operator and CMS air-transport address compared with independent geocoding and aerial imagery.",
+      "limitation": "Approximate public South Hangar Drive address reference at Jackson-Medgar Wiley Evers International Airport. UMMC identifies Guardian Flight as the aviation operator. Exclusively fixed-wing; excluded from county-click helicopter coverage.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1932039401",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=150+S+HANGAR+DR%2C+PEARL%2C+MS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode evaluated against the supported facility; rejected when it falls away from the site."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and aircraft category; operator affiliation assessed separately."
+        },
+        {
+          "url": "https://www.umc.edu/news/News_Articles/2026/09/Airplane.html",
+          "purpose": "September 2026 hospital launch announcement confirms active AirCare 5 and Guardian Flight aircraft, pilots and aviation operations."
+        }
+      ],
+      "directoryOffsetMeters": null
+    }
+  ],
+  "exclusions": [
+    "Legacy Magee/Rescue 8 registry entry is not corroborated as a current base and is not plotted.",
+    "FlightCare and Mississippi Air Rescue listings for the same program are not duplicate bases.",
+    "Other operators outside the requested GMR network are not included."
+  ],
+  "geometry": {
+    "countyCount": 82,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "unresolved": [
+    {
+      "id": "mt-ms-143",
+      "issue": "Approximate airport hangar reference at the public CMS address on Hangar Street. The operator lists 1100 while CMS lists 900; the exact current hangar assignment remains unresolved."
+    },
+    {
+      "id": "mt-ms-176",
+      "issue": "Approximate Key Field airport reference. The hospital confirms this airport base, but the exact AirCare hangar or pad coordinate is not established; the street geocode is not used."
+    },
+    {
+      "id": "mt-ms-178",
+      "issue": "Approximate Greenwood-Leflore airport reference near the terminal/apron area. The hospital confirms the airport base; its exact current hangar or pad coordinate is not established."
+    }
+  ],
+  "limitations": [
+    "Approximate reference points are labeled and are not surveyed aircraft parking positions.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; mapped overlap does not imply availability.",
+    "Uniform 75 NM circles are a geographic comparison, not the operational range of fixed-wing aircraft."
+  ]
+}

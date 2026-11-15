@@ -11,7 +11,7 @@ function check(value,at){
     check(v,`${at}.${key}`);
   }
 }
-for(const file of ['data.js','map-only-data.js','regional-data.js','base-audit.json','regional-audit.json','regional-sites.json','oklahoma-public-evidence.json','new-mexico-public-evidence.json','arkansas-public-evidence.json','kansas-public-evidence.json','louisiana-public-evidence.json','tennessee-public-evidence.json']){
+for(const file of ['data.js','map-only-data.js','regional-data.js','base-audit.json','regional-audit.json','regional-sites.json','oklahoma-public-evidence.json','new-mexico-public-evidence.json','arkansas-public-evidence.json','kansas-public-evidence.json','louisiana-public-evidence.json','tennessee-public-evidence.json','mississippi-public-evidence.json']){
   const source=fs.readFileSync(path.join(root,file),'utf8');
   if(file.endsWith('.js')){
     const context={window:{}};vm.runInNewContext(source,context);check(context.window,file);

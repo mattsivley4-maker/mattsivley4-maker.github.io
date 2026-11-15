@@ -9,7 +9,13 @@ const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.read
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
-assert.equal(clean.bases.length,121);
+assert.equal(clean.bases.length,134);
+assert.equal(clean.bases.filter(b=>b.state==='MS').length,13);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('28')).length,82);
+assert.equal(clean.bases.find(b=>b.id==='gf-ms-292').operator,'guardian');
+assert.equal(clean.bases.find(b=>b.id==='gf-ms-292').mode,'Fixed-wing');
+assert(!clean.bases.some(b=>b.state==='MS'&&/Magee|Rescue 8/.test(b.name)));
+assert(clean.bases.find(b=>b.id==='ael-99').lat<31.5);
 assert.equal(clean.bases.filter(b=>b.state==='TN').length,29);
 assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('47')).length,95);
 assert(!clean.bases.some(b=>b.state==='TN'&&/Selmer|SkyLife|Etowah/.test(b.name)));
@@ -36,7 +42,7 @@ assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  if(!['OK','NM','AR','KS','LA','TN'].includes(b.state)){
+  if(!['OK','NM','AR','KS','LA','TN','MS'].includes(b.state)){
     assert.equal(original.status,'Publicly supported');
     for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
   }
@@ -150,8 +156,8 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       const frame=await page.locator('#map').boundingBox();
       for(const outline of await page.locator('.texas-outline').all()){
         const box=await outline.boundingBox();
-        // The wider seven-state region makes Tennessee about 36 px tall at 390 px.
-        assert(box.width>50&&box.height>30,'Each reviewed state must be visibly rendered');
+        // At 390 px, TN is about 97x36 px and MS 41x70 px; allow either orientation.
+        assert(Math.min(box.width,box.height)>30&&Math.max(box.width,box.height)>50,'Each reviewed state must be visibly rendered');
         assert(box.x>=frame.x-1&&box.y>=frame.y-1&&box.x+box.width<=frame.x+frame.width+1&&box.y+box.height<=frame.y+frame.height+1,'Regional view must contain every reviewed state');
       }
       if(output)await page.screenshot({path:path.join(output,`map-only-${width}.png`)});
@@ -164,7 +170,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['TN','LA','KS','AR','NM','OK','TX','all']){
+    for(const state of ['MS','TN','LA','KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
       assert.equal(await page.locator('.radius').count(),total);
       assert.equal(await page.locator('.county').count(),countyTotal);
