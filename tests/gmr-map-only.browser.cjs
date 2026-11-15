@@ -9,7 +9,12 @@ const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.read
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
-assert.equal(clean.bases.length,92);
+assert.equal(clean.bases.length,121);
+assert.equal(clean.bases.filter(b=>b.state==='TN').length,29);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('47')).length,95);
+assert(!clean.bases.some(b=>b.state==='TN'&&/Selmer|SkyLife|Etowah/.test(b.name)));
+assert(clean.bases.find(b=>b.id==='ael-159').name.includes('123 / 159'));
+assert(clean.bases.find(b=>b.id==='mt-tn-22').locationNote.includes('precise new hangar or helipad is not established'));
 assert.equal(clean.bases.filter(b=>b.state==='LA').length,4);
 assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('22')).length,64);
 assert.equal(clean.bases.filter(b=>b.state==='KS').length,10);
@@ -31,7 +36,7 @@ assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  if(!['OK','NM','AR','KS','LA'].includes(b.state)){
+  if(!['OK','NM','AR','KS','LA','TN'].includes(b.state)){
     assert.equal(original.status,'Publicly supported');
     for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
   }
@@ -145,7 +150,8 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       const frame=await page.locator('#map').boundingBox();
       for(const outline of await page.locator('.texas-outline').all()){
         const box=await outline.boundingBox();
-        assert(box.width>50&&box.height>50,'Each reviewed state must be visibly rendered');
+        // The wider seven-state region makes Tennessee about 36 px tall at 390 px.
+        assert(box.width>50&&box.height>30,'Each reviewed state must be visibly rendered');
         assert(box.x>=frame.x-1&&box.y>=frame.y-1&&box.x+box.width<=frame.x+frame.width+1&&box.y+box.height<=frame.y+frame.height+1,'Regional view must contain every reviewed state');
       }
       if(output)await page.screenshot({path:path.join(output,`map-only-${width}.png`)});
@@ -158,7 +164,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['LA','KS','AR','NM','OK','TX','all']){
+    for(const state of ['TN','LA','KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
       assert.equal(await page.locator('.radius').count(),total);
       assert.equal(await page.locator('.county').count(),countyTotal);

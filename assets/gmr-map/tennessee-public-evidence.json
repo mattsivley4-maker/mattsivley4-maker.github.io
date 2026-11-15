@@ -1,0 +1,855 @@
+{
+  "checked": "2026-11-15",
+  "state": "TN",
+  "airPrograms": 31,
+  "mappedSites": 29,
+  "operators": {
+    "airevac": 16,
+    "medtrans": 13
+  },
+  "bases": [
+    {
+      "id": "ael-151",
+      "name": "Air Evac Lifeteam 151 \u2013 Clarksville, TN",
+      "city": "Clarksville",
+      "lat": 36.6199438,
+      "lng": -87.2272254,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate current public Hampton Ridge base-address reference. Public operator and CMS records supersede the older Guthrie Highway listing; exact pad position is not established.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1003394933",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=209+HAMPTON+RIDGE+DR%2C+CLARKSVILLE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-151-%E2%80%93-clarksville,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-7",
+      "name": "Air Evac Lifeteam 7 \u2013 Jackson, TN",
+      "city": "Jackson",
+      "lat": 35.6376848,
+      "lng": -88.8283928,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1881677995",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=54+MEDICAL+CENTER+DR%2C+JACKSON%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-7-%E2%80%93-jackson,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-9",
+      "name": "Air Evac Lifeteam 9 \u2013 Lewisburg, TN",
+      "city": "Lewisburg",
+      "lat": 35.4998323,
+      "lng": -86.8084255,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1548243348",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1879+FRANKLIN+PIKE%2C+LEWISBURG%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-9-%E2%80%93-lewisburg,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-19",
+      "name": "Air Evac Lifeteam 19 \u2013 Lafayette, TN",
+      "city": "Lafayette",
+      "lat": 36.5185984,
+      "lng": -86.0329924,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1568445377",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=32+WELDON+DR%2C+LAFAYETTE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-19-%E2%80%93-lafayette,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-31",
+      "name": "Air Evac Lifeteam 31 \u2013 Martin, TN",
+      "city": "Martin",
+      "lat": 36.325421,
+      "lng": -88.868931,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1427031244",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=199+BAKER+RD%2C+MARTIN%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-31-%E2%80%93-martin,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-37",
+      "name": "Air Evac Lifeteam 37 \u2013 Waverly, TN",
+      "city": "Waverly",
+      "lat": 36.075532,
+      "lng": -87.7945041,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1417930231",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=336+HIGHWAY+13+S%2C+WAVERLY%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-37-%E2%80%93-waverly,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-44",
+      "name": "Air Evac Lifeteam 44 \u2013 Manchester, TN",
+      "city": "Manchester",
+      "lat": 35.4279193,
+      "lng": -86.0254406,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1396728119",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1592+VOLUNTEER+PKWY%2C+MANCHESTER%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-44-%E2%80%93-coffee-county,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-72",
+      "name": "Air Evac Lifeteam 72 \u2013 Waynesboro, TN",
+      "city": "Waynesboro",
+      "lat": 35.3257705,
+      "lng": -87.7786578,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1295933661",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=915+ANDREW+JACKSON+DRIVE%2C+WAYNESBORO%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-72-%E2%80%93-waynesboro,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-75",
+      "name": "Air Evac Lifeteam 75 \u2013 Dyersburg, TN",
+      "city": "Dyersburg",
+      "lat": 36.049,
+      "lng": -89.3801441,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1871775221",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=435+WILKINSON+DRIVE%2C+DYERSBURG%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-75-dyersburg,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-94",
+      "name": "Air Evac Lifeteam 94 \u2013 Savannah, TN",
+      "city": "Savannah",
+      "lat": 35.223959,
+      "lng": -88.2351701,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1609188739",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=175+JACKSON+STREET%2C+SAVANNAH%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-94-%E2%80%93-savannah,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-110",
+      "name": "Air Evac Lifeteam 110 \u2013 Lawrenceburg, TN",
+      "city": "Lawrenceburg",
+      "lat": 35.2211581,
+      "lng": -87.3393555,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1609131051",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1619+S+LOCUST+AVE%2C+LAWRENCEBURG%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-110-%E2%80%93-lawrenceburg,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-141",
+      "name": "Air Evac Lifeteam 141 \u2013 Parsons, TN",
+      "city": "Parsons",
+      "lat": 35.6384889,
+      "lng": -88.1260932,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1023551298",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=83+W+HOLLEY+STREET+EXT%2C+PARSONS%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-141-%E2%80%93-decatur-county,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-143",
+      "name": "Air Evac Lifeteam 143 \u2013 Troy, TN",
+      "city": "Troy",
+      "lat": 36.3331823,
+      "lng": -89.1608464,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1891242301",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=701+CC+GURIEN+DR%2C+TROY%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-143-%E2%80%93-obion-county,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-159",
+      "name": "Air Evac Lifeteam 123 / 159 \u2013 Paris, TN",
+      "city": "Paris",
+      "lat": 36.3351027,
+      "lng": -88.3813849,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Shared Henry County Airport facility for AEL 123 and 159, represented by one approximate hangar reference. Aircraft parking positions are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1265077259",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1401+DIGGS+RD+STE+B%2C+PARIS%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-159-%E2%80%93-western-tennessee",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-123-%E2%80%93-henry-county,-tn",
+          "purpose": "AEL 123 program identity; older Diggs Road address evaluated against current practice address."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1447645338",
+          "purpose": "AEL 123 public practice address: 1401 Diggs Road, Suite A; AEL 159 is Suite B."
+        },
+        {
+          "url": "https://henrycountytn.org/wp-content/uploads/2026/02/2-17-26-Henry-County-Commission-Agenda.pdf",
+          "purpose": "County agenda Exhibit B labels AEL 123/159 at the same airport facility; used as location corroboration, not proof of an air-service lease."
+        }
+      ]
+    },
+    {
+      "id": "ael-175",
+      "name": "Air Evac Lifeteam 175 \u2013 Smyrna, TN",
+      "city": "Smyrna",
+      "lat": 36.0145055,
+      "lng": -86.511434,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1962162651",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=689+FITZHUGH+BLVD%2C+SMYRNA%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-175-%E2%80%93-smyrna,-tn",
+          "purpose": "Operator identifies this base and public address; directory coordinate evaluated independently."
+        }
+      ]
+    },
+    {
+      "id": "ael-188",
+      "name": "Air Evac Lifeteam 188 \u2013 Jackson, TN",
+      "city": "Jackson",
+      "lat": 35.6036291,
+      "lng": -88.921456,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate publicly registered airport hangar-address reference for AEL 188, distinct from AEL 7 in Jackson. Not a surveyed parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1265399422",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=240+GRADY+MONTGOMERY+DR+STE+B%2C+JACKSON%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.linkedin.com/jobs/view/line-pilot-ael-188-madison-co-tn-located-in-jackson-tn-at-air-evac-lifeteam-4457913249",
+          "purpose": "Air Evac recruitment identifies the AEL 188 Madison County helicopter program in Jackson."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-205",
+      "name": "LIFE FORCE 1 \u2013 Cleveland, TN",
+      "city": "Cleveland",
+      "lat": 35.2137172,
+      "lng": -84.7954207,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1578793766",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=251+DRY+VALLEY+RD+NE%2C+CLEVELAND%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.erlanger.org/medical-services/life-force-air-medical/life-force-bases",
+          "purpose": "Hospital partner identifies the Cleveland, Sparta and Winchester programs; Winchester address assessed against newer CMS data."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-206",
+      "name": "LIFE FORCE 2 \u2013 Sparta, TN",
+      "city": "Sparta",
+      "lat": 36.0550794,
+      "lng": -85.5286121,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1831329028",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=799+AIRPORT+RD%2C+SPARTA%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.erlanger.org/medical-services/life-force-air-medical/life-force-bases",
+          "purpose": "Hospital partner identifies the Cleveland, Sparta and Winchester programs; Winchester address assessed against newer CMS data."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-254",
+      "name": "LIFE FORCE 5 \u2013 Winchester, TN",
+      "city": "Winchester",
+      "lat": 35.1838987,
+      "lng": -86.0675987,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate current Carl Spray Drive airport hangar-address reference. Newer CMS practice address takes precedence over older Aviation Drive listings; not a surveyed parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1841666450",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=197+CARL+SPRAY+DR%2C+WINCHESTER%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.erlanger.org/medical-services/life-force-air-medical/life-force-bases",
+          "purpose": "Hospital partner identifies the Cleveland, Sparta and Winchester programs; Winchester address assessed against newer CMS data."
+        },
+        {
+          "url": "https://business.franklincountychamber.com/events/Details/erlanger-connection-open-house-1960688?sourceTypeId=Website",
+          "purpose": "November 2026 hospital-sponsored open house identifies the Erlanger hangar on Carl Spray Drive; street number differs, so CMS 197 is used with approximate precision."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-21",
+      "name": "UT LIFESTAR 1 \u2013 Morristown, TN",
+      "city": "Morristown",
+      "lat": 36.175545,
+      "lng": -83.384381,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1891949475",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=5573+OLD+HIGHWAY+11E%2C+MORRISTOWN%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet",
+          "purpose": "Hospital partner identifies all five current helicopter bases and their public addresses."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-22",
+      "name": "UT LIFESTAR 2 \u2013 Rockwood, TN",
+      "city": "Rockwood",
+      "lat": 35.8792499,
+      "lng": -84.7429855,
+      "method": "Current hospital and CMS address agree on Flatrock. Address coordinate identifies the property vicinity; precise launch-pad coordinate remains unresolved. The old Rockwood Airport site is not plotted as another base.",
+      "limitation": "Approximate Flatrock Motorclub property/address reference supported by current hospital and CMS listings. The precise new hangar or helipad is not established; older imagery predates the move.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1386898831",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=100+MOTOR+CLUB+DR%2C+ROCKWOOD%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet",
+          "purpose": "Hospital partner identifies all five current helicopter bases and their public addresses."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-20",
+      "name": "UT LIFESTAR 3 \u2013 Sevierville, TN",
+      "city": "Sevierville",
+      "lat": 35.8587854,
+      "lng": -83.5284533,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1801040332",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1215+AIRPORT+RD%2C+SEVIERVILLE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet",
+          "purpose": "Hospital partner identifies all five current helicopter bases and their public addresses."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-23",
+      "name": "UT LIFESTAR 4 \u2013 Jacksboro, TN",
+      "city": "Jacksboro",
+      "lat": 36.3362827,
+      "lng": -84.1623069,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1083868517",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=588+MEMORIAL+LANE%2C+JACKSBORO%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet",
+          "purpose": "Hospital partner identifies all five current helicopter bases and their public addresses."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-24",
+      "name": "UT LIFESTAR 5 \u2013 Sweetwater, TN",
+      "city": "Sweetwater",
+      "lat": 35.5942853,
+      "lng": -84.5218506,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1467830802",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=333+PLEASANT+GROVE+RD%2C+SWEETWATER%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.utmedical.org/centers-of-excellence/emergency-trauma-center/ut-lifestar/bases-fleet",
+          "purpose": "Hospital partner identifies all five current helicopter bases and their public addresses."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-10",
+      "name": "HEART / Highlands 1 \u2013 Elizabethton, TN",
+      "city": "Elizabethton",
+      "lat": 36.367432,
+      "lng": -82.1779201,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1215953351",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=415+HIGHWAY+91%2C+ELIZABETHTON%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/wings-air-rescue-i",
+          "purpose": "Legacy Wings operator identity; current HEART brand cross-checked against public program list."
+        },
+        {
+          "url": "https://www.airmedcarenetwork.com/a-wish-come-true",
+          "purpose": "GMR network identifies HEART/Highlands and its Med-Trans affiliation."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-11",
+      "name": "HEART / Highlands 2 \u2013 Greeneville, TN",
+      "city": "Greeneville",
+      "lat": 36.1940458,
+      "lng": -82.8107804,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate current Greeneville airport base-address reference; the older Tusculum Road hospital directory location is not used.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1295751345",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=300+AIRPORT+RD%2C+GREENEVILLE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/wings-air-rescue-ii",
+          "purpose": "Legacy Wings operator identity; current HEART brand cross-checked against public program list."
+        },
+        {
+          "url": "https://www.airmedcarenetwork.com/a-wish-come-true",
+          "purpose": "GMR network identifies HEART/Highlands and its Med-Trans affiliation."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-257",
+      "name": "Hospital Wing 1 / 2 (Children's) \u2013 Memphis, TN",
+      "city": "Memphis",
+      "lat": 35.1365005,
+      "lng": -90.025116,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Shared Hospital Wing 1 and 2 Memphis facility, including the children\u2019s program. One approximate public base-address reference, not surveyed aircraft parking positions.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1508537531",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1080+EASTMORELAND+AVE%2C+MEMPHIS%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/hospital-wing-1",
+          "purpose": "Operator program identity; old Selmer location for Wing 6 is not treated as current."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1104349901",
+          "purpose": "Second Memphis program shares the Eastmoreland facility."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-259",
+      "name": "Hospital Wing 4 \u2013 Brownsville, TN",
+      "city": "Brownsville",
+      "lat": 35.600948,
+      "lng": -89.2384114,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate public base address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1336810258",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1601+WELCH+ST%2C+BROWNSVILLE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/hospital-wing-4",
+          "purpose": "Operator program identity; old Selmer location for Wing 6 is not treated as current."
+        }
+      ]
+    },
+    {
+      "id": "mt-tn-260",
+      "name": "Hospital Wing 6 \u2013 McKenzie, TN",
+      "city": "McKenzie",
+      "lat": 36.0847174,
+      "lng": -88.466676,
+      "method": "Public air-transport practice address independently geocoded and compared with operator/partner evidence and public aerial imagery.",
+      "limitation": "Approximate current Carroll County Airport address reference in McKenzie. The precise new hangar/parking position is not surveyed; the former Selmer base is not duplicated.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1013688829",
+          "purpose": "Public air-transport practice address; registry status alone does not establish operational availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=456+AIRPORT+LN%2C+MC+KENZIE%2C+TN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address reference coordinate."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed base list corroborates program identity, Tennessee city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/hospital-wing-6",
+          "purpose": "Operator program identity; old Selmer location for Wing 6 is not treated as current."
+        },
+        {
+          "url": "https://delta.creativecirclecdn.com/mckenzie/files/20250107-153116-c50-2025-1-7.pdf",
+          "purpose": "Local reporting documents the completed move to Carroll County Airport."
+        },
+        {
+          "url": "https://www.mckenziebanner.com/stories/hospital-wing-critical-care-to-rural-communities",
+          "purpose": "October 2026 local reporting corroborates current Hospital Wing 6 Carroll County operations."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Legacy Etowah registry entry is not sufficient evidence of a current additional Air Evac base.",
+    "SkyLife Nashville is not included as a current base; legacy directory and registry entries are not corroborated by the current public base list.",
+    "Former Selmer Hospital Wing 6 and former Rockwood Airport LIFESTAR 2 sites are not duplicated after their moves.",
+    "Hospital administrative or communications headquarters are not automatically treated as separately staffed flight bases."
+  ],
+  "geometry": {
+    "countyCount": 95,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "unresolved": [
+    {
+      "id": "mt-tn-22",
+      "issue": "Flatrock property/address reference is supported; exact new hangar/helipad coordinate remains unestablished."
+    }
+  ],
+  "limitations": [
+    "Approximate public address references are labeled, not surveyed aircraft parking positions.",
+    "Aerial imagery can predate recent relocations or new facilities.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; mapped overlap does not imply availability."
+  ]
+}

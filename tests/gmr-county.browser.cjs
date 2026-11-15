@@ -34,6 +34,14 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Both Jackson programs qualify; shared Memphis/Paris facilities are counted once each.
+    await page.locator('[data-geoid="47113"]').dispatchEvent('click');
+    for(const id of ['ael-7','ael-188'])assert.equal(await page.locator(`.county-base-list [data-base-id="${id}"]`).count(),1);
+    await page.locator('[data-geoid="47079"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ael-159"]').count(),1);
+    assert((await page.locator('.county-base-list [data-base-id="ael-159"]').innerText()).includes('123 / 159'));
+    await page.locator('[data-geoid="47157"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-tn-257"]').count(),1);
     // Louisiana uses parish labels, including accessible names and result distances.
     await page.locator('[data-geoid="22003"]').dispatchEvent('click');
     assert.equal(await page.locator('#selection h2').innerText(),'Allen Parish, LA');

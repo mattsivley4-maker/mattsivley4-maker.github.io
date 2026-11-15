@@ -1,8 +1,14 @@
 # Texas GMR Air Medical Map
 
-## Map-only state expansion — November 14, 2026
+## Map-only state expansion — November 15, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas and Louisiana: 608 counties/parishes and 92 base-site records. Louisiana adds all 64 parishes and two sites to the prior inventory, for four Louisiana Air Evac rotor bases. All 88 non-Louisiana records and 544 previous county features are unchanged.
+The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana and Tennessee: 703 counties/parishes and 121 base-site records. Tennessee adds all 95 counties and 29 sites representing 31 rotor-wing programs. AEL 123/159 share a Paris airport facility; Hospital Wing 1/2 share the Memphis facility. All 92 previous base records and 608 county/parish features are unchanged.
+
+`tennessee-public-evidence.json` documents the operator, hospital, CMS, geocode and aerial checks. Current public sources support Clarksville at Hampton Ridge, LIFESTAR 2 at Flatrock, LIFE FORCE 5 on Carl Spray Drive and Hospital Wing 6 at McKenzie. The old Rockwood Airport and Selmer sites are not duplicated. AEL 188 and AEL 7 are separate Jackson sites. Legacy Etowah and SkyLife records are not restored merely from registry/directory presence. The current public list and county airport exhibit corroborate both Paris programs.
+
+LIFESTAR 2 is explicitly mapped at an approximate Flatrock property/address reference: the exact new hangar/helipad coordinate is not established and older imagery predates the move. All other address/reference points also carry precision notes. No private workbook rows, personnel or phone information is published.
+
+The preceding Louisiana increment brought the map to 608 counties/parishes and 92 base-site records. Louisiana added all 64 parishes and two sites to the prior inventory, for four Louisiana Air Evac rotor bases. That increment preserved all 88 then-existing non-Louisiana records and 544 county features.
 
 `louisiana-public-evidence.json` documents the public operator, CMS, airport/campus, geocode and aerial checks. Kinder is corrected approximately 1.40 km from a town-center directory point to the publicly identified base/helipad south of LA 383 beside US 165. Opelousas uses the listed airport hangar address, approximately 2.85 km from the operator directory point. Natchitoches retains its approximate airport-site reference; exact hangar/parking position remains unestablished. Legacy Med-Trans registry records alone are not accepted as current air bases. Louisiana click panels and accessibility labels correctly use Parish.
 
@@ -20,9 +26,9 @@ The preceding New Mexico increment added 33 counties and one shared Gallup airpo
 
 New Mexico site points were compared with operator directories, CMS public practice addresses, airport records, operator announcements, independent address geocoding and public aerial imagery. Clovis retains its airport reference rather than a conflicting rural street coordinate; Hobbs retains the airport reference supported by its updated practice address rather than the older hospital directory point. Approximate site positions remain labeled. Source position and generalized county-boundary uncertainty are separate from mathematical radius accuracy. No private workbook contents, contacts, personnel or change-history records are published with this increment.
 
-`oklahoma-public-evidence.json` documents the preceding 21-site Oklahoma review. Regional and individual Texas, Oklahoma, New Mexico, Arkansas, Kansas and Louisiana views are available. Five-digit Census GEOIDs distinguish identically named counties. County selection uses WGS84 distances to the nearest county boundary, includes edge-only contact, includes mixed rotor/fixed sites and excludes exclusively fixed-wing operations. Adjacent-state inventories are still being expanded. The county boundaries are Census ACS 2024 generalized geometry, not surveyed property boundaries.
+`oklahoma-public-evidence.json` documents the preceding 21-site Oklahoma review. Regional and individual Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana and Tennessee views are available. Five-digit Census GEOIDs distinguish identically named counties. County selection uses WGS84 distances to the nearest county boundary, includes edge-only contact, includes mixed rotor/fixed sites and excludes exclusively fixed-wing operations. Adjacent-state inventories are still being expanded. The county boundaries are Census ACS 2024 generalized geometry, not surveyed property boundaries.
 
-Next planned state: Tennessee. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
+Next planned state: Mississippi, then Alabama and Georgia, continuing east and southeast one state at a time. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
 
 Validation covers all county/base comparisons, geodesic ring vertices, county interactions, base popups, existing Facebook links, aircraft hover icons, operator filters, state views and mobile/desktop layouts. Every radius is 138,900 meters from its recorded reference point; operational availability is not implied.
 
