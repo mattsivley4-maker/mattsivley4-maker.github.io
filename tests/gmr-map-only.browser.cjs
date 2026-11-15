@@ -9,8 +9,12 @@ const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.read
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
-assert.equal(clean.bases.length,72);
+assert.equal(clean.bases.length,73);
 assert.equal(clean.bases.filter(b=>b.state==='OK').length,21);
+assert.equal(clean.bases.filter(b=>b.state==='NM').length,5);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('35')).length,33);
+assert(!clean.bases.some(b=>/GFL 007|GFL 032|GFL 066/.test(b.name)));
+const total=clean.bases.length,markerTotal=total-1,countyTotal=clean.counties.features.length;
 assert(!clean.bases.some(b=>b.id==='mt-alpine'||/Alpine/i.test(b.name)));
 assert.equal(clean.radiusMeters,138900);
 assert.deepEqual(clean.counties.features.filter(f=>f.properties.geoid.startsWith('48')),full.counties.features);
@@ -19,7 +23,7 @@ assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  if(b.state!=='OK'){
+  if(!['OK','NM'].includes(b.state)){
     assert.equal(original.status,'Publicly supported');
     for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
   }
@@ -36,9 +40,9 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     page.on('request',r=>requests.push(r.url()));
     await page.goto(process.argv[2]||pathToFileURL(path.join(root,'texas-gmr-air-medical-map-only.html')).href);
     await page.waitForSelector('.base-marker');
-    assert.equal(await page.locator('.base-marker').count(),71);
-    assert.equal(await page.locator('.county').count(),331);
-    assert.equal(await page.locator('.radius').count(),72);
+    assert.equal(await page.locator('.base-marker').count(),markerTotal);
+    assert.equal(await page.locator('.county').count(),countyTotal);
+    assert.equal(await page.locator('.radius').count(),total);
     await page.locator('#search').fill('Alpine');
     assert.equal(await page.locator('.base-marker').count(),0);
     assert.equal(await page.locator('.radius').count(),0);
@@ -70,6 +74,13 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       await page.keyboard.press('Escape');
       assert.equal(await page.locator('#selection').isVisible(),false);
     }
+    await page.locator('#search').fill('Gallup');
+    assert.equal(await page.locator('.base-marker').count(),1);
+    assert.equal(await page.locator('.base-marker').getAttribute('data-aircraft'),'mixed');
+    await page.locator('.base-marker').click();
+    assert((await page.locator('#selection').innerText()).includes('GFL 216 / 018 / 033'));
+    assert.equal(await page.locator('.radius.active').count(),1);
+    await page.keyboard.press('Escape');
     await page.locator('#search').fill('San Antonio');
     await page.locator('.base-marker').hover();
     assert.equal(await page.locator('#tooltip a').count(),2);
@@ -98,7 +109,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     await page.locator('#operators input[value="airmed"]').check();
     await page.locator('#search').fill('');
     await page.locator('#aircraft').selectOption('fixed');
-    assert.equal(await page.locator('.radius').count(),6);
+    assert.equal(await page.locator('.radius').count(),clean.bases.filter(b=>/fixed/i.test(b.mode)).length);
     await page.locator('#aircraft').selectOption('all');
     await page.locator('#results button').first().click();
     assert.equal(await page.locator('#filters').isVisible(),false);
@@ -108,7 +119,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     assert.equal(await page.locator('.radius:visible').count(),0);
     await page.locator('#rings').check();
     await page.locator('#labels').check();
-    assert.equal(await page.locator('.base-label:visible').count(),71);
+    assert.equal(await page.locator('.base-label:visible').count(),markerTotal);
     await page.locator('#labels').uncheck();
     const before=await page.locator('#map>g').getAttribute('transform');
     await page.locator('#zoom-in').click();
@@ -123,8 +134,12 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       await page.waitForTimeout(150);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
       assert(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1));
-      const box=await page.locator('.texas-outline').first().boundingBox();
-      assert(box.width>250&&box.height>250);
+      const frame=await page.locator('#map').boundingBox();
+      for(const outline of await page.locator('.texas-outline').all()){
+        const box=await outline.boundingBox();
+        assert(box.width>50&&box.height>50,'Each reviewed state must be visibly rendered');
+        assert(box.x>=frame.x-1&&box.y>=frame.y-1&&box.x+box.width<=frame.x+frame.width+1&&box.y+box.height<=frame.y+frame.height+1,'Regional view must contain every reviewed state');
+      }
       if(output)await page.screenshot({path:path.join(output,`map-only-${width}.png`)});
       await page.locator('#search').fill('San Antonio');
       await page.locator('.base-marker').focus();
@@ -135,15 +150,15 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['OK','TX','all']){
+    for(const state of ['NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
-      assert.equal(await page.locator('.radius').count(),72);
-      assert.equal(await page.locator('.county').count(),331);
+      assert.equal(await page.locator('.radius').count(),total);
+      assert.equal(await page.locator('.county').count(),countyTotal);
       if(output)await page.screenshot({path:path.join(output,`state-view-${state}.png`)});
     }
     const text=await page.locator('body').innerText();
     assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
     assert.deepEqual(errors,[]);
-    console.log(JSON.stringify({passed:true,sites:72,markers:71,counties:331,alpineExcluded:true,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
+    console.log(JSON.stringify({passed:true,sites:total,markers:markerTotal,counties:countyTotal,alpineExcluded:true,noPrivateFields:true,geometryPreserved:true,allTooltips:true,filters:true,keyboard:true,viewports:[390,768,1440,1920]}));
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

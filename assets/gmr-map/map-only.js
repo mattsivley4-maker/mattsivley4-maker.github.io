@@ -2,7 +2,7 @@
   'use strict';
   const data=window.GMR_MAP_ONLY_DATA;
   const $=id=>document.getElementById(id);
-  const operators={airevac:{name:'Air Evac Lifeteam',color:'#b53942'},medtrans:{name:'Med-Trans',color:'#197790'},airmed:{name:'AirMed International',color:'#32794c'}};
+  const operators={airevac:{name:'Air Evac Lifeteam',color:'#b53942'},medtrans:{name:'Med-Trans',color:'#197790'},airmed:{name:'AirMed International',color:'#32794c'},guardian:{name:'Guardian Flight',color:'#7753a6'}};
   const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const modeText=b=>b.mode==='Air medical'?'Aircraft type not established':b.mode;
   const members=b=>b.members || [b];

@@ -1,0 +1,205 @@
+{
+  "checked": "2026-11-14",
+  "state": "NM",
+  "mappedSites": 5,
+  "mappedPrograms": 7,
+  "bases": [
+    {
+      "id": "medtrans-e2a8b370",
+      "name": "AeroCare II (214) \u2013 Clovis / Texico, NM",
+      "city": "Clovis / Texico",
+      "lat": 34.428988,
+      "lng": -103.085891,
+      "method": "Prior site reference retained after independent address and aerial-imagery comparison.",
+      "limitation": "Approximate airport address point. Public street listings differ; individual hangar position is not verified.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/aerocare-ii-%E2%80%93-clovis,-nm",
+          "purpose": "Official program identity; directory coordinates reviewed separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1073849527",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=474+Curry+Road+11.5%2C+Texico%2C+NM&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address-coordinate comparison."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Current operator affiliate list includes this New Mexico city."
+        },
+        {
+          "url": "https://cityofclovis.granicus.com/DocumentViewer.php?file=cityofclovis_10d697e4ec1842a83a3a785151971598.pdf&view=1",
+          "purpose": "City airport lease identifies the AeroCare hangar and crew quarters at Clovis Municipal Airport."
+        }
+      ]
+    },
+    {
+      "id": "medtrans-faeeab2f",
+      "name": "AeroCare IX (190) \u2013 Hobbs, NM",
+      "city": "Hobbs",
+      "lat": 32.692383,
+      "lng": -103.214439,
+      "method": "Prior site reference retained after independent address and aerial-imagery comparison.",
+      "limitation": "Approximate airport address point based on public registration data. Individual hangar position is not verified.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/aerocare-ix-%E2%80%93-hobbs,-nm",
+          "purpose": "Official program identity; directory coordinates reviewed separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1134709736",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=6601+W+Carlsbad+Hwy%2C+Hobbs%2C+NM&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address-coordinate comparison."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Current operator affiliate list includes this New Mexico city."
+        }
+      ]
+    },
+    {
+      "id": "medtrans-7e8c2948",
+      "name": "AeroCare VII (249) \u2013 Lovington, NM",
+      "city": "Lovington",
+      "lat": 32.965305,
+      "lng": -103.347555,
+      "method": "Prior site reference retained after independent address and aerial-imagery comparison.",
+      "limitation": "Approximate hospital-site position based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/aerocare-vii-%E2%80%93-lovington,-nm",
+          "purpose": "Official program identity; directory coordinates reviewed separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1255737706",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1600+N+Main+Ave%2C+Lovington%2C+NM&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address-coordinate comparison."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Current operator affiliate list includes this New Mexico city."
+        }
+      ]
+    },
+    {
+      "id": "mt-portales",
+      "name": "AeroCare XII (277) \u2013 Portales, NM",
+      "city": "Portales",
+      "lat": 34.168942,
+      "lng": -103.361402,
+      "method": "Prior site reference retained after independent address and aerial-imagery comparison.",
+      "limitation": "Approximate hospital-campus address point based on publicly available location data.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1013617190",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2041+Schlenker+Dr%2C+Portales%2C+NM&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address-coordinate comparison."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Current operator affiliate list includes this New Mexico city."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/the-new-aerocare-base-in-portales-is-now-in-service",
+          "purpose": "Operator announcement identifies the hospital-campus rotor base."
+        }
+      ]
+    },
+    {
+      "id": "gfl-gallup-airport",
+      "name": "Gallup Med Flight \u2013 GFL 216 / 018 / 033",
+      "city": "Gallup",
+      "lat": 35.5152439,
+      "lng": -108.7800212,
+      "method": "Three publicly listed programs at one airport address represented as one mixed-aircraft site.",
+      "limitation": "Shared airport address for GFL 216 (rotor-wing) and GFL 018 / 033 (fixed-wing). Approximate site point; separate aircraft parking positions are not verified.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-018-%28fw%29-%E2%80%93-gallup,-nm",
+          "purpose": "Public operator listing at the shared Gallup airport address."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-033-%28fw%29-%E2%80%93-gallup,-nm",
+          "purpose": "Public operator listing at the shared Gallup airport address."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-216-%28rw%29-%E2%80%93-gallup,-nm",
+          "purpose": "Public operator listing at the shared Gallup airport address."
+        },
+        {
+          "url": "https://www.gallupmedflight.com/our-fleet",
+          "purpose": "Operator confirms rotor-wing and fixed-wing fleet at the Gallup program; rotor aircraft operated by Med-Trans."
+        },
+        {
+          "url": "https://www.gallupmedflight.com/history",
+          "purpose": "Operator identifies the Gallup airport headquarters and mixed aircraft program."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1841717162",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1235656562",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2111+W+Historic+Highway+66%2C+Gallup%2C+NM&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent airport-address geocode."
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "GFL 007 \u2013 Gallup",
+      "status": "Program publicly listed; aircraft departure location not established. Not plotted as a separate coverage circle.",
+      "reason": "Published Crestwood Court address is away from the airport. No verified link to a specific airport launch point was established.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-007-%28fw%29-%E2%80%93-gallup,-nm",
+          "purpose": "Operator lists the program at Crestwood Court."
+        },
+        {
+          "url": "https://www.rld.nm.gov/uploads/FileLinks/30148500fc59448da00d2ed9b2659868/January_2019_Draft_Meeting_Minutes.pdf",
+          "purpose": "Historical state record lists an EMS clinic at Crestwood Court; not evidence of an aircraft launch location."
+        }
+      ]
+    },
+    {
+      "name": "Legacy Albuquerque / Crownpoint registrations",
+      "status": "Not added: registration records alone do not establish a currently staffed GMR air base.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1639696180",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1538115332",
+          "purpose": "Public practice address; registration alone does not prove current operations."
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "source": "US Census Generalized ACS 2024, 500K state and county boundaries",
+    "countyCount": 33,
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic rings; county distances computed against the published boundary geometry."
+  },
+  "limitations": [
+    "Site coordinates are approximate reference points, not surveyed aircraft parking positions.",
+    "County geometry is generalized and is not a cadastral survey.",
+    "Adjacent-state inventories remain incomplete during the state-by-state rollout."
+  ]
+}
