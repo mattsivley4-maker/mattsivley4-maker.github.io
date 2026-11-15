@@ -1,0 +1,459 @@
+{
+  "checked": "2026-11-15",
+  "state": "CO",
+  "airPrograms": 12,
+  "mappedSites": 12,
+  "operators": {
+    "medtrans": 3,
+    "guardian": 4,
+    "reach": 5
+  },
+  "bases": [
+    {
+      "id": "mt-co-111",
+      "name": "North Colorado Med Evac I / 111 \u2013 Greeley, CO",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 40.4148243,
+      "lng": -104.708909,
+      "limitation": "Approximate public facility reference, cross-checked with public address records and aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1477731206",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1801+16TH+ST%2C+GREELEY%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/med-evac-i-%E2%80%93-greeley,-co",
+          "purpose": "Operator identifies the air program."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public program identity, city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.bannerhealth.com/locations/greeley/north-colorado-medical-center/paramedics",
+          "purpose": "Hospital independently identifies North Colorado Med Evac air transport."
+        }
+      ],
+      "directoryOffsetMeters": 53.3
+    },
+    {
+      "id": "mt-co-112",
+      "name": "North Colorado Med Evac II / 112 \u2013 Boulder, CO",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 40.0161887,
+      "lng": -105.2362587,
+      "limitation": "Approximate Foothills Hospital campus reference from the public operator address. CMS lists nearby Riverbend Road; the exact current aircraft parking position is not established.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1710157094",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=4810+RIVERBEND+RD%2C+BOULDER%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/med-evac-ii-%E2%80%93-boulder,-co",
+          "purpose": "Operator identifies the air program."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public program identity, city and rotor-wing classification."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=4747+Arapahoe+Avenue%2C+Boulder%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Operator hospital address geocode selected over the separate Riverbend Road practice-address point."
+        }
+      ],
+      "directoryOffsetMeters": 23.3
+    },
+    {
+      "id": "mt-co-243",
+      "name": "North Colorado Med Evac III / 243 \u2013 Sterling, CO",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 40.6232224,
+      "lng": -103.2629675,
+      "limitation": "Approximate Sterling airport-facility address reference. The hospital confirms relocation from Akron; the old Akron directory point is not used. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1821419615",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=16718+HIGHWAY+14+UNIT+B%2C+STERLING%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/med-evac-iii-%E2%80%93-akron,-co",
+          "purpose": "Operator identifies the air program."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public program identity, city and rotor-wing classification."
+        },
+        {
+          "url": "https://www.bannerhealth.com/newsroom/press-releases/emergency-medical-helicopter-moving-to-sterling",
+          "purpose": "Hospital confirms full-time Sterling staging from October 2022, replacing Akron."
+        }
+      ],
+      "directoryOffsetMeters": 50633.1
+    },
+    {
+      "id": "reach-co-26",
+      "name": "UCHealth LifeLine 4 / REACH 26 \u2013 La Junta, CO",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 38.044408,
+      "lng": -103.514854,
+      "limitation": "Approximate public facility reference, cross-checked with public address records and aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1659996858",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=30800+1ST+AVE%2C+LA+JUNTA%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-la-junta,-co",
+          "purpose": "Current operator base address and GMR affiliation."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH base number and rotor-wing classification."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies its helicopter bases and REACH aviation role. The program-wide RW/FW directory title is not treated as proof of both aircraft at every base."
+        }
+      ],
+      "directoryOffsetMeters": 2.9
+    },
+    {
+      "id": "reach-co-29",
+      "name": "REACH 29 \u2013 Salida, CO",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 38.54425,
+      "lng": -106.009103,
+      "limitation": "Approximate Heart of the Rockies hospital-campus hangar address reference, corroborated by operator/CMS and aerial imagery. The former Buena Vista site is not duplicated.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1003431206",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=7156+COUNTY+ROAD+154%2C+SALIDA%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.reachair.com/locations/reach-29-%28rw%29-%E2%80%93-salida,-co",
+          "purpose": "Current operator base address and GMR affiliation."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH base number and rotor-wing classification."
+        }
+      ],
+      "directoryOffsetMeters": 1.3
+    },
+    {
+      "id": "reach-co-30",
+      "name": "UCHealth LifeLine 1 / REACH 30 \u2013 Loveland, CO",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 40.4166944,
+      "lng": -104.9960778,
+      "limitation": "Approximate published FAA heliport reference at Medical Center of the Rockies, where UCHealth identifies LifeLine 1. The FAA coordinate is estimated, not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1376168575",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2500+ROCKY+MOUNTAIN+AVE%2C+LOVELAND%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-loveland,-co",
+          "purpose": "Current operator base address and GMR affiliation."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH base number and rotor-wing classification."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies its helicopter bases and REACH aviation role. The program-wide RW/FW directory title is not treated as proof of both aircraft at every base."
+        },
+        {
+          "url": "https://www.uchealth.org/locations/uchealth-trauma-center-at-medical-center-of-the-rockies/",
+          "purpose": "Hospital explicitly identifies itself as home base for LifeLine 1."
+        },
+        {
+          "url": "https://www.airnav.com/airport/2CD2",
+          "purpose": "Published FAA estimated heliport reference, used instead of generic parking/address geocodes."
+        }
+      ],
+      "directoryOffsetMeters": 252.8
+    },
+    {
+      "id": "reach-co-45",
+      "name": "UCHealth LifeLine 2 / REACH 45 \u2013 Colorado Springs, CO",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 38.7961737,
+      "lng": -104.7236069,
+      "limitation": "Approximate Aviation Way street-address reference. Current operator and CMS records agree on the new facility address; the exact current hangar or helipad coordinate is not established. Older hospital sites are not duplicated.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1225658784",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2323+AVIATION+WAY%2C+COLORADO+SPRINGS%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-colorado-springs,-co",
+          "purpose": "Current operator base address and GMR affiliation."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH base number and rotor-wing classification."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies its helicopter bases and REACH aviation role. The program-wide RW/FW directory title is not treated as proof of both aircraft at every base."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1417512559",
+          "purpose": "Hospital transport entity also identifies 2323 Aviation Way in its updated public record."
+        },
+        {
+          "url": "https://www.pprbd.org/File/Report?report=90",
+          "purpose": "Regional building department documents construction at the current address; older aerial imagery cannot establish the completed aircraft parking position."
+        }
+      ],
+      "directoryOffsetMeters": 234.9
+    },
+    {
+      "id": "reach-co-73",
+      "name": "UCHealth LifeLine 5 / REACH 73 \u2013 Pueblo West, CO",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 38.3285903,
+      "lng": -104.70176,
+      "limitation": "Approximate UCHealth Parkview Pueblo West hospital-site reference. The hospital confirms the stationed helicopter; the operator directory point farther west is not used. Not a surveyed helipad center.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1225797178",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=899+E+INDUSTRIAL+BLVD%2C+PUEBLO%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-pueblo-west,-co",
+          "purpose": "Current operator base address and GMR affiliation."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH base number and rotor-wing classification."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies its helicopter bases and REACH aviation role. The program-wide RW/FW directory title is not treated as proof of both aircraft at every base."
+        },
+        {
+          "url": "https://www.uchealth.org/today/pueblo-man-with-muscular-dystrophy-fulfills-dream-of-helicopter-ride/",
+          "purpose": "Hospital directly identifies the helicopter stationed at Parkview Pueblo West."
+        }
+      ],
+      "directoryOffsetMeters": 4210.6
+    },
+    {
+      "id": "gf-co-015",
+      "name": "Eagle Air Med / GFL 015 \u2013 Alamosa, CO",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 37.4434546,
+      "lng": -105.8647463,
+      "limitation": "Approximate public State Avenue airport-facility reference. The operator identifies San Luis Valley Regional Airport; not a surveyed hangar or aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-015-%28fw%29-%E2%80%93-alamosa,-co",
+          "purpose": "Operator identifies fixed-wing base at San Luis Valley Regional Airport."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public fixed-wing base identity."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2500+State+Avenue%2C+Alamosa%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public airport address geocode checked against airport apron and hangar imagery."
+        }
+      ],
+      "directoryOffsetMeters": 49.3
+    },
+    {
+      "id": "gf-co-203",
+      "name": "Eagle Air Med / GFL 203 (65228) \u2013 Alamosa, CO",
+      "operator": "guardian",
+      "mode": "Rotor-wing",
+      "lat": 37.472638,
+      "lng": -105.883229,
+      "limitation": "Approximate San Luis Valley Health Regional Medical Center rooftop-site reference. The hospital identifies the stationed helicopter; the residential practice address and off-site directory coordinate are not used. Not a surveyed pad center.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-203-%28rw%29-alamosa,-co",
+          "purpose": "Operator identifies the rotor program; its off-site address/pin is not used as the aircraft location."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public Alamosa rotor-program identity and alternate base number."
+        },
+        {
+          "url": "https://www.sanluisvalleyhealth.org/news/2021/september/eagle-air-med-and-slv-health-celebrate-one-year-/",
+          "purpose": "Hospital directly identifies the resident helicopter on its rooftop."
+        },
+        {
+          "url": "https://slvretac.org/wp-content/uploads/2024/06/SLV-RETAC-Consultative-Visit-2024.pdf",
+          "purpose": "Regional EMS assessment corroborates Guardian rotor and fixed-wing operations in Alamosa."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=San+Luis+Valley+Health+Regional+Medical+Center%2C+Alamosa%2C+Colorado&f=json&outFields=%2A&maxLocations=4&forStorage=false",
+          "purpose": "Hospital facility reference independently geocoded and compared with rooftop aerial imagery."
+        }
+      ],
+      "directoryOffsetMeters": 7029.2
+    },
+    {
+      "id": "gf-co-016",
+      "name": "Eagle Air Med / GFL 016 \u2013 Del Norte, CO",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 37.7137833,
+      "lng": -106.3520194,
+      "limitation": "Approximate Astronaut Kent Rominger Airport reference. Public aviation and EMS reports identify the airport base; the exact current hangar coordinate is not established. The residential Hermosa Street address is not plotted.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-016-%28fw%29-%E2%80%93-del-norte,-co",
+          "purpose": "Operator program identity; its residential address is not treated as an aircraft launch point."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public Del Norte fixed-wing program."
+        },
+        {
+          "url": "https://www.coloradoaviationsystem.com/wp-content/uploads/2020/07/Astronaut-Kent-Rominger_RCV.pdf",
+          "purpose": "Colorado aviation system report identifies Eagle Air Med as based at this airport."
+        },
+        {
+          "url": "https://slvretac.org/wp-content/uploads/2024/06/SLV-RETAC-Consultative-Visit-2024.pdf",
+          "purpose": "Regional EMS assessment independently identifies Guardian fixed-wing service from Del Norte airport."
+        },
+        {
+          "url": "https://www.airnav.com/airport/KRCV",
+          "purpose": "Published FAA airport reference; not the individual aircraft hangar."
+        }
+      ],
+      "directoryOffsetMeters": 3581.7
+    },
+    {
+      "id": "gf-co-071",
+      "name": "UCHealth LifeLine 19 / GFL 071 \u2013 Englewood, CO",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 39.5700555,
+      "lng": -104.8474183,
+      "limitation": "Approximate public Interport Boulevard airport-facility address at Centennial Airport. Guardian and REACH listings refer to the same LifeLine fixed-wing program; no additional rotor base is inferred from the program-wide RW/FW heading.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1952866402",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=8001+INTERPORT+BLVD+STE+150%2C+ENGLEWOOD%2C+CO&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode compared with public facility evidence and aerial imagery."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-071-%28fw%29-%E2%80%93-englewood,-co",
+          "purpose": "Guardian identifies its fixed-wing Englewood base."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-englewood,-co",
+          "purpose": "Partner location matches the same Centennial Airport facility; deduplicated."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies LifeLine 19 in Denver and its single PC12 as Guardian-operated, separately from the five REACH helicopters."
+        }
+      ],
+      "directoryOffsetMeters": 32.9
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Children's One / legacy GFL 061 and REACH 47",
+      "reason": "Hospital and current operator identify Metro Aviation as operator of both aircraft. Not included as GMR aviation.",
+      "source": "https://www.childrenscolorado.org/doctors-and-departments/departments/emergency-transport/"
+    },
+    {
+      "program": "LifeLine 6, Steamboat Springs",
+      "reason": "Hospital announces January 2027 start. Planned, not active on the review date.",
+      "source": "https://www.uchealth.org/newsroom/uchealth-to-add-lifeline-helicopter-base-in-steamboat-springs-2/"
+    },
+    {
+      "program": "Former Akron Med Evac III",
+      "reason": "Replaced by Sterling; no duplicate circle.",
+      "source": "https://www.bannerhealth.com/newsroom/press-releases/emergency-medical-helicopter-moving-to-sterling"
+    },
+    {
+      "program": "Legacy Med-Trans LifeLine / EagleMed records",
+      "reason": "Legacy entity/address entries alone do not establish additional active aircraft bases. Current operator/hospital identities take precedence."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "mt-co-112",
+      "issue": "Approximate Foothills Hospital campus reference from the public operator address. CMS lists nearby Riverbend Road; the exact current aircraft parking position is not established."
+    },
+    {
+      "id": "reach-co-45",
+      "issue": "Approximate Aviation Way street-address reference. Current operator and CMS records agree on the new facility address; the exact current hangar or helipad coordinate is not established. Older hospital sites are not duplicated."
+    },
+    {
+      "id": "gf-co-016",
+      "issue": "Approximate Astronaut Kent Rominger Airport reference. Public aviation and EMS reports identify the airport base; the exact current hangar coordinate is not established. The residential Hermosa Street address is not plotted."
+    },
+    {
+      "id": "gf-co-068",
+      "program": "GFL 068, Cortez",
+      "mapped": false,
+      "issue": "Operator directory identifies Cortez but provides no street address and an off-airport coordinate. Current staffed flight-base status and launch location were not independently established. No speculative pin/circle added.",
+      "source": "https://www.guardianflight.com/locations/gfl-068-%28fw%29-%E2%80%93-cortez,-co"
+    }
+  ],
+  "geometry": {
+    "countyCount": 64,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Approximate facility, street and airport references are labeled; they are not surveyed aircraft parking positions.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; geographic overlap is not an operational service guarantee.",
+    "Uniform 75 NM circles do not describe fixed-wing range, mountain flight routing, terrain or aircraft availability."
+  ]
+}

@@ -34,6 +34,14 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Colorado rotor bases qualify; the separate Alamosa fixed-wing site does not.
+    await page.locator('[data-geoid="08003"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-co-203"]').count(),1);
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-co-015"]').count(),0);
+    await page.locator('[data-geoid="08069"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="reach-co-30"]').count(),1);
+    await page.locator('[data-geoid="08005"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-co-071"]').count(),0);
     // Alabama includes the dedicated pediatric helicopter, not AirMed's airport reference.
     await page.locator('[data-geoid="01073"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="ami-birmingham"]').count(),0);
