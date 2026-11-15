@@ -1,0 +1,300 @@
+{
+  "checked": "2026-11-14",
+  "state": "AR",
+  "mappedSites": 9,
+  "operators": {
+    "airevac": 8,
+    "medtrans": 1
+  },
+  "bases": [
+    {
+      "id": "ael-4",
+      "name": "Air Evac Lifeteam 4 \u2013 Springdale, AR",
+      "city": "Springdale",
+      "lat": 36.1818272,
+      "lng": -94.137191,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate base address point based on publicly available location data; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-4-%E2%80%93-springdale,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1598748394",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=712+W+MAPLE+AVE%2C+SPRINGDALE%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 8.2
+    },
+    {
+      "id": "ael-12",
+      "name": "Air Evac Lifeteam 12 \u2013 Mountain Home, AR",
+      "city": "Mountain Home",
+      "lat": 36.3432994,
+      "lng": -92.3925711,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate base address point based on publicly available location data; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-12-%E2%80%93-mountain-home,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1699758409",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=549+HOSPITAL+DR%2C+MOUNTAIN+HOME%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 47.4
+    },
+    {
+      "id": "ael-22",
+      "name": "Air Evac Lifeteam 22 \u2013 Clarksville, AR",
+      "city": "Clarksville",
+      "lat": 35.4619307,
+      "lng": -93.5183818,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate publicly listed temporary base address in Clarksville. A planned hospital-site move has not been verified.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-22-%E2%80%93-paris,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1881677870",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=132+MASSENGALE+RD%2C+CLARKSVILLE%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        },
+        {
+          "url": "https://business.parisarkansas.com/members/category/healthcare-fitness-60",
+          "purpose": "Chamber directory corroborates the Clarksville address."
+        },
+        {
+          "url": "https://www.thegraphic.org/2026/05/19/jc-quorum-court-gets-update-on-air-evac/",
+          "purpose": "Local reporting of the base director describes temporary fire-station use and a proposed hospital-campus facility."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 22755.2
+    },
+    {
+      "id": "ael-40",
+      "name": "Air Evac Lifeteam 40 \u2013 Harrison, AR",
+      "city": "Harrison",
+      "lat": 36.2381994,
+      "lng": -93.1078499,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate base address point based on publicly available location data; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-40-%E2%80%93-harrison,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1407839228",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=800+N+MAIN+ST%2C+HARRISON%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 69.9
+    },
+    {
+      "id": "ael-42",
+      "name": "Air Evac Lifeteam 42 \u2013 Forrest City, AR",
+      "city": "Forrest City",
+      "lat": 35.039334,
+      "lng": -90.777367,
+      "method": "Arkansas environmental agency facility reference coordinate, checked against address geocode and visible base/pad area.",
+      "limitation": "Approximate facility reference point from public state records, corroborated against the listed address and aerial imagery.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-42-%E2%80%93-forrest-city,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1225011042",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1000+HOLIDAY+DRIVE%2C+FORREST+CITY%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        },
+        {
+          "url": "https://adeq.state.ar.us/rst/programs/fees/p_facil_details.aspx?FACILITY_ID=62001660&OWNER_ID=010027",
+          "purpose": "Public state facility coordinate for Air Evac base AE 042."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 459.4
+    },
+    {
+      "id": "airevac-cba167fc",
+      "name": "Air Evac Lifeteam 73 \u2013 De Queen, AR",
+      "city": "De Queen",
+      "lat": 34.1062027,
+      "lng": -94.3200962,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate reference point at the publicly listed hospital campus. Individual aircraft parking position is not surveyed.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-73-%E2%80%93-dequeen,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1255525218",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=958+HIGHWAY+71+N%2C+DE+QUEEN%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 7292.5,
+      "distanceFromPreviousMapMeters": 465.1
+    },
+    {
+      "id": "ael-113",
+      "name": "Air Evac Lifeteam 113 \u2013 Blytheville, AR",
+      "city": "Blytheville",
+      "lat": 35.9438292,
+      "lng": -89.9160614,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate base address point based on publicly available location data; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-113-%E2%80%93-blytheville,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1013350339",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1021+HIGHLAND+STREET%2C+BLYTHEVILLE%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 11.4
+    },
+    {
+      "id": "ael-149",
+      "name": "Air Evac Lifeteam 149 \u2013 Fort Smith, AR",
+      "city": "Fort Smith",
+      "lat": 35.3726327,
+      "lng": -94.4192111,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate base address point based on publicly available location data; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-149-%E2%80%93-fort-smith,-ar",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1679085989",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1321+DODSON+AVE%2C+FORT+SMITH%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 61.4
+    },
+    {
+      "id": "mt-hospital-wing-8",
+      "name": "Hospital Wing 8 (262) \u2013 Jonesboro, AR",
+      "city": "Jonesboro",
+      "lat": 35.8334026,
+      "lng": -90.6536236,
+      "method": "Public practice-address geocode independently compared with operator listing and public aerial imagery; approximate site reference.",
+      "limitation": "Approximate airport address point. Individual hangar and aircraft parking positions are not surveyed.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/hospital-wing-8",
+          "purpose": "Operator program identity; directory address/coordinates evaluated separately."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1194496174",
+          "purpose": "Current public practice address; registration alone does not establish operational availability."
+        },
+        {
+          "url": "https://healthy.arkansas.gov/wp-content/uploads/AR-active-services-for-Public-Portal_2025-12-17_102414.pdf",
+          "purpose": "State EMS service list corroborates rotor-wing classification; historical address may precede a move."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3901+LINDBERGH+DR%2C+JONESBORO%2C+AR&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode."
+        },
+        {
+          "url": "https://www.hospitalwing.com/jonesboro_base.html",
+          "purpose": "Program website identifies the Jonesboro base."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 71.1
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "AEL 22 \u2013 Clarksville",
+      "status": "Mapped at the publicly listed temporary site; completion of a proposed permanent hospital-site move is not verified."
+    }
+  ],
+  "exclusions": [
+    "Legacy Morrilton, Paragould, Holiday Island and Camden registry entries are not added as currently supported bases. Current program and state service listings were checked; an active registry entry alone is insufficient."
+  ],
+  "geometry": {
+    "countyCount": 75,
+    "source": "US Census Generalized ACS 2024, 500K state/county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Approximate site reference points are labeled; they are not surveyed parking positions.",
+    "County geometry is generalized, not a cadastral survey.",
+    "Neighboring-state inventories remain incomplete until their increments are reviewed."
+  ]
+}

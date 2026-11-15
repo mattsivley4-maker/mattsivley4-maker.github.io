@@ -25,6 +25,7 @@ const root=path.resolve(__dirname,'..');
     for(const row of rows){
       await page.locator(`[data-geoid="${row.id}"]`).dispatchEvent('click');
       assert.equal(await page.locator('.county-selected').getAttribute('data-geoid'),row.id);
+      assert.equal(await page.locator('#selection h2').innerText(),`${row.name} County, ${row.state}`);
       assert.equal(await page.locator('.radius.active').count(),row.matches.length,row.name);
       assert.equal(await page.locator('.radius.county-muted').count(),bases.length-row.matches.length);
       const list=await page.locator('.county-base-list li').evaluateAll(items=>items.map(el=>el.dataset.baseId));
@@ -33,6 +34,10 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Arkansas's relocated rotor base is represented in its new county.
+    await page.locator('[data-geoid="05071"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ael-22"]').count(),1);
+    assert((await page.locator('.county-base-list [data-base-id="ael-22"]').innerText()).includes('Clarksville'));
     // Gallup's mixed site qualifies for NM counties; closed/withheld records do not.
     await page.locator('[data-geoid="35031"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="gfl-gallup-airport"]').count(),1);
