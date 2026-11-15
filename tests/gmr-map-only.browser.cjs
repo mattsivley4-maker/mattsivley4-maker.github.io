@@ -9,7 +9,10 @@ const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.read
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
-assert.equal(clean.bases.length,81);
+assert.equal(clean.bases.length,90);
+assert.equal(clean.bases.filter(b=>b.state==='KS').length,10);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('20')).length,105);
+assert.equal(clean.bases.find(b=>b.id==='mt-eaglemed-wichita').mode,'Rotor-wing + fixed-wing');
 assert.equal(clean.bases.filter(b=>b.state==='OK').length,21);
 assert.equal(clean.bases.filter(b=>b.state==='NM').length,5);
 assert.equal(clean.bases.filter(b=>b.state==='AR').length,9);
@@ -26,7 +29,7 @@ assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  if(!['OK','NM','AR'].includes(b.state)){
+  if(!['OK','NM','AR','KS'].includes(b.state)){
     assert.equal(original.status,'Publicly supported');
     for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
   }
@@ -153,7 +156,7 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['AR','NM','OK','TX','all']){
+    for(const state of ['KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
       assert.equal(await page.locator('.radius').count(),total);
       assert.equal(await page.locator('.county').count(),countyTotal);

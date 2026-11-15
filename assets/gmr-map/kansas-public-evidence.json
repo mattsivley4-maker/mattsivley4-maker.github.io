@@ -1,0 +1,352 @@
+{
+  "checked": "2026-11-14",
+  "state": "KS",
+  "airPrograms": 11,
+  "mappedSites": 10,
+  "operators": {
+    "medtrans": 10
+  },
+  "bases": [
+    {
+      "id": "mt-eaglemed-wichita",
+      "name": "EagleMed 11 (rotor) / 1 (fixed-wing) \u2013 Wichita, KS",
+      "city": "Wichita",
+      "mode": "Rotor-wing + fixed-wing",
+      "lat": 37.6690329,
+      "lng": -97.4196488,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Shared publicly identified hangar complex for EagleMed 11 rotor-wing and EagleMed 1 fixed-wing. Approximate address reference, not a surveyed parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1679930010",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=6601+W+PUEBLO+DR%2C+WICHITA%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-11-%28Rotor-Wing%29-%E2%80%93-Wichita,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-1-%28Fixed-Wing%29-%E2%80%93-Wichita,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        },
+        {
+          "url": "https://www.wichita.gov/ArchiveCenter/ViewFile/Item/14110",
+          "purpose": "February 2026 city airport lease agenda identifies EagleMed hangar and corporate office complex at 6601 Pueblo Road."
+        }
+      ]
+    },
+    {
+      "id": "mt-eaglemed-9",
+      "name": "EagleMed 9 \u2013 Hays, KS",
+      "city": "Hays",
+      "mode": "Rotor-wing",
+      "lat": 38.8538214,
+      "lng": -99.2738001,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1619330354",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3950+E+8TH+ST+HNGR+A6%2C+HAYS%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-9-%28Rotor-Wing%29-%E2%80%93-Hays,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        }
+      ]
+    },
+    {
+      "id": "mt-eaglemed-4",
+      "name": "EagleMed 4 \u2013 Dodge City, KS",
+      "city": "Dodge City",
+      "mode": "Fixed-wing",
+      "lat": 37.7597261,
+      "lng": -99.9678921,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1750746525",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=103+AIRPORT+RD%2C+DODGE+CITY%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-4-%28Fixed-Wing%29-%E2%80%93-Dodge-City,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        }
+      ]
+    },
+    {
+      "id": "mt-eaglemed-24",
+      "name": "EagleMed 24 \u2013 Goodland, KS",
+      "city": "Goodland",
+      "mode": "Fixed-wing",
+      "lat": 39.3716833,
+      "lng": -101.7050694,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1659736189",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=532+RENNER+FIELD+RD%2C+GOODLAND%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-24-%28Fixed-Wing%29-%E2%80%93-Goodland,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        },
+        {
+          "url": "https://www.thetopsideofkansas.org/economic-development/medical",
+          "purpose": "Local development agency lists EagleMed at 532 Renner Field; supports the airport site rather than the conflicting downtown directory address."
+        }
+      ]
+    },
+    {
+      "id": "medtrans-6cd167c1",
+      "name": "EagleMed 23 / Med-Trans \u2013 Liberal, KS",
+      "city": "Liberal",
+      "mode": "Fixed-wing",
+      "lat": 37.044329,
+      "lng": -100.951635,
+      "method": "Retained public operator airport reference. Independent street interpolation is about 125 meters away and does not establish a more precise hangar position.",
+      "limitation": "Approximate airport reference retained from the public operator listing. The exact EagleMed hangar is not established by the street-address geocode.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1740645514",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=757+TERMINAL+RD%2C+LIBERAL%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-23-%28Fixed-Wing%29-%E2%80%93-Liberal,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        },
+        {
+          "url": "https://www.med-trans.net/locations/med-trans-%E2%80%93-liberal-fw",
+          "purpose": "Operator airport reference coordinate."
+        }
+      ]
+    },
+    {
+      "id": "mt-eaglemed-14",
+      "name": "EagleMed 14 \u2013 Chanute, KS",
+      "city": "Chanute",
+      "mode": "Rotor-wing",
+      "lat": 37.6743366,
+      "lng": -95.4889358,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1942662309",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=800+S+COUNTRY+CLUB+RD+STE+A%2C+CHANUTE%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-14-%28Rotor-Wing%29-%E2%80%93-Chanute,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        }
+      ]
+    },
+    {
+      "id": "mt-eaglemed-10",
+      "name": "EagleMed 10 \u2013 Great Bend, KS",
+      "city": "Great Bend",
+      "mode": "Rotor-wing",
+      "lat": 38.339994,
+      "lng": -98.852437,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1386382356",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=9025+4TH+ST+BLDG+A%2C+GREAT+BEND%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://www.flyeaglemed.com/Locations/EagleMed-10-%28Rotor-Wing%29-%E2%80%93-Great-Bend,-KS",
+          "purpose": "Current operator service location identifies this air program and aircraft category; generic directory coordinates are not treated as surveyed hangar points."
+        }
+      ]
+    },
+    {
+      "id": "mt-lifestar-2",
+      "name": "Life Star II (161) \u2013 Junction City, KS",
+      "city": "Junction City",
+      "mode": "Rotor-wing",
+      "lat": 39.0421365,
+      "lng": -96.8401251,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1427532951",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=540+AIRPORT+RD%2C+JUNCTION+CITY%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://lawrencebusinessmagazine.com/2023/12/15/math-on-the-fly/",
+          "purpose": "Local reporting identifies Life Star I at Lawrence airport, Life Star II at Junction City and HealthStar ONE at Overland Park."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates Kansas air-program identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://web.junctioncitychamber.org/Emergency-Urgent-Care/Life-Star-of-KansasAirMedCare-Network-652",
+          "purpose": "Current chamber listing corroborates Life Star air service in Junction City and Lawrence."
+        }
+      ]
+    },
+    {
+      "id": "mt-lifestar-1",
+      "name": "Life Star I (162) \u2013 Lawrence, KS",
+      "city": "Lawrence",
+      "mode": "Rotor-wing",
+      "lat": 39.0054853,
+      "lng": -95.22224,
+      "method": "CMS public air-transport practice address independently geocoded and compared with operator directory and aerial imagery.",
+      "limitation": "Approximate public airport address reference; the individual hangar and aircraft parking position are not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1760966303",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1930+N+7TH+ST%2C+LAWRENCE%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://lawrencebusinessmagazine.com/2023/12/15/math-on-the-fly/",
+          "purpose": "Local reporting identifies Life Star I at Lawrence airport, Life Star II at Junction City and HealthStar ONE at Overland Park."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates Kansas air-program identifiers and rotor-wing classifications."
+        }
+      ]
+    },
+    {
+      "id": "mt-healthstar-one",
+      "name": "HealthStar ONE / Life Star III (169) \u2013 Overland Park, KS",
+      "city": "Overland Park",
+      "mode": "Rotor-wing",
+      "lat": 38.9369139,
+      "lng": -94.7259389,
+      "method": "FAA-derived SN54 estimated helipad coordinate, corroborated by hospital imagery and public operator/partner evidence. The office-suite geocode is not used as the launch point.",
+      "limitation": "Approximate FAA-listed SN54 hospital helipad reference at Overland Park Regional Medical Center; not the administrative suite. Aircraft parking and availability can vary.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1023657038",
+          "purpose": "Public air-transport practice address; registration alone is not proof of current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=10550+QUIVIRA+RD+STE+260%2C+OVERLAND+PARK%2C+KS&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent public address geocode, checked against airport/campus imagery."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator program identity and affiliate classification."
+        },
+        {
+          "url": "https://lawrencebusinessmagazine.com/2023/12/15/math-on-the-fly/",
+          "purpose": "Local reporting identifies Life Star I at Lawrence airport, Life Star II at Junction City and HealthStar ONE at Overland Park."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates Kansas air-program identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://www.airnav.com/airport/SN54",
+          "purpose": "FAA-derived estimated hospital helipad coordinate."
+        },
+        {
+          "url": "https://www.hcadam.com/api/public/content/20f7357d489049fc8cf54a59236604c2?v=53de5a9f",
+          "purpose": "Hospital system report depicts HealthStar ONE at the Overland Park hospital helipad."
+        },
+        {
+          "url": "https://growthzonesitesprod.azureedge.net/wp-content/uploads/sites/1486/2021/11/November-2021.pdf",
+          "purpose": "Chamber reports HealthStar ONE is based at Overland Park Regional Medical Center."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Ground-only ambulance programs are not additional air bases.",
+    "Historical Garden City and Pittsburg registry records are not treated as current air bases; neither appears in the current EagleMed air-service location list.",
+    "The conflicting Olathe HealthStar directory address and former Lee\u2019s Summit location are not separate additional bases. Public affiliate, hospital and practice-address evidence supports the Overland Park campus."
+  ],
+  "geometry": {
+    "countyCount": 105,
+    "source": "US Census Generalized ACS 2024, 500K state/county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Approximate reference points are labeled; they are not surveyed aircraft parking positions. Hays uses the public airport address reference, not an asserted specific hangar.",
+    "Public records support program/site identification, not real-time staffing or flight availability.",
+    "County geometry is generalized, not a cadastral survey.",
+    "Neighboring-state inventories remain incomplete until their increments are reviewed."
+  ]
+}

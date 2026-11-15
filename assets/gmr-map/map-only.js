@@ -46,7 +46,7 @@
     .on('keydown',(event,f)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();selectCounty(f);}});
   const boundary=world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline');
   const rings=world.append('g');
-  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-100.8,37.35]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
+  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-98.3,38.5]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
   const markers=world.append('g'),labels=world.append('g');
   const zoom=d3.zoom().scaleExtent([1,14]).on('zoom',event=>{
     scale=event.transform.k;

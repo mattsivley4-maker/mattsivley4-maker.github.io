@@ -34,6 +34,10 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Wichita's shared rotor/fixed site qualifies; Kansas fixed-only sites do not.
+    await page.locator('[data-geoid="20173"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-eaglemed-wichita"]').count(),1);
+    assert(await page.locator('.radius.active').evaluateAll(nodes=>nodes.some(el=>el.__data__.id==='mt-eaglemed-wichita')));
     // Arkansas's relocated rotor base is represented in its new county.
     await page.locator('[data-geoid="05071"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="ael-22"]').count(),1);
