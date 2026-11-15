@@ -1,0 +1,168 @@
+{
+  "checked": "2026-11-14",
+  "state": "LA",
+  "mappedSites": 4,
+  "operators": {
+    "airevac": 4
+  },
+  "bases": [
+    {
+      "id": "ael-100",
+      "name": "Air Evac Lifeteam 100 \u2013 Rayville, LA",
+      "city": "Rayville",
+      "lat": 32.4630194,
+      "lng": -91.7498454,
+      "method": "Public operator and CMS practice address independently geocoded and compared with public aerial imagery.",
+      "limitation": "Approximate public hospital-campus base address reference, corroborated by aerial imagery; not a surveyed landing-pad position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-100-%E2%80%93-rayville,-la",
+          "purpose": "Current operator base identity and public address; directory coordinates assessed independently."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1679867261",
+          "purpose": "Public air-transport practice address; registration alone does not establish current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=266+HIGHWAY+3048%2C+RAYVILLE%2C+LA&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode; locality-only and interpolated results are not accepted as precise landing points."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates all four Louisiana base identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://mstraumafoundation.org/pre-hospital-providers-ems/",
+          "purpose": "Regional EMS provider directory independently lists the Rayville highway address."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 32.4
+    },
+    {
+      "id": "ael-124",
+      "name": "Air Evac Lifeteam 124 \u2013 Opelousas, LA",
+      "city": "Opelousas",
+      "lat": 30.555674,
+      "lng": -92.09655,
+      "method": "Public operator and CMS practice address independently geocoded and compared with public aerial imagery.",
+      "limitation": "Approximate reference at the publicly listed airport hangar address. The operator directory town point is not used; aircraft parking is not surveyed.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-124-%E2%80%93-opelousas,-la",
+          "purpose": "Current operator base identity and public address; directory coordinates assessed independently."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1427435114",
+          "purpose": "Public air-transport practice address; registration alone does not establish current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=299+HANGAR+RD+HNGR+B%2C+OPELOUSAS%2C+LA&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode; locality-only and interpolated results are not accepted as precise landing points."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates all four Louisiana base identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://mstraumafoundation.org/pre-hospital-providers-ems/",
+          "purpose": "Regional EMS provider directory corroborates 299 Hangar Road, Hangar B."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 2847.7
+    },
+    {
+      "id": "airevac-eb3025e4",
+      "name": "Air Evac Lifeteam 125 \u2013 Kinder, LA",
+      "city": "Kinder",
+      "lat": 30.4745139,
+      "lng": -92.8579861,
+      "method": "Public aviation-directory helipad coordinate corroborated by visible pad/base infrastructure in aerial imagery and on-site reporting describing US 165 south of LA 383. Address geocodes returned only town centroids and were rejected.",
+      "limitation": "Approximate publicly identified helipad reference south of LA 383 beside US 165, corroborated against aerial imagery. The town-center directory point is not used.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-125-%E2%80%93-kinder,-la",
+          "purpose": "Current operator base identity and public address; directory coordinates assessed independently."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1639545924",
+          "purpose": "Public air-transport practice address; registration alone does not establish current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=505+ELLIE+LN%2C+KINDER%2C+LA&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode; locality-only and interpolated results are not accepted as precise landing points."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates all four Louisiana base identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://www.helis.com/database/gps/aelt125_us/",
+          "purpose": "Public aviation directory identifies AEL 125 and supplies the approximate helipad coordinate."
+        },
+        {
+          "url": "https://www.kplctv.com/story/29995097/kinders-air-evac-lifeteam-now-open/",
+          "purpose": "On-site opening report describes the base location along US 165 south of Highway 383."
+        },
+        {
+          "url": "https://www.beauregard.org/patients-and-visitors/financial-arrangements/",
+          "purpose": "Hospital provider listing corroborates the public Ellie Layne address."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 1402.4,
+      "distanceFromPreviousMapMeters": 1402.4
+    },
+    {
+      "id": "airevac-631d6ecf",
+      "name": "Air Evac Lifeteam 160 \u2013 Natchitoches, LA",
+      "city": "Natchitoches",
+      "lat": 31.734267,
+      "lng": -93.094689,
+      "method": "Retained operator airport-site reference; CMS and chamber addresses agree. Aerial imagery places it in the airport access area. A street-interpolated geocode about 104 meters south does not establish a better aircraft position.",
+      "limitation": "Approximate operator airport-site reference beside Wallenburg Drive. The precise hangar or parking pad is not established; street interpolation is not a more precise launch point.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-160-%E2%80%93-natchitoches,-la",
+          "purpose": "Current operator base identity and public address; directory coordinates assessed independently."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1861059289",
+          "purpose": "Public air-transport practice address; registration alone does not establish current aircraft availability."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=306+WALLENBURG+DR%2C+NATCHITOCHES%2C+LA&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address geocode; locality-only and interpolated results are not accepted as precise landing points."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Publicly distributed AMCN list corroborates all four Louisiana base identifiers and rotor-wing classifications."
+        },
+        {
+          "url": "https://members.gonatchitoches.com/list/searchalpha/a",
+          "purpose": "Local chamber corroborates the public Wallenburg/Wallenberg base address."
+        },
+        {
+          "url": "https://careers.gmr.net/air-evac-lifeteam/jobs/60116?lang=en-us",
+          "purpose": "Current GMR Natchitoches helicopter-service recruitment corroborates operating program identity."
+        }
+      ],
+      "distanceFromOperatorPointMeters": 0.0,
+      "distanceFromPreviousMapMeters": 0.0
+    }
+  ],
+  "exclusions": [
+    "Legacy Med-Trans Life Air Rescue registrations in Shreveport, Natchitoches and Winnfield and Flight Care in New Orleans are not accepted as proof of current GMR bases. They are absent from the current operator and publicly distributed AMCN base lists.",
+    "Acadian Air Med and Ochsner Flight Care are not substituted for GMR AirMed International; similar names alone do not establish GMR affiliation."
+  ],
+  "geometry": {
+    "parishCount": 64,
+    "source": "US Census Generalized ACS 2024, 500K county-equivalent geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county/parish-edge distance comparisons."
+  },
+  "limitations": [
+    "Approximate site references are labeled, not surveyed aircraft parking positions.",
+    "AEL 160 exact hangar/parking position is not established; its public airport-site reference is retained.",
+    "County/parish boundaries are generalized, not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; mapped overlap does not imply current availability."
+  ]
+}

@@ -88,7 +88,7 @@ def build():
     rows, margins = [], []
     for feature in data['counties']['features']:
         props = feature['properties']
-        name = props.get('NAME', props.get('name')).removesuffix(' County')
+        name = props.get('NAME', props.get('name')).removesuffix(' County').removesuffix(' Parish')
         prepared = prepare(feature['geometry'])
         matches = []
         for b in data['bases']:

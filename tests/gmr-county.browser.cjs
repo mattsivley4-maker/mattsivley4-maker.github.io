@@ -25,7 +25,7 @@ const root=path.resolve(__dirname,'..');
     for(const row of rows){
       await page.locator(`[data-geoid="${row.id}"]`).dispatchEvent('click');
       assert.equal(await page.locator('.county-selected').getAttribute('data-geoid'),row.id);
-      assert.equal(await page.locator('#selection h2').innerText(),`${row.name} County, ${row.state}`);
+      assert.equal(await page.locator('#selection h2').innerText(),`${row.name} ${row.state==='LA'?'Parish':'County'}, ${row.state}`);
       assert.equal(await page.locator('.radius.active').count(),row.matches.length,row.name);
       assert.equal(await page.locator('.radius.county-muted').count(),bases.length-row.matches.length);
       const list=await page.locator('.county-base-list li').evaluateAll(items=>items.map(el=>el.dataset.baseId));
@@ -34,6 +34,15 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Louisiana uses parish labels, including accessible names and result distances.
+    await page.locator('[data-geoid="22003"]').dispatchEvent('click');
+    assert.equal(await page.locator('#selection h2').innerText(),'Allen Parish, LA');
+    assert((await page.locator('[data-geoid="22003"]').getAttribute('aria-label')).startsWith('Allen Parish, LA'));
+    assert.equal(await page.locator('.county-base-list [data-base-id="airevac-eb3025e4"]').count(),1);
+    assert((await page.locator('.county-base-list [data-base-id="airevac-eb3025e4"] .county-distance').innerText()).includes('Inside parish'));
+    assert(!/county/i.test(await page.locator('#selection').innerText()));
+    await page.locator('[data-geoid="22097"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ael-124"]').count(),1);
     // Wichita's shared rotor/fixed site qualifies; Kansas fixed-only sites do not.
     await page.locator('[data-geoid="20173"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="mt-eaglemed-wichita"]').count(),1);

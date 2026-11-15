@@ -22,7 +22,8 @@
     return rotor&&fixed?'mixed':rotor?'rotor':fixed?'fixed':'unknown';
   };
   let scale=1,selected=null,selectedCounty=null,hovered=null,visible=[],points=[],width=1000,height=860;
-  const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ County$/,'');
+  const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ (County|Parish)$/,'');
+  const countyUnit=state=>state==='LA'?'Parish':'County';
   const countyId=f=>f.properties.GEOID || f.properties.geoid;
   const countyState=f=>data.reviewedStates.find(s=>countyId(f).startsWith(s.fips))?.code || '';
   const countyEligibleIds=new Set(data.bases.filter(b=>!/fixed/i.test(b.mode)||/rotor/i.test(b.mode)).map(b=>b.id));
@@ -39,9 +40,9 @@
   svg.append('defs').html(`<clipPath id="glyph-left"><rect x="-11" y="-12" width="11" height="24"/></clipPath><clipPath id="glyph-right"><rect x="0" y="-12" width="11" height="24"/></clipPath><g id="glyph-fixed"><path d="${airplane}"/></g><g id="glyph-rotor"><path d="${helicopter}"/></g><g id="glyph-mixed"><path d="${helicopter}" clip-path="url(#glyph-left)"/><path d="${airplane}" clip-path="url(#glyph-right)"/></g>`);
   const world=svg.append('g');
   const countyLayer=world.append('g').selectAll('path').data(counties).join('path').attr('class','county');
-  countyLayer.append('title').text(f=>`${countyName(f)} County, ${countyState(f)}`);
+  countyLayer.append('title').text(f=>`${countyName(f)} ${countyUnit(countyState(f))}, ${countyState(f)}`);
   countyLayer.attr('data-county',countyName).attr('data-geoid',countyId).attr('data-state',countyState).attr('tabindex',0).attr('role','button')
-    .attr('aria-label',f=>`${countyName(f)} County, ${countyState(f)}: show bases within 75 nautical miles`)
+    .attr('aria-label',f=>`${countyName(f)} ${countyUnit(countyState(f))}, ${countyState(f)}: show bases within 75 nautical miles`)
     .on('click',(event,f)=>{event.stopPropagation();selectCounty(f);})
     .on('keydown',(event,f)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();selectCounty(f);}});
   const boundary=world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline');
@@ -99,7 +100,8 @@
     document.querySelectorAll('#operators input').forEach(el=>el.checked=true);
     closeFilters();render();
     const matches=selectedCounty.matches;
-    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} County, ${escape(selectedCounty.state)}</h2><p>${matches.length} mapped ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this county.</p><p class="provenance">Closest to farthest by distance to the nearest point in the county. Bases inside are 0 NM. ${countyEligibleIds.size} eligible mapped bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${selectedCounty.state!=='TX'?'<p class="provenance">Adjacent-state inventory is still being expanded. Results cover the bases currently on this map.</p>':''}${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?'0 NM · Inside county':`${(m.distanceMeters/1852).toFixed(2)} NM to county`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:'<p class="empty">No eligible mapped base radius touches this county.</p>'}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
+    const unit=countyUnit(selectedCounty.state).toLowerCase();
+    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} ${countyUnit(selectedCounty.state)}, ${escape(selectedCounty.state)}</h2><p>${matches.length} mapped ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this ${unit}.</p><p class="provenance">Closest to farthest by distance to the nearest point in the ${unit}. Bases inside are 0 NM. ${countyEligibleIds.size} eligible mapped bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${selectedCounty.state!=='TX'?'<p class="provenance">Adjacent-state inventory is still being expanded. Results cover the bases currently on this map.</p>':''}${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?`0 NM · Inside ${unit}`:`${(m.distanceMeters/1852).toFixed(2)} NM to ${unit}`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:`<p class="empty">No eligible mapped base radius touches this ${unit}.</p>`}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
     $('selection').hidden=false;
     $('selection').scrollTop=0;
     positionCounty();
