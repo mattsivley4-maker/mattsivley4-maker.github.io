@@ -1,0 +1,314 @@
+{
+  "checked": "2026-11-15",
+  "state": "AL",
+  "airPrograms": 9,
+  "mappedSites": 9,
+  "operators": {
+    "airevac": 5,
+    "medtrans": 3,
+    "airmed": 1
+  },
+  "bases": [
+    {
+      "id": "ael-15",
+      "name": "Air Evac Lifeteam 15 \u2013 Vinemont, AL",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.2702665,
+      "lng": -86.8603415,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public base-address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1598748303",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=191+COUNTY+ROAD+1360%2C+VINEMONT%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-15-%E2%80%93-cullman-county,-al",
+          "purpose": "Operator identifies the base and address. Directory coordinates were not assumed to locate its current facility."
+        }
+      ],
+      "directoryOffsetMeters": 190.8
+    },
+    {
+      "id": "ael-16",
+      "name": "Air Evac Lifeteam 16 \u2013 Tuscumbia, AL",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.6718611,
+      "lng": -87.6322784,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public base-address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1033192695",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1010+3+MILE+LN%2C+TUSCUMBIA%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-16-%E2%80%93-the-shoals",
+          "purpose": "Operator identifies the base and address. Directory coordinates were not assumed to locate its current facility."
+        }
+      ],
+      "directoryOffsetMeters": 432.1
+    },
+    {
+      "id": "ael-32",
+      "name": "Air Evac Lifeteam 32 \u2013 Scottsboro, AL",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.6603287,
+      "lng": -86.0489266,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public base-address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1336122159",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=580+WOODS+COVE+RD+STE+A%2C+SCOTTSBORO%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-32-%E2%80%93-scottsboro,-al",
+          "purpose": "Operator identifies the base and address. Directory coordinates were not assumed to locate its current facility."
+        }
+      ],
+      "directoryOffsetMeters": 81.7
+    },
+    {
+      "id": "ael-45",
+      "name": "Air Evac Lifeteam 45 \u2013 Fayette, AL",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 33.71458,
+      "lng": -87.81663,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public base-address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1992788871",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=108+21ST+ST+NE%2C+FAYETTE%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-45-%E2%80%93-fayette,-al",
+          "purpose": "Operator identifies the base and address. Directory coordinates were not assumed to locate its current facility."
+        }
+      ],
+      "directoryOffsetMeters": 200.5
+    },
+    {
+      "id": "ael-177",
+      "name": "Air Evac Lifeteam 177 / Limestone County \u2013 Tanner, AL",
+      "operator": "airevac",
+      "mode": "Rotor-wing",
+      "lat": 34.6487996,
+      "lng": -86.9479412,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate Flight Line Road base-address reference at Pryor Field, Tanner. Current public address records agree; the older Athens-area directory pin is not used. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1780328062",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=21086+FLIGHT+LINE+RD%2C+TANNER%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-177-limestone-county,-al",
+          "purpose": "Operator identifies the base and address. Directory coordinates were not assumed to locate its current facility."
+        },
+        {
+          "url": "https://business.alcchamber.org/list/searchalpha/a",
+          "purpose": "Local chamber independently identifies AEL 177 at 21086 Flight Line Road, Tanner."
+        }
+      ],
+      "directoryOffsetMeters": 17585.2
+    },
+    {
+      "id": "mt-al-145",
+      "name": "MedStar AirCare / 145 \u2013 Foley, AL",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 30.4272233,
+      "lng": -87.6853434,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public base-address reference, checked against aerial imagery; not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1275084535",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1700+N+ALSTON+ST%2C+FOLEY%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthcareProviders/LicenseVerification?LicInd=114&ProCde=2603",
+          "purpose": "Current state air-ambulance license AIR9502 identifies Foley and Atmore facilities; supersedes the older Robertsdale/Stapleton directory location."
+        }
+      ],
+      "directoryOffsetMeters": null
+    },
+    {
+      "id": "mt-al-163",
+      "name": "MedStar AirCare II / 163 \u2013 Atmore, AL",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 31.0160319,
+      "lng": -87.4796417,
+      "method": "Current public program listing reconciled with CMS air-transport practice address, independent address geocode and aerial imagery.",
+      "limitation": "Approximate public Medical Park Drive address reference at the Atmore hospital campus; street geocode is not the helipad center. Current licensing and CMS records corroborate the site.",
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program identity, city and rotor-wing category."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1396218855",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active flight operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=411+MEDICAL+PARK+DR%2C+ATMORE%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Public address reference checked against the supported airport or hospital facility."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthcareProviders/LicenseVerification?LicInd=114&ProCde=2603",
+          "purpose": "Current state air-ambulance license AIR9502 identifies Foley and Atmore facilities; supersedes the older Robertsdale/Stapleton directory location."
+        }
+      ],
+      "directoryOffsetMeters": null
+    },
+    {
+      "id": "mt-al-childrens",
+      "name": "Children's CARE Flight \u2013 Birmingham, AL",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 33.5659387,
+      "lng": -86.7420127,
+      "method": "Med-Trans identifies the airport facility; the hospital independently confirms Med-Trans operates its dedicated helicopter. Hospital jet-transfer capability does not establish a second aircraft at this rotor base.",
+      "limitation": "Approximate publicly listed airport-facility address reference, corroborated by the operator, geocoding and aerial imagery; not a surveyed helicopter parking position.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/children-s-care-flight",
+          "purpose": "Operator identifies the 4725 65th Place North base address."
+        },
+        {
+          "url": "https://www.childrensal.org/services/critical-care-transport",
+          "purpose": "Hospital identifies Med-Trans as the rotor-wing aviation operator and a dedicated EC145 helicopter."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=4725+65th+Place+N%2C+Birmingham%2C+AL&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Independent address reference agrees with the operator point on the airport apron/hangar site."
+        }
+      ],
+      "directoryOffsetMeters": 4.3
+    },
+    {
+      "id": "ami-birmingham",
+      "name": "AirMed International \u2013 Birmingham, AL",
+      "operator": "airmed",
+      "mode": "Fixed-wing",
+      "lat": 33.5638889,
+      "lng": -86.7523056,
+      "method": "Operator-confirmed Birmingham fixed-wing base and accreditor airport identification, using the published FAA airport reference rather than the downtown administrative address.",
+      "limitation": "Approximate Birmingham-Shuttlesworth airport reference. AirMed confirms its Birmingham base and the accreditor identifies BHM; the exact current hangar coordinate is not established. Exclusively fixed-wing; excluded from county-click helicopter coverage.",
+      "sources": [
+        {
+          "url": "https://airmed.com/about-us/our-bases",
+          "purpose": "Operator identifies Birmingham as a permanent fixed-wing base."
+        },
+        {
+          "url": "https://eurami.org/provider/airmed-international-llc-4/",
+          "purpose": "Accreditor explicitly identifies airport IATA BHM; its downtown mailing address is not used as the aircraft position."
+        },
+        {
+          "url": "https://www.airnav.com/airport/KBHM",
+          "purpose": "FAA airport reference coordinate as reproduced by AirNav; not an AirMed hangar or parking position."
+        },
+        {
+          "url": "https://careers.gmr.net/event-17943/jobs/60062?lang=en-us",
+          "purpose": "Current operator recruitment independently corroborates Birmingham fixed-wing flight operations."
+        }
+      ],
+      "directoryOffsetMeters": null
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "AEL 106, Demopolis",
+      "reason": "Publicly reported closure; a remaining directory/registry entry does not prove current operations.",
+      "source": "https://multibriefs.com/briefs/aams/AAMS081623.php"
+    },
+    {
+      "program": "AEL 64, Elmore",
+      "reason": "Publicly reported closure; not restored from a legacy registry record.",
+      "source": "https://www.wsfa.com/story/24507444/air-evac-to-close-elmore-co-air-ambulance-base/?outputType=amp"
+    },
+    {
+      "program": "Wiregrass Life Flight, Dothan",
+      "reason": "Publicly reported closure; no corroborated current GMR base.",
+      "source": "https://www.helihub.com/2017/08/18/wiregrass-life-flight-closes-down-in-alabama/"
+    },
+    {
+      "program": "Robertsdale/Stapleton MedStar listing",
+      "reason": "Historical location, not a third current Alabama MedStar base. Current licensing identifies Foley and Atmore.",
+      "source": "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthcareProviders/LicenseVerification?LicInd=114&ProCde=2603"
+    }
+  ],
+  "geometry": {
+    "countyCount": 67,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "unresolved": [
+    {
+      "id": "ami-birmingham",
+      "issue": "Approximate Birmingham-Shuttlesworth airport reference. AirMed confirms its Birmingham base and the accreditor identifies BHM; the exact current hangar coordinate is not established. Exclusively fixed-wing; excluded from county-click helicopter coverage."
+    }
+  ],
+  "limitations": [
+    "Approximate facility, street and airport references are labeled, not surveyed aircraft parking positions.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; mapped overlap does not imply availability.",
+    "Uniform 75 NM circles are a geographic comparison, not the operational range of fixed-wing aircraft."
+  ]
+}

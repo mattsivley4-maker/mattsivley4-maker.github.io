@@ -34,6 +34,12 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Alabama includes the dedicated pediatric helicopter, not AirMed's airport reference.
+    await page.locator('[data-geoid="01073"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ami-birmingham"]').count(),0);
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-al-childrens"]').count(),1);
+    await page.locator('[data-geoid="01083"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="ael-177"]').count(),1);
     // Mississippi fixed-wing AirCare 5 stays on the map but not in county helicopter lists.
     await page.locator('[data-geoid="28121"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="gf-ms-292"]').count(),0);
