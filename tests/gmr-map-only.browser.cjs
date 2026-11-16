@@ -10,6 +10,8 @@ const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js',
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
 assert.equal(clean.bases.length,162);
+assert.equal(clean.bases.filter(b=>b.state==='SD').length,0);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('46')).length,66);
 assert.equal(clean.bases.filter(b=>b.state==='WY').length,7);
 assert.equal(clean.bases.filter(b=>b.state==='WY'&&b.mode==='Rotor-wing').length,4);
 assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('56')).length,23);
@@ -198,12 +200,21 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
+    for(const state of ['SD','WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
+      assert.equal(await page.locator('#state-note').isVisible(),state==='SD');
+      if(state==='SD')assert((await page.locator('#state-note').innerText()).includes('Neighboring-state review remains incomplete'));
       assert.equal(await page.locator('.radius').count(),total);
       assert.equal(await page.locator('.county').count(),countyTotal);
       if(output)await page.screenshot({path:path.join(output,`state-view-${state}.png`)});
     }
+    await page.setViewportSize({width:390,height:844});
+    await page.locator('#state-view').selectOption('SD');
+    await page.waitForTimeout(150);
+    const noteBox=await page.locator('#state-note').boundingBox();
+    assert(noteBox.x>=0&&noteBox.x+noteBox.width<=391&&noteBox.y+noteBox.height<=845,'SD status note must fit mobile viewport');
+    if(output)await page.screenshot({path:path.join(output,'state-view-SD-mobile.png')});
+    await page.locator('#state-view').selectOption('all');
     const text=await page.locator('body').innerText();
     assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
     assert.deepEqual(errors,[]);

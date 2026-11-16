@@ -1,0 +1,107 @@
+{
+  "checked": "2026-11-15",
+  "state": "SD",
+  "mappedSites": 0,
+  "bases": [],
+  "finding": "No current in-state GMR aircraft base independently verified in this review. This is not a finding of no air-medical service or no visiting GMR aircraft.",
+  "sources": [
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "Current operator directory: no South Dakota base entry."
+    },
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "Current operator directory: no South Dakota base entry."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "Current operator directory: no South Dakota base entry."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "Current operator directory: no South Dakota base entry."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "AirMed International permanent base listing does not establish a South Dakota base."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Public September 2026 base list: no South Dakota entries."
+    },
+    {
+      "url": "https://www.camts.org/accreditedservices",
+      "purpose": "Accreditation directory distinguishes Avera, Sanford, Air Methods and Apollo programs; accreditation is not itself proof of a base launch point."
+    },
+    {
+      "url": "https://www.med-trans.net/affiliates",
+      "purpose": "Wings Air Rescue is based in Sioux City, Iowa; Regional West Air Link serves the region from Nebraska. Service area is not the same as base location."
+    }
+  ],
+  "unresolved": [
+    {
+      "program": "Guardian Flight 070, Winner",
+      "mapped": false,
+      "issue": "Historical opening and operating evidence exists, but current staffed-base status is not independently established. The May 2026 state newsletter discusses projected 2025 activity. Current operator and September 2026 public membership directories omit the site; registry entries do not establish ongoing flight operations. No closure date is asserted.",
+      "sources": [
+        {
+          "url": "https://dot.sd.gov/media/io5kraet/may-2026-newsletter.pdf",
+          "purpose": "Page 6: airport activity explicitly described as projected 2025 activity, including Guardian medevac flights."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/serving-the-community-guardian-flight-to-open-new-base-in-winner",
+          "purpose": "Historical announcement of planned early-2022 opening."
+        },
+        {
+          "url": "https://careers.gmr.net/guardianflight",
+          "purpose": "Undated staff story mentions Winner; not a current staffed-base directory."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1154072528",
+          "purpose": "Air-transport registration, last updated January 2022."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1861143612",
+          "purpose": "Second registration at same airport address, last updated January 2022; not a separate base."
+        }
+      ]
+    },
+    {
+      "program": "Guardian Flight / Eagle Air Med, Rosebud",
+      "mapped": false,
+      "issue": "Historical public facility and registration evidence exists, but current staffed-base status is not independently established. Omitted from current operator and September 2026 public membership directories; no speculative pin or closure date.",
+      "sources": [
+        {
+          "url": "https://extension.sdstate.edu/sites/default/files/2025-05/MC-03803.pdf",
+          "purpose": "May 2025 educational visit resource names the Rosebud base; historical evidence."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1184141400",
+          "purpose": "Air-transport registration last updated March 2020; not confirmation of current flights."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Avera Careflight, Sanford AirMed, Air Methods and Apollo programs",
+      "reason": "Not established as current GMR-operated South Dakota bases. Similar air-medical names or historical partnerships are insufficient to attribute current operations to GMR."
+    },
+    {
+      "program": "Med-Trans AirLink and Wings Air Rescue",
+      "reason": "Programs serving South Dakota from Nebraska/Iowa are not South Dakota bases. Their home-state reviews remain pending."
+    }
+  ],
+  "geometry": {
+    "countyCount": 66,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "Existing WGS84 geodesic base circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Neighboring-state inventories remain incomplete; county results cover only bases already on this map.",
+    "Generalized boundaries are not cadastral surveys.",
+    "A geographic 75 NM overlap does not establish service availability.",
+    "Absence from directories is not conclusive proof of closure."
+  ]
+}

@@ -2,7 +2,13 @@
 
 ## Map-only state expansion — November 15, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado and Wyoming: 939 counties/parishes and 162 base-site records. Wyoming adds all 23 counties and seven sites: five Guardian Flight, one Med-Trans and one REACH. Four are rotor-wing and three exclusively fixed-wing. All 155 previous base records and 916 county/parish features are unchanged.
+The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming and South Dakota: 1,005 counties/parishes and 162 base-site records. South Dakota adds all 66 counties and no newly verified active in-state GMR pins. All previous base records, radius polygons and county geometries are unchanged.
+
+`south-dakota-public-evidence.json` documents the review. Current public operator directories and the September 2026 public membership list have no South Dakota entries. Historical Winner and Rosebud evidence is retained as unresolved, unplotted status rather than treated as proof of current staffed bases or conclusive closure. The May 2026 state newsletter's Winner activity explicitly refers to projected 2025 activity. Duplicate Winner NPI registrations do not establish separate bases. Other air-medical operators are not attributed to GMR simply because they serve the state.
+
+The South Dakota view and county panels state the limitation: no current in-state GMR base was verified, and neighboring-state review is incomplete. This does not mean no air-medical service is available. No phones, personnel or private source contents are published.
+
+The preceding Wyoming increment brought the map to 939 counties/parishes and 162 base-site records. Wyoming adds all 23 counties and seven sites: five Guardian Flight, one Med-Trans and one REACH. Four are rotor-wing and three exclusively fixed-wing. All 155 previous base records and 916 county/parish features are unchanged.
 
 `wyoming-public-evidence.json` records the public reconciliation. Current public membership, operator, hospital, CMS and aviation sources support the seven programs. Casper's Med Evac 4 is included; Cheyenne LifeLine 3 / REACH 70 is rotor-wing despite the directory's program-wide RW/FW title. Gillette uses an explicitly approximate airport reference rather than a residential Goldenrod Avenue point. Riverton uses the airport facility reference rather than residential Prairie Road. Lander's operator address is corroborated by a city airport-office lease, not treated as a surveyed aircraft hangar. Cody and Worland use public airport-facility references.
 
@@ -52,7 +58,7 @@ New Mexico site points were compared with operator directories, CMS public pract
 
 `oklahoma-public-evidence.json` documents the preceding 21-site Oklahoma review. Regional and individual Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado and Wyoming views are available. Five-digit Census GEOIDs distinguish identically named counties. County selection uses WGS84 distances to the nearest county boundary, includes edge-only contact, includes mixed rotor/fixed sites and excludes exclusively fixed-wing operations. Adjacent-state inventories are still being expanded. The county boundaries are Census ACS 2024 generalized geometry, not surveyed property boundaries.
 
-Next planned state: South Dakota, then North Dakota, following the requested northern expansion. Georgia is deferred. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
+Next planned state: North Dakota, following the requested northern expansion. Georgia is deferred. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
 
 Validation covers all county/base comparisons, geodesic ring vertices, county interactions, base popups, existing Facebook links, aircraft hover icons, operator filters, state views and mobile/desktop layouts. Every radius is 138,900 meters from its recorded reference point; operational availability is not implied.
 

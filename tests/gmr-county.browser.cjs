@@ -34,6 +34,10 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // SD is selectable, with incomplete neighboring inventory stated explicitly.
+    await page.locator('[data-geoid="46103"]').dispatchEvent('click');
+    assert((await page.locator('#selection').innerText()).includes('No current in-state GMR bases verified in South Dakota'));
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-wy-030"]').count(),0);
     // Wyoming includes rotor programs and excludes separate fixed-wing bases.
     await page.locator('[data-geoid="56013"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="gf-wy-204"]').count(),1);
