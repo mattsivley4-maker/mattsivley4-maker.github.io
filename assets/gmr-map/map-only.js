@@ -25,6 +25,7 @@
   const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ (County|Parish)$/,'');
   const countyUnit=state=>state==='LA'?'Parish':'County';
   const countyId=f=>f.properties.GEOID || f.properties.geoid;
+  const stateNotes={SD:'No current in-state GMR bases verified in South Dakota. Neighboring-state review remains incomplete.',ND:'Williston fixed-wing launch location unresolved; pending bases excluded. Neighboring-state review remains incomplete.'};
   const countyState=f=>data.reviewedStates.find(s=>countyId(f).startsWith(s.fips))?.code || '';
   const countyEligibleIds=new Set(data.bases.filter(b=>!/fixed/i.test(b.mode)||/rotor/i.test(b.mode)).map(b=>b.id));
   const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.id,{...c,matches:c.matches.filter(m=>countyEligibleIds.has(m.id))}]));
@@ -47,7 +48,7 @@
     .on('keydown',(event,f)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();selectCounty(f);}});
   const boundary=world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline');
   const rings=world.append('g');
-  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-98.3,38.5],['TENNESSEE',-86.3,35.85],['MISSISSIPPI',-89.7,32.5],['ALABAMA',-86.8,32.7],['COLORADO',-105.5,39.0],['WYOMING',-107.5,43.0],['SOUTH DAKOTA',-100.0,44.5]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
+  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-98.3,38.5],['TENNESSEE',-86.3,35.85],['MISSISSIPPI',-89.7,32.5],['ALABAMA',-86.8,32.7],['COLORADO',-105.5,39.0],['WYOMING',-107.5,43.0],['SOUTH DAKOTA',-100.0,44.5],['NORTH DAKOTA',-100.5,47.5]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
   const markers=world.append('g'),labels=world.append('g');
   const zoom=d3.zoom().scaleExtent([1,14]).on('zoom',event=>{
     scale=event.transform.k;
@@ -101,7 +102,7 @@
     closeFilters();render();
     const matches=selectedCounty.matches;
     const unit=countyUnit(selectedCounty.state).toLowerCase();
-    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} ${countyUnit(selectedCounty.state)}, ${escape(selectedCounty.state)}</h2><p>${matches.length} mapped ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this ${unit}.</p><p class="provenance">Closest to farthest by distance to the nearest point in the ${unit}. Bases inside are 0 NM. ${countyEligibleIds.size} eligible mapped bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${selectedCounty.state!=='TX'?'<p class="provenance">Adjacent-state inventory is still being expanded. Results cover the bases currently on this map.</p>':''}${selectedCounty.state==='SD'?'<p class="provenance">No current in-state GMR bases verified in South Dakota. Neighboring-state review remains incomplete.</p>':''}${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?`0 NM · Inside ${unit}`:`${(m.distanceMeters/1852).toFixed(2)} NM to ${unit}`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:`<p class="empty">No eligible mapped base radius touches this ${unit}.</p>`}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
+    $('selection-content').innerHTML=`<h2>${escape(selectedCounty.name)} ${countyUnit(selectedCounty.state)}, ${escape(selectedCounty.state)}</h2><p>${matches.length} mapped ${matches.length===1?'base has':'bases have'} a 75 NM radius touching this ${unit}.</p><p class="provenance">Closest to farthest by distance to the nearest point in the ${unit}. Bases inside are 0 NM. ${countyEligibleIds.size} eligible mapped bases checked; mixed rotor/fixed-wing bases included, exclusively fixed-wing operations excluded.</p>${selectedCounty.state!=='TX'?'<p class="provenance">Adjacent-state inventory is still being expanded. Results cover the bases currently on this map.</p>':''}${stateNotes[selectedCounty.state]?`<p class="provenance">${escape(stateNotes[selectedCounty.state])}</p>`:''}${matches.length?`<ol class="county-base-list">${matches.map(m=>{const b=basesById.get(m.id);return `<li data-base-id="${escape(b.id)}"><strong>${escape(b.name)}</strong><p class="county-distance">${m.distanceMeters===0?`0 NM · Inside ${unit}`:`${(m.distanceMeters/1852).toFixed(2)} NM to ${unit}`}</p><p>${escape(modeText(b))}</p>${socialDetail(b)}</li>`;}).join('')}</ol>`:`<p class="empty">No eligible mapped base radius touches this ${unit}.</p>`}<p class="provenance">Geographic overlap, not guaranteed service availability.</p>`;
     $('selection').hidden=false;
     $('selection').scrollTop=0;
     positionCounty();
@@ -149,8 +150,8 @@
     if(width<80||height<80)return;
     svg.attr('viewBox',`0 0 ${width} ${height}`);
     const state=$('state-view').value;
-    $('state-note').hidden=state!=='SD';
-    $('state-note').textContent=state==='SD'?'No current in-state GMR bases verified in South Dakota. Neighboring-state review remains incomplete.':'';
+    $('state-note').hidden=!stateNotes[state];
+    $('state-note').textContent=stateNotes[state]||'';
     const view=state==='all'?extent:{type:'FeatureCollection',features:texas.filter(f=>f.properties.state===state)};
     projection.fitExtent([[24,25],[width-24,height-55]],view);
     countyLayer.attr('d',path);boundary.attr('d',path);

@@ -1,0 +1,163 @@
+{
+  "checked": "2026-11-16",
+  "state": "ND",
+  "publiclyListedPrograms": 1,
+  "mappedSites": 0,
+  "bases": [],
+  "finding": "GFL 041 is publicly identified as a Williston fixed-wing program, but a defensible aircraft launch location was not established. No new North Dakota base pin or circle is added. This is not a claim that the program is closed or that the state lacks air-medical service.",
+  "sources": [
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "One North Dakota listing: GFL 041, Williston."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "North Dakota entry is explicitly Med-Trans Office in Mandan, not an aircraft base."
+    },
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "No current North Dakota base listing."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No current North Dakota base listing."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "AirMed International permanent base listing does not establish a North Dakota base."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Public September 2026 list identifies base 41 as fixed-wing in Williston while retaining the Sidney name."
+    }
+  ],
+  "unresolved": [
+    {
+      "program": "Guardian Flight / GFL 041, Williston",
+      "mapped": false,
+      "issue": "Program identity and fixed-wing classification are supported by current public operator, membership and state licensing records. The directory coordinate is off-airport in a residential area. Neither a current airport assignment nor hangar/aircraft parking coordinate was independently established. The old Sidney name is not treated as a separate base. No hospital, residential or guessed airport pin is used.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-041-%28fw%29-%E2%80%93-williston,-nd",
+          "purpose": "Current operator identity and off-airport directory location."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public program number, mode and Williston city; legacy Sidney name creates a location-reconciliation issue."
+        },
+        {
+          "url": "https://prod-dphhs.mt.gov/assets/publichealth/EMSTS/EMS/LicensedMontanaEMSAgencies.pdf",
+          "purpose": "July 2026 licensing report identifies Guardian fixed-wing in Williston; it does not identify the aircraft launch facility."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1548789530",
+          "purpose": "Public Williston registration updated December 2024; registration is not proof of aircraft parking location."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-103.643498269982%2C48.1553543%2C-103.631498269982%2C48.163354299999995&bboxSR=4326&imageSR=4326&size=900%2C700&format=jpg&f=image",
+          "purpose": "Public aerial imagery of operator coordinate: off-airport residential setting, not a fixed-wing launch site."
+        }
+      ]
+    },
+    {
+      "program": "Legacy Guardian / GFL 039, Grand Forks",
+      "mapped": false,
+      "issue": "Airport tenant listing and current maintenance recruiting establish a Guardian presence, but not a current staffed patient-transport base. Not in the current operator service directory or public September 2026 base list. No active flight-base pin added; maintenance aircraft traffic alone is insufficient.",
+      "sources": [
+        {
+          "url": "https://gfkairport.com/",
+          "purpose": "Airport lists Guardian as a tenant; this does not distinguish maintenance from an active transport base."
+        },
+        {
+          "url": "https://careers.gmr.net/gmr/jobs",
+          "purpose": "Current search listing includes Grand Forks aircraft maintenance quality assurance role 61416."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1902325996",
+          "purpose": "Historical air-transport registration, last updated February 2020; not current staffed-base proof."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Guardian Flight, Watford City",
+      "reason": "Pending, not mapped as active. Operator recruiting explicitly describes a new base coming winter 2027. A recent NPI registration does not establish that flights have started.",
+      "sources": [
+        {
+          "url": "https://careers.gmr.net/gmr/jobs/60408?lang=en-us",
+          "purpose": "Operator flight-nurse posting states planned winter 2027 opening."
+        },
+        {
+          "url": "https://careers.gmr.net/guardianflight/jobs/60406?lang=en-us",
+          "purpose": "Operator flight-paramedic posting independently repeats future opening."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1407751068",
+          "purpose": "October 2026 registration; does not override future-opening statement."
+        }
+      ]
+    },
+    {
+      "program": "Med-Trans Office, Mandan",
+      "reason": "Operator identifies an office, not a staffed aircraft base. No pin or 75 NM circle.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/med-trans-office",
+          "purpose": "Explicit operator office listing."
+        }
+      ]
+    },
+    {
+      "program": "Legacy Guardian helicopter bases, Williston and Devils Lake",
+      "reason": "Public state EMS minutes report the loss of Guardian rotary service in 2023. No current reopening independently established. Do not confuse the old helicopters with the separately listed Williston fixed-wing program.",
+      "sources": [
+        {
+          "url": "https://www.hhs.nd.gov/sites/www/files/documents/DOH%20Legacy/EMS/EMS/EMSAC/Minutes_Agendas/EMSACMinutes_07202023.pdf",
+          "purpose": "July 20, 2023 state EMS council minutes: Guardian no longer had rotary service in North Dakota."
+        },
+        {
+          "url": "https://williamsnd.civicweb.net/document/63668/",
+          "purpose": "August 2023 county minutes discuss the removed Williston helicopter and possible restoration, not a completed reopening."
+        }
+      ]
+    },
+    {
+      "program": "Spirit Lifeline / Med-Trans, Dickinson",
+      "reason": "Historical NPI is not proof of an active base. Sanford announced the Med-Trans service closure in July 2014; no current reopening found.",
+      "sources": [
+        {
+          "url": "https://news.sanfordhealth.org/news/airmed-services-to-launch-in-dickinson-nd/",
+          "purpose": "Hospital announcement describes Spirit Lifeline closure and planned separate Sanford service."
+        }
+      ]
+    },
+    {
+      "program": "Legacy Guardian, Dickinson",
+      "reason": "Historical registration alone does not establish a current staffed base. Absent current operator and public membership directories; no speculative active circle.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1518486505",
+          "purpose": "Public air-transport registration last updated February 2020."
+        }
+      ]
+    },
+    {
+      "program": "Williston Care Flight, Sanford AirMed, Altru and Trinity services",
+      "reason": "Separate air-medical programs are not attributed to GMR based on name similarity, shared airports or aircraft registration alone."
+    }
+  ],
+  "geometry": {
+    "countyCount": 53,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "Existing WGS84 geodesic base circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Current fixed-wing program identity is distinct from a verified launch coordinate.",
+    "Neighboring-state inventories remain incomplete; county results cover only bases already mapped.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "75 NM geographic overlap is not guaranteed service availability.",
+    "State EMS minutes were accessible through the web-reader cache; the direct PDF download returned 404. GMR recruiting pages were readable in search results but direct access returned 403."
+  ]
+}

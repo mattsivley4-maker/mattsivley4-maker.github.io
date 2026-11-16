@@ -34,6 +34,11 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // ND must not imply the unresolved Williston launch site or future Watford base is mapped.
+    await page.locator('[data-geoid="38105"]').dispatchEvent('click');
+    assert((await page.locator('#selection').innerText()).includes('Williston fixed-wing launch location unresolved'));
+    assert.equal(await page.locator('.county-base-list li').count(),0);
+    assert.equal(await page.locator('.radius.active').count(),0);
     // SD is selectable, with incomplete neighboring inventory stated explicitly.
     await page.locator('[data-geoid="46103"]').dispatchEvent('click');
     assert((await page.locator('#selection').innerText()).includes('No current in-state GMR bases verified in South Dakota'));

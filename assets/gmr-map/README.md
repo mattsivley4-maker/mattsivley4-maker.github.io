@@ -1,8 +1,16 @@
 # Texas GMR Air Medical Map
 
-## Map-only state expansion — November 15, 2026
+## Map-only state expansion — November 16, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming and South Dakota: 1,005 counties/parishes and 162 base-site records. South Dakota adds all 66 counties and no newly verified active in-state GMR pins. All previous base records, radius polygons and county geometries are unchanged.
+The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota and North Dakota: 1,058 counties/parishes and 162 base-site records. North Dakota adds all 53 counties. All previous base records, circle geometries and county features are unchanged.
+
+`north-dakota-public-evidence.json` documents one currently listed Williston fixed-wing program (GFL 041), with its aircraft launch location unresolved. Public operator, membership and licensing records establish the program identity, but its directory point falls in a residential area. No radius is centered on that street address or on a guessed airport. This is not a claim that the program is closed. The legacy Sidney name is not counted as a second base.
+
+Watford City recruiting explicitly describes a winter 2027 opening, so the pending location is excluded. Mandan is an office listing. Historic Williston/Devils Lake helicopter operations and Dickinson entries are not restored from stale registrations. Grand Forks has a public airport-tenant listing and maintenance recruiting; a current staffed patient-transport base is not independently established, so it remains unplotted. Similar program names, registered aircraft ownership and airport visits alone are not treated as current GMR base confirmation.
+
+North Dakota's view and county panels identify the unresolved Williston launch location and incomplete neighboring-state review. No phones, personnel or private source contents are published. The requested northward sequence has reached North Dakota; further states remain for subsequent increments.
+
+The preceding South Dakota increment brought the map to 1,005 counties/parishes and 162 base-site records. South Dakota adds all 66 counties and no newly verified active in-state GMR pins. All previous base records, radius polygons and county geometries are unchanged.
 
 `south-dakota-public-evidence.json` documents the review. Current public operator directories and the September 2026 public membership list have no South Dakota entries. Historical Winner and Rosebud evidence is retained as unresolved, unplotted status rather than treated as proof of current staffed bases or conclusive closure. The May 2026 state newsletter's Winner activity explicitly refers to projected 2025 activity. Duplicate Winner NPI registrations do not establish separate bases. Other air-medical operators are not attributed to GMR simply because they serve the state.
 
@@ -58,7 +66,7 @@ New Mexico site points were compared with operator directories, CMS public pract
 
 `oklahoma-public-evidence.json` documents the preceding 21-site Oklahoma review. Regional and individual Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado and Wyoming views are available. Five-digit Census GEOIDs distinguish identically named counties. County selection uses WGS84 distances to the nearest county boundary, includes edge-only contact, includes mixed rotor/fixed sites and excludes exclusively fixed-wing operations. Adjacent-state inventories are still being expanded. The county boundaries are Census ACS 2024 generalized geometry, not surveyed property boundaries.
 
-Next planned state: North Dakota, following the requested northern expansion. Georgia is deferred. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
+Northward sequence through North Dakota reviewed and published. Neighboring-state reviews remain incomplete. Minnesota is the proposed next increment, continuing east. Complete and publish each state increment before starting the next. Do not overwrite the expanded `map-only-data.js` with the legacy Texas-only export. Rebuild county coverage after any base or geometry change.
 
 Validation covers all county/base comparisons, geodesic ring vertices, county interactions, base popups, existing Facebook links, aircraft hover icons, operator filters, state views and mobile/desktop layouts. Every radius is 138,900 meters from its recorded reference point; operational availability is not implied.
 
