@@ -1,0 +1,305 @@
+{
+  "checked": "2026-11-15",
+  "state": "WY",
+  "airPrograms": 7,
+  "mappedSites": 7,
+  "operators": {
+    "medtrans": 1,
+    "guardian": 5,
+    "reach": 1
+  },
+  "bases": [
+    {
+      "id": "mt-wy-289",
+      "name": "North Colorado Med Evac 4 / M289 \u2013 Casper, WY",
+      "operator": "medtrans",
+      "mode": "Rotor-wing",
+      "lat": 42.8952513,
+      "lng": -106.4555345,
+      "limitation": "Approximate public Studer Avenue address reference at Casper airport. Hospital and public program records confirm the Med-Trans helicopter program; the exact current hangar or helipad coordinate is not established.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1154293686",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3450+STUDER+AVE%2C+CASPER%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode inspected against public aerial imagery; not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public Casper base identity and rotor-wing classification."
+        },
+        {
+          "url": "https://www.bannerhealth.com/newsroom/press-releases/wyoming-air-evac",
+          "purpose": "Hospital announced the Casper helicopter and Med-Trans aviation partnership in August 2025."
+        },
+        {
+          "url": "https://www.bannerhealth.com/locations/casper/wyoming-medical-center/emergency",
+          "purpose": "Current hospital page identifies its locally based Med Evac flight team."
+        }
+      ],
+      "directoryOffsetMeters": null
+    },
+    {
+      "id": "reach-wy-70",
+      "name": "UCHealth LifeLine 3 / REACH 70 \u2013 Cheyenne, WY",
+      "operator": "reach",
+      "mode": "Rotor-wing",
+      "lat": 41.1505054,
+      "lng": -104.8182573,
+      "limitation": "Approximate public Evans Avenue airport-facility reference, supported by operator and CMS address records and aerial imagery. Not a surveyed aircraft parking position. The program-wide RW/FW heading does not establish a fixed-wing aircraft at this base.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1992446918",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3801+EVANS+AVE+APT+B%2C+CHEYENNE%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode inspected against public aerial imagery; not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://www.reachair.com/locations/uchealth-lifeline-%28rw-fw%29-%E2%80%93-cheyenne,-wy",
+          "purpose": "Operator identifies the Cheyenne airport facility."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public REACH 70 rotor-wing identity."
+        },
+        {
+          "url": "https://www.uchealth.org/services/emergency-care/uchealth-emergency-medical-services/uchealth-lifeline/",
+          "purpose": "Hospital identifies LifeLine 3 at Cheyenne separately from its Denver fixed-wing program."
+        }
+      ],
+      "directoryOffsetMeters": 85.5
+    },
+    {
+      "id": "gf-wy-225",
+      "name": "Guardian Flight / GFL 225 \u2013 Cody, WY",
+      "operator": "guardian",
+      "mode": "Rotor-wing",
+      "lat": 44.5133468,
+      "lng": -109.0274952,
+      "limitation": "Approximate operator reference in the Yellowstone Regional Airport hangar area. Public operator and CMS records identify Duggleby Drive Hangar 4; the street geocode and directory point differ by about 69 m. Exact aircraft parking position is not surveyed.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1629594841",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3201+DUGGLEBY+DR+HNGR+4%2C+CODY%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode inspected against public aerial imagery; not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-225-%28rw%29-%E2%80%93-cody,-wy",
+          "purpose": "Operator identifies Cody rotor program and Hangar 4."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public rotor-wing identity."
+        },
+        {
+          "url": "https://www.codywy.gov/ArchiveCenter/ViewFile/Item/6963",
+          "purpose": "City airport packet corroborates Guardian activity in the Duggleby hangar area, while using the older 3001 address."
+        }
+      ],
+      "directoryOffsetMeters": 0.0
+    },
+    {
+      "id": "gf-wy-204",
+      "name": "Guardian Flight / GFL 204 \u2013 Riverton, WY",
+      "operator": "guardian",
+      "mode": "Rotor-wing",
+      "lat": 43.0613453,
+      "lng": -108.4584543,
+      "limitation": "Approximate Airport Road facility reference at Central Wyoming Regional Airport. Public aviation records support the airport base; the residential Prairie Road directory point is not used. Exact current helicopter hangar or pad position remains unestablished.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1518409523",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=4800+AIRPORT+RD%2C+RIVERTON%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode inspected against public aerial imagery; not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-204-%28rw%29-%E2%80%93-riverton,-wy",
+          "purpose": "Current rotor-program identity; the off-airport residential directory point is not used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public rotor-wing program."
+        },
+        {
+          "url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Aeronautics/Economic-Impact/2020%20Wyoming%20Aviation%20Economic%20Impact%20Study%20Technical%20Report.pdf",
+          "purpose": "State aviation report independently identifies Guardian rotor operations based at Riverton airport."
+        },
+        {
+          "url": "https://gacc.nifc.gov/rmcc/dispatch_centers/r2cdc/dispatch/Dispatch_folder/Aviation%20Mishap%202023.pdf",
+          "purpose": "Historical interagency aviation directory identifies Guardian rotor service at RIW; corroborates airport, not a current surveyed pad."
+        }
+      ],
+      "directoryOffsetMeters": 4680.9
+    },
+    {
+      "id": "gf-wy-029",
+      "name": "Guardian Flight / GFL 029 \u2013 Lander, WY",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 42.8173496,
+      "lng": -108.7283696,
+      "limitation": "Approximate public terminal-office reference at Hunt Field. Operator and city lease records agree on the airport facility. This identifies the base airport, not the exact current aircraft hangar or parking position; off-airport residential addresses are not plotted.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-029-%28fw%29-%E2%80%93-lander,-wy",
+          "purpose": "Operator identifies the fixed-wing Lander program at 1520 Rodeo Drive."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public fixed-wing identity."
+        },
+        {
+          "url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/landerwy-meet-2d5b5043e9144baaa6965b79dd62ad13/ITEM-Attachment-001-709bfdbd30df4fc6a5c3fef8a09a52a2.pdf",
+          "purpose": "City airport lease document identifies Guardian office space at the old terminal, with a 2024\u20132029 term; not an aircraft hangar lease."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1520+Rodeo+Drive%2C+Lander%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Geocoded airport terminal address checked against aerial imagery."
+        },
+        {
+          "url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Aeronautics/Economic-Impact/2020%20Wyoming%20Aviation%20Economic%20Impact%20Study%20Technical%20Report.pdf",
+          "purpose": "State aviation report identifies Guardian fixed-wing base at Hunt Field."
+        }
+      ],
+      "directoryOffsetMeters": 284.1
+    },
+    {
+      "id": "gf-wy-030",
+      "name": "Guardian Flight / GFL 030 \u2013 Gillette, WY",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 44.3489081,
+      "lng": -105.5393675,
+      "limitation": "Approximate published FAA reference for Northeast Wyoming Regional Airport. Aviation records identify the airport base; the Goldenrod Avenue residential address is not plotted. Exact current aircraft hangar or parking position remains unestablished.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-030-%28fw%29-%E2%80%93-gillette,-wy",
+          "purpose": "Current fixed-wing program identity; residential street coordinate is not treated as the aircraft launch location."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public fixed-wing identity."
+        },
+        {
+          "url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Aeronautics/Economic-Impact/2020%20Wyoming%20Aviation%20Economic%20Impact%20Study%20Technical%20Report.pdf",
+          "purpose": "State aviation report identifies Guardian fixed-wing base at Gillette airport."
+        },
+        {
+          "url": "https://gacc.nifc.gov/rmcc/dispatch_centers/r2cdc/dispatch/Dispatch_folder/Aviation%20Mishap%202023.pdf",
+          "purpose": "Historical interagency aviation directory identifies Guardian fixed-wing service at GCC."
+        },
+        {
+          "url": "https://www.airnav.com/airport/KGCC",
+          "purpose": "Published FAA estimated airport reference; not the individual aircraft hangar."
+        }
+      ],
+      "directoryOffsetMeters": 5616.2
+    },
+    {
+      "id": "gf-wy-031",
+      "name": "Guardian Flight / GFL 031 \u2013 Worland, WY",
+      "operator": "guardian",
+      "mode": "Fixed-wing",
+      "lat": 43.97242,
+      "lng": -107.95154,
+      "limitation": "Approximate public Airport Road facility reference at Worland Municipal Airport, corroborated by operator, CMS, state aviation records and aerial imagery. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1104342922",
+          "purpose": "Public air-transport practice address; registry status alone does not establish active aircraft operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1456+AIRPORT+RD%2C+WORLAND%2C+WY&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Address geocode inspected against public aerial imagery; not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-031-%28fw%29-%E2%80%93-worland,-wy",
+          "purpose": "Operator identifies the Worland fixed-wing base at the airport address."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Current public fixed-wing identity."
+        },
+        {
+          "url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Aeronautics/Economic-Impact/2020%20Wyoming%20Aviation%20Economic%20Impact%20Study%20Technical%20Report.pdf",
+          "purpose": "State aviation report identifies Guardian as based at Worland Municipal Airport."
+        }
+      ],
+      "directoryOffsetMeters": 20.8
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Legacy Guardian Rock Springs registry entry",
+      "reason": "Historical state EMS report says Guardian no longer maintained a base there. No current operator or membership-list evidence of a reopened GMR base was established. University of Utah AirMed is a different program.",
+      "source": "https://health.wyo.gov/wp-content/uploads/2016/04/21-18322_SWEETWATER_REPORT_FINAL_SafeTech.pdf"
+    },
+    {
+      "program": "Legacy Guardian Powell and Basin registrations",
+      "reason": "Historical registration/coverage evidence does not establish additional current staffed air bases. Neither is in the current public operator or membership list; no speculative duplicate circle added."
+    },
+    {
+      "program": "Legacy EagleMed Cody registration",
+      "reason": "Not independently established as a separate current aircraft base in addition to Guardian 225."
+    },
+    {
+      "program": "Guardian/AMR ground ambulance sites",
+      "reason": "Ground registrations and offices are not mapped as aircraft bases."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "mt-wy-289",
+      "program": "North Colorado Med Evac 4 / M289 \u2013 Casper, WY",
+      "mapped": true,
+      "issue": "Approximate public Studer Avenue address reference at Casper airport. Hospital and public program records confirm the Med-Trans helicopter program; the exact current hangar or helipad coordinate is not established."
+    },
+    {
+      "id": "gf-wy-204",
+      "program": "Guardian Flight / GFL 204 \u2013 Riverton, WY",
+      "mapped": true,
+      "issue": "Approximate Airport Road facility reference at Central Wyoming Regional Airport. Public aviation records support the airport base; the residential Prairie Road directory point is not used. Exact current helicopter hangar or pad position remains unestablished."
+    },
+    {
+      "id": "gf-wy-029",
+      "program": "Guardian Flight / GFL 029 \u2013 Lander, WY",
+      "mapped": true,
+      "issue": "Approximate public terminal-office reference at Hunt Field. Operator and city lease records agree on the airport facility. This identifies the base airport, not the exact current aircraft hangar or parking position; off-airport residential addresses are not plotted."
+    },
+    {
+      "id": "gf-wy-030",
+      "program": "Guardian Flight / GFL 030 \u2013 Gillette, WY",
+      "mapped": true,
+      "issue": "Approximate published FAA reference for Northeast Wyoming Regional Airport. Aviation records identify the airport base; the Goldenrod Avenue residential address is not plotted. Exact current aircraft hangar or parking position remains unestablished."
+    },
+    {
+      "id": "legacy-wy-basin-powell",
+      "program": "Legacy Guardian Basin/Powell entries",
+      "mapped": false,
+      "issue": "Separate current staffed air-base status is not independently established; registry entries alone are insufficient."
+    }
+  ],
+  "geometry": {
+    "countyCount": 23,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Facility, street and airport references are approximate, not surveyed aircraft parking positions.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout.",
+    "Uniform 75 NM circles do not describe fixed-wing range, mountain flight routing, terrain or operational availability.",
+    "The historical NIFC directory was available through the web reader cache; its direct download returned 404 during this review. Current operator and public program listings provide current identity evidence."
+  ]
+}

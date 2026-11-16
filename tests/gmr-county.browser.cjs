@@ -34,6 +34,16 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Wyoming includes rotor programs and excludes separate fixed-wing bases.
+    await page.locator('[data-geoid="56013"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-wy-204"]').count(),1);
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-wy-029"]').count(),0);
+    await page.locator('[data-geoid="56021"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="reach-wy-70"]').count(),1);
+    await page.locator('[data-geoid="56025"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-wy-289"]').count(),1);
+    await page.locator('[data-geoid="56005"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-wy-030"]').count(),0);
     // Colorado rotor bases qualify; the separate Alamosa fixed-wing site does not.
     await page.locator('[data-geoid="08003"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list [data-base-id="gf-co-203"]').count(),1);
