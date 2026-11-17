@@ -2,7 +2,13 @@
 
 ## Map-only state expansion — November 16, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota and North Dakota: 1,058 counties/parishes and 162 base-site records. North Dakota adds all 53 counties. All previous base records, circle geometries and county features are unchanged.
+The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota, North Dakota and Minnesota: 1,145 counties/parishes and 163 base-site records. Minnesota adds 87 counties and one combined Grand Rapids airport-site pin for Guardian GFL 213 (rotor-wing) and GFL 042 (fixed-wing). All 162 previous base records and 1,058 county geometries remain unchanged.
+
+`minnesota-public-evidence.json` reconciles the two programs using the public September 2026 membership list, GMR's helicopter opening announcement, public CMS airport-facility registration, city airport lease and hangar-development documents, and the 2026 Arrowhead EMS conference guide. The legacy Roseau helicopter moved to Grand Rapids in 2023 and is not duplicated. The off-airport Donovan Drive residential directory point is not used.
+
+The combined pin is an explicitly approximate airport-facility reference, not a claim that both aircraft use the same hangar. Exact current hangar and parking positions remain unresolved. Its mixed-aircraft icon and county eligibility retain the helicopter program; exclusively fixed-wing sites remain excluded from county selections. No contact details or private source contents are published. Neighboring-state review remains incomplete.
+
+The preceding North Dakota increment brought the map to 1,058 counties/parishes and 162 base-site records. North Dakota adds all 53 counties. All previous base records, circle geometries and county features are unchanged.
 
 `north-dakota-public-evidence.json` documents one currently listed Williston fixed-wing program (GFL 041), with its aircraft launch location unresolved. Public operator, membership and licensing records establish the program identity, but its directory point falls in a residential area. No radius is centered on that street address or on a guessed airport. This is not a claim that the program is closed. The legacy Sidney name is not counted as a second base.
 

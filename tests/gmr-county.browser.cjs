@@ -15,6 +15,9 @@ const root=path.resolve(__dirname,'..');
     const bases=await page.evaluate(()=>window.GMR_MAP_ONLY_DATA.bases);
     const excluded=new Set(bases.filter(b=>/fixed/i.test(b.mode)&&!/rotor/i.test(b.mode)).map(b=>b.id));
     for(const row of rows)row.matches=row.matches.filter(m=>!excluded.has(m.id));
+    // Use the state view for an actual pointer hit: regional expansion can make
+    // small counties narrower than nearby base markers at the default extent.
+    await page.locator('#state-view').selectOption('TX');
     const bexar=page.locator('[data-county="Bexar"]');
     const hit=await bexar.evaluate(el=>{const box=el.getBoundingClientRect();for(let y=box.top+3;y<box.bottom;y+=3)for(let x=box.left+3;x<box.right;x+=3)if(document.elementFromPoint(x,y)===el)return {x,y};});
     assert(hit,'County must have a clickable area outside base markers');
@@ -34,6 +37,11 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Minnesota mixed airport site is eligible through its helicopter program.
+    await page.locator('[data-geoid="27061"]').dispatchEvent('click');
+    assert((await page.locator('#selection h2').innerText()).includes('Itasca'));
+    assert.deepEqual(await page.locator('.county-base-list li').evaluateAll(els=>els.map(e=>e.dataset.baseId)),['gf-mn-grand-rapids']);
+    assert.equal(await page.locator('.radius.active').count(),1);
     // ND must not imply the unresolved Williston launch site or future Watford base is mapped.
     await page.locator('[data-geoid="38105"]').dispatchEvent('click');
     assert((await page.locator('#selection').innerText()).includes('Williston fixed-wing launch location unresolved'));

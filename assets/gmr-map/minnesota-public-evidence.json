@@ -1,0 +1,118 @@
+{
+  "checked": "2026-11-16",
+  "state": "MN",
+  "airPrograms": 2,
+  "mappedSites": 1,
+  "bases": [
+    {
+      "id": "gf-mn-grand-rapids",
+      "name": "Guardian Flight / GFL 213 (rotor) + GFL 042 (fixed) \u2013 Grand Rapids, MN",
+      "mode": "Rotor-wing + fixed-wing",
+      "lat": 47.2144024,
+      "lng": -93.5163523,
+      "limitation": "Approximate Grand Rapids-Itasca County Airport facility reference. GFL 213 helicopter and GFL 042 fixed-wing programs are represented together at airport scale; this does not establish a shared hangar. Exact current aircraft parking positions remain unestablished. The off-airport Donovan Drive directory point is not used.",
+      "directoryOffsetMeters": 1510.4,
+      "sources": [
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 list identifies GFL 213 rotor-wing and GFL 042 fixed-wing in Grand Rapids. Roseau is a retained program name, not a second aircraft base."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/guardian-flight-opens-new-air-medical-base-in-grand-rapids,-mn",
+          "purpose": "Operator June 2023 announcement confirms the Grand Rapids helicopter joining an existing fixed-wing operation serving since August 2016."
+        },
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-042-%28rw%29-%E2%80%93-grand-rapids,-mn",
+          "purpose": "Current operator identifies Grand Rapids program. Off-airport directory address is not treated as an aircraft launch location; RW in URL does not override public program classification."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1881113876",
+          "purpose": "Public air-transport facility registration at 1500 SE 7th Avenue Unit O, updated June 2023. Registration supports the airport facility but is not by itself proof of current flights."
+        },
+        {
+          "url": "https://cityofgrandrapidsmn.com/sites/default/files/fileattachments/economic_development_authority/meeting/6103/greda_20161206.pdf",
+          "purpose": "2016 city airport lease identifies Valley Med Flight PC-12 air-ambulance operations at 1500 SE 7th Avenue. Historic lease corroborates airport assignment, not current individual hangar occupancy."
+        },
+        {
+          "url": "https://cityofgrandrapidsmn.com/sites/default/files/fileattachments/economic_development_authority/meeting/6073/greda_20180524.pdf",
+          "purpose": "City 2017 annual report included in May 2018 packet records utility extension for a new Valley Med Flight hangar; the historic lease is not assumed to be the current hangar."
+        },
+        {
+          "url": "https://goingthedistanceforems.com/wp-content/uploads/2026/01/158181-EMS-2026-Guide5v3_web.pdf",
+          "purpose": "2026 Arrowhead EMS conference guide, PDF page 52, includes Guardian Flight Grand Rapids sponsorship with fixed-wing imagery; supplementary current presence evidence."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1500+SE+7th+Ave+Unit+O%2C+Grand+Rapids%2C+MN&f=json&outFields=%2A&maxLocations=3&forStorage=false",
+          "purpose": "Airport facility address geocode, inspected against public aerial imagery. Approximate facility reference, not a surveyed aircraft parking position."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-93.521352341285%2C47.210902364201%2C-93.511352341285%2C47.217902364201&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Airport hangar/apron context for mapped facility reference."
+        }
+      ]
+    }
+  ],
+  "inventoryChecks": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "No Minnesota listing found in current public locator."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "No additional Minnesota program found in current public locator. Guardian rotor operations are not counted a second time under the aviation certificate holder."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No Minnesota listing found in current public locator."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No Minnesota permanent AirMed International base identified."
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Legacy Guardian Roseau helicopter location",
+      "reason": "Relocated to Grand Rapids in 2023. No duplicate Roseau pin or circle; the public program list retains Roseau as a name but identifies Grand Rapids as the city.",
+      "sources": [
+        {
+          "url": "https://www.city.roseau.mn.us/vertical/Sites/%7B8FB1D8F3-5043-4518-90E7-60C266949462%7D/uploads/June_5_2023_Regular_City_Council_meeting_MEM_revised_6.14.23_%28002%29.pdf",
+          "purpose": "June 2023 council minutes report helicopter relocation to Grand Rapids; accessible search-index text, direct retrieval unavailable."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public list places both Minnesota programs in Grand Rapids."
+        }
+      ]
+    },
+    {
+      "program": "Donovan Drive directory point",
+      "reason": "Public aerial imagery and address geocode indicate a residential location off the airport. Not used to center a flight radius."
+    },
+    {
+      "program": "Other Minnesota air-medical services",
+      "reason": "Non-GMR programs are not attributed to GMR based on similar names or shared geography. Grand Rapids, Michigan, is a different city."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "gf-mn-grand-rapids",
+      "program": "Guardian Flight / GFL 213 (rotor) + GFL 042 (fixed) \u2013 Grand Rapids, MN",
+      "mapped": true,
+      "issue": "Approximate Grand Rapids-Itasca County Airport facility reference. GFL 213 helicopter and GFL 042 fixed-wing programs are represented together at airport scale; this does not establish a shared hangar. Exact current aircraft parking positions remain unestablished. The off-airport Donovan Drive directory point is not used."
+    }
+  ],
+  "geometry": {
+    "countyCount": 87,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Two programs use one approximate airport-site reference; exact current hangar and aircraft parking coordinates are not established.",
+    "County matching includes the combined site because it has a rotor-wing program; exclusively fixed-wing operations remain excluded.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout.",
+    "75 NM geographic circles do not establish aircraft availability, operational range or flight routing."
+  ]
+}
