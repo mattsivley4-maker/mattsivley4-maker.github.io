@@ -37,6 +37,12 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Hospital aviation partnerships qualify even when absent from membership lists.
+    await page.locator('[data-geoid="55085"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'mt-wi-aspirus-1');
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-wi-aspirus-2"]').count(),1);
+    await page.locator('[data-geoid="55073"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'mt-wi-aspirus-2');
     // Minnesota mixed airport site is eligible through its helicopter program.
     await page.locator('[data-geoid="27061"]').dispatchEvent('click');
     assert((await page.locator('#selection h2').innerText()).includes('Itasca'));

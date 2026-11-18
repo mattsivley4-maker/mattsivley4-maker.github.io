@@ -1,8 +1,16 @@
 # Texas GMR Air Medical Map
 
-## Map-only state expansion — November 16, 2026
+## Map-only state expansion — November 17, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota, North Dakota and Minnesota: 1,145 counties/parishes and 163 base-site records. Minnesota adds 87 counties and one combined Grand Rapids airport-site pin for Guardian GFL 213 (rotor-wing) and GFL 042 (fixed-wing). All 162 previous base records and 1,058 county geometries remain unchanged.
+The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota, North Dakota, Minnesota and Wisconsin: 1,217 counties/parishes and 165 base-site records. Wisconsin adds all 72 counties and Aspirus MedEvac Air 1 (Woodruff) and Air 2 (Mosinee), both publicly identified as Med-Trans-operated helicopter programs. All 163 previous base records and 1,145 county geometries remain unchanged.
+
+`wisconsin-public-evidence.json` reconciles hospital, aviation, airport and state air-medical council sources. The membership list and operator locator omit Wisconsin, but current hospital partner information identifies the two aircraft programs and their aviation operator. Inclusion does not establish membership benefits. No personnel, contact details or private source content is published.
+
+Woodruff uses the estimated published FAA heliport reference for Howard Young Medical Center (60WI). Mosinee uses an approximate public Spirit/Aspirus hangar-footprint reference at Central Wisconsin Airport, checked against aerial imagery and supported by current hospital and airport sources. Neither is a surveyed aircraft parking coordinate. Wausau's receiving helipads, ground-ambulance stations, and historical Spirit names are not duplicate air bases. Neighboring-state inventories remain incomplete.
+
+Mosinee hangar footprint: © OpenStreetMap contributors, available under the Open Database License; https://www.openstreetmap.org/copyright. Source geometry and attribution are documented in the public evidence manifest.
+
+The preceding Minnesota increment brought the map to 1,145 counties/parishes and 163 base-site records. Minnesota adds 87 counties and one combined Grand Rapids airport-site pin for Guardian GFL 213 (rotor-wing) and GFL 042 (fixed-wing). All 162 previous base records and 1,058 county geometries remain unchanged.
 
 `minnesota-public-evidence.json` reconciles the two programs using the public September 2026 membership list, GMR's helicopter opening announcement, public CMS airport-facility registration, city airport lease and hangar-development documents, and the 2026 Arrowhead EMS conference guide. The legacy Roseau helicopter moved to Grand Rapids in 2023 and is not duplicated. The off-airport Donovan Drive residential directory point is not used.
 

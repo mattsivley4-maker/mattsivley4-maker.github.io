@@ -1,0 +1,178 @@
+{
+  "checked": "2026-11-17",
+  "state": "WI",
+  "airPrograms": 2,
+  "mappedSites": 2,
+  "operators": {
+    "medtrans": 2
+  },
+  "bases": [
+    {
+      "id": "mt-wi-aspirus-1",
+      "name": "Aspirus MedEvac Air 1 / Med-Trans \u2013 Woodruff, WI",
+      "mode": "Rotor-wing",
+      "lat": 45.8944472,
+      "lng": -89.7035694,
+      "limitation": "Published estimated FAA reference for Howard Young Medical Center Heliport (60WI), checked against aerial imagery. Aspirus identifies this hospital as the Air 1 helicopter base, operated by Med-Trans. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.aspirus.org/aircraft-equipment",
+          "purpose": "Hospital identifies Air 1 at Howard Young Medical Center and Air 2 at Central Wisconsin Airport, both operated by Med-Trans. Aircraft listed are H135 and EC145 respectively."
+        },
+        {
+          "url": "https://www.aspirus.org/medical-transport",
+          "purpose": "Current hospital page identifies Med-Trans as aviation operator and distinguishes air transport from multiple ground-ambulance stations."
+        },
+        {
+          "url": "https://www.airnav.com/airport/60WI",
+          "purpose": "Published estimated FAA heliport reference"
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-89.7065694%2C45.8924472%2C-89.7005694%2C45.896447200000004&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for heliport/hangar setting; not a survey of current aircraft parking."
+        },
+        {
+          "url": "https://www.faa.gov/air_traffic/publications/atpubs/LID/A_H.htm",
+          "purpose": "FAA identifies Howard Young Medical Center Heliport in Woodruff as 60WI."
+        },
+        {
+          "url": "https://www.aspirus.org/mediacenter/aspirus-medevac-adds-new-advanced-helicopter-48",
+          "purpose": "Hospital 2022 aircraft introduction identifies Air 1 home base at Howard Young Medical Center."
+        },
+        {
+          "url": "https://careers.gmr.net/gmr/jobs/58187?lang=en-us",
+          "purpose": "Public GMR Med-Trans helicopter-pilot listing in Woodruff corroborates aviation affiliation; not used as sole operational evidence."
+        }
+      ]
+    },
+    {
+      "id": "mt-wi-aspirus-2",
+      "name": "Aspirus MedEvac Air 2 / Med-Trans \u2013 Mosinee, WI",
+      "mode": "Rotor-wing",
+      "lat": 44.784621,
+      "lng": -89.6643693,
+      "limitation": "Approximate publicly mapped Spirit/Aspirus hangar reference at Central Wisconsin Airport (CWA). Aspirus and the airport confirm the Air 2 airport base; the hangar footprint was checked against aerial imagery. Exact current aircraft parking position is not surveyed.",
+      "sources": [
+        {
+          "url": "https://www.aspirus.org/aircraft-equipment",
+          "purpose": "Hospital identifies Air 1 at Howard Young Medical Center and Air 2 at Central Wisconsin Airport, both operated by Med-Trans. Aircraft listed are H135 and EC145 respectively."
+        },
+        {
+          "url": "https://www.aspirus.org/medical-transport",
+          "purpose": "Current hospital page identifies Med-Trans as aviation operator and distinguishes air transport from multiple ground-ambulance stations."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/907947818/full.json",
+          "purpose": "Approximate centroid of publicly mapped Spirit hangar footprint"
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-89.66736927777778%2C44.78262104444444%2C-89.66136927777778%2C44.786621044444445&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for heliport/hangar setting; not a survey of current aircraft parking."
+        },
+        {
+          "url": "https://www.fly-cwa.org/about-cwa",
+          "purpose": "Airport identifies the Aspirus MedEvac hangar on its airfield."
+        },
+        {
+          "url": "https://www.aspirus.org/press-room/aspirus-medevac-air-2-returns-to-service-4161",
+          "purpose": "March 2022 hospital announcement identifies Air 2 at CWA and explains former Spirit identity; not a separate additional program."
+        },
+        {
+          "url": "https://eua.com/projects/ascension-spirit-hangar-central-wisconsin-airport/",
+          "purpose": "Project architect documents the Spirit medical aviation hangar at CWA; historical design evidence corroborates facility purpose."
+        }
+      ]
+    }
+  ],
+  "finding": "Two Aspirus hospital programs with publicly identified Med-Trans aircraft operations are included. Their absence from the membership base list and operator locator is not treated as proof of absence. Inclusion identifies the aviation relationship, not membership benefits or coverage eligibility.",
+  "inventoryChecks": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "Fresh locator: no Wisconsin base listing."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "Fresh locator: no Wisconsin entry; hospital partner sources establish the two Aspirus programs."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "Fresh locator: no Wisconsin base listing."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "Fresh locator: no Wisconsin base listing."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No permanent Wisconsin AirMed International base; floating aircraft are not turned into permanent pins."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "No Wisconsin entries in the public September 2026 membership base list. The map includes verified hospital aviation partnerships beyond membership-list entries."
+    },
+    {
+      "url": "https://wiamc.org/programs",
+      "purpose": "State air-medical council program inventory cross-check."
+    },
+    {
+      "url": "https://static1.squarespace.com/static/543c8a57e4b0b64c16215e77/t/661ed922bf548049e471a09d/1713297698912/WIAMC%2BProgram%2BProfiles%2B2024.pdf",
+      "purpose": "Council profile corroborates Aspirus Med-Trans aviation relationship; contact details are not copied."
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Aspirus Wausau Hospital receiving helipads / business address",
+      "reason": "Hospital receiving helipads and program administration do not establish another based aircraft. Current aircraft page identifies only Woodruff and Mosinee.",
+      "source": "https://www.aspirus.org/mediacenter/aspirus-wausau-hospital-opens-new-dual-helipad-to-427"
+    },
+    {
+      "program": "Aspirus ground-ambulance stations",
+      "reason": "Ground stations, including Portage, Weston and Wisconsin Rapids, are not counted as air bases.",
+      "source": "https://www.aspirus.org/medical-transport"
+    },
+    {
+      "program": "Former Ascension Spirit program",
+      "reason": "Historical naming and former locations are not duplicated. Current Air 1/2 facility assignments control.",
+      "source": "https://www.aspirus.org/press-room/aspirus-medevac-air-2-returns-to-service-4161"
+    },
+    {
+      "program": "Med-Transport LLC, Menomonee Falls",
+      "reason": "Name-similar registry result is non-emergency van transport, not evidence of a Med-Trans aircraft base.",
+      "source": "https://npiregistry.cms.hhs.gov/provider-view/1508633355"
+    },
+    {
+      "program": "Eagle III",
+      "reason": "Program identifies Air Methods as helicopter operator, not GMR.",
+      "source": "https://www.eagle3.org/services/helicopter/"
+    },
+    {
+      "program": "UW Med Flight and Gundersen Air",
+      "reason": "Metro Aviation identifies these as its operating customers.",
+      "source": "https://www.metroaviation.com/operations-customers/"
+    },
+    {
+      "program": "Life Link III",
+      "reason": "Separate nonprofit consortium with its own Part 135 certificate; not attributed to GMR.",
+      "source": "https://lifelinkiii.com/about/"
+    },
+    {
+      "program": "Other non-GMR regional services",
+      "reason": "North Memorial and Flight For Life/ThedaStar are not attributed to GMR based on nearby activity or similar program names. No public GMR affiliation was established in this review."
+    }
+  ],
+  "unresolved": [],
+  "geometry": {
+    "countyCount": 72,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic circles and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Heliport reference and hangar-footprint center are approximate, not surveyed aircraft parking positions.",
+    "OpenStreetMap hangar footprint retains historical Spirit name; current hospital and airport sources establish Aspirus operations at CWA.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Neighboring Michigan and Iowa inventories remain unreviewed in this rollout; county results cover mapped bases only.",
+    "Uniform 75 NM geographic rings do not describe operator advertised service radius, guaranteed availability or membership eligibility."
+  ],
+  "geographicAttribution": "Mosinee hangar footprint: OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright"
+}
