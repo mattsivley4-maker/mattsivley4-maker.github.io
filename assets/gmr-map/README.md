@@ -1,8 +1,16 @@
 # Texas GMR Air Medical Map
 
-## Map-only state expansion — November 17, 2026
+## Map-only state expansion — November 23, 2026
 
-The map-only page now includes Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota, North Dakota, Minnesota and Wisconsin: 1,217 counties/parishes and 165 base-site records. Wisconsin adds all 72 counties and Aspirus MedEvac Air 1 (Woodruff) and Air 2 (Mosinee), both publicly identified as Med-Trans-operated helicopter programs. All 163 previous base records and 1,145 county geometries remain unchanged.
+The map-only page now includes 16 reviewed states, adding Michigan: 1,300 counties/parishes and 170 base-site records. Michigan contributes all 83 counties and five programs: Guardian Escanaba (rotor), Iron Mountain, Houghton and Gaylord (fixed), and Med-Trans FlightCare in Saginaw (rotor). All 165 previous base records, 1,217 county geometries and prior state geometry remain unchanged.
+
+`michigan-public-evidence.json` documents operator, hospital, state EMS inventory and aviation cross-checks. Escanaba uses a publicly mapped hospital helipad checked against imagery, rather than the misplaced operator directory point. Saginaw uses the estimated FAA heliport reference. Iron Mountain and Houghton use approximate public airport-facility references, not surveyed hangar coordinates. Gaylord uses the estimated FAA airport reference, not the residential directory point. Its operator number 228 conflicts with 73 in the public membership list; one program is mapped and the discrepancy is disclosed. Fixed-wing-only programs are excluded from county selections.
+
+Escanaba helipad footprint: © OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright. Generalized county geometry and approximate base references retain their existing limitations. No phones, personnel or private source contents are published. The state review does not imply verification of all neighboring states.
+
+The preceding Wisconsin increment is documented below.
+
+The Wisconsin increment included Texas, Oklahoma, New Mexico, Arkansas, Kansas, Louisiana, Tennessee, Mississippi, Alabama, Colorado, Wyoming, South Dakota, North Dakota, Minnesota and Wisconsin: 1,217 counties/parishes and 165 base-site records. Wisconsin adds all 72 counties and Aspirus MedEvac Air 1 (Woodruff) and Air 2 (Mosinee), both publicly identified as Med-Trans-operated helicopter programs. All 163 previous base records and 1,145 county geometries remain unchanged.
 
 `wisconsin-public-evidence.json` reconciles hospital, aviation, airport and state air-medical council sources. The membership list and operator locator omit Wisconsin, but current hospital partner information identifies the two aircraft programs and their aviation operator. Inclusion does not establish membership benefits. No personnel, contact details or private source content is published.
 

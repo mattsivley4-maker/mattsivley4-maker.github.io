@@ -1,0 +1,258 @@
+{
+  "checked": "2026-11-23",
+  "state": "MI",
+  "airPrograms": 5,
+  "mappedSites": 5,
+  "operators": {
+    "guardian": 4,
+    "medtrans": 1
+  },
+  "bases": [
+    {
+      "id": "gf-mi-escanaba",
+      "name": "Guardian Flight / GFL 214 \u2013 Escanaba, MI",
+      "mode": "Rotor-wing",
+      "lat": 45.7425919,
+      "lng": -87.0978411,
+      "limitation": "Approximate publicly mapped helipad center on the OSF St. Francis Hospital campus, checked against aerial imagery. The hospital confirms Guardian hangar and crew on campus. The off-campus directory coordinate is not used; this is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-214-%28rw%29-%E2%80%93-escanaba,-mi",
+          "purpose": "Current public operator directory identifies this program."
+        },
+        {
+          "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+          "purpose": "May 2026 state EMS council aircraft inventory corroborates the program and aircraft class; reviewed via public cached text."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 membership directory cross-check; contacts not reproduced."
+        },
+        {
+          "url": "https://www.osfhealthcare.org/hospitals/st-francis/programs-services/emergency-care",
+          "purpose": "Hospital confirms Guardian flight crew and hangar on its campus."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/799438554/full.json",
+          "purpose": "Public helipad footprint; mean of four unique vertices used as approximate pad center."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-87.101,45.738,-87.09,45.746&bboxSR=4326&imageSR=4326&size=1100,800&format=jpg&f=image",
+          "purpose": "Aerial inspection confirms mapped pad adjacent to hospital and hangar."
+        }
+      ]
+    },
+    {
+      "id": "gf-mi-iron-mountain",
+      "name": "Guardian Flight / GFL 043 \u2013 Iron Mountain, MI",
+      "mode": "Fixed-wing",
+      "lat": 45.808427,
+      "lng": -88.110371,
+      "limitation": "Approximate public operator facility reference in the southern hangar area of Ford Airport (IMT), checked against aerial imagery and airport tenancy information. Exact current hangar assignment and aircraft parking position are not established.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-043-%28fw%29-%E2%80%93-iron-mountain,-mi",
+          "purpose": "Current public operator directory identifies this program."
+        },
+        {
+          "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+          "purpose": "May 2026 state EMS council aircraft inventory corroborates the program and aircraft class; reviewed via public cached text."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 membership directory cross-check; contacts not reproduced."
+        },
+        {
+          "url": "https://www.fordairport.org/",
+          "purpose": "Airport identifies Guardian Flight as an airport employer/service."
+        },
+        {
+          "url": "https://www.uppermichiganssource.com/2025/05/07/two-businesses-move-into-ford-airport-hangers/",
+          "purpose": "May 2025 report quoting airport marketing director places Guardian in the southern hangar complex at Gate 2 off Woodward Avenue."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-88.114371%2C45.805427%2C-88.106371%2C45.811427&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial inspection confirms airport hangar setting at the public reference."
+        }
+      ]
+    },
+    {
+      "id": "gf-mi-houghton",
+      "name": "Guardian Flight / GFL 044 \u2013 Houghton, MI",
+      "mode": "Fixed-wing",
+      "lat": 47.168273,
+      "lng": -88.49447,
+      "limitation": "Approximate public operator airport-facility reference at Houghton County Memorial Airport (CMX), checked against aerial imagery. The operator lists Airpark Boulevard; a separate Hancock registry address is not plotted. Exact current hangar and aircraft parking position remain unestablished.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-044-%28fw%29-%E2%80%93-houghton,-mi",
+          "purpose": "Current public operator directory identifies this program."
+        },
+        {
+          "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+          "purpose": "May 2026 state EMS council aircraft inventory corroborates the program and aircraft class; reviewed via public cached text."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 membership directory cross-check; contacts not reproduced."
+        },
+        {
+          "url": "https://houghtoncounty.org/docs/Airpark_11x17.pdf",
+          "purpose": "County airport/airpark layout cross-check."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/guardian-flight-base-manager-celebrates-career-milestone",
+          "purpose": "GMR identifies the Houghton fixed-wing operation."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-88.49847000000001%2C47.165273%2C-88.49047%2C47.171273&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial inspection confirms terminal/apron airport setting, not a precise assigned hangar."
+        }
+      ]
+    },
+    {
+      "id": "gf-mi-gaylord",
+      "name": "Guardian Flight / GFL 228 \u2013 Gaylord, MI",
+      "mode": "Fixed-wing",
+      "lat": 45.0130278,
+      "lng": -84.7034444,
+      "limitation": "Published estimated FAA airport reference for Gaylord Regional Airport (GLR). GMR and a 2026 airport visit confirm the airport base; exact current hangar is unestablished. Operator directory uses GFL 228 while a public membership list uses 73; one program is mapped. The residential directory point is not used.",
+      "sources": [
+        {
+          "url": "https://www.guardianflight.com/locations/gfl-228-%28fw%29-%E2%80%93-gaylord,-mi",
+          "purpose": "Current public operator directory identifies this program."
+        },
+        {
+          "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+          "purpose": "May 2026 state EMS council aircraft inventory corroborates the program and aircraft class; reviewed via public cached text."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 membership directory cross-check; contacts not reproduced."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/guardian-flight-opens-base-in-gaylord,-michigan",
+          "purpose": "GMR explicitly locates the PC-12 fixed-wing program at Gaylord Regional Airport."
+        },
+        {
+          "url": "https://www.miworksne.org/post/from-airplanes-to-engines-inland-lakes-students-discover-career-pathways",
+          "purpose": "Michigan Works reports a May 2026 student visit to Guardian Flight at Gaylord Regional Airport."
+        },
+        {
+          "url": "https://airnav.com/airport/GLR",
+          "purpose": "Republished FAA estimated airport reference; not a hangar coordinate."
+        }
+      ]
+    },
+    {
+      "id": "mt-mi-flightcare",
+      "name": "FlightCare / Med-Trans 242 \u2013 Saginaw, MI",
+      "mode": "Rotor-wing",
+      "lat": 43.4257917,
+      "lng": -83.9395722,
+      "limitation": "Published estimated FAA reference for hospital heliport 10MI, checked against aerial imagery. FlightCare publicly identifies the Saginaw hospital site and Med-Trans operation. Historical St. Mary hospital naming is not an additional base; this is not a surveyed aircraft parking coordinate.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/flightcare",
+          "purpose": "Current public operator directory identifies this program."
+        },
+        {
+          "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+          "purpose": "May 2026 state EMS council aircraft inventory corroborates the program and aircraft class; reviewed via public cached text."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 membership directory cross-check; contacts not reproduced."
+        },
+        {
+          "url": "https://www.flightcaremi.org/contact",
+          "purpose": "Program confirms Saginaw hospital address, continuous service and Med-Trans ownership/operation."
+        },
+        {
+          "url": "https://www.airnav.com/airport/10MI",
+          "purpose": "Republished estimated FAA hospital helipad reference."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.9424673%2C43.421784099999996%2C-83.9344673%2C43.4277841&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial inspection confirms the helipad northwest of the main hospital."
+        }
+      ]
+    }
+  ],
+  "finding": "Five publicly corroborated Michigan GMR programs: two rotor-wing and three fixed-wing. Current directory and state inventory agree on the five cities. Gaylord number discrepancy is retained explicitly, not turned into duplicate bases.",
+  "inventoryChecks": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "No Michigan entry in November operator snapshot."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "FlightCare is the Michigan entry."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "Four Michigan entries."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No Michigan entry."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No permanent Michigan AirMed International base established. Accreditation service area is not proof of a permanent base."
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Inside-MDHHS/Policy-and-Planning/EMS/New-Uploads/04032026/EMSCC-MINUTES-05152026-draft-with-attachments.pdf",
+      "purpose": "Statewide program inventory cross-check."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Public September 2026 list corroborates five programs; Gaylord uses number 73 instead of operator number 228."
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Survival Flight, Ann Arbor/Howell",
+      "reason": "University identifies Metro Aviation as operator, not GMR.",
+      "source": "https://www.uofmhealth.org/our-care/clinical-units/survival-flight"
+    },
+    {
+      "program": "North Flight Aero Med / Corewell Aero Med",
+      "reason": "Hospital-operated programs; no GMR aviation affiliation established.",
+      "source": "https://northflightaeromed.org/"
+    },
+    {
+      "program": "Medstar LifeFlight, Troy",
+      "reason": "Michigan state agreement identifies PHI Air Medical, not GMR Med-Trans.",
+      "source": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Executive-Briefing-Book/Copies-for-Internet/MDHHS-Department-Grants-Section-1.pdf"
+    },
+    {
+      "program": "Legacy Guardian Sault Ste. Marie registration",
+      "reason": "Not corroborated as a current staffed base by operator directory, public membership list or 2026 state aircraft inventory. No active pin and no public closure date asserted."
+    },
+    {
+      "program": "Residential directory/registry points and duplicate program registrations",
+      "reason": "Addresses do not independently establish aircraft launch locations. Only the corroborated airport/hospital programs are mapped."
+    }
+  ],
+  "unresolved": [
+    {
+      "program": "Gaylord base number",
+      "reason": "Current operator uses 228; public September list uses 73. Exact numbering history is unresolved; a single airport-based program is mapped."
+    }
+  ],
+  "geometry": {
+    "countyCount": 83,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic rings and county-edge distance comparisons."
+  },
+  "limitations": [
+    "Facility/heliport references are approximate, not surveyed parking locations. Gaylord uses the airport reference; exact hangars at Gaylord, Houghton and Iron Mountain remain unestablished.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Neighboring states remain incompletely reviewed during rollout.",
+    "Fixed-wing-only programs remain visible but are excluded from county-click coverage results.",
+    "Uniform 75 NM geographic rings do not guarantee operational range, flight availability, membership eligibility or service."
+  ],
+  "geographicAttribution": "Escanaba helipad footprint: OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright"
+}

@@ -37,6 +37,12 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Michigan rotor bases qualify; nearby fixed-wing-only bases do not.
+    await page.locator('[data-geoid="26041"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'gf-mi-escanaba');
+    assert.equal(await page.locator('.county-base-list [data-base-id="gf-mi-iron-mountain"]').count(),0);
+    await page.locator('[data-geoid="26145"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'mt-mi-flightcare');
     // Hospital aviation partnerships qualify even when absent from membership lists.
     await page.locator('[data-geoid="55085"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'mt-wi-aspirus-1');
