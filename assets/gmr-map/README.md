@@ -1,5 +1,15 @@
 # Texas GMR Air Medical Map
 
+## Map-only state expansion — November 25, 2026
+
+Ohio adds all 88 counties and five rotor-wing programs: Air Evac Lifeteam 89 (Georgetown), 97 (Portsmouth), 101 (Lancaster), 107 (St. Louisville), and Air Bear / Med-Trans (Akron). The map now includes 17 reviewed states, 1,388 counties/parishes and 175 base-site records. All 170 previous base records, 1,300 county geometries and prior state geometry remain unchanged.
+
+`ohio-public-evidence.json` records operator, hospital, public membership, CMS facility, FAA and aerial-imagery checks. Four current Air Evac entries match the public directory. Air Bear is independently confirmed by hospital and Med-Trans affiliate pages despite absence from the membership locator. Membership eligibility is not inferred from an aviation partnership.
+
+Georgetown and Lancaster use approximate publicly mapped helipad centers checked against imagery. Portsmouth uses the estimated FAA 68OH heliport reference. St. Louisville uses an approximate pad center from georeferenced aerial imagery. Air Bear uses the estimated FAA 85OI hospital rooftop reference, following current hospital/operator descriptions; a separately mapped airport helibase leaves routine staging unresolved and is not added as a duplicate staffed base. No position is claimed to be a surveyed aircraft parking location.
+
+Legacy Ohio entries lacking current staffed-base corroboration remain excluded. Other Ohio air-medical programs were checked for operator affiliation; Metro Aviation, HeliService USA and PHI operations are not attributed to GMR. No phone numbers, personnel or private source contents are published. OpenStreetMap helipad footprints: © OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright. County boundaries are generalized Census geometry. Adjacent-state inventories remain incomplete during rollout.
+
 ## Map-only state expansion — November 23, 2026
 
 The map-only page now includes 16 reviewed states, adding Michigan: 1,300 counties/parishes and 170 base-site records. Michigan contributes all 83 counties and five programs: Guardian Escanaba (rotor), Iron Mountain, Houghton and Gaylord (fixed), and Med-Trans FlightCare in Saginaw (rotor). All 165 previous base records, 1,217 county geometries and prior state geometry remain unchanged.

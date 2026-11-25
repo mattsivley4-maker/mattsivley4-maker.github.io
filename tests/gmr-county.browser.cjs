@@ -37,6 +37,11 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Ohio program pins fall inside their home counties and sort first.
+    for(const [county,base] of [['39015','ae-oh-89'],['39145','ae-oh-97'],['39045','ae-oh-101'],['39089','ae-oh-107'],['39153','mt-oh-air-bear']]){
+      await page.locator(`[data-geoid="${county}"]`).dispatchEvent('click');
+      assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),base);
+    }
     // Michigan rotor bases qualify; nearby fixed-wing-only bases do not.
     await page.locator('[data-geoid="26041"]').dispatchEvent('click');
     assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),'gf-mi-escanaba');

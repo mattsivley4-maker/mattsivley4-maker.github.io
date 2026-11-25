@@ -1,0 +1,267 @@
+{
+  "checked": "2026-11-25",
+  "state": "OH",
+  "airPrograms": 5,
+  "mappedSites": 5,
+  "operators": {
+    "airevac": 4,
+    "medtrans": 1
+  },
+  "bases": [
+    {
+      "id": "ae-oh-89",
+      "name": "Air Evac Lifeteam 89 \u2013 Brown County, OH",
+      "mode": "Rotor-wing",
+      "lat": 38.8590866,
+      "lng": -83.8958547,
+      "limitation": "Approximate center of publicly mapped hospital-site helipad, visually checked against aerial imagery. Current operator and chamber listings identify the Home Street base. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-89-%E2%80%93-brown-county,-oh",
+          "purpose": "Current operator base identity and facility address."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1194059451",
+          "purpose": "Public CMS facility-address corroboration; contacts not reproduced."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates Ohio base and rotor-wing classification."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/574964710/full.json",
+          "purpose": "Public helipad reference; estimated coordinate, not a survey."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.900266%2C38.85582%2C-83.89226599999999%2C38.86182&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for the helipad and nearby facility setting."
+        },
+        {
+          "url": "https://business.browncountyohiochamber.com/list/member/air-evac-lifeteam-89-11",
+          "purpose": "Local chamber lists AEL 89 at Home Street."
+        }
+      ]
+    },
+    {
+      "id": "ae-oh-97",
+      "name": "Air Evac Lifeteam 97 \u2013 Portsmouth, OH",
+      "mode": "Rotor-wing",
+      "lat": 38.7395333,
+      "lng": -82.9878667,
+      "limitation": "Published estimated FAA reference for Air Evac 97 Heliport (68OH), checked against aerial imagery and the public Union Street base address. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-97-%E2%80%93-portsmouth,-oh",
+          "purpose": "Current operator base identity and facility address."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1083910335",
+          "purpose": "Public CMS facility-address corroboration; contacts not reproduced."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates Ohio base and rotor-wing classification."
+        },
+        {
+          "url": "https://www.airnav.com/airport/68OH",
+          "purpose": "Public helipad reference; estimated coordinate, not a survey."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.991544%2C38.736468%2C-82.983544%2C38.742468&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for the helipad and nearby facility setting."
+        }
+      ]
+    },
+    {
+      "id": "ae-oh-101",
+      "name": "Air Evac Lifeteam 101 \u2013 Lancaster, OH",
+      "mode": "Rotor-wing",
+      "lat": 39.7655001,
+      "lng": -82.5457516,
+      "limitation": "Approximate publicly mapped helipad center at the Lancaster-Thornville Road base, checked against aerial imagery. The street-address directory point east of the pad is not used. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-101-%E2%80%93-lancaster,-oh",
+          "purpose": "Current operator base identity and facility address."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1295029296",
+          "purpose": "Public CMS facility-address corroboration; contacts not reproduced."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates Ohio base and rotor-wing classification."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/1113338177/full.json",
+          "purpose": "Public helipad reference; estimated coordinate, not a survey."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.54841400000001%2C39.762215%2C-82.540414%2C39.768215&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for the helipad and nearby facility setting."
+        }
+      ]
+    },
+    {
+      "id": "ae-oh-107",
+      "name": "Air Evac Lifeteam 107 \u2013 Licking County, OH",
+      "mode": "Rotor-wing",
+      "lat": 40.16561,
+      "lng": -82.420379,
+      "limitation": "Approximate helipad center identified in georeferenced public aerial imagery at the Firehouse Drive base, southwest of the fire station. Current operator and registry addresses agree on the facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-107-%E2%80%93-licking-county,-oh",
+          "purpose": "Current operator base identity and facility address."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1972877538",
+          "purpose": "Public CMS facility-address corroboration; contacts not reproduced."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates Ohio base and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.42149199999999%2C40.164578000000006%2C-82.418492%2C40.166978&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=json",
+          "purpose": "Public helipad reference; estimated coordinate, not a survey."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.423992%2C40.162778%2C-82.41599199999999%2C40.168778&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Aerial imagery inspected for the helipad and nearby facility setting."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.42149199999999%2C40.164578000000006%2C-82.418492%2C40.166978&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=json",
+          "purpose": "Pad-center pixel approximately (371,456) in 1000 by 800 image; coordinate calculated from returned EPSG:4326 extent."
+        }
+      ]
+    },
+    {
+      "id": "mt-oh-air-bear",
+      "name": "Air Bear / Med-Trans \u2013 Akron, OH",
+      "mode": "Rotor-wing",
+      "lat": 41.0802306,
+      "lng": -81.5250194,
+      "limitation": "Published estimated FAA reference for the Akron Children's rooftop heliport (85OI). Current hospital and Med-Trans pages identify the hospital base. A separately mapped airport helibase has not been established as a second staffed base or confirmed replacement; exact routine aircraft staging remains unresolved.",
+      "sources": [
+        {
+          "url": "https://www.akronchildrens.org/departments/Transport-Services.html",
+          "purpose": "Hospital explicitly identifies Akron campus as Air Bear base and Med-Trans as aircraft operator."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "Operator identifies Air Bear as an Akron Children's Hospital affiliate operating from the hospital."
+        },
+        {
+          "url": "https://airnav.com/airport/85OI",
+          "purpose": "Published estimated FAA hospital rooftop heliport reference."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.5265194%2C41.0790306%2C-81.52351940000001%2C41.0814306&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=json",
+          "purpose": "Aerial inspection confirms the hospital rooftop helipad setting."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/1290385701/full.json",
+          "purpose": "Airport feature labeled Air Bear is treated as conflicting staging evidence, not independent proof of another active base."
+        },
+        {
+          "url": "https://www.flyohio.org/static-displays",
+          "purpose": "Local aviation event organizer describes Air Bear as housed at Akron Children's Hospital."
+        }
+      ]
+    }
+  ],
+  "finding": "Four current Air Evac Ohio programs plus Air Bear, a publicly confirmed Med-Trans hospital aviation partnership. Absence from a membership list does not exclude an independently confirmed hospital partnership, and inclusion does not establish membership benefits.",
+  "inventoryChecks": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "Fresh November 25 directory lists four Ohio bases."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "No Ohio locator entry; hospital and operator affiliate pages independently establish Air Bear."
+    },
+    {
+      "url": "https://www.med-trans.net/affiliates",
+      "purpose": "Affiliate inventory cross-check for hospital programs."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "No current Ohio locator entry."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No Ohio locator entry."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No permanent Ohio AirMed International base established."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Four Ohio Air Evac programs in public September list."
+    },
+    {
+      "url": "https://www.camts.org/accreditedservices",
+      "purpose": "Ohio program inventory cross-check; accreditation alone does not establish GMR affiliation or a flight-base address."
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Legacy AEL East Liverpool, Martins Ferry, Chillicothe and Ironton registrations",
+      "reason": "Registry records and historical directories do not establish current staffed bases. Not corroborated in current operator directory or public September membership list; no active pins or speculative reopening/closure dates."
+    },
+    {
+      "program": "Guardian / North Central AirCare, Milan",
+      "reason": "Legacy registry and weather-directory entries remain, but a current staffed Ohio operation was not corroborated by the operator or current public membership directory. No active pin or public closure date asserted."
+    },
+    {
+      "program": "MedFlight of Ohio, Metro Life Flight, UC Health, Nationwide Monarch and ProMedica Air",
+      "reason": "Metro Aviation identifies these as operating customers; not attributed to GMR.",
+      "source": "https://www.metroaviation.com/operations-customers/"
+    },
+    {
+      "program": "Premier CareFlight",
+      "reason": "Current hospital page identifies HeliService USA as aviation operator. AMR ground transport partnership does not make the helicopters GMR bases.",
+      "source": "https://www.premierhealth.com/services/emergency-and-trauma/careflight-air-and-mobile-services/careflight-air-transportation"
+    },
+    {
+      "program": "Cleveland Clinic Critical Care Transport",
+      "reason": "Public aviation reporting identifies PHI aircraft and crews, not GMR.",
+      "source": "https://www.heliopsmag.com/heliops/news/cct-adds-new-h145-d3/"
+    },
+    {
+      "program": "Mercy Health Life Flight and STAT MedEvac",
+      "reason": "Separate aviation programs; no GMR operator affiliation established in the review."
+    },
+    {
+      "program": "Air Bear airport map feature and Beeghly receiving helipad",
+      "reason": "Not established as additional independently staffed Air Bear bases. Current hospital and operator pages identify one Akron hospital program."
+    },
+    {
+      "program": "Med-Trans Inc., Springfield; name-similar home-care records",
+      "reason": "Registry name similarity does not establish a GMR aircraft program; not included."
+    }
+  ],
+  "unresolved": [
+    {
+      "program": "Air Bear routine staging location",
+      "reason": "Published estimated FAA reference for the Akron Children's rooftop heliport (85OI). Current hospital and Med-Trans pages identify the hospital base. A separately mapped airport helibase has not been established as a second staffed base or confirmed replacement; exact routine aircraft staging remains unresolved."
+    }
+  ],
+  "geometry": {
+    "countyCount": 88,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic rings and county-edge distance comparisons.",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer"
+  },
+  "limitations": [
+    "Helipad centers and FAA references are approximate, not surveyed current aircraft parking positions.",
+    "Air Bear hospital reference follows current primary sources; airport staging versus hospital basing remains unresolved.",
+    "Generalized county boundaries are not cadastral surveys.",
+    "Adjacent-state inventories remain incomplete during rollout; county results include mapped bases only.",
+    "Uniform 75 NM geographic rings do not guarantee availability, service range or membership benefits."
+  ],
+  "geographicAttribution": "Georgetown and Lancaster helipad footprints: OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright"
+}
