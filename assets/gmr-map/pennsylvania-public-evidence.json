@@ -1,0 +1,147 @@
+{
+  "checked": "2026-11-26",
+  "state": "PA",
+  "mappedSites": 0,
+  "bases": [],
+  "finding": "No current in-state GMR aircraft base independently verified in this review. This does not mean Pennsylvania lacks air-medical service, visiting GMR aircraft or cross-border coverage.",
+  "sources": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "Fresh operator directory: 154 entries, none in Pennsylvania."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "Fresh operator directory: 112 entries, none in Pennsylvania."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "Fresh operator directory: 56 entries, none in Pennsylvania."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "Fresh operator directory: 61 entries, none in Pennsylvania."
+    },
+    {
+      "url": "https://www.med-trans.net/affiliates",
+      "purpose": "Hospital-affiliate inventory checked; no Pennsylvania base established."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "Permanent bases and floating-fleet descriptions do not establish a Pennsylvania staffed base."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Public September 2026 directory has no Pennsylvania entries."
+    },
+    {
+      "url": "https://www.camts.org/accreditedservices",
+      "purpose": "Current accreditation inventory used to identify Pennsylvania programs for affiliation review, not as proof of GMR affiliation."
+    },
+    {
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/penndot/documents/programs-and-doing-business/aviation/planning-and-zoning/documents/2022-economic-impact-study/paaei%20study%20technical%20report.pdf",
+      "purpose": "State aviation study identifies ten Pennsylvania air-medical programs; each was checked for affiliation."
+    }
+  ],
+  "unresolved": [
+    {
+      "program": "Legacy Mid-Atlantic MedEvac / Med-Trans, Pottstown",
+      "mapped": false,
+      "issue": "An air-transport registry record last updated in September 2018 remains active as a registration. Current operator, affiliate and public membership directories do not corroborate an active staffed GMR base. Registration status is not flight-base status; no closure date is asserted.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1679961544",
+          "purpose": "Legacy Med-Trans Corporation / Mid-Atlantic MedEvac air-transport registration."
+        },
+        {
+          "url": "https://www.med-trans.net/services/service-area",
+          "purpose": "No current Pennsylvania base entry."
+        },
+        {
+          "url": "https://www.med-trans.net/affiliates",
+          "purpose": "No current Pennsylvania affiliate base established."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "AHN LifeFlight",
+      "reason": "Hospital identifies Metro Aviation as helicopter operator.",
+      "source": "https://www.ahn.org/services/lifeflight/basesites"
+    },
+    {
+      "program": "PennSTAR",
+      "reason": "Current Metro Aviation operating customer; not a GMR aviation program.",
+      "source": "https://www.metroaviation.com/project/pennstar-flight/"
+    },
+    {
+      "program": "JeffSTAT",
+      "reason": "March 2026 operator announcement identifies Air Methods as provider of aircraft, pilots and mechanics.",
+      "source": "https://www.airmethods.com/press-releases/jeffstat-lead-pilot-achieves-significant-milestone/"
+    },
+    {
+      "program": "LVHN MedEvac",
+      "reason": "Hospital explicitly identifies Air Methods as the Part 135 aviation operator.",
+      "source": "https://www.lvhn.org/health-professionals/medevac"
+    },
+    {
+      "program": "Guthrie Air",
+      "reason": "Current Air Methods program, based in Sayre.",
+      "source": "https://www.airmethods.com/air-medical/program/guthrie-air/"
+    },
+    {
+      "program": "Temple MedFlight",
+      "reason": "November 2025 announcement renews Temple Health partnership with Air Methods.",
+      "source": "https://www.airmethods.com/press-releases/air-methods-and-temple-medflight-renew-partnership-to-continue-delivering-lifesaving-care-across-northeast/"
+    },
+    {
+      "program": "WellSpan WellFlight",
+      "reason": "Current Air Methods program established with WellSpan Health.",
+      "source": "https://www.airmethods.com/air-medical/program/wellspan-wellflight/"
+    },
+    {
+      "program": "Conemaugh MedStar",
+      "reason": "Hospital program with public Rocky Mountain Holdings / Air Methods affiliation evidence; no GMR affiliation established.",
+      "sources": [
+        "https://www.conemaugh.org/emergency-room/transporting-patients",
+        "https://npiregistry.cms.hhs.gov/provider-view/1407855240",
+        "https://cambriaplanning.org/wp-content/uploads/2016/06/jats_lrtp_2017_chapters1-4.pdf"
+      ]
+    },
+    {
+      "program": "Geisinger Life Flight",
+      "reason": "Geisinger identifies its own Life Flight fleet and directly recruits its pilot team; not established as a GMR-operated program.",
+      "sources": [
+        "https://www.geisinger.org/find-care/services/emergency/life-flight",
+        "https://jobs.geisinger.org/en/job/montoursville/helicopter-pilot-ifr/12064/96653531968"
+      ]
+    },
+    {
+      "program": "Penn State Health Life Lion",
+      "reason": "Hospital describes its Part 135 helicopter operations and aviation team; no GMR affiliation established.",
+      "source": "https://www.pennstatehealth.org/careers/careers/our-entities/life-lion"
+    },
+    {
+      "program": "STAT MedEvac",
+      "reason": "Direct air carrier and clinical arm of Center for Emergency Medicine of Western Pennsylvania; rotor flights operated by STAT MedEvac.",
+      "source": "https://www.statmedevac.com/about/"
+    },
+    {
+      "program": "Med-Trans Inc., Parkesburg; Life Star Medical Transport; ground-service and generic job-location listings",
+      "reason": "Name similarity, general ambulance registration and nationwide recruiting menus do not establish a GMR aircraft base."
+    }
+  ],
+  "geometry": {
+    "countyCount": 67,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer",
+    "radiusMeters": 138900,
+    "method": "Existing WGS84 geodesic base circles and minimum county-area distance comparisons."
+  },
+  "limitations": [
+    "Absence from directories is not conclusive proof of closure.",
+    "Neighboring-state inventories remain incomplete; county results cover only bases already on this map.",
+    "Generalized county boundaries and approximate base references retain their existing limitations.",
+    "Uniform 75 NM geographic rings do not guarantee availability, service range or membership benefits."
+  ]
+}

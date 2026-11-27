@@ -37,6 +37,13 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Pennsylvania has selectable counties, cross-border coverage, and an honest status note.
+    await page.locator('[data-geoid="42073"]').dispatchEvent('click');
+    assert((await page.locator('#selection').innerText()).includes('Legacy Mid-Atlantic listing is unverified'));
+    assert.equal(await page.locator('.county-base-list [data-base-id="mt-oh-air-bear"]').count(),1);
+    await page.locator('[data-geoid="42101"]').dispatchEvent('click');
+    assert.equal(await page.locator('.county-base-list li').count(),0);
+    assert.equal(await page.locator('.radius.active').count(),0);
     // Ohio program pins fall inside their home counties and sort first.
     for(const [county,base] of [['39015','ae-oh-89'],['39145','ae-oh-97'],['39045','ae-oh-101'],['39089','ae-oh-107'],['39153','mt-oh-air-bear']]){
       await page.locator(`[data-geoid="${county}"]`).dispatchEvent('click');

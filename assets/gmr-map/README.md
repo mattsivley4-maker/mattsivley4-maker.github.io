@@ -1,5 +1,15 @@
 # Texas GMR Air Medical Map
 
+## Map-only state expansion — November 26, 2026
+
+Pennsylvania adds all 67 counties. No current in-state GMR aircraft base was independently verified, so no speculative pins are added. The map now has 18 reviewed states, 1,455 counties/parishes and 175 base-site records. All prior bases, radii, county geometry and existing county coverage are unchanged. Existing mapped cross-border radii remain available in Pennsylvania county selections.
+
+`pennsylvania-public-evidence.json` documents current operator locators, Med-Trans hospital affiliates, public membership and registry checks, and an affiliation review of Pennsylvania hospital programs. AHN LifeFlight and PennSTAR use Metro Aviation. JeffSTAT, LVHN MedEvac, Guthrie Air, Temple MedFlight and WellSpan WellFlight have public Air Methods affiliations; Conemaugh MedStar has corresponding public hospital and registry evidence. Geisinger Life Flight, Penn State Life Lion and STAT MedEvac are separate hospital aviation programs, not established as GMR bases.
+
+The legacy Pottstown Mid-Atlantic MedEvac / Med-Trans air-transport registration was last updated in September 2018. Registry status and historical listings do not prove current staffed flight operations. The site remains unplotted; no closure date is asserted. This is not a claim that Pennsylvania has no air-medical services or visiting GMR aircraft. The state view and county panels disclose the unverified legacy listing and incomplete neighboring-state review.
+
+All 11,725 new Pennsylvania county/base pairs are independently checked. Previous 242,900 validated pairs are retained only after verifying unchanged bases, geometry and coverage records. The default full numerical test remains available; `--state PA` scopes its independent comparison to the new counties. No phone numbers, personnel or private workbook contents are published. Census boundaries and approximate base references retain their existing limitations.
+
 ## Map-only state expansion — November 25, 2026
 
 Ohio adds all 88 counties and five rotor-wing programs: Air Evac Lifeteam 89 (Georgetown), 97 (Portsmouth), 101 (Lancaster), 107 (St. Louisville), and Air Bear / Med-Trans (Akron). The map now includes 17 reviewed states, 1,388 counties/parishes and 175 base-site records. All 170 previous base records, 1,300 county geometries and prior state geometry remain unchanged.

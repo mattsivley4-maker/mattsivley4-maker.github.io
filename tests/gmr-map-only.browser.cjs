@@ -10,6 +10,8 @@ const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js',
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
 assert.equal(clean.bases.length,175);
+assert.equal(clean.bases.filter(b=>b.state==='PA').length,0);
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('42')).length,67);
 assert.equal(clean.bases.filter(b=>b.state==='OH').length,5);
 assert(clean.bases.filter(b=>b.state==='OH').every(b=>b.mode==='Rotor-wing'));
 assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('39')).length,88);
@@ -224,9 +226,10 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['OH','MI','WI','MN','ND','SD','WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
+    for(const state of ['PA','OH','MI','WI','MN','ND','SD','WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
-      assert.equal(await page.locator('#state-note').isVisible(),['SD','ND'].includes(state));
+      assert.equal(await page.locator('#state-note').isVisible(),['SD','ND','PA'].includes(state));
+      if(state==='PA')assert((await page.locator('#state-note').innerText()).includes('Legacy Mid-Atlantic listing is unverified'));
       if(state==='ND')assert((await page.locator('#state-note').innerText()).includes('Williston fixed-wing launch location unresolved'));
       if(state==='SD')assert((await page.locator('#state-note').innerText()).includes('Neighboring-state review remains incomplete'));
       assert.equal(await page.locator('.radius').count(),total);
@@ -244,6 +247,10 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
     const ndNote=await page.locator('#state-note').boundingBox();
     assert(ndNote.x>=0&&ndNote.x+ndNote.width<=391&&ndNote.y+ndNote.height<=845);
     if(output)await page.screenshot({path:path.join(output,'state-view-ND-mobile.png')});
+    await page.locator('#state-view').selectOption('PA');
+    const paNote=await page.locator('#state-note').boundingBox();
+    assert(paNote.x>=0&&paNote.x+paNote.width<=391&&paNote.y+paNote.height<=845);
+    if(output)await page.screenshot({path:path.join(output,'state-view-PA-mobile.png')});
     await page.locator('#state-view').selectOption('all');
     const text=await page.locator('body').innerText();
     assert(!/roster|phone|internal|research snapshot|citation|owner.confirmed/i.test(text));
