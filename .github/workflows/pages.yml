@@ -34,7 +34,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+          name: github-pages-${{ github.run_attempt }}
+
+      # The upload can finish before deploy-pages can discover its metadata.
+      - name: Allow artifact metadata to become available
+        run: sleep 10
 
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
