@@ -37,6 +37,15 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Georgia: both Dublin bases are inside Laurens; southern and northern sites are selectable.
+    for(const [county,base] of [['13185','ae-ga-190'],['13111','mt-ga-lf4'],['13129','mt-ga-lf3'],['13285','ae-ga-77']]){
+      await page.locator(`[data-geoid="${county}"]`).dispatchEvent('click');
+      assert.equal(await page.locator('.county-base-list li').first().getAttribute('data-base-id'),base);
+    }
+    await page.locator('[data-geoid="13175"]').dispatchEvent('click');
+    for(const id of ['ae-ga-102','ae-ga-176']){
+      assert((await page.locator(`.county-base-list [data-base-id="${id}"]`).innerText()).includes('0 NM'));
+    }
     // Pennsylvania has selectable counties, cross-border coverage, and an honest status note.
     await page.locator('[data-geoid="42073"]').dispatchEvent('click');
     assert((await page.locator('#selection').innerText()).includes('Legacy Mid-Atlantic listing is unverified'));

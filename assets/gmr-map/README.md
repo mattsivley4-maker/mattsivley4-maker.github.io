@@ -1,5 +1,17 @@
 # Texas GMR Air Medical Map
 
+## Map-only state expansion — November 27, 2026
+
+Georgia adds 159 counties and 19 rotor-wing base sites: 17 Air Evac programs plus LIFE FORCE 3 and 4, operated by Med-Trans. There are now 19 reviewed states, 1,614 counties/parishes and 194 base-site records (193 rendered markers because the existing San Antonio pair shares a marker).
+
+`georgia-public-evidence.json` records the public-source inventory, coordinate decisions and unresolved listings. Street-address and city-center directory points were checked against imagery, public registrations and facility references. Milledgeville uses its publicly registered airport facility rather than the older Britt Waters Road point. LIFE FORCE 3 uses the publicly confirmed Calhoun airport instead of the directory city point. LIFE FORCE 4 uses the permanent McCaysville facility, corroborated by program history, rather than stale temporary-hospital wording. AEL 153 uses the estimated FAA GA93 heliport reference.
+
+Valdosta AEL 190 is publicly confirmed active, but GMR's opening announcement describes temporary fire-department facilities. The public registration matches the city-listed airport fire station; the plotted address reference is explicitly approximate and does not assert a completed permanent hangar. Douglas, Milledgeville, Laurens County, Upson and LIFE FORCE 3 also retain explicit airport-position uncertainty. Other helipad centers are visually estimated or publicly mapped, not surveys.
+
+Augusta Med-Trans / AirMed and Elberton Med-Trans conflicting entries remain unresolved and unplotted; no closure dates are asserted. Greensboro has a July 2026 public registration, recruitment and an August county lease agenda, but active flight operations and its launch position are not established; it remains unplotted as a proposed program. Wellstar AirCare is a separate Metro Aviation program. Georgia AEL 77 in LaGrange is distinct from the excluded Texas AEL 47 La Grange base.
+
+Every new radius uses 138,900-meter WGS84 construction. All county coverage is rebuilt and independently tested against all 194 bases, including prior states that can gain cross-border matches. Exclusively fixed-wing operations remain excluded from county selection. Prior base records, radii and county geometry are preserved. No base phones, personnel or private workbook content are published. Generalized boundaries and incomplete neighboring-state inventories remain limitations.
+
 ## Map-only state expansion — November 26, 2026
 
 Pennsylvania adds all 67 counties. No current in-state GMR aircraft base was independently verified, so no speculative pins are added. The map now has 18 reviewed states, 1,455 counties/parishes and 175 base-site records. All prior bases, radii, county geometry and existing county coverage are unchanged. Existing mapped cross-border radii remain available in Pennsylvania county selections.

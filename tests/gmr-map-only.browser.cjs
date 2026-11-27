@@ -9,7 +9,16 @@ const readData=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.read
 const full=readData('data.js','GMR_MAP_DATA'),clean=readData('map-only-data.js','GMR_MAP_ONLY_DATA');
 const social=new Map(readData('facebook-data.js','GMR_FACEBOOK_DATA').rows.map(r=>[r.id,r]));
 const fields=['id','operator','name','city','state','mode','lat','lng','circle','siteGroup','locationNote'];
-assert.equal(clean.bases.length,175);
+assert.equal(clean.bases.length,194);
+assert.equal(clean.bases.filter(b=>b.state==='GA').length,19);
+assert(clean.bases.filter(b=>b.state==='GA').every(b=>b.mode==='Rotor-wing'));
+assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('13')).length,159);
+assert(clean.bases.find(b=>b.id==='ae-ga-140').lat>33.15);
+assert(clean.bases.find(b=>b.id==='mt-ga-lf3').lat<34.46);
+assert.equal(clean.bases.find(b=>b.id==='ae-ga-153').lat,33.4822722);
+assert(clean.bases.find(b=>b.id==='ae-ga-190').locationNote.includes('temporary'));
+assert(clean.bases.find(b=>b.id==='ae-ga-77').city==='LaGrange');
+assert(!clean.bases.some(b=>b.state==='GA'&&/Augusta|Elberton|Greensboro/.test(b.city)));
 assert.equal(clean.bases.filter(b=>b.state==='PA').length,0);
 assert.equal(clean.counties.features.filter(f=>f.properties.geoid.startsWith('42')).length,67);
 assert.equal(clean.bases.filter(b=>b.state==='OH').length,5);
@@ -93,7 +102,7 @@ assert.deepEqual(clean.texas,full.texas);
 for(const b of clean.bases){
   assert(Object.keys(b).every(k=>fields.includes(k)));
   const original=full.bases.find(x=>x.id===b.id);
-  if(!['OK','NM','AR','KS','LA','TN','MS','AL','CO','WY','MN','WI','MI','OH'].includes(b.state)){
+  if(!['OK','NM','AR','KS','LA','TN','MS','AL','CO','WY','MN','WI','MI','OH','GA'].includes(b.state)){
     assert.equal(original.status,'Publicly supported');
     for(const [k,v] of Object.entries(b))assert.deepEqual(v,original[k]);
   }
@@ -226,9 +235,10 @@ assert(!/phone|roster|sources|confirmation|reviewItems|note"/.test(JSON.stringif
       if(output)await page.screenshot({path:path.join(output,`map-only-tooltip-${width}.png`)});
       await page.locator('#search').fill('');
     }
-    for(const state of ['PA','OH','MI','WI','MN','ND','SD','WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
+    for(const state of ['GA','PA','OH','MI','WI','MN','ND','SD','WY','CO','AL','MS','TN','LA','KS','AR','NM','OK','TX','all']){
       await page.locator('#state-view').selectOption(state);
-      assert.equal(await page.locator('#state-note').isVisible(),['SD','ND','PA'].includes(state));
+      assert.equal(await page.locator('#state-note').isVisible(),['SD','ND','PA','GA'].includes(state));
+      if(state==='GA')assert((await page.locator('#state-note').innerText()).includes('temporary-facility'));
       if(state==='PA')assert((await page.locator('#state-note').innerText()).includes('Legacy Mid-Atlantic listing is unverified'));
       if(state==='ND')assert((await page.locator('#state-note').innerText()).includes('Williston fixed-wing launch location unresolved'));
       if(state==='SD')assert((await page.locator('#state-note').innerText()).includes('Neighboring-state review remains incomplete'));

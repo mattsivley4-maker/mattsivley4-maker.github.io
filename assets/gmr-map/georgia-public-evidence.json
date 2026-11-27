@@ -1,0 +1,732 @@
+{
+  "checked": "2026-11-27",
+  "state": "GA",
+  "airPrograms": 19,
+  "mappedSites": 19,
+  "operators": {
+    "airevac": 17,
+    "medtrans": 2
+  },
+  "bases": [
+    {
+      "id": "ae-ga-102",
+      "name": "Air Evac Lifeteam 102 \u2013 Dublin, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.4958287,
+      "lng": -82.9262809,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-102-%E2%80%93-dublin,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1043507551",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.929034938044%2C32.493272722578%2C-82.923034938044%2C32.498072722578&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.929034938044%2C32.493272722578%2C-82.923034938044%2C32.498072722578&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (459,374) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=661+County+Farm+Road%2C+Dublin%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-112",
+      "name": "Air Evac Lifeteam 112 \u2013 Carrollton, GA",
+      "mode": "Rotor-wing",
+      "lat": 33.6178935,
+      "lng": -85.097989,
+      "locationNote": "Approximate publicly mapped helipad center at the base facility, checked against aerial imagery. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-112-%E2%80%93-carrollton,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1891030201",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-85.102143%2C33.614981%2C-85.096143%2C33.619781&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/1444396849/full.json",
+          "purpose": "Publicly mapped helipad footprint, visually cross-checked against aerial imagery."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-117",
+      "name": "Air Evac Lifeteam 117 \u2013 Snellville, GA",
+      "mode": "Rotor-wing",
+      "lat": 33.879208,
+      "lng": -84.0188172,
+      "locationNote": "Approximate publicly mapped helipad center at the base facility, checked against aerial imagery. This is not a surveyed aircraft parking position. Uses the separate north-side base pad, not the south-side hospital receiving pad.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-117-%E2%80%93-snellville,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1598176406",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.022345%2C33.876138%2C-84.016345%2C33.880938&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/765858784/full.json",
+          "purpose": "Publicly mapped helipad footprint, visually cross-checked against aerial imagery."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-140",
+      "name": "Air Evac Lifeteam 140 \u2013 Milledgeville, GA",
+      "mode": "Rotor-wing",
+      "lat": 33.1530956,
+      "lng": -83.2425564,
+      "locationNote": "Approximate public-address reference at Baldwin County Airport. Public CMS registration identifies the Airport Road facility; the older Britt Waters Road directory point is not used. Exact hangar or launch position is not established.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-140-%E2%80%93-milledgeville,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1184162943",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.245556389069%2C33.150695563479%2C-83.239556389069%2C33.155495563479&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=216+Airport+Rd+NE%2C+Milledgeville%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        },
+        {
+          "url": "https://www.dot.ga.gov/InvestSmart/Aviation/GAAirportsDocuments/Individual%20Report_MLJ.pdf",
+          "purpose": "State aviation report identifies Air Evac at Baldwin County Airport; public CMS provides updated airport address."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-142",
+      "name": "Air Evac Lifeteam 142 \u2013 Tift County, GA",
+      "mode": "Rotor-wing",
+      "lat": 31.4360525,
+      "lng": -83.4791335,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position. Public address numbers differ (304 versus 340); the pad reference is used instead of the residential directory point.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-142-%E2%80%93-tift-county,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1730622838",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.479673505957%2C31.432314510774%2C-83.473673505957%2C31.437114510774002&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.479673505957%2C31.432314510774%2C-83.473673505957%2C31.437114510774002&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (90,177) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=340+Tifton+Eldorado%2C+Tifton%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        },
+        {
+          "url": "https://r5trauma.org/helicopter-ems-agencies/",
+          "purpose": "Regional trauma directory lists 304 Tifton Eldorado Road; operator lists 340. Imagery identifies the neighboring dedicated pad; neither address is treated as surveyed coordinates."
+        },
+        {
+          "url": "https://www.airnav.com/airport/GA34",
+          "purpose": "Estimated FAA heliport reference corroborates the facility; differs 50.1 meters from the imagery-selected pad center. Imagery reference is retained."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-153",
+      "name": "Air Evac Lifeteam 153 \u2013 Fayette Co., GA",
+      "mode": "Rotor-wing",
+      "lat": 33.4822722,
+      "lng": -84.4332,
+      "locationNote": "Published estimated FAA reference for AE153 Base Heliport (GA93), near the public Promenade Parkway base address. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-153-%E2%80%93-fayette-co-,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1356980650",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.436166926928%2C33.479670385237%2C-84.430166926928%2C33.484470385237&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=125+Promenade+Pkwy.%2C+Fayetteville%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        },
+        {
+          "url": "https://www.airnav.com/airport/GA93",
+          "purpose": "FAA estimated AE153 heliport coordinate: 33.4822722, -84.4332000; preferred over street interpolation."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-154",
+      "name": "Air Evac Lifeteam 154 \u2013 Perry, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.458347,
+      "lng": -83.710504,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-154-%E2%80%93-perry,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1912472796",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.714296%2C32.456889%2C-83.708296%2C32.461689&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.714296%2C32.456889%2C-83.708296%2C32.461689&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (632,557) in 1000 by 800 EPSG:4326 image."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-176",
+      "name": "Air Evac Lifeteam 176 - Laurens County, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.5645759,
+      "lng": -82.9797167,
+      "locationNote": "Approximate public-address reference at W.H. Bud Barron Airport. Current operator and CMS listings identify this airport base; exact hangar or aircraft staging position is not established.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-176-laurens-county,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1043959836",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.982716669293%2C32.562175864265%2C-82.976716669293%2C32.566975864265004&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=675+Airport+Road%2C+Dublin%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-183",
+      "name": "Air Evac Lifeteam 183 - Waycross, GA",
+      "mode": "Rotor-wing",
+      "lat": 31.25554,
+      "lng": -82.406832,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-183-waycross,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1629830161",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.407936%2C31.252575999999998%2C-82.401936%2C31.257376&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.407936%2C31.252575999999998%2C-82.401936%2C31.257376&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (184,306) in 1000 by 800 EPSG:4326 image."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-185",
+      "name": "Air Evac Lifeteam 185 - Upson County, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.952191,
+      "lng": -84.265016,
+      "locationNote": "Approximate public-address reference at Thomaston-Upson County Airport. Public operator and CMS records identify the airport base; exact Hangar C2 or launch position is not established.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-185-upson-county,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1184513145",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.268015974764%2C32.949790983553%2C-84.262015974764%2C32.954590983553004&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2347+Delray+Road%2C+Thomaston%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-77",
+      "name": "Air Evac Lifeteam 77 \u2013 Troup County, GA",
+      "mode": "Rotor-wing",
+      "lat": 33.015661,
+      "lng": -85.073242,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-77-%E2%80%93-troup-county,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1285802751",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-85.076662%2C33.013765%2C-85.070662%2C33.018565&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-85.076662%2C33.013765%2C-85.070662%2C33.018565&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (570,484) in 1000 by 800 EPSG:4326 image."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-86",
+      "name": "Air Evac Lifeteam 86 \u2013 Americus, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.066809,
+      "lng": -84.252874,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-86-%E2%80%93-americus,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1588899868",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.2551%2C32.064403%2C-84.2491%2C32.069203&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.2551%2C32.064403%2C-84.2491%2C32.069203&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (371,399) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://www.airnav.com/airport/GA07",
+          "purpose": "Estimated FAA heliport reference corroborates the facility; differs 16.6 meters from the imagery-selected pad center. Imagery reference is retained."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-90",
+      "name": "Air Evac Lifeteam 90 \u2013 Douglas, GA",
+      "mode": "Rotor-wing",
+      "lat": 31.476519,
+      "lng": -82.8541753,
+      "locationNote": "Approximate public-address reference at Douglas Municipal Airport. Airport setting checked against aerial imagery; the precise aircraft parking or launch position is not established.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-90-%E2%80%93-douglas,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1881924066",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.857175289559%2C31.474119001404%2C-82.851175289559%2C31.478919001404&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=195+Thomas+Frier+Drive%2C+Douglas%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-91",
+      "name": "Air Evac Lifeteam 91 \u2013 Vidalia, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.2076975,
+      "lng": -82.3703836,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-91-%E2%80%93-vidalia,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1992028864",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.373035556317%2C32.205309547229%2C-82.367035556317%2C32.210109547229&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.373035556317%2C32.205309547229%2C-82.367035556317%2C32.210109547229&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (442,402) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2801+North+Street+E%2C+Vidalia%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-95",
+      "name": "Air Evac Lifeteam 95 \u2013 Statesboro, GA",
+      "mode": "Rotor-wing",
+      "lat": 32.392159,
+      "lng": -81.751598,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-95-%E2%80%93-statesboro,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1447569009",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.755792%2C32.389969%2C-81.749792%2C32.394769000000004&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.755792%2C32.389969%2C-81.749792%2C32.394769000000004&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (699,435) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://www.airnav.com/airport/GA15",
+          "purpose": "Estimated FAA heliport reference corroborates the facility; differs 1.1 meters from the imagery-selected pad center. Imagery reference is retained."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-96",
+      "name": "Air Evac Lifeteam 96 \u2013 Jesup, GA",
+      "mode": "Rotor-wing",
+      "lat": 31.6013757,
+      "lng": -81.8985203,
+      "locationNote": "Approximate publicly mapped helipad center at the base facility, checked against aerial imagery. This is not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.lifeteam.net/locations/air-evac-lifeteam-96-%E2%80%93-jesup,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1205144425",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.901835%2C31.597617%2C-81.895835%2C31.602417000000003&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/409770206/full.json",
+          "purpose": "Publicly mapped helipad footprint, visually cross-checked against aerial imagery."
+        }
+      ]
+    },
+    {
+      "id": "mt-ga-lf3",
+      "name": "LIFE FORCE 3 / Med-Trans - Calhoun, GA",
+      "mode": "Rotor-wing",
+      "lat": 34.454987,
+      "lng": -84.937362,
+      "locationNote": "Approximate public-address reference at Tom B. David Airport. Hospital and program listings agree on the airport but list different street numbers. The directory city-center point is not used; exact hangar or launch position remains unresolved.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/erlanger-life-force-iii-%E2%80%93-calhoun,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1568692754",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.940362039898%2C34.452587013923996%2C-84.934362039898%2C34.457387013924&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1957+Highway+41+South%2C+Calhoun%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        },
+        {
+          "url": "https://www.lifeforceairmed.com/lf-3-calhoun",
+          "purpose": "Current program identifies Tom B. David Airport and Bell 407 rotor-wing aircraft; lists 1909 Highway 41 South."
+        },
+        {
+          "url": "https://www.erlanger.org/medical-services/life-force-air-medical/life-force-bases",
+          "purpose": "Hospital identifies Calhoun base at 1957-A Highway 41 South."
+        },
+        {
+          "url": "https://www.dot.ga.gov/InvestSmart/Aviation/GAAirportsDocuments/Individual%20Report_CZL.pdf",
+          "purpose": "State aviation report corroborates Med-Trans/LIFE FORCE base at this airport."
+        }
+      ]
+    },
+    {
+      "id": "mt-ga-lf4",
+      "name": "LIFE FORCE 4 / Med-Trans - McCaysville, GA",
+      "mode": "Rotor-wing",
+      "lat": 34.9616434,
+      "lng": -84.3764255,
+      "locationNote": "Approximate helipad center identified in georeferenced public aerial imagery at the publicly listed base facility. This is not a surveyed aircraft parking position. The program confirms its permanent McCaysville facility since 2012.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/erlanger-life-force-iv-%E2%80%93-blue-ridge,-ga",
+          "purpose": "Current operator base identity and public address; directory coordinates independently checked."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1760792246",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.3788495%2C34.957257399999996%2C-84.3728495%2C34.9620574&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-84.3788495%2C34.957257399999996%2C-84.3728495%2C34.9620574&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Approximate visible helipad center at image pixel (404,69) in 1000 by 800 EPSG:4326 image."
+        },
+        {
+          "url": "https://www.lifeforceairmed.com/lf-4-blue-ridge",
+          "purpose": "Program identifies permanent McCaysville base since June 2012 and Bell 407 aircraft; resolves stale temporary-hospital wording on hospital directory."
+        },
+        {
+          "url": "https://www.lifeforceairmed.com/history-of-life-force",
+          "purpose": "Program history independently repeats June 2012 move from temporary hospital to permanent McCaysville facility."
+        }
+      ]
+    },
+    {
+      "id": "ae-ga-190",
+      "name": "Air Evac Lifeteam 190 - Valdosta, GA",
+      "mode": "Rotor-wing",
+      "lat": 30.7848127,
+      "lng": -83.2716147,
+      "locationNote": "Approximate public-address reference at the airport fire-station facility. GMR confirms an active Valdosta program using temporary fire-department facilities. Exact aircraft staging and completion of the permanent hangar remain unverified.",
+      "sources": [
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1659201184",
+          "purpose": "Public facility-address corroboration; registration alone is not proof of current flight operations."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 directory corroborates program identity and rotor-wing classification."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-83.274614687178%2C30.782412667773%2C-83.268614687178%2C30.787212667773&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Georeferenced public aerial imagery inspected; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2614+Madison+Hwy%2C+Valdosta%2C+GA&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public facility address geocoded for setting check; not represented as a surveyed pad."
+        },
+        {
+          "url": "https://www.publicnow.com/view/1C5EF8818F8B43DCBD7BEE6AB31BEB2B9A36371C",
+          "purpose": "Unaltered GMR press release dated July 21, 2026: June 29 opening and temporary Valdosta Fire Department facilities; permanent airport facility planned."
+        },
+        {
+          "url": "https://www.valdostacity.com/sites/default/files/uploads/depts/finance/purchasing-bids/bid_55-20-21_pest_control_annual_contract.pdf",
+          "purpose": "City document identifies Fire Station 7 at 2614 Madison Highway, matching the public CMS base address. Exact launch position is an inference, not a surveyed pad."
+        }
+      ]
+    }
+  ],
+  "finding": "Seventeen publicly supported Air Evac programs and two LIFE FORCE / Med-Trans programs. Base identity is distinct from coordinate precision; approximate airport and temporary-facility references are explicitly qualified.",
+  "inventoryChecks": [
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "Fresh operator directory: 16 Georgia programs; newer Valdosta independently established through GMR announcement and public registration."
+    },
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "Fresh operator locator: two Georgia LIFE FORCE entries."
+    },
+    {
+      "url": "https://www.med-trans.net/affiliates",
+      "purpose": "Hospital-affiliate cross-check."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "No current Georgia locator entry."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No current Georgia locator entry."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No permanent Georgia AirMed International base established."
+    },
+    {
+      "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+      "purpose": "Public program and aircraft-type corroboration."
+    },
+    {
+      "url": "https://r5trauma.org/wp-content/uploads/2025/04/R5-Trauma-Plan-07.10.24.pdf",
+      "purpose": "Regional plan reviewed for additional programs, including Elberton discrepancy."
+    }
+  ],
+  "unplottedUnresolved": [
+    {
+      "program": "Legacy Augusta Med-Trans / AirMed registrations",
+      "reason": "Two public registrations last updated in 2018 do not establish current staffed operations. Not corroborated by current operator locator, affiliate list or public membership directory. No closure date asserted.",
+      "sources": [
+        "https://npiregistry.cms.hhs.gov/provider-view/1194061036",
+        "https://npiregistry.cms.hhs.gov/provider-view/1417207937"
+      ]
+    },
+    {
+      "program": "Elberton Med-Trans listing",
+      "reason": "Regional 2024 trauma plan lists an Elberton base, but current staffed operation and launch location were not independently corroborated in operator or registry checks. Retained as unresolved rather than plotted or declared closed.",
+      "source": "https://r5trauma.org/wp-content/uploads/2025/04/R5-Trauma-Plan-07.10.24.pdf"
+    },
+    {
+      "program": "Greensboro / AEL 186 proposed program",
+      "reason": "Public CMS registration was created July 22, 2026, and the county considered an Air Evac lease on August 25. Recruitment also identifies AEL 186. These establish planning activity, not a verified opening date or current launch location. No active pin is added until flight operations and the facility are corroborated.",
+      "sources": [
+        "https://npiregistry.cms.hhs.gov/provider-view/1043131477",
+        "https://greenecoga.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=7749,plainText=false)",
+        "https://www.linkedin.com/jobs/view/program-manager-located-in-greensboro-ga-at-air-evac-lifeteam-4429093896"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Wellstar AirCare, Augusta and Griffin",
+      "reason": "Hospital and Metro Aviation identify Metro as aviation operator, not GMR. Distinct from legacy Augusta Med-Trans registrations.",
+      "sources": [
+        "https://www.wellstar.org/medical-services/aircare",
+        "https://www.metroaviation.com/project/wellstar-mcg-aircare/"
+      ]
+    },
+    {
+      "program": "AirLife Georgia and Survival Flight",
+      "reason": "Regional plan identifies separate operators; not attributed to GMR.",
+      "source": "https://r5trauma.org/wp-content/uploads/2025/04/R5-Trauma-Plan-07.10.24.pdf"
+    }
+  ],
+  "geometry": {
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer",
+    "countyCount": 159,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic rings and minimum geodesic county-edge distance."
+  },
+  "limitations": [
+    "Aerial helipad centers, public-address references and FAA estimated references are not surveyed aircraft parking positions.",
+    "Milledgeville, Douglas, Laurens County, Upson and LIFE FORCE 3 use approximate airport-facility references.",
+    "Valdosta uses a qualified temporary-facility address reference, not an asserted completed permanent hangar.",
+    "Augusta and Elberton conflicting listings and the proposed Greensboro program remain unplotted and unresolved.",
+    "Generalized county boundaries are not cadastral surveys. Adjacent-state inventories remain incomplete.",
+    "Uniform 75 NM geographic rings do not guarantee aircraft availability, response range or membership benefits."
+  ],
+  "geographicAttribution": "OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright"
+}

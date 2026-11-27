@@ -25,7 +25,7 @@
   const countyName=f=>(f.properties.NAME || f.properties.name).replace(/ (County|Parish)$/,'');
   const countyUnit=state=>state==='LA'?'Parish':'County';
   const countyId=f=>f.properties.GEOID || f.properties.geoid;
-  const stateNotes={PA:'No current in-state GMR bases verified in Pennsylvania. Legacy Mid-Atlantic listing is unverified. Neighboring-state review remains incomplete.',SD:'No current in-state GMR bases verified in South Dakota. Neighboring-state review remains incomplete.',ND:'Williston fixed-wing launch location unresolved; pending bases excluded. Neighboring-state review remains incomplete.'};
+  const stateNotes={GA:'Approximate airport and temporary-facility references are labeled. Unverified listings in Augusta, Elberton and Greensboro remain unplotted. Adjacent-state review is incomplete.',PA:'No current in-state GMR bases verified in Pennsylvania. Legacy Mid-Atlantic listing is unverified. Neighboring-state review remains incomplete.',SD:'No current in-state GMR bases verified in South Dakota. Neighboring-state review remains incomplete.',ND:'Williston fixed-wing launch location unresolved; pending bases excluded. Neighboring-state review remains incomplete.'};
   const countyState=f=>data.reviewedStates.find(s=>countyId(f).startsWith(s.fips))?.code || '';
   const countyEligibleIds=new Set(data.bases.filter(b=>!/fixed/i.test(b.mode)||/rotor/i.test(b.mode)).map(b=>b.id));
   const countyCoverage=new Map(window.GMR_COUNTY_COVERAGE.counties.map(c=>[c.id,{...c,matches:c.matches.filter(m=>countyEligibleIds.has(m.id))}]));
@@ -48,7 +48,7 @@
     .on('keydown',(event,f)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();selectCounty(f);}});
   const boundary=world.append('g').selectAll('path').data(texas).join('path').attr('class','texas-outline');
   const rings=world.append('g');
-  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-98.3,38.5],['TENNESSEE',-86.3,35.85],['MISSISSIPPI',-89.7,32.5],['ALABAMA',-86.8,32.7],['COLORADO',-105.5,39.0],['WYOMING',-107.5,43.0],['SOUTH DAKOTA',-100.0,44.5],['NORTH DAKOTA',-100.5,47.5],['MINNESOTA',-94.5,46.0],['WISCONSIN',-89.8,44.5],['MICHIGAN',-84.8,43.7],['OHIO',-82.8,40.2],['PENNSYLVANIA',-77.8,40.9]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
+  const states=world.append('g').selectAll('text').data([['TEXAS',-100,31],['NEW MEXICO',-104.5,34.8],['OKLAHOMA',-98,35.6],['LOUISIANA',-92.3,31.2],['ARKANSAS',-93.2,34.7],['KANSAS',-98.3,38.5],['TENNESSEE',-86.3,35.85],['MISSISSIPPI',-89.7,32.5],['ALABAMA',-86.8,32.7],['COLORADO',-105.5,39.0],['WYOMING',-107.5,43.0],['SOUTH DAKOTA',-100.0,44.5],['NORTH DAKOTA',-100.5,47.5],['MINNESOTA',-94.5,46.0],['WISCONSIN',-89.8,44.5],['MICHIGAN',-84.8,43.7],['OHIO',-82.8,40.2],['PENNSYLVANIA',-77.8,40.9],['GEORGIA',-83.5,32.6]]).join('text').attr('class','state-label').attr('text-anchor','middle').text(d=>d[0]);
   const markers=world.append('g'),labels=world.append('g');
   const zoom=d3.zoom().scaleExtent([1,14]).on('zoom',event=>{
     scale=event.transform.k;
