@@ -1,0 +1,500 @@
+{
+  "checked": "2026-11-27",
+  "state": "FL",
+  "mappedSites": 10,
+  "operators": {
+    "medtrans": 10
+  },
+  "bases": [
+    {
+      "id": "mt-fl-airstar1",
+      "name": "AirStar 1 - Lakeland, FL",
+      "mode": "Rotor-wing",
+      "lat": 27.9823805,
+      "lng": -82.01535,
+      "locationNote": "Approximate publicly registered Flightline Drive facility reference at Lakeland Linder International Airport. The current certificate application and CMS address supersede the older Airfield Drive listing. Exact current hangar or aircraft parking position is not independently established.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/airstar-1",
+          "purpose": "Current operator program identity."
+        },
+        {
+          "url": "https://pinellas.legistar.com/View.ashx?GUID=FF0341ED-6E9F-4E1B-B0D0-64A57914F977&ID=14916082&M=F",
+          "purpose": "Public 2026 certificate-renewal application supplies 3405 Flightline Drive, replacing the older Airfield Drive listing."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1598427775",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.01834995903%2C27.979980463733998%2C-82.01234995903%2C27.984780463734&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3405+Flightline+Dr%2C+Lakeland%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-lifeline1",
+      "name": "Johns Hopkins All Children's LifeLine 1 - St. Petersburg, FL",
+      "mode": "Rotor-wing",
+      "lat": 27.7651028,
+      "lng": -82.6406639,
+      "locationNote": "Hospital-published rooftop helipad coordinate at Johns Hopkins All Children's Hospital. Used as a qualified facility reference for the publicly based LifeLine program; routine aircraft staging at the hospital versus nearby airport is not independently established.",
+      "sources": [
+        {
+          "url": "https://www.hopkinsmedicine.org/all-childrens-hospital/services/transport-team",
+          "purpose": "Hospital identifies LifeLine 1 in St. Petersburg and Med-Trans as rotor-wing operator."
+        },
+        {
+          "url": "https://www.hopkinsmedicine.org/all-childrens-hospital/services/transport-team/helipad-information",
+          "purpose": "Hospital publishes rooftop helipad coordinates. These are a hospital-facility reference; routine aircraft parking is not established."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1932559390",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.6436638888889%2C27.762702777777776%2C-82.6376638888889%2C27.76750277777778&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=501+6th+Avenue+South%2C+St.+Petersburg%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-mtc",
+      "name": "Med-Trans Florida (formerly Bayflite 4) - Brooksville, FL",
+      "mode": "Rotor-wing",
+      "lat": 28.4698493,
+      "lng": -82.4476893,
+      "locationNote": "Approximate publicly licensed Rescue Way facility reference at Brooksville-Tampa Bay Regional Airport. The operator directory city-center point is not used. Exact hangar or aircraft parking position is not independently established.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/mtc-florida",
+          "purpose": "Current operator listing; city-center coordinate rejected."
+        },
+        {
+          "url": "https://www.globalmedicalresponse.com/news/bayflite-4-is-now-med-trans-florida",
+          "purpose": "GMR announced the Brooksville Bayflite 4 name change to Med-Trans Florida on March 29, 2021."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1144856402",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.450689279191%2C28.467449279369%2C-82.444689279191%2C28.472249279369002&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2535+Rescue+Way%2C+Brooksville%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-sc2",
+      "name": "ShandsCair 2 - The Villages, FL",
+      "mode": "Rotor-wing",
+      "lat": 28.9497129,
+      "lng": -81.9598836,
+      "locationNote": "Approximate publicly mapped hospital helipad center at UF Health The Villages Hospital, checked against aerial imagery. Current public licensing supersedes the older Summerfield location. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://shandscair.ufhealth.org/contacts/",
+          "purpose": "Hospital identifies Med-Trans as rotor-wing operator and separate providers for fixed-wing services."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=88&Procde=2603",
+          "purpose": "Florida AIR7010 license retrieved November 27, 2026: Gainesville address and secondary locations in The Villages and Pierson."
+        },
+        {
+          "url": "https://news-notes.ufhealth.org/2022/03/30/shandscair-celebrates-40th-anniversary/",
+          "purpose": "Hospital history corroborates The Villages base, superseding older Summerfield listings."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1750654356",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.961478075433%2C28.948097488934%2C-81.955478075433%2C28.952897488934003&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1451+El+Camino+Real%2C+The+Villages%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/339292763/full.json",
+          "purpose": "Public helipad footprint; visually checked against aerial imagery."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-sc3",
+      "name": "ShandsCair 3 - Pierson, FL",
+      "mode": "Rotor-wing",
+      "lat": 29.2477769,
+      "lng": -81.4632214,
+      "locationNote": "Approximate public-address reference at Pierson Municipal Airport. Current public licensing and registration identify the relocated program here, superseding Perry. Exact temporary staging and completion or position of a permanent hangar remain unverified.",
+      "sources": [
+        {
+          "url": "https://shandscair.ufhealth.org/contacts/",
+          "purpose": "Hospital identifies Med-Trans as rotor-wing operator and separate providers for fixed-wing services."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=88&Procde=2603",
+          "purpose": "Florida AIR7010 license retrieved November 27, 2026: Gainesville address and secondary locations in The Villages and Pierson."
+        },
+        {
+          "url": "https://www.townofpierson.org/documents/240/Minutes_08-18-2026.pdf",
+          "purpose": "Town minutes describe the UF Health airport contract."
+        },
+        {
+          "url": "https://www.townofpierson.org/documents/240/Minutes_10-20-2026.pdf",
+          "purpose": "Town minutes report revenue from GMR airport lease; current state license and CMS address establish Pierson rather than the old Perry location."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1851645196",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.466221424009%2C29.245376856295998%2C-81.460221424009%2C29.250176856296&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=305+N+Center+St%2C+Pierson%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-sc6",
+      "name": "ShandsCair 6 - Milton, FL",
+      "mode": "Rotor-wing",
+      "lat": 30.638218,
+      "lng": -86.9920556,
+      "locationNote": "Approximate publicly mapped helipad center at Peter Prince Field, checked against aerial imagery and the publicly listed Aviation Drive facility. Not a surveyed aircraft parking position.",
+      "sources": [
+        {
+          "url": "https://www.med-trans.net/locations/shandscair-vi-%E2%80%93-milton%2C-fl",
+          "purpose": "Current operator lists Milton at 5800 Aviation Boulevard; CMS uses Aviation Drive."
+        },
+        {
+          "url": "https://nursing.careers.ufhealth.org/shands-at-uf/unit-scopes/emergency-services/shandscair/",
+          "purpose": "Hospital identifies Milton program; older location descriptions elsewhere on this page are not used."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1891108908",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-86.994715294771%2C30.636246693266%2C-86.988715294771%2C30.641046693266002&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=5800+Aviation+Blvd%2C+Milton%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/536556630/full.json",
+          "purpose": "Public helipad footprint; visually checked against aerial imagery."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-trauma-lc",
+      "name": "TraumaOne Lake City - Lake City, FL",
+      "mode": "Rotor-wing",
+      "lat": 30.186801,
+      "lng": -82.582965,
+      "locationNote": "Approximate public-address reference at Lake City Gateway Airport. Public license and operator use street number 3520; CMS uses 3526. Airport identity is corroborated, but the exact current hangar or aircraft parking position is not independently established.",
+      "sources": [
+        {
+          "url": "https://traumaone.ufhealthjax.org/flight-services/",
+          "purpose": "Hospital identifies three rotor-wing bases and Med-Trans aviation operator."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=94&Procde=2603",
+          "purpose": "Current AIR1613 secondary facilities in Lake City, Yulee and St. Augustine."
+        },
+        {
+          "url": "https://www.columbiacountyfla.com/ws/ws.asmx/DownloadAgendaItemPacket?BudgetAmendmentRequestID=9541&MeetingID=3554",
+          "purpose": "County packet corroborates Med-Trans/TraumaOne airport operation."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1306182837",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.585964982178%2C30.184401049945%2C-82.579964982178%2C30.189201049945&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3520+E+US+Highway+90%2C+Lake+City%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-trauma-n",
+      "name": "TraumaOne North - Yulee, FL",
+      "mode": "Rotor-wing",
+      "lat": 30.6245045,
+      "lng": -81.531984,
+      "locationNote": "Approximate public-address reference at Flying M Acres. Hospital, operator and public license agree on this airport base. Exact hangar or aircraft parking position is not independently established.",
+      "sources": [
+        {
+          "url": "https://traumaone.ufhealthjax.org/flight-services/",
+          "purpose": "Hospital identifies three rotor-wing bases and Med-Trans aviation operator."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=94&Procde=2603",
+          "purpose": "Current AIR1613 secondary facilities in Lake City, Yulee and St. Augustine."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1235475716",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.53498404309%2C30.622104536680997%2C-81.52898404309%2C30.626904536681&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=96175+Cessna+Dr%2C+Yulee%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-trauma-s",
+      "name": "TraumaOne South - St. Augustine, FL",
+      "mode": "Rotor-wing",
+      "lat": 29.8619429,
+      "lng": -81.3167821,
+      "locationNote": "Approximate publicly mapped Flagler Hospital helipad reference, checked against aerial imagery. Current public license lists the adjacent Shore Drive facility. Exact routine aircraft parking position is not independently established.",
+      "sources": [
+        {
+          "url": "https://traumaone.ufhealthjax.org/flight-services/",
+          "purpose": "Hospital identifies three rotor-wing bases and Med-Trans aviation operator."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=94&Procde=2603",
+          "purpose": "Current AIR1613 secondary facilities in Lake City, Yulee and St. Augustine."
+        },
+        {
+          "url": "https://npiregistry.cms.hhs.gov/provider-view/1003153537",
+          "purpose": "Public facility-address corroboration; registration alone does not prove current flight operations."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-81.319406271102%2C29.858700995847997%2C-81.313406271102%2C29.863500995848&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=609+Shore+Dr%2C+St.+Augustine%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/502459072/full.json",
+          "purpose": "Public helipad footprint; visually checked against aerial imagery."
+        },
+        {
+          "url": "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf",
+          "purpose": "Public September 2026 program inventory corroboration. Public hospital/operator evidence determines aviation operator and current program identity."
+        }
+      ]
+    },
+    {
+      "id": "mt-fl-sc1",
+      "name": "ShandsCair 1 / Med-Trans - Gainesville, FL",
+      "mode": "Rotor-wing",
+      "lat": 29.6355167,
+      "lng": -82.3505722,
+      "locationNote": "FAA estimated reference for Shands Cair Heliport (63FL), checked against public aerial imagery at the hospital flight facility. Not a surveyed aircraft parking position. Public fixed-wing services use other aviation providers and are not attributed to this GMR rotor-wing site.",
+      "sources": [
+        {
+          "url": "https://shandscair.ufhealth.org/contacts/",
+          "purpose": "Hospital identifies Med-Trans as rotor-wing operator and separate providers for fixed-wing services."
+        },
+        {
+          "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=88&Procde=2603",
+          "purpose": "Florida AIR7010 license retrieved November 27, 2026: Gainesville address and secondary locations in The Villages and Pierson."
+        },
+        {
+          "url": "https://shandscair.ufhealth.org/teams/adultpeds-flight-team/shandscair-1/",
+          "purpose": "Hospital identifies Gainesville flight team."
+        },
+        {
+          "url": "https://www.airnav.com/airport/63FL",
+          "purpose": "FAA estimated Shands Cair heliport reference effective November 26, 2026: 29.6355167, -82.3505722."
+        },
+        {
+          "url": "https://shandscair.ufhealth.org/transientprocedures/",
+          "purpose": "Hospital distinguishes receiving pads from Gatorport parking for Med-Trans aircraft."
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-82.3533822%2C29.6331231%2C-82.3473822%2C29.637923100000002&bboxSR=4326&imageSR=4326&size=1000%2C800&format=jpg&f=image",
+          "purpose": "Public georeferenced aerial imagery inspected to check facility setting; imagery alone does not establish current operations."
+        },
+        {
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2101+SW+16th+Street%2C+Gainesville%2C+FL&outFields=Match_addr%2CAddr_type&f=json&maxLocations=1",
+          "purpose": "Public address geocode used only as an approximate facility reference, or as a setting check where a separate helipad reference is used."
+        }
+      ]
+    }
+  ],
+  "finding": "Ten publicly supported rotor-wing sites operated by Med-Trans: AirStar 1, Johns Hopkins All Children's LifeLine 1, Med-Trans Florida, four ShandsCair sites, and three TraumaOne sites. This is a GMR aviation-operator inventory, not a statement of membership benefits.",
+  "inventoryChecks": [
+    {
+      "url": "https://www.med-trans.net/services/service-area",
+      "purpose": "Ten Florida directory entries checked. Several old addresses and erroneous coordinate points were replaced using current public evidence; ShandsCair V remains unplotted."
+    },
+    {
+      "url": "https://www.med-trans.net/affiliates",
+      "purpose": "Hospital-program cross-check."
+    },
+    {
+      "url": "https://www.lifeteam.net/services/service-area",
+      "purpose": "No Florida base entry in refreshed locator."
+    },
+    {
+      "url": "https://www.guardianflight.com/services/service-area",
+      "purpose": "No Florida base entry in refreshed locator."
+    },
+    {
+      "url": "https://www.reachair.com/services/service-area",
+      "purpose": "No Florida base entry in refreshed locator."
+    },
+    {
+      "url": "https://airmed.com/about-us/our-bases",
+      "purpose": "No permanent Florida AirMed International base established; floating aircraft are not treated as permanent bases."
+    },
+    {
+      "url": "https://www.floridahealth.gov/wp-content/uploads/2025/08/ems-providers.pdf",
+      "purpose": "Florida November 24, 2026 EMS provider report corroborates relevant programs. Out-of-state licensees and ground services are not counted as Florida air bases."
+    }
+  ],
+  "unplottedUnresolved": [
+    {
+      "program": "ShandsCair V - Southport / Altha",
+      "reason": "Old operator listing conflicts with a later Altha registration, current organizational license locations and public September 2026 inventory. Directory coordinate is outside Florida. No current staffed operation corroborated; no active pin or precise closure date asserted.",
+      "sources": [
+        "https://www.med-trans.net/locations/shandscair-v-%E2%80%93-panama-city%2C-fl",
+        "https://npiregistry.cms.hhs.gov/provider-view/1619416880",
+        "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=88&Procde=2603",
+        "https://info.proservice.com/hubfs/AirMed/AMCN%20Base%20List%2009.21.2026%20-%20AMCN.pdf"
+      ]
+    },
+    {
+      "program": "Legacy Pensacola AirMed Regional / EagleMed registrations",
+      "reason": "Historical registrations do not establish a current permanent GMR base; not corroborated by current program directories or state provider review. Unplotted without asserting a closure date.",
+      "sources": [
+        "https://npiregistry.cms.hhs.gov/provider-view/1396193223",
+        "https://npiregistry.cms.hhs.gov/provider-view/1437564986",
+        "https://www.floridahealth.gov/wp-content/uploads/2025/08/ems-providers.pdf"
+      ]
+    },
+    {
+      "program": "Legacy Stuart Med-Trans registration",
+      "reason": "Public registration last updated in 2018 is not corroborated as a current staffed base by operator, affiliate or public inventory checks. Unplotted.",
+      "sources": [
+        "https://npiregistry.cms.hhs.gov/provider-view/1215296488"
+      ]
+    },
+    {
+      "program": "Legacy New Port Richey Bayflite / Med-Trans registration",
+      "reason": "Public registration last updated in 2020 does not establish a current staffed site. Current GMR and licensing evidence supports Brooksville; no extra New Port Richey pin added.",
+      "sources": [
+        "https://npiregistry.cms.hhs.gov/provider-view/1487280509",
+        "https://www.floridahealth.gov/wp-content/uploads/2025/08/ems-providers.pdf"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "program": "Perry and Summerfield former ShandsCair positions",
+      "reason": "Current public licensing identifies Pierson and The Villages, respectively. Old locations are not duplicated.",
+      "source": "https://mqa-internet.doh.state.fl.us/MQASearchServices/healthcareproviders/LicenseVerificationPractitionerPrintFriendly?HasArnpAprnRelationship=False&LicInd=88&Procde=2603"
+    },
+    {
+      "program": "ShandsCair fixed-wing services",
+      "reason": "Hospital identifies University Air and Jet ICU as fixed-wing aviation providers. Those aircraft are not attributed to Med-Trans.",
+      "source": "https://shandscair.ufhealth.org/contacts/"
+    },
+    {
+      "program": "TGH AeroMed and Health First First Flight",
+      "reason": "Public hospital/operator pages identify Metro Aviation.",
+      "sources": [
+        "https://www.tgh.org/institutes-and-services/emergency-services-institute/aeromed-transport-services",
+        "https://www.metroaviation.com/project/first-flight/"
+      ]
+    },
+    {
+      "program": "Orlando Health Air Care Team",
+      "reason": "Hospital identifies Air Methods as aviation provider.",
+      "source": "https://www.orlandohealth.com/content-hub/orlando-health-launches-new-helicopter-for-children-adults"
+    },
+    {
+      "program": "Med-Trans LLC, Brandon",
+      "reason": "Similarly named registration is not independently established as a GMR air base. Corporate-name resemblance alone is not sufficient.",
+      "source": "https://npiregistry.cms.hhs.gov/provider-view/1023509692"
+    },
+    {
+      "program": "Alabama Medstar Air Care Florida license",
+      "reason": "Florida provider report lists its base in Foley, Alabama; not counted again as a Florida site.",
+      "source": "https://www.floridahealth.gov/wp-content/uploads/2025/08/ems-providers.pdf"
+    }
+  ],
+  "geometry": {
+    "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer",
+    "countyCount": 67,
+    "source": "US Census Generalized ACS 2024, 500K county geometry",
+    "radiusMeters": 138900,
+    "method": "WGS84 geodesic rings and minimum geodesic county-edge distance."
+  },
+  "limitations": [
+    "Facility references and visually checked helipad centers are not surveyed aircraft parking positions.",
+    "Pierson permanent hangar completion and exact temporary staging remain unresolved.",
+    "St. Petersburg and St. Augustine use qualified hospital-facility references; routine aircraft parking is not established.",
+    "Lakeland, Brooksville, Lake City and Yulee use approximate public-address references at confirmed airports.",
+    "Generalized county boundaries are not cadastral surveys. Adjacent-state inventories remain incomplete.",
+    "Uniform 75 NM geographic rings do not guarantee aircraft availability, operational range or membership benefits."
+  ],
+  "geographicAttribution": "OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright"
+}

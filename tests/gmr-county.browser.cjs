@@ -37,6 +37,11 @@ const root=path.resolve(__dirname,'..');
       assert.equal(await page.locator('.radius.active').evaluateAll(nodes=>nodes.filter(el=>/fixed/i.test(el.__data__.mode)&&!/rotor/i.test(el.__data__.mode)).length),0);
       if(!row.matches.length)assert((await page.locator('#selection').innerText()).includes('No eligible mapped base radius'));
     }
+    // Florida: newly reviewed rotor-wing bases have zero distance in their home county.
+    for(const [county,base] of [['12001','mt-fl-sc1'],['12127','mt-fl-sc3'],['12113','mt-fl-sc6'],['12103','mt-fl-lifeline1'],['12105','mt-fl-airstar1'],['12089','mt-fl-trauma-n'],['12023','mt-fl-trauma-lc'],['12053','mt-fl-mtc']]){
+      await page.locator(`[data-geoid="${county}"]`).dispatchEvent('click');
+      assert((await page.locator(`.county-base-list [data-base-id="${base}"]`).innerText()).includes('0 NM'));
+    }
     // Georgia: both Dublin bases are inside Laurens; southern and northern sites are selectable.
     for(const [county,base] of [['13185','ae-ga-190'],['13111','mt-ga-lf4'],['13129','mt-ga-lf3'],['13285','ae-ga-77']]){
       await page.locator(`[data-geoid="${county}"]`).dispatchEvent('click');

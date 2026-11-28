@@ -1,5 +1,15 @@
 # Texas GMR Air Medical Map
 
+## Map-only Florida expansion — November 27, 2026
+
+Florida adds all 67 counties and 10 publicly supported Med-Trans rotor-wing sites: AirStar 1, Johns Hopkins All Children's LifeLine 1, Med-Trans Florida (formerly Bayflite 4), ShandsCair in Gainesville, The Villages, Pierson and Milton, and TraumaOne in Lake City, Yulee and St. Augustine. There are now 20 reviewed states, 1,681 counties/parishes and 204 site records (203 rendered markers because the existing San Antonio pair shares a marker).
+
+`florida-public-evidence.json` records the public licensing, hospital, operator, registration and geographic evidence. November public licensing resolves stale Summerfield and Perry addresses in favor of The Villages and Pierson. The Brooksville and Lake City directory points are replaced with their publicly documented airport facilities. AirStar uses its public 2026 certificate application address. Gainesville uses the FAA estimated 63FL reference. Med-Trans operates the ShandsCair helicopters; the hospital's separately operated fixed-wing services are not counted as GMR aircraft.
+
+Coordinate precision remains explicit. Lakeland, Brooksville, Lake City, Yulee and Pierson use approximate public-address facility references; Pierson's permanent hangar completion and exact temporary staging remain unverified. St. Petersburg and St. Augustine use qualified hospital helipad references; routine aircraft parking is not independently established. Other helipad centers are estimated references or publicly mapped footprints checked against imagery, not surveys. ShandsCair V / Altha, legacy Pensacola, Stuart and New Port Richey entries remain unplotted without current operational corroboration. No public closure dates are asserted for those unresolved listings.
+
+All 75 NM rings use 138,900-meter WGS84 geodesic construction. Coverage is rebuilt for every county and every base, including cross-border gains in previously reviewed states. County selection includes rotor or mixed operations and excludes exclusively fixed-wing operations. Existing base objects, radii, county geometry, Facebook links and excluded Texas bases are preserved. No base phone numbers, personnel or private-source content are published. State review completion does not imply surveyed coordinates, guaranteed service, or a complete neighboring-state inventory.
+
 ## Map-only state expansion — November 27, 2026
 
 Georgia adds 159 counties and 19 rotor-wing base sites: 17 Air Evac programs plus LIFE FORCE 3 and 4, operated by Med-Trans. There are now 19 reviewed states, 1,614 counties/parishes and 194 base-site records (193 rendered markers because the existing San Antonio pair shares a marker).

@@ -35,8 +35,8 @@ source=(root/'assets/gmr-map/map-only-data.js').read_text(encoding='utf-8')
 data=json.loads(source.split('=',1)[1].strip().removesuffix(';'))
 result=json.loads((root/'assets/gmr-map/county-coverage.js').read_text().split('=',1)[1].strip().removesuffix(';'))
 assert hashlib.sha256(source.encode()).hexdigest()==result['sourceSha256'], 'Rebuild coverage after changing map data'
-assert len(result['counties'])==1614
-assert len({c['id'] for c in result['counties']})==1614
+assert len(result['counties'])==1681
+assert len({c['id'] for c in result['counties']})==1681
 assert all(not c['name'].endswith((' County',' Parish')) for c in result['counties'])
 lookup={c['id']:c for c in result['counties']}
 polygons=[(f['properties'].get('GEOID',f['properties'].get('geoid')),coverage.prepare(f['geometry'])[1]) for f in data['counties']['features']]
